@@ -103,5 +103,11 @@ class Detector:
             )
         if candidates:
             candidates.sort(key=lambda c: c["iteration"])
-            self.seen.extend(c["iteration"] for c in candidates)
+            accepted = []
+            for candidate in candidates:
+                if any(abs(candidate["iteration"] - old) < 2 for old in self.seen):
+                    continue
+                accepted.append(candidate)
+                self.seen.append(candidate["iteration"])
+            candidates = accepted
         return candidates

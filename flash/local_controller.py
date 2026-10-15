@@ -1,8 +1,27 @@
-import time, json, argparse, os, socket
+import time, argparse, os, socket
 from collections import defaultdict, Counter
 import numpy as np
 from .store import Store
 from .shm import Reader, discover
+from .profile import process_state
+from .driver_status import snapshot
+
+
+def aggregate(acc, metadata):
+    result = []
+    for key, vals in acc.items():
+        md = metadata[key]
+        result.append(
+            dict(
+                **md,
+                count=len(vals),
+                mean_us=float(np.mean(vals)),
+                min_us=float(np.min(vals)),
+                max_us=float(np.max(vals)),
+                std_us=float(np.std(vals)),
+            )
+        )
+    return result
 
 
 def main():
@@ -11,84 +30,103 @@ def main():
     p.add_argument("--node", required=True)
     a = p.parse_args()
     s = Store(a.run)
-    readers = {}
-    epoch = -1
-    mode = 0
+    readers, metadata = {}, {}
+    epoch, mode = 0, 0
     acc = defaultdict(list)
     operations = defaultdict(Counter)
     reported = set()
-    last_seen = {}
-    start = time.monotonic()
+    active = None
+    stats = []
+    complete = False
+    unknown = 0
+    profile_info = {}
     while not s.get("stop", False):
+        now = time.monotonic()
         ctrl = s.get("control", dict(mode=0, epoch=0))
-        new = (ctrl["epoch"], ctrl["mode"]) != (epoch, mode)
-        if new and ctrl["mode"] == 1:
+        if ctrl["mode"] == 1 and ctrl["epoch"] != epoch:
+            epoch, mode = ctrl["epoch"], 1
             acc.clear()
-        epoch, mode = ctrl["epoch"], ctrl["mode"]
+            stats, complete, unknown = [], False, 0
+            its = s.items("iter_time_0")
+            latest = float(its[-1].split(":")[1]) / 1000 if its else 0
+            seconds = max(
+                latest * s.config["profile_multiplier"], s.config["profile_min_seconds"]
+            )
+            # The request freezes one budget; both nodes acknowledge their own start.
+            seconds = float(ctrl.get("seconds", seconds))
+            active = dict(
+                deadline=now + seconds,
+                drain_deadline=None,
+                quiet=0,
+                drain_seconds=max(latest * s.config["profile_multiplier"], 2.0),
+            )
+            profile_info = dict(started_at=time.time(), requested_seconds=seconds)
+        if active and mode == 1 and now >= active["deadline"]:
+            mode = 0
+            active["drain_deadline"] = now + active["drain_seconds"]
+            profile_info["capture_stopped_at"] = time.time()
         for path in discover(a.run):
-            key = str(path)
-            if key not in readers:
+            if str(path) not in readers:
                 try:
-                    readers[key] = Reader(path)
+                    readers[str(path)] = Reader(path)
                 except (ValueError, OSError):
                     continue
-            reader = readers[key]
+        added = 0
+        for reader in readers.values():
             reader.mode(mode, epoch)
-            meta = reader.metadata()
             h = reader.header()
             rank = int(h[9])
+            md = reader.metadata_by_identity()
+            for (comm, chash), value in md.items():
+                metadata[(rank, comm, chash)] = value
             for r in reader.records():
                 operations[rank][str(r[4])] += 1
-                if r[8] == epoch and r[7] > 0 and r[2] in meta and r[9] == 1:
-                    acc[(rank, r[2], r[3])].append(r[7] / 1000.0)
-            last_seen[rank] = h[4] / 1e9
-        if new:
-            s.set("ack:" + a.node, dict(epoch=epoch, mode=mode, time=time.time()))
-        stats = []
-        for (rank, comm, chash), vals in acc.items():
-            md = next(
-                (
-                    reader.metadata().get(comm)
-                    for reader in readers.values()
-                    if int(reader.header()[9]) == rank
-                ),
-                None,
-            )
-            if md:
-                stats.append(
-                    dict(
-                        **md,
-                        count=len(vals),
-                        mean_us=float(np.mean(vals)),
-                        min_us=float(np.min(vals)),
-                        max_us=float(np.max(vals)),
-                        std_us=float(np.std(vals)),
-                    )
+                if active and r[8] == epoch and r[7] > 0 and r[9] == 1:
+                    key = (rank, r[2], r[3])
+                    if key in metadata:
+                        acc[key].append(r[7] / 1000.0)
+                        added += 1
+                    else:
+                        unknown += 1
+        if active and mode == 0:
+            pending = sum(r.header()[15] for r in readers.values())
+            active["quiet"] = active["quiet"] + 1 if pending == 0 and added == 0 else 0
+            if active["quiet"] >= 2 or now >= active["drain_deadline"]:
+                complete = active["quiet"] >= 2 and unknown == 0
+                stats = aggregate(acc, metadata)
+                profile_info.update(
+                    finished_at=time.time(),
+                    active_scopes_at_finish=pending,
+                    unknown_records=unknown,
+                    driver_status=snapshot(),
                 )
+                active = None
+        headers = [list(r.header()) for r in readers.values()]
+        s.set("ack:" + a.node, dict(epoch=epoch, mode=mode, time=time.time()))
         s.set(
             "stats:" + a.node,
             dict(
                 epoch=epoch,
                 mode=mode,
+                node=a.node,
+                host=os.getenv("FLASH_NODE_ADDR", socket.gethostname()),
+                complete=complete,
                 stats=stats,
                 operations={str(k): dict(v) for k, v in operations.items()},
                 lost=sum(r.lost for r in readers.values()),
-                headers=[list(r.header()) for r in readers.values()],
+                headers=headers,
+                profile=profile_info,
                 time=time.time(),
             ),
         )
-        it = s.items("iter_time_0")
-        latest = float(it[-1].split(":")[1]) / 1000.0 if it else None
-        # Arm after a completed iteration. Normal job completion is signalled by the launcher.
+        its = s.items("iter_time_0")
+        latest = float(its[-1].split(":")[1]) / 1000 if its else None
         if latest is not None and not s.get("training_done", False):
             window = s.config["failstop_multiplier"] * latest
-            # Refresh after draining/aggregation: stale snapshots can falsely report live ranks.
-            last_seen = {
-                int(reader.header()[9]): reader.header()[4] / 1e9
-                for reader in readers.values()
-            }
             checked_at = time.monotonic()
-            for rank, ts in last_seen.items():
+            for reader in readers.values():
+                h = reader.header()
+                rank, ts = int(h[9]), h[4] / 1e9
                 if checked_at - ts > window and rank not in reported:
                     reported.add(rank)
                     s.push(
@@ -99,12 +137,14 @@ def main():
                             window=window,
                             last_call_age=checked_at - ts,
                             time=time.time(),
+                            pid=int(h[10]),
+                            **process_state(int(h[10])),
                         ),
                         1000,
                     )
         time.sleep(s.config["poll_seconds"])
-    for r in readers.values():
-        r.close()
+    for reader in readers.values():
+        reader.close()
 
 
 if __name__ == "__main__":

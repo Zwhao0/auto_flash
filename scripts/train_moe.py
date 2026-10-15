@@ -8,7 +8,11 @@ from megatron.core.models.gpt import GPTModel
 from megatron.core.models.gpt.gpt_layer_specs import get_gpt_layer_local_spec
 from megatron.core.transformer.transformer_config import TransformerConfig
 from megatron.core.pipeline_parallel.schedules import get_forward_backward_func
-from flash.integration import report_iteration, report_parallel_states
+from flash.integration import (
+    report_iteration,
+    report_parallel_states,
+    close_iteration_reporter,
+)
 from flash.store import Store
 
 
@@ -25,6 +29,10 @@ def main():
     p.add_argument("--hidden", type=int, default=256)
     p.add_argument("--layers", type=int, default=4)
     p.add_argument("--seed", type=int, default=1234)
+    p.add_argument("--hf-checkpoint")
+    p.add_argument("--dtype", choices=["float32", "bfloat16"], default="float32")
+    p.add_argument("--validate-conversion", action="store_true")
+    p.add_argument("--no-save-checkpoint", action="store_true")
     p.add_argument(
         "--fault", choices=["none", "delay", "oom", "timeout"], default="none"
     )
@@ -47,7 +55,9 @@ def main():
     torch.set_num_threads(2)
     torch.manual_seed(a.seed)
     torch.cuda.manual_seed_all(a.seed)
-    dist.init_process_group("nccl", timeout=datetime.timedelta(seconds=90))
+    dist.init_process_group(
+        "nccl", timeout=datetime.timedelta(seconds=600 if a.hf_checkpoint else 90)
+    )
     # Disable the official GreyHound fork's duplicate Redis logger (it polls port 6379 forever).
     ps.log_model_parallel_to_redis = lambda *args, **kwargs: None
     modern = (
@@ -59,7 +69,10 @@ def main():
         pipeline_model_parallel_size=a.pp,
         expert_model_parallel_size=a.ep,
         **(
-            {"expert_tensor_parallel_size": 1, "distributed_timeout_minutes": 1.5}
+            {
+                "expert_tensor_parallel_size": 1,
+                "distributed_timeout_minutes": 10 if a.hf_checkpoint else 1.5,
+            }
             if modern
             else {}
         ),
@@ -68,8 +81,11 @@ def main():
     # The fixture's stopping protocol must not create NCCL cliques that the
     # paper's member-set-based labeling could mistake for model DP traffic.
     stop_group = (
-        dist.new_group(backend="gloo", timeout=datetime.timedelta(seconds=90))
-        if a.stop_backend == "gloo"
+        dist.new_group(
+            backend="gloo",
+            timeout=datetime.timedelta(seconds=600 if a.hf_checkpoint else 90),
+        )
+        if a.stop_backend == "gloo" and a.min_seconds > 0
         else None
     )
     if modern and a.tp > 1:
@@ -92,38 +108,49 @@ def main():
         if modern
         else {}
     )
-    cfg = TransformerConfig(
-        num_layers=a.layers,
-        hidden_size=a.hidden,
-        num_attention_heads=8,
-        ffn_hidden_size=a.hidden * 2,
-        num_moe_experts=8,
-        moe_router_topk=2,
-        moe_aux_loss_coeff=0.01,
-        tensor_model_parallel_size=a.tp,
-        pipeline_model_parallel_size=a.pp,
-        expert_model_parallel_size=a.ep,
-        sequence_parallel=a.tp > 1,
-        hidden_dropout=0.0,
-        attention_dropout=0.0,
-        params_dtype=torch.float32,
-        pipeline_dtype=torch.float32,
-        gradient_accumulation_fusion=False,
-        async_tensor_model_parallel_allreduce=a.tp == 1,
-        **extra,
-    )
-    model = GPTModel(
-        cfg,
-        get_gpt_layer_local_spec(
-            num_experts=8, **({"normalization": "RMSNorm"} if modern else {})
-        ),
-        vocab_size=256,
-        max_sequence_length=a.seq,
-        pre_process=ps.is_pipeline_first_stage(),
-        post_process=ps.is_pipeline_last_stage(),
-        share_embeddings_and_output_weights=False,
-        position_embedding_type="rope",
-    ).cuda()
+    conversion = None
+    loaded = None
+    dtype = getattr(torch, a.dtype)
+    if a.hf_checkpoint:
+        from scripts.qwen_support import build, load, validate
+
+        model, hf = build(a.hf_checkpoint, a.seq, a.tp, a.pp, a.ep, dtype)
+        loaded = load(model, a.hf_checkpoint, hf)
+        if a.validate_conversion:
+            conversion = validate(model, a.hf_checkpoint, hf, dtype)
+    else:
+        cfg = TransformerConfig(
+            num_layers=a.layers,
+            hidden_size=a.hidden,
+            num_attention_heads=8,
+            ffn_hidden_size=a.hidden * 2,
+            num_moe_experts=8,
+            moe_router_topk=2,
+            moe_aux_loss_coeff=0.01,
+            tensor_model_parallel_size=a.tp,
+            pipeline_model_parallel_size=a.pp,
+            expert_model_parallel_size=a.ep,
+            sequence_parallel=a.tp > 1,
+            hidden_dropout=0.0,
+            attention_dropout=0.0,
+            params_dtype=torch.float32,
+            pipeline_dtype=torch.float32,
+            gradient_accumulation_fusion=False,
+            async_tensor_model_parallel_allreduce=a.tp == 1,
+            **extra,
+        )
+        model = GPTModel(
+            cfg,
+            get_gpt_layer_local_spec(
+                num_experts=8, **({"normalization": "RMSNorm"} if modern else {})
+            ),
+            vocab_size=256,
+            max_sequence_length=a.seq,
+            pre_process=ps.is_pipeline_first_stage(),
+            post_process=ps.is_pipeline_last_stage(),
+            share_embeddings_and_output_weights=False,
+            position_embedding_type="rope",
+        ).cuda()
     dense = [p for p in model.parameters() if getattr(p, "allreduce", True)]
     expert = [p for p in model.parameters() if not getattr(p, "allreduce", True)]
     dp = ps.get_data_parallel_group()
@@ -182,11 +209,19 @@ def main():
     store = Store()
     store.set("world_size", dist.get_world_size())
     optimizer = torch.optim.AdamW(model.parameters(), lr=1e-3, weight_decay=0.01)
-    data = torch.tensor(
-        list(pathlib.Path("/flash/data/shakespeare.txt").read_bytes()),
-        dtype=torch.long,
-        device="cuda",
-    )
+    if a.hf_checkpoint and hf["vocab_size"] > 256:
+        from transformers import AutoTokenizer
+
+        tokenizer = AutoTokenizer.from_pretrained(
+            a.hf_checkpoint, local_files_only=True
+        )
+        corpus = tokenizer(
+            pathlib.Path("/flash/data/shakespeare.txt").read_text(),
+            add_special_tokens=False,
+        )["input_ids"]
+    else:
+        corpus = list(pathlib.Path("/flash/data/shakespeare.txt").read_bytes())
+    data = torch.tensor(corpus, dtype=torch.long, device="cuda")
     dp_rank = ps.get_data_parallel_rank()
     offset = [dp_rank * a.seq * a.batch]
 
@@ -211,17 +246,7 @@ def main():
 
         return out, loss_func
 
-    def sync(params, group):
-        have = [p for p in params if p.grad is not None]
-        if not have:
-            return
-        flat = torch.cat([p.grad.reshape(-1) for p in have])
-        dist.all_reduce(flat, group=group)
-        flat.div_(dist.get_world_size(group))
-        offset = 0
-        for p in have:
-            p.grad.copy_(flat[offset : offset + p.numel()].view_as(p))
-            offset += p.numel()
+    from scripts.gradient_sync import sync_gradients as sync
 
     effective_delay_ms = a.delay_ms
     fb = get_forward_backward_func()
@@ -246,12 +271,17 @@ def main():
         expert_parameters=sum(p.numel() for p in expert),
         torch=torch.__version__,
         groups=groups,
+        hf_checkpoint=a.hf_checkpoint,
+        conversion_validation=conversion,
+        imported=loaded,
+        optimizer="torch.optim.AdamW (states follow parameter dtype)",
         sleep_cycles_per_ms=calibration_cycles_per_ms,
     )
     with path.open("w") as f:
         f.write(json.dumps(metadata) + "\n")
     dist.barrier()
     torch.cuda.synchronize()
+    torch.cuda.reset_peak_memory_stats()
     begin = time.monotonic()
     step = 0
     duration = []
@@ -355,6 +385,8 @@ def main():
             kind="iteration",
             rank=rank,
             iteration=step,
+            timestamp=time.time(),
+            monotonic=time.monotonic(),
             time_ms=ms,
             loss=loss,
             tokens_per_second=a.batch
@@ -368,17 +400,21 @@ def main():
         if rank == 0 and (step <= 3 or step % 10 == 0):
             print(json.dumps(row), flush=True)
         # A globally agreed stop prevents PP stages leaving at different iterations.
-        stop = torch.tensor(
-            [int(step >= a.steps and time.monotonic() - begin >= a.min_seconds)],
-            device="cpu" if a.stop_backend == "gloo" else "cuda",
-        )
-        dist.all_reduce(stop, op=dist.ReduceOp.MIN, group=stop_group)
+        done = step >= a.steps
+        if a.min_seconds > 0:
+            stop = torch.tensor(
+                [int(done and time.monotonic() - begin >= a.min_seconds)],
+                device="cpu" if a.stop_backend == "gloo" else "cuda",
+            )
+            dist.all_reduce(stop, op=dist.ReduceOp.MIN, group=stop_group)
+            done = bool(stop.item())
         if os.getenv("FLASH_GREYHOUND") == "TRUE":
             dist.all_reduce(torch.zeros(503, dtype=torch.int8, device="cuda"))
-        if stop.item():
+        if done:
             break
     elapsed = time.monotonic() - steady_start if steady_start else None
     if rank == 0:
+        close_iteration_reporter()
         store.set("training_done", True)
     with path.open("a") as f:
         f.write(
@@ -388,6 +424,8 @@ def main():
                     rank=rank,
                     steps=step,
                     steady_steps=steady_steps,
+                    peak_allocated_bytes=torch.cuda.max_memory_allocated(),
+                    peak_reserved_bytes=torch.cuda.max_memory_reserved(),
                     steady_wall_seconds=elapsed,
                     steady_e2e_tokens_per_second=(
                         (
@@ -406,10 +444,11 @@ def main():
             + "\n"
         )
     # Preserve a compact real model checkpoint for independent correctness inspection.
-    torch.save(
-        {"model": model.state_dict(), "config": vars(a), "step": step},
-        str(path) + ".pt",
-    )
+    if not a.no_save_checkpoint:
+        torch.save(
+            {"model": model.state_dict(), "config": vars(a), "step": step},
+            str(path) + ".pt",
+        )
     dist.barrier()
     if rank == 0:
         store.set("training_done", True)

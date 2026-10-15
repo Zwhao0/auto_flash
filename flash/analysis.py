@@ -10,21 +10,40 @@ def cv(xs):
 
 
 def analyze(stats, group_specs, cv_threshold=0.1, percent=0.2):
-    cliques = defaultdict(dict)
+    cliques = defaultdict(lambda: defaultdict(list))
     for s in stats:
         if s["count"] and s["mean_us"] > 0:
-            cliques[str(s["hash"])][int(s["rank"])] = s
+            cliques[str(s["hash"])][int(s["rank"])].append(s)
     tags = defaultdict(list)
     incomplete = []
     for h, byrank in cliques.items():
         members = set(byrank)
-        sizes = {int(s["size"]) for s in byrank.values()}
+        sizes = {int(s["size"]) for values in byrank.values() for s in values}
         if len(sizes) != 1 or len(members) != next(iter(sizes)):
             incomplete.append(
                 dict(hash=h, ranks=sorted(members), expected_sizes=sorted(sizes))
             )
             continue
-        for spec in group_specs:
+        # Preserve every communicator for a rank instead of keeping the last
+        # handle with the same id_hash. Means are weighted by recorded samples.
+        values = {
+            r: sum(s["mean_us"] * s["count"] for s in rows)
+            / sum(s["count"] for s in rows)
+            for r, rows in byrank.items()
+        }
+        max_avg = max(s["mean_us"] for rows in byrank.values() for s in rows)
+        matching = [
+            g for g in group_specs if set(g["ranks"]) == members and len(members) > 1
+        ]
+        eligible = [g for g in matching if g["tag"] not in ["ep", "tp_ep"]]
+        if not matching and len(members) > 1:
+            eligible = [
+                dict(
+                    tag="special_" + "_".join(map(str, sorted(members))),
+                    ranks=sorted(members),
+                )
+            ]
+        for spec in eligible:
             if (
                 set(spec["ranks"]) == members
                 and len(members) > 1
@@ -34,8 +53,8 @@ def analyze(stats, group_specs, cv_threshold=0.1, percent=0.2):
                     dict(
                         hash=h,
                         ranks=sorted(members),
-                        values={r: s["mean_us"] for r, s in byrank.items()},
-                        max_avg_latency=max(s["mean_us"] for s in byrank.values()),
+                        values=values,
+                        max_avg_latency=max_avg,
                     )
                 )
     evidence = defaultdict(list)

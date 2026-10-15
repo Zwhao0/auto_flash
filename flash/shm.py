@@ -24,11 +24,18 @@ class Reader:
     def mode(self, mode, epoch):
         struct.pack_into("<Q", self.m, 16, epoch)
         struct.pack_into("<Q", self.m, 8, mode)
+        if self.header()[12] >= 2:
+            struct.pack_into("<Q", self.m, 48, (epoch << 1) | mode)
 
     def metadata(self):
+        return {c["comm"]: c for c in self.metadata_by_identity().values()}
+
+    def metadata_by_identity(self):
         n = min(self.header()[11], NCOMM)
         return {
-            c[0]: dict(comm=c[0], hash=str(c[1]), rank=c[2], local=c[3], size=c[4])
+            (c[0], c[1]): dict(
+                comm=c[0], hash=str(c[1]), rank=c[2], local=c[3], size=c[4]
+            )
             for c in (
                 COMM.unpack_from(self.m, HEADER + i * COMM.size) for i in range(n)
             )

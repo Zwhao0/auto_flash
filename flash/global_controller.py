@@ -2,6 +2,7 @@ import argparse, time, json, pathlib
 from .store import Store
 from .detection import Detector
 from .analysis import analyze
+from .profile import complete_nodes
 
 
 def main():
@@ -21,9 +22,7 @@ def main():
         guard=cfg["right_guard"],
         min_persistence=a.min_persistence or cfg["min_persistence"],
     )
-    epoch = 0
-    last = -1
-    active = None
+    epoch, last, active = 0, -1, None
     done = set()
     s.set("control", dict(mode=0, epoch=0))
     path = pathlib.Path(a.output)
@@ -31,6 +30,16 @@ def main():
 
     def emit(kind, **kw):
         row = dict(kw, kind=kind, time=time.time())
+        if kind == "failstop" or (
+            kind == "diagnosis" and kw.get("result", {}).get("suspects")
+        ):
+            row["level"] = "CRITICAL"
+        elif kind == "diagnosis":
+            row["level"] = (
+                "WARNING"
+                if kw.get("result", {}).get("status") == "incomplete_profile"
+                else "INFO"
+            )
         print(json.dumps(row), flush=True)
         with path.open("a") as f:
             f.write(json.dumps(row) + "\n")
@@ -39,26 +48,43 @@ def main():
     while not s.get("stop", False):
         its = [tuple(v.split(":")) for v in s.items("iter_time_0")]
         latest = int(its[-1][0]) if its else -1
-        fs = s.items("failstop_ranks")
-        for e in fs:
-            key = (e["node"], e["rank"])
+        for event in s.items("failstop_ranks"):
+            key = (event["node"], event["rank"])
             if key not in done:
-                emit("failstop", **e)
+                emit("failstop", **event)
                 done.add(key)
         if active:
-            if time.monotonic() > active["deadline"]:
-                blobs = [s.get("stats:" + n, {}) for n in ["0", "1"]]
-                valid = [b for b in blobs if b.get("epoch") == epoch]
-                specs = {}
-                for r in range(int(s.get("world_size", 16))):
-                    for g in s.get("parallel_states_" + str(r), []):
-                        specs[(g["tag"], tuple(g["ranks"]))] = g
-                result = analyze(
-                    [st for b in valid for st in b.get("stats", [])],
-                    list(specs.values()),
-                    cv_threshold=cfg["cv_threshold"],
-                    percent=cfg["rank_threshold"],
-                )
+            blobs = [s.get("stats:" + node, {}) for node in ["0", "1"]]
+            valid, complete = complete_nodes(blobs, epoch)
+            expired = time.monotonic() > active["deadline"]
+            if complete or expired:
+                if complete:
+                    specs = {}
+                    for rank in range(int(s.get("world_size", 16))):
+                        for g in s.get("parallel_states_" + str(rank), []):
+                            specs[(g["tag"], tuple(g["ranks"]))] = g
+                    result = analyze(
+                        [st for b in valid for st in b.get("stats", [])],
+                        list(specs.values()),
+                        cv_threshold=cfg["cv_threshold"],
+                        percent=cfg["rank_threshold"],
+                    )
+                    result["status"] = "complete"
+                    locations = {
+                        int(h[9]): dict(node=b["node"], host=b["host"], pid=int(h[10]))
+                        for b in valid
+                        for h in b.get("headers", [])
+                    }
+                    for candidate in result["suspects"]:
+                        candidate["location"] = locations.get(candidate["rank"])
+                else:
+                    result = dict(
+                        status="incomplete_profile",
+                        suspects=[],
+                        clique_scores=[],
+                        incomplete=[],
+                        complete_cliques=0,
+                    )
                 emit(
                     "diagnosis",
                     epoch=epoch,
@@ -81,18 +107,21 @@ def main():
                 triggers = [dict(forced=True, observed_iteration=latest)]
             if triggers:
                 epoch += 1
-                secs = max(
-                    float(its[-1][1]) / 1000.0 * cfg["profile_multiplier"],
+                iteration_seconds = float(its[-1][1]) / 1000
+                seconds = max(
+                    iteration_seconds * cfg["profile_multiplier"],
                     cfg["profile_min_seconds"],
                 )
-                trigger = triggers[0]
-                active = dict(
-                    deadline=time.monotonic() + secs + 0.5,
-                    seconds=secs,
-                    trigger=trigger,
+                # Leave a bounded tail for in-flight groups and each node's final drain.
+                deadline = (
+                    time.monotonic()
+                    + seconds
+                    + max(iteration_seconds * cfg["profile_multiplier"], 2)
+                    + 3
                 )
-                s.set("control", dict(mode=1, epoch=epoch))
-                emit("profile_start", epoch=epoch, seconds=secs, trigger=trigger)
+                active = dict(deadline=deadline, seconds=seconds, trigger=triggers[0])
+                s.set("control", dict(mode=1, epoch=epoch, seconds=seconds))
+                emit("profile_start", epoch=epoch, seconds=seconds, trigger=triggers[0])
         time.sleep(cfg["poll_seconds"])
     emit("controller_stopped", epochs=epoch)
 

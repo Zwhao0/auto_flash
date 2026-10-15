@@ -81,7 +81,7 @@ void init() {
     shm->h[10] = getpid();
     shm->h[14] = sizeof(Shared);
     shm->h[4] = now();
-    shm->h[12] = 1;
+    shm->h[12] = 2; // v2: h[6] packed control, h[15] active profile scopes
     shm->h[0].store(MAGIC, std::memory_order_release);
   });
 }
@@ -158,6 +158,12 @@ thread_local int depth = 0;
 thread_local uint64_t gid = 0;
 thread_local std::vector<Record> pending;
 thread_local std::unordered_map<uint64_t, Timer *> current;
+thread_local uint64_t control = 0;
+thread_local bool profiling = false;
+void refresh_control() {
+  if (shm)
+    control = shm->h[6].load(std::memory_order_acquire);
+}
 Timer *start(cudaStream_t s) {
   auto k = uint64_t(s);
   if (current.count(k))
@@ -184,11 +190,16 @@ Timer *start(cudaStream_t s) {
   return t;
 }
 void finish() {
+  // Enqueue every stop marker before waiting on any stream. Otherwise the
+  // first stream's host wait is incorrectly included in later measurements.
+  std::unordered_map<uint64_t, bool> stopped;
+  for (auto &v : current)
+    stopped[v.first] =
+        cudaEventRecord(v.second->b, v.second->stream) == cudaSuccess;
   for (auto &v : current) {
     Timer *t = v.second;
     float ms = 0;
-    bool ok = cudaEventRecord(t->b, t->stream) == cudaSuccess &&
-              cudaEventSynchronize(t->b) == cudaSuccess &&
+    bool ok = stopped[v.first] && cudaEventSynchronize(t->b) == cudaSuccess &&
               cudaEventElapsedTime(&ms, t->a, t->b) == cudaSuccess;
     if (!ok)
       err();
@@ -207,6 +218,10 @@ void finish() {
     }
   pending.clear();
   current.clear();
+  if (profiling) {
+    shm->h[15].fetch_sub(1, std::memory_order_release);
+    profiling = false;
+  }
 }
 template <class F>
 ncclResult_t call(F f, ncclComm_t c, size_t n, ncclDataType_t dt,
@@ -224,7 +239,9 @@ ncclResult_t call(F f, ncclComm_t c, size_t n, ncclDataType_t dt,
     if (it != comms.end())
       hash = it->second.hash;
   }
-  bool prof = shm->h[1].load(std::memory_order_acquire) == 1;
+  if (!depth)
+    refresh_control();
+  bool prof = control & 1;
   Record r{0,
            ns,
            uint64_t(c),
@@ -233,10 +250,15 @@ ncclResult_t call(F f, ncclComm_t c, size_t n, ncclDataType_t dt,
            n * typesize(dt),
            depth ? gid : ++groups,
            0,
-           shm->h[2].load(),
+           control >> 1,
            uint64_t(stream)};
-  if (prof)
+  if (prof) {
+    if (!profiling) {
+      shm->h[15].fetch_add(1, std::memory_order_acq_rel);
+      profiling = true;
+    }
     start(stream);
+  }
   auto ret = f();
   if (ret != ncclSuccess)
     err();
@@ -275,16 +297,21 @@ ncclResult_t ncclGroupStart() {
   static auto f = sym<decltype(&ncclGroupStart)>("ncclGroupStart");
   auto ret = f();
   if (ret == ncclSuccess) {
-    if (depth++ == 0)
+    if (depth++ == 0) {
       gid = ++groups;
+      // Hold one mode/epoch for the entire outer group, including nesting.
+      refresh_control();
+    }
   }
   return ret;
 }
 ncclResult_t ncclGroupEnd() {
   static auto f = sym<decltype(&ncclGroupEnd)>("ncclGroupEnd");
   auto ret = f();
-  if (depth > 0 && --depth == 0)
+  if (depth > 0 && --depth == 0) {
     finish();
+    refresh_control();
+  }
   return ret;
 }
 ncclResult_t ncclAllReduce(const void *a, void *b, size_t n, ncclDataType_t t,

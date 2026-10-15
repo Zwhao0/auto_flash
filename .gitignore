@@ -13,3 +13,4 @@ build/
 .venv/
 deps/
 rdma/
+results/**/*.part

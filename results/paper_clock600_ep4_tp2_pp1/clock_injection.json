@@ -1,0 +1,20 @@
+[
+  {
+    "time": 1792075746.3886762,
+    "command": "nvidia-smi -i 0 --query-gpu=name,clocks.current.sm,clocks.max.sm,power.limit --format=csv",
+    "exit": 0,
+    "output": "name, clocks.current.sm [MHz], clocks.max.sm [MHz], power.limit [W]\nNVIDIA H800, 345 MHz, 1980 MHz, 700.00 W\n"
+  },
+  {
+    "time": 1792075852.194849,
+    "command": "nvidia-smi -i 0 -rgc",
+    "exit": 0,
+    "output": "All done.\n"
+  },
+  {
+    "time": 1792075852.6789892,
+    "command": "nvidia-smi -i 0 --query-gpu=clocks.current.sm,clocks.max.sm --format=csv",
+    "exit": 0,
+    "output": "clocks.current.sm [MHz], clocks.max.sm [MHz]\n345 MHz, 1980 MHz\n"
+  }
+]

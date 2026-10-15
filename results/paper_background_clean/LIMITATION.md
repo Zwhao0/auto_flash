@@ -1,0 +1,1 @@
+该次背景流量 fixture 原先按每个rank本地墙钟独立退出，可能造成不等次数collective与残留进程；主模型训练结果可保留排障，但网络性能/准确率不采信。修复为全局一致停止并使用 paper_background_final 重跑。

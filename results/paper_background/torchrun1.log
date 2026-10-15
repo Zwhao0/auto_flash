@@ -1,0 +1,237 @@
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+[/pytorch/third_party/gloo/gloo/transport/tcp/debug_logger.cc:9] ERROR failed to connect, willRetry=1, retry=1, retryLimit=3, rank=10, size=16, local=[10.10.4.2]:51355, remote=[10.10.4.2]:45965$10, error=SO_ERROR: Connection refused, remote=[10.10.4.2]:45965$10
+[/pytorch/third_party/gloo/gloo/transport/tcp/debug_logger.cc:9] ERROR failed to connect, willRetry=1, retry=2, retryLimit=3, rank=10, size=16, local=[10.10.4.2]:55451, remote=[10.10.4.2]:45965$10, error=SO_ERROR: Connection refused, remote=[10.10.4.2]:45965$10
+[/pytorch/third_party/gloo/gloo/transport/tcp/debug_logger.cc:9] ERROR failed to connect, willRetry=1, retry=3, retryLimit=3, rank=10, size=16, local=[10.10.4.2]:59035, remote=[10.10.4.2]:45965$10, error=SO_ERROR: Connection refused, remote=[10.10.4.2]:45965$10
+[/pytorch/third_party/gloo/gloo/transport/tcp/debug_logger.cc:9] ERROR failed to connect, willRetry=0, retry=4, retryLimit=3, rank=10, size=16, local=[10.10.4.2]:62619, remote=[10.10.4.2]:45965$10, error=SO_ERROR: Connection refused, remote=[10.10.4.2]:45965$10
+[rank10]:[E1015 14:33:18.078742677 ProcessGroupGloo.cpp:66] Gloo connectFullMesh failed with [/pytorch/third_party/gloo/gloo/transport/tcp/pair.cc:152] timed out connecting: SO_ERROR: Connection refused, remote=[10.10.4.2]:45965$10
+[rank10]: Traceback (most recent call last):
+[rank10]:   File "/flash/scripts/train_moe.py", line 103, in <module>
+[rank10]:     if __name__=='__main__':main()
+[rank10]:                             ^^^^^^
+[rank10]:   File "/flash/scripts/train_moe.py", line 21, in main
+[rank10]:     ps.initialize_model_parallel(tensor_model_parallel_size=a.tp,pipeline_model_parallel_size=a.pp,expert_model_parallel_size=a.ep,**({'expert_tensor_parallel_size':1} if modern else {}))
+[rank10]:   File "/flash/vendor/MegatronCore/megatron/core/parallel_state.py", line 803, in initialize_model_parallel
+[rank10]:     group_gloo = create_group(
+[rank10]:                  ^^^^^^^^^^^^^
+[rank10]:   File "/flash/vendor/MegatronCore/megatron/core/parallel_state.py", line 179, in create_group
+[rank10]:     return torch.distributed.new_group(**kwargs)
+[rank10]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank10]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 97, in wrapper
+[rank10]:     func_return = func(*args, **kwargs)
+[rank10]:                   ^^^^^^^^^^^^^^^^^^^^^
+[rank10]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 5374, in new_group
+[rank10]:     return _new_group_with_tag(
+[rank10]:            ^^^^^^^^^^^^^^^^^^^^
+[rank10]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 5465, in _new_group_with_tag
+[rank10]:     pg, pg_store = _new_process_group_helper(
+[rank10]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank10]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 2043, in _new_process_group_helper
+[rank10]:     backend_class = ProcessGroupGloo(
+[rank10]:                     ^^^^^^^^^^^^^^^^^
+[rank10]: RuntimeError: Gloo connectFullMesh failed with [/pytorch/third_party/gloo/gloo/transport/tcp/pair.cc:152] timed out connecting: SO_ERROR: Connection refused, remote=[10.10.4.2]:45965$10
+[rank8]:[E1015 14:33:18.315105378 ProcessGroupGloo.cpp:66] Gloo connectFullMesh failed with [/pytorch/third_party/gloo/gloo/transport/tcp/pair.cc:547] Connection closed by peer [10.10.4.2]:9411
+[/pytorch/third_party/gloo/gloo/transport/tcp/debug_logger.cc:9] ERROR failed to connect, willRetry=1, retry=1, retryLimit=3, rank=15, size=16, local=[10.10.4.2]:18152, remote=[10.10.4.2]:54671$15, error=SO_ERROR: Connection refused, remote=[10.10.4.2]:54671$15
+[/pytorch/third_party/gloo/gloo/transport/tcp/debug_logger.cc:9] ERROR failed to connect, willRetry=1, retry=1, retryLimit=3, rank=14, size=16, local=[10.10.4.2]:21224, remote=[10.10.4.2]:54671$14, error=SO_ERROR: Connection refused, remote=[10.10.4.2]:54671$14
+[/pytorch/third_party/gloo/gloo/transport/tcp/debug_logger.cc:9] ERROR failed to connect, willRetry=1, retry=2, retryLimit=3, rank=15, size=16, local=[10.10.4.2]:24296, remote=[10.10.4.2]:54671$15, error=SO_ERROR: Connection refused, remote=[10.10.4.2]:54671$15
+[/pytorch/third_party/gloo/gloo/transport/tcp/debug_logger.cc:9] ERROR failed to connect, willRetry=1, retry=3, retryLimit=3, rank=15, size=16, local=[10.10.4.2]:30440, remote=[10.10.4.2]:54671$15, error=SO_ERROR: Connection refused, remote=[10.10.4.2]:54671$15
+[/pytorch/third_party/gloo/gloo/transport/tcp/debug_logger.cc:9] ERROR failed to connect, willRetry=1, retry=2, retryLimit=3, rank=14, size=16, local=[10.10.4.2]:27880, remote=[10.10.4.2]:54671$14, error=SO_ERROR: Connection refused, remote=[10.10.4.2]:54671$14
+[/pytorch/third_party/gloo/gloo/transport/tcp/debug_logger.cc:9] ERROR failed to connect, willRetry=1, retry=3, retryLimit=3, rank=14, size=16, local=[10.10.4.2]:33000, remote=[10.10.4.2]:54671$14, error=SO_ERROR: Connection refused, remote=[10.10.4.2]:54671$14
+[/pytorch/third_party/gloo/gloo/transport/tcp/debug_logger.cc:9] ERROR failed to connect, willRetry=0, retry=4, retryLimit=3, rank=15, size=16, local=[10.10.4.2]:32488, remote=[10.10.4.2]:54671$15, error=SO_ERROR: Connection refused, remote=[10.10.4.2]:54671$15
+[/pytorch/third_party/gloo/gloo/transport/tcp/debug_logger.cc:9] ERROR failed to connect, willRetry=0, retry=4, retryLimit=3, rank=14, size=16, local=[10.10.4.2]:34536, remote=[10.10.4.2]:54671$14, error=SO_ERROR: Connection refused, remote=[10.10.4.2]:54671$14
+[rank8]: Traceback (most recent call last):
+[rank8]:   File "/flash/scripts/train_moe.py", line 103, in <module>
+[rank8]:     if __name__=='__main__':main()
+[rank8]:                             ^^^^^^
+[rank8]:   File "/flash/scripts/train_moe.py", line 21, in main
+[rank8]:     ps.initialize_model_parallel(tensor_model_parallel_size=a.tp,pipeline_model_parallel_size=a.pp,expert_model_parallel_size=a.ep,**({'expert_tensor_parallel_size':1} if modern else {}))
+[rank8]:   File "/flash/vendor/MegatronCore/megatron/core/parallel_state.py", line 803, in initialize_model_parallel
+[rank8]:     group_gloo = create_group(
+[rank8]:                  ^^^^^^^^^^^^^
+[rank8]:   File "/flash/vendor/MegatronCore/megatron/core/parallel_state.py", line 179, in create_group
+[rank8]:     return torch.distributed.new_group(**kwargs)
+[rank8]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 97, in wrapper
+[rank8]:     func_return = func(*args, **kwargs)
+[rank8]:                   ^^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 5374, in new_group
+[rank8]:     return _new_group_with_tag(
+[rank8]:            ^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 5465, in _new_group_with_tag
+[rank8]:     pg, pg_store = _new_process_group_helper(
+[rank8]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 2043, in _new_process_group_helper
+[rank8]:     backend_class = ProcessGroupGloo(
+[rank8]:                     ^^^^^^^^^^^^^^^^^
+[rank8]: RuntimeError: Gloo connectFullMesh failed with [/pytorch/third_party/gloo/gloo/transport/tcp/pair.cc:547] Connection closed by peer [10.10.4.2]:9411
+[rank15]:[E1015 14:33:18.415784326 ProcessGroupGloo.cpp:66] Gloo connectFullMesh failed with [/pytorch/third_party/gloo/gloo/transport/tcp/pair.cc:152] timed out connecting: SO_ERROR: Connection refused, remote=[10.10.4.2]:54671$15
+[rank14]:[E1015 14:33:18.415788832 ProcessGroupGloo.cpp:66] Gloo connectFullMesh failed with [/pytorch/third_party/gloo/gloo/transport/tcp/pair.cc:152] timed out connecting: SO_ERROR: Connection refused, remote=[10.10.4.2]:54671$14
+[rank15]: Traceback (most recent call last):
+[rank15]:   File "/flash/scripts/train_moe.py", line 103, in <module>
+[rank15]:     if __name__=='__main__':main()
+[rank15]:                             ^^^^^^
+[rank15]:   File "/flash/scripts/train_moe.py", line 21, in main
+[rank15]:     ps.initialize_model_parallel(tensor_model_parallel_size=a.tp,pipeline_model_parallel_size=a.pp,expert_model_parallel_size=a.ep,**({'expert_tensor_parallel_size':1} if modern else {}))
+[rank15]:   File "/flash/vendor/MegatronCore/megatron/core/parallel_state.py", line 803, in initialize_model_parallel
+[rank15]:     group_gloo = create_group(
+[rank15]:                  ^^^^^^^^^^^^^
+[rank15]:   File "/flash/vendor/MegatronCore/megatron/core/parallel_state.py", line 179, in create_group
+[rank15]:     return torch.distributed.new_group(**kwargs)
+[rank15]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank15]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 97, in wrapper
+[rank15]:     func_return = func(*args, **kwargs)
+[rank15]:                   ^^^^^^^^^^^^^^^^^^^^^
+[rank15]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 5374, in new_group
+[rank15]:     return _new_group_with_tag(
+[rank15]:            ^^^^^^^^^^^^^^^^^^^^
+[rank15]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 5465, in _new_group_with_tag
+[rank15]:     pg, pg_store = _new_process_group_helper(
+[rank15]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank15]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 2043, in _new_process_group_helper
+[rank15]:     backend_class = ProcessGroupGloo(
+[rank15]:                     ^^^^^^^^^^^^^^^^^
+[rank15]: RuntimeError: Gloo connectFullMesh failed with [/pytorch/third_party/gloo/gloo/transport/tcp/pair.cc:152] timed out connecting: SO_ERROR: Connection refused, remote=[10.10.4.2]:54671$15
+[rank14]: Traceback (most recent call last):
+[rank14]:   File "/flash/scripts/train_moe.py", line 103, in <module>
+[rank14]:     if __name__=='__main__':main()
+[rank14]:                             ^^^^^^
+[rank14]:   File "/flash/scripts/train_moe.py", line 21, in main
+[rank14]:     ps.initialize_model_parallel(tensor_model_parallel_size=a.tp,pipeline_model_parallel_size=a.pp,expert_model_parallel_size=a.ep,**({'expert_tensor_parallel_size':1} if modern else {}))
+[rank14]:   File "/flash/vendor/MegatronCore/megatron/core/parallel_state.py", line 803, in initialize_model_parallel
+[rank14]:     group_gloo = create_group(
+[rank14]:                  ^^^^^^^^^^^^^
+[rank14]:   File "/flash/vendor/MegatronCore/megatron/core/parallel_state.py", line 179, in create_group
+[rank14]:     return torch.distributed.new_group(**kwargs)
+[rank14]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank14]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 97, in wrapper
+[rank14]:     func_return = func(*args, **kwargs)
+[rank14]:                   ^^^^^^^^^^^^^^^^^^^^^
+[rank14]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 5374, in new_group
+[rank14]:     return _new_group_with_tag(
+[rank14]:            ^^^^^^^^^^^^^^^^^^^^
+[rank14]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 5465, in _new_group_with_tag
+[rank14]:     pg, pg_store = _new_process_group_helper(
+[rank14]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank14]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 2043, in _new_process_group_helper
+[rank14]:     backend_class = ProcessGroupGloo(
+[rank14]:                     ^^^^^^^^^^^^^^^^^
+[rank14]: RuntimeError: Gloo connectFullMesh failed with [/pytorch/third_party/gloo/gloo/transport/tcp/pair.cc:152] timed out connecting: SO_ERROR: Connection refused, remote=[10.10.4.2]:54671$14
+[rank8]:[W1015 14:33:18.553239711 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W1015 14:33:19.066000 16381 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 16384 closing signal SIGTERM
+W1015 14:33:19.068000 16381 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 16385 closing signal SIGTERM
+W1015 14:33:19.070000 16381 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 16387 closing signal SIGTERM
+W1015 14:33:19.071000 16381 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 16388 closing signal SIGTERM
+W1015 14:33:19.073000 16381 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 16389 closing signal SIGTERM
+W1015 14:33:19.074000 16381 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 16390 closing signal SIGTERM
+W1015 14:33:19.076000 16381 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 16391 closing signal SIGTERM
+E1015 14:33:19.419000 16381 torch/distributed/elastic/multiprocessing/api.py:984] failed (exitcode: 1) local_rank: 2 (pid: 16386) of binary: bash
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 7, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 362, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 991, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 982, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 170, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 317, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+bash FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-10-15_14:33:19
+  host      : gpu-02
+  rank      : 8 (local_rank: 0)
+  exitcode  : -15 (pid: 16384)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 16384
+[2]:
+  time      : 2026-10-15_14:33:19
+  host      : gpu-02
+  rank      : 9 (local_rank: 1)
+  exitcode  : -15 (pid: 16385)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 16385
+[3]:
+  time      : 2026-10-15_14:33:19
+  host      : gpu-02
+  rank      : 11 (local_rank: 3)
+  exitcode  : -15 (pid: 16387)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 16387
+[4]:
+  time      : 2026-10-15_14:33:19
+  host      : gpu-02
+  rank      : 12 (local_rank: 4)
+  exitcode  : -15 (pid: 16388)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 16388
+[5]:
+  time      : 2026-10-15_14:33:19
+  host      : gpu-02
+  rank      : 13 (local_rank: 5)
+  exitcode  : -15 (pid: 16389)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 16389
+[6]:
+  time      : 2026-10-15_14:33:19
+  host      : gpu-02
+  rank      : 14 (local_rank: 6)
+  exitcode  : -15 (pid: 16390)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 16390
+[7]:
+  time      : 2026-10-15_14:33:19
+  host      : gpu-02
+  rank      : 15 (local_rank: 7)
+  exitcode  : -15 (pid: 16391)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 16391
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-10-15_14:33:19
+  host      : gpu-02
+  rank      : 10 (local_rank: 2)
+  exitcode  : 1 (pid: 16386)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

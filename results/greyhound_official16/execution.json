@@ -1,0 +1,9 @@
+{
+  "run": "greyhound_official16",
+  "exits": [
+    "0",
+    "0"
+  ],
+  "source": "official",
+  "config_adaptations": "patches/greyhound-hardware.patch"
+}

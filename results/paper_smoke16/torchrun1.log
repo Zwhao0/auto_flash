@@ -1,0 +1,247 @@
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+[Gloo] Rank 8 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 9 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 10 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 11 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 12 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank [Gloo] Rank 14 is connected to 1315 is connected to  peer ranks. 15Expected number of connected peer ranks is :  peer ranks. 15Expected number of connected peer ranks is : 15
+
+[Gloo] Rank 15 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 8 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 9 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 10 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 11 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 12 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank [Gloo] Rank 13 is connected to 1415 is connected to  peer ranks. 15Expected number of connected peer ranks is :  peer ranks. [Gloo] Rank 15Expected number of connected peer ranks is : 15
+15 is connected to 15
+ peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 1 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+[Gloo] Rank 1 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+[rank13]: Traceback (most recent call last):
+[rank13]:   File "/flash/scripts/train_moe.py", line 86, in <module>
+[rank13]:     if __name__=='__main__':main()
+[rank13]:                             ^^^^^^
+[rank13]:   File "/flash/scripts/train_moe.py", line 24, in main
+[rank13]:     cfg=TransformerConfig(num_layers=a.layers,hidden_size=a.hidden,num_attention_heads=8,ffn_hidden_size=a.hidden*2,num_moe_experts=8,moe_router_topk=2,moe_aux_loss_coeff=.01,tensor_model_parallel_size=a.tp,pipeline_model_parallel_size=a.pp,expert_model_parallel_size=a.ep,sequence_parallel=a.tp>1,hidden_dropout=0.,attention_dropout=0.,params_dtype=torch.float32,pipeline_dtype=torch.float32,gradient_accumulation_fusion=False,async_tensor_model_parallel_allreduce=a.tp==1,**extra)
+[rank13]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank13]:   File "<string>", line 177, in __init__
+[rank13]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_config.py", line 946, in __post_init__
+[rank13]:     assert not self.add_bias_linear, "Bias is not supported for MoE"
+[rank13]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank13]: AssertionError: Bias is not supported for MoE
+[rank10]: Traceback (most recent call last):
+[rank10]:   File "/flash/scripts/train_moe.py", line 86, in <module>
+[rank10]:     if __name__=='__main__':main()
+[rank10]:                             ^^^^^^
+[rank10]:   File "/flash/scripts/train_moe.py", line 24, in main
+[rank10]:     cfg=TransformerConfig(num_layers=a.layers,hidden_size=a.hidden,num_attention_heads=8,ffn_hidden_size=a.hidden*2,num_moe_experts=8,moe_router_topk=2,moe_aux_loss_coeff=.01,tensor_model_parallel_size=a.tp,pipeline_model_parallel_size=a.pp,expert_model_parallel_size=a.ep,sequence_parallel=a.tp>1,hidden_dropout=0.,attention_dropout=0.,params_dtype=torch.float32,pipeline_dtype=torch.float32,gradient_accumulation_fusion=False,async_tensor_model_parallel_allreduce=a.tp==1,**extra)
+[rank10]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank10]:   File "<string>", line 177, in __init__
+[rank10]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_config.py", line 946, in __post_init__
+[rank10]:     assert not self.add_bias_linear, "Bias is not supported for MoE"
+[rank10]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank10]: AssertionError: Bias is not supported for MoE
+[Gloo] Rank 1 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+[rank12]: Traceback (most recent call last):
+[rank12]:   File "/flash/scripts/train_moe.py", line 86, in <module>
+[rank12]:     if __name__=='__main__':main()
+[rank12]:                             ^^^^^^
+[rank12]:   File "/flash/scripts/train_moe.py", line 24, in main
+[rank12]:     cfg=TransformerConfig(num_layers=a.layers,hidden_size=a.hidden,num_attention_heads=8,ffn_hidden_size=a.hidden*2,num_moe_experts=8,moe_router_topk=2,moe_aux_loss_coeff=.01,tensor_model_parallel_size=a.tp,pipeline_model_parallel_size=a.pp,expert_model_parallel_size=a.ep,sequence_parallel=a.tp>1,hidden_dropout=0.,attention_dropout=0.,params_dtype=torch.float32,pipeline_dtype=torch.float32,gradient_accumulation_fusion=False,async_tensor_model_parallel_allreduce=a.tp==1,**extra)
+[rank12]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank12]:   File "<string>", line 177, in __init__
+[rank12]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_config.py", line 946, in __post_init__
+[rank12]:     assert not self.add_bias_linear, "Bias is not supported for MoE"
+[rank12]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank12]: AssertionError: Bias is not supported for MoE
+[Gloo] Rank 1 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+[Gloo] Rank [rank15]: Traceback (most recent call last):
+[rank15]:   File "/flash/scripts/train_moe.py", line 86, in <module>
+[rank15]:     if __name__=='__main__':main()
+[rank15]:                             ^^^^^^
+[rank15]:   File "/flash/scripts/train_moe.py", line 24, in main
+[rank15]:     cfg=TransformerConfig(num_layers=a.layers,hidden_size=a.hidden,num_attention_heads=8,ffn_hidden_size=a.hidden*2,num_moe_experts=8,moe_router_topk=2,moe_aux_loss_coeff=.01,tensor_model_parallel_size=a.tp,pipeline_model_parallel_size=a.pp,expert_model_parallel_size=a.ep,sequence_parallel=a.tp>1,hidden_dropout=0.,attention_dropout=0.,params_dtype=torch.float32,pipeline_dtype=torch.float32,gradient_accumulation_fusion=False,async_tensor_model_parallel_allreduce=a.tp==1,**extra)
+[rank15]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank15]:   File "<string>", line 177, in __init__
+[rank15]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_config.py", line 946, in __post_init__
+[rank15]:     assert not self.add_bias_linear, "Bias is not supported for MoE"
+[rank15]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank15]: AssertionError: Bias is not supported for MoE
+1 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+[rank8]: Traceback (most recent call last):
+[rank8]:   File "/flash/scripts/train_moe.py", line 86, in <module>
+[rank8]:     if __name__=='__main__':main()
+[rank8]:                             ^^^^^^
+[rank8]:   File "/flash/scripts/train_moe.py", line 24, in main
+[rank8]:     cfg=TransformerConfig(num_layers=a.layers,hidden_size=a.hidden,num_attention_heads=8,ffn_hidden_size=a.hidden*2,num_moe_experts=8,moe_router_topk=2,moe_aux_loss_coeff=.01,tensor_model_parallel_size=a.tp,pipeline_model_parallel_size=a.pp,expert_model_parallel_size=a.ep,sequence_parallel=a.tp>1,hidden_dropout=0.,attention_dropout=0.,params_dtype=torch.float32,pipeline_dtype=torch.float32,gradient_accumulation_fusion=False,async_tensor_model_parallel_allreduce=a.tp==1,**extra)
+[rank8]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "<string>", line 177, in __init__
+[rank8]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_config.py", line 946, in __post_init__
+[rank8]:     assert not self.add_bias_linear, "Bias is not supported for MoE"
+[rank8]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank8]: AssertionError: Bias is not supported for MoE
+[Gloo] Rank 1 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+[rank14]: Traceback (most recent call last):
+[rank14]:   File "/flash/scripts/train_moe.py", line 86, in <module>
+[rank14]:     if __name__=='__main__':main()
+[rank14]:                             ^^^^^^
+[rank14]:   File "/flash/scripts/train_moe.py", line 24, in main
+[rank14]:     cfg=TransformerConfig(num_layers=a.layers,hidden_size=a.hidden,num_attention_heads=8,ffn_hidden_size=a.hidden*2,num_moe_experts=8,moe_router_topk=2,moe_aux_loss_coeff=.01,tensor_model_parallel_size=a.tp,pipeline_model_parallel_size=a.pp,expert_model_parallel_size=a.ep,sequence_parallel=a.tp>1,hidden_dropout=0.,attention_dropout=0.,params_dtype=torch.float32,pipeline_dtype=torch.float32,gradient_accumulation_fusion=False,async_tensor_model_parallel_allreduce=a.tp==1,**extra)
+[rank14]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank14]:   File "<string>", line 177, in __init__
+[rank14]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_config.py", line 946, in __post_init__
+[rank14]:     assert not self.add_bias_linear, "Bias is not supported for MoE"
+[rank14]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank14]: AssertionError: Bias is not supported for MoE
+[Gloo] Rank 1 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+[rank9]: Traceback (most recent call last):
+[rank9]:   File "/flash/scripts/train_moe.py", line 86, in <module>
+[rank9]:     if __name__=='__main__':main()
+[rank9]:                             ^^^^^^
+[rank9]:   File "/flash/scripts/train_moe.py", line 24, in main
+[rank9]:     cfg=TransformerConfig(num_layers=a.layers,hidden_size=a.hidden,num_attention_heads=8,ffn_hidden_size=a.hidden*2,num_moe_experts=8,moe_router_topk=2,moe_aux_loss_coeff=.01,tensor_model_parallel_size=a.tp,pipeline_model_parallel_size=a.pp,expert_model_parallel_size=a.ep,sequence_parallel=a.tp>1,hidden_dropout=0.,attention_dropout=0.,params_dtype=torch.float32,pipeline_dtype=torch.float32,gradient_accumulation_fusion=False,async_tensor_model_parallel_allreduce=a.tp==1,**extra)
+[rank9]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank9]:   File "<string>", line 177, in __init__
+[rank9]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_config.py", line 946, in __post_init__
+[rank9]:     assert not self.add_bias_linear, "Bias is not supported for MoE"
+[rank9]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank9]: AssertionError: Bias is not supported for MoE
+[Gloo] Rank 1 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+[rank11]: Traceback (most recent call last):
+[rank11]:   File "/flash/scripts/train_moe.py", line 86, in <module>
+[rank11]:     if __name__=='__main__':main()
+[rank11]:                             ^^^^^^
+[rank11]:   File "/flash/scripts/train_moe.py", line 24, in main
+[rank11]:     cfg=TransformerConfig(num_layers=a.layers,hidden_size=a.hidden,num_attention_heads=8,ffn_hidden_size=a.hidden*2,num_moe_experts=8,moe_router_topk=2,moe_aux_loss_coeff=.01,tensor_model_parallel_size=a.tp,pipeline_model_parallel_size=a.pp,expert_model_parallel_size=a.ep,sequence_parallel=a.tp>1,hidden_dropout=0.,attention_dropout=0.,params_dtype=torch.float32,pipeline_dtype=torch.float32,gradient_accumulation_fusion=False,async_tensor_model_parallel_allreduce=a.tp==1,**extra)
+[rank11]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank11]:   File "<string>", line 177, in __init__
+[rank11]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_config.py", line 946, in __post_init__
+[rank11]:     assert not self.add_bias_linear, "Bias is not supported for MoE"
+[rank11]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank11]: AssertionError: Bias is not supported for MoE
+[rank8]:[W1015 14:14:28.619258913 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank9]:[W1015 14:14:29.807963028 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank10]:[W1015 14:14:29.817881133 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank11]:[W1015 14:14:29.818096939 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank12]:[W1015 14:14:29.828099005 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank13]:[W1015 14:14:29.838125396 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank14]:[W1015 14:14:29.848133656 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank15]:[W1015 14:14:29.848398476 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W1015 14:14:29.743000 1012 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 1033 closing signal SIGTERM
+W1015 14:14:29.745000 1012 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 1034 closing signal SIGTERM
+W1015 14:14:29.747000 1012 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 1035 closing signal SIGTERM
+W1015 14:14:29.749000 1012 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 1036 closing signal SIGTERM
+W1015 14:14:29.750000 1012 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 1039 closing signal SIGTERM
+W1015 14:14:29.752000 1012 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 1040 closing signal SIGTERM
+E1015 14:14:29.883000 1012 torch/distributed/elastic/multiprocessing/api.py:984] failed (exitcode: 1) local_rank: 4 (pid: 1037) of binary: bash
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 7, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 362, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 991, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 982, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 170, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 317, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+bash FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-10-15_14:14:29
+  host      : gpu-02
+  rank      : 13 (local_rank: 5)
+  exitcode  : 1 (pid: 1038)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2026-10-15_14:14:29
+  host      : gpu-02
+  rank      : 8 (local_rank: 0)
+  exitcode  : 1 (pid: 1033)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2026-10-15_14:14:29
+  host      : gpu-02
+  rank      : 9 (local_rank: 1)
+  exitcode  : 1 (pid: 1034)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[4]:
+  time      : 2026-10-15_14:14:29
+  host      : gpu-02
+  rank      : 10 (local_rank: 2)
+  exitcode  : 1 (pid: 1035)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[5]:
+  time      : 2026-10-15_14:14:29
+  host      : gpu-02
+  rank      : 11 (local_rank: 3)
+  exitcode  : 1 (pid: 1036)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[6]:
+  time      : 2026-10-15_14:14:29
+  host      : gpu-02
+  rank      : 14 (local_rank: 6)
+  exitcode  : 1 (pid: 1039)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[7]:
+  time      : 2026-10-15_14:14:29
+  host      : gpu-02
+  rank      : 15 (local_rank: 7)
+  exitcode  : 1 (pid: 1040)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-10-15_14:14:29
+  host      : gpu-02
+  rank      : 12 (local_rank: 4)
+  exitcode  : 1 (pid: 1037)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

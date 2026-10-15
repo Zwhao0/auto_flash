@@ -1,0 +1,82 @@
+/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+[rank0]:[W1015 15:06:56.922215726 ProcessGroupNCCL.cpp:5138] Guessing device ID based on global rank. This can cause a hang if rank to GPU mapping is heterogeneous. You can specify device_id in init_process_group()
+[rank0]:[E1015 15:08:27.780766373 ProcessGroupNCCL.cpp:688] [Rank 0] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=2, OpType=ALLREDUCE, NumelIn=33554432, NumelOut=33554432, Timeout(ms)=90000) ran for 90077 milliseconds before timing out.
+[rank0]:[E1015 15:08:27.781358033 ProcessGroupNCCL.cpp:2277] [PG ID 0 PG GUID 0(default_pg) Rank 0]  failure detected by watchdog at work sequence id: 2 PG status: last enqueued work: 2, last completed work: 1
+[rank0]:[E1015 15:08:27.781381723 ProcessGroupNCCL.cpp:735] Stack trace of the failed collective not found, potentially because FlightRecorder is disabled. You can enable it by setting TORCH_NCCL_TRACE_BUFFER_SIZE to a non-zero value.
+[rank0]:[E1015 15:08:27.781513239 ProcessGroupNCCL.cpp:2610] [PG ID 0 PG GUID 0(default_pg) Rank 0] First PG on this rank to signal dumping.
+[rank0]:[E1015 15:08:27.936228922 ProcessGroupNCCL.cpp:1890] [PG ID 0 PG GUID 0(default_pg) Rank 0] Received a dump signal due to a collective timeout from this local rank and we will try our best to dump the debug info. Last enqueued NCCL work: 2, last completed NCCL work: 1.This is most likely caused by incorrect usages of collectives, e.g., wrong sizes used across ranks, the order of collectives is not same for all ranks or the scheduled collective, for some reason, didn't run. Additionally, this can be caused by GIL deadlock or other reasons such as network errors or bugs in the communications library (e.g. NCCL), etc. 
+[rank0]:[E1015 15:08:27.936589872 ProcessGroupNCCL.cpp:1606] [PG ID 0 PG GUID 0(default_pg) Rank 0] ProcessGroupNCCL preparing to dump debug info. Include stack trace: 1, only active collectives: 0
+[rank0]:[E1015 15:09:27.365391500 ProcessGroupNCCL.cpp:749] [Rank 0] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank0]:[E1015 15:09:27.365461199 ProcessGroupNCCL.cpp:763] [Rank 0] To avoid data inconsistency, we are taking the entire process down.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/flash/scripts/background_comm.py", line 26, in <module>
+[rank0]:     dist.all_reduce(stop, op=dist.ReduceOp.MAX)
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 83, in wrapper
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 3007, in all_reduce
+[rank0]:     work = group.allreduce([tensor], opts)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: torch.distributed.DistBackendError: NCCL communicator was aborted on rank 0. 
+[rank0]:[E1015 15:09:27.370451441 ProcessGroupNCCL.cpp:2093] [PG ID 0 PG GUID 0(default_pg) Rank 0] Process group watchdog thread terminated with exception: [Rank 0] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=2, OpType=ALLREDUCE, NumelIn=33554432, NumelOut=33554432, Timeout(ms)=90000) ran for 90077 milliseconds before timing out.
+Exception raised from checkTimeout at /pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:691 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x9d (0x78ded4b72fdd in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x26a (0x78dddde55f5a in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::Watchdog::runLoop() + 0x16a1 (0x78dddde5a441 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::Watchdog::run() + 0x105 (0x78dddde5b785 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xecdb4 (0x78dea606edb4 in /lib/x86_64-linux-gnu/libstdc++.so.6)
+frame #5: <unknown function> + 0x9caa4 (0x78ded5864aa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #6: <unknown function> + 0x129c6c (0x78ded58f1c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+terminate called after throwing an instance of 'c10::DistBackendError'
+  what():  [PG ID 0 PG GUID 0(default_pg) Rank 0] Process group watchdog thread terminated with exception: [Rank 0] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=2, OpType=ALLREDUCE, NumelIn=33554432, NumelOut=33554432, Timeout(ms)=90000) ran for 90077 milliseconds before timing out.
+Exception raised from checkTimeout at /pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:691 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x9d (0x78ded4b72fdd in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x26a (0x78dddde55f5a in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::Watchdog::runLoop() + 0x16a1 (0x78dddde5a441 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::Watchdog::run() + 0x105 (0x78dddde5b785 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xecdb4 (0x78dea606edb4 in /lib/x86_64-linux-gnu/libstdc++.so.6)
+frame #5: <unknown function> + 0x9caa4 (0x78ded5864aa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #6: <unknown function> + 0x129c6c (0x78ded58f1c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+Exception raised from run at /pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:2099 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x9d (0x78ded4b72fdd in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xed5abe (0x78dddd8d0abe in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so)
+frame #2: <unknown function> + 0xecdb4 (0x78dea606edb4 in /lib/x86_64-linux-gnu/libstdc++.so.6)
+frame #3: <unknown function> + 0x9caa4 (0x78ded5864aa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #4: <unknown function> + 0x129c6c (0x78ded58f1c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+E1015 15:09:29.995000 44604 torch/distributed/elastic/multiprocessing/api.py:984] failed (exitcode: -6) local_rank: 0 (pid: 44689) of binary: /usr/bin/python3
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 7, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 362, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 991, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 982, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 170, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 317, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+======================================================
+scripts/background_comm.py FAILED
+------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-10-15_15:09:29
+  host      : gpu-01
+  rank      : 0 (local_rank: 0)
+  exitcode  : -6 (pid: 44689)
+  error_file: <N/A>
+  traceback : Signal 6 (SIGABRT) received by PID 44689
+======================================================

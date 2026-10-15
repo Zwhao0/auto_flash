@@ -1,0 +1,7 @@
+{
+  "run": "paper_allreduce_monitor16",
+  "exits": [
+    "0",
+    "0"
+  ]
+}

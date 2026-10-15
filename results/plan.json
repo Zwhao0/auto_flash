@@ -1,0 +1,123 @@
+[
+  {
+    "id": "paper_delay5",
+    "kind": "calibrated_gpu_delay",
+    "severity": 0.05,
+    "forced": false
+  },
+  {
+    "id": "paper_delay25",
+    "kind": "calibrated_gpu_delay",
+    "severity": 0.25,
+    "forced": false
+  },
+  {
+    "id": "paper_delay45",
+    "kind": "calibrated_gpu_delay",
+    "severity": 0.45,
+    "forced": false
+  },
+  {
+    "id": "paper_delay65",
+    "kind": "calibrated_gpu_delay",
+    "severity": 0.65,
+    "forced": false
+  },
+  {
+    "id": "paper_delay85",
+    "kind": "calibrated_gpu_delay",
+    "severity": 0.85,
+    "forced": false
+  },
+  {
+    "id": "paper_clock600_ep8_tp1_pp1",
+    "kind": "physical_clock",
+    "mhz": 600,
+    "tp": 1,
+    "pp": 1,
+    "ep": 8,
+    "forced": true
+  },
+  {
+    "id": "paper_clock600_ep4_tp2_pp1",
+    "kind": "physical_clock",
+    "mhz": 600,
+    "tp": 2,
+    "pp": 1,
+    "ep": 4,
+    "forced": true
+  },
+  {
+    "id": "paper_clock600_ep4_tp1_pp2",
+    "kind": "physical_clock",
+    "mhz": 600,
+    "tp": 1,
+    "pp": 2,
+    "ep": 4,
+    "forced": true
+  },
+  {
+    "id": "paper_clock600_ep4_tp2_pp2",
+    "kind": "physical_clock",
+    "mhz": 600,
+    "tp": 2,
+    "pp": 2,
+    "ep": 4,
+    "forced": true
+  },
+  {
+    "id": "paper_clock1965",
+    "kind": "physical_clock",
+    "mhz": 1965,
+    "forced": true
+  },
+  {
+    "id": "paper_clock1600",
+    "kind": "physical_clock",
+    "mhz": 1600,
+    "forced": true
+  },
+  {
+    "id": "paper_clock1200",
+    "kind": "physical_clock",
+    "mhz": 1200,
+    "forced": true
+  },
+  {
+    "id": "paper_clock900",
+    "kind": "physical_clock",
+    "mhz": 900,
+    "forced": true
+  },
+  {
+    "id": "paper_clock345",
+    "kind": "physical_clock",
+    "mhz": 345,
+    "forced": true
+  },
+  {
+    "id": "paper_oom",
+    "kind": "oom",
+    "forced": false
+  },
+  {
+    "id": "paper_timeout",
+    "kind": "timeout",
+    "forced": false
+  },
+  {
+    "id": "paper_transient",
+    "kind": "single_step_gpu_delay",
+    "forced": false
+  },
+  {
+    "id": "paper_background",
+    "kind": "background_nccl",
+    "forced": false
+  },
+  {
+    "id": "paper_profile_healthy",
+    "kind": "profile_overhead",
+    "forced": true
+  }
+]

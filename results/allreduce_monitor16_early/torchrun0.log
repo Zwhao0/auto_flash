@@ -1,0 +1,7 @@
+NCCL version 2.19.3+cuda12.2
+{"rank": 0, "mib": 4, "repeats": 100, "mean_ms": 4.971768622398376}
+{"rank": 0, "mib": 8, "repeats": 100, "mean_ms": 8.865071020126344}
+{"rank": 0, "mib": 16, "repeats": 100, "mean_ms": 17.498101348876954}
+{"rank": 0, "mib": 32, "repeats": 100, "mean_ms": 30.04015075683594}
+{"rank": 0, "mib": 64, "repeats": 100, "mean_ms": 55.14105667114258}
+{"rank": 0, "mib": 128, "repeats": 100, "mean_ms": 109.49805603027343}

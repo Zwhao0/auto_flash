@@ -1,0 +1,7 @@
+{
+  "run": "allreduce_monitor16_early",
+  "exits": [
+    "0",
+    "0"
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "assets": [
+    {
+      "path": "wheelhouse/annotated_types-0.8.0-py3-none-any.whl",
+      "bytes": 13427,
+      "sha256": "f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0"
+    },
+    {
+      "path": "wheelhouse/deepspeed-0.19.7.tar.gz",
+      "bytes": 1927513,
+      "sha256": "c6640ecbda08ec6b4b6c72521155351719f145f48d850687b7332f503992921c"
+    },
+    {
+      "path": "wheelhouse/einops-0.8.2-py3-none-any.whl",
+      "bytes": 65638,
+      "sha256": "54058201ac7087911181bfec4af6091bb59380360f069276601256a76af08193"
+    },
+    {
+      "path": "wheelhouse/hjson-3.1.0-py3-none-any.whl",
+      "bytes": 54018,
+      "sha256": "65713cdcf13214fb554eb8b4ef803419733f4f5e551047c9b711098ab7186b89"
+    },
+    {
+      "path": "wheelhouse/msgpack-1.2.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "bytes": 472998,
+      "sha256": "ede33b2892ceb976283e009ad12fa1834cfdf1f9c43ee9c97849fc588d00a618"
+    },
+    {
+      "path": "wheelhouse/numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "bytes": 16727283,
+      "sha256": "fbde6962867ee75b48b0ee29b2b9372ec5d617799dbaf38e82dc0596f2f7738a"
+    },
+    {
+      "path": "wheelhouse/packaging-26.3-py3-none-any.whl",
+      "bytes": 129956,
+      "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c"
+    },
+    {
+      "path": "wheelhouse/py_cpuinfo-9.0.0-py3-none-any.whl",
+      "bytes": 22335,
+      "sha256": "859625bc251f64e21f077d099d4162689c762b5d6a4c3c97553d56241c9674d5"
+    },
+    {
+      "path": "wheelhouse/pydantic-2.14.1-py3-none-any.whl",
+      "bytes": 488106,
+      "sha256": "9195d967ec791692a04438115466764fb8b9a27b31f14a760437694f40d6b454"
+    },
+    {
+      "path": "wheelhouse/pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "bytes": 2160157,
+      "sha256": "93ba4e9d8210d941c200431a56b2c0400b131865947903937ed3ec5404307d2e"
+    },
+    {
+      "path": "wheelhouse/pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "bytes": 807870,
+      "sha256": "ba1cc08a7ccde2d2ec775841541641e4548226580ab850948cbfda66a1befcdc"
+    },
+    {
+      "path": "wheelhouse/rbeast-0.1.25-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "bytes": 1621391,
+      "sha256": "1bde99a4c3b6cc8b130c8cd2d179385c50dbba6b00d82917ecb2475b0083eab5"
+    },
+    {
+      "path": "wheelhouse/redis-8.1.0-py3-none-any.whl",
+      "bytes": 560618,
+      "sha256": "a4fe1aac3d3b3cc791d4b3d5931c5a956045dc951ee74d1c913ee3ac4d2ee9fb"
+    },
+    {
+      "path": "wheelhouse/tqdm-4.70.1-py3-none-any.whl",
+      "bytes": 80199,
+      "sha256": "c293e525e6fef9c20e8728fd4612df02a0aa31bb5fe91ecd93e123b1b7bffa73"
+    },
+    {
+      "path": "wheelhouse/typing_extensions-4.16.0-py3-none-any.whl",
+      "bytes": 45571,
+      "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"
+    },
+    {
+      "path": "wheelhouse/typing_inspection-0.4.4-py3-none-any.whl",
+      "bytes": 14750,
+      "sha256": "65b8397ba37ccbce054456aaccddfc91e6e3083c92824df348d96ca832f3f147"
+    }
+  ],
+  "repositories": {
+    "Greyhound": {
+      "commit": "d641b3997c17de700e1ef7d37e353418df7e336d",
+      "url": "https://github.com/wutianyuan1/Greyhound.git"
+    },
+    "MegatronCore": {
+      "commit": "a845aa7e12b3a117e24c2352b9e3e60bad2e3a17",
+      "url": "https://github.com/NVIDIA/Megatron-LM.git"
+    }
+  }
+}

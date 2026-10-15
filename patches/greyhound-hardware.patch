@@ -1,0 +1,48 @@
+diff --git a/detector/config.hpp b/detector/config.hpp
+index 972e05e..9f4019a 100644
+--- a/detector/config.hpp
++++ b/detector/config.hpp
+@@ -38,7 +38,7 @@ DEFINE_ENUM_WITH_STRING_CONVERSIONS(
+ // max length of PCIe string
+ #define PCI_STR_LEN 64
+ // max #GPUs
+-#define MAX_DEVS 4
++#define MAX_DEVS 8
+ // 7 metadata fields: numfields, maxrecords, numrecords, head, tail, magic, last_event
+ #define METADATA_FIELDS  7
+ // buffer magic number
+diff --git a/detector/control_plane/config.json b/detector/control_plane/config.json
+index de12a5d..268e1be 100644
+--- a/detector/control_plane/config.json
++++ b/detector/control_plane/config.json
+@@ -1 +1 @@
+-{"PCI_STR_LEN": 64, "MAX_DEVS": 4, "METADATA_FIELDS": 7, "BUFFER_MAGIC": 3735928559, "BUFFER_SIZE": 20000, "MIN_RECORD_OP_SIZE": 1024, "MAX_COMMS_PER_RANK": 128, "PAUSE_CHECK_INTERVAL": 1000, "NUM_FIELDS": 14}
+\ No newline at end of file
++{"PCI_STR_LEN": 64, "MAX_DEVS": 8, "METADATA_FIELDS": 7, "BUFFER_MAGIC": 3735928559, "BUFFER_SIZE": 20000, "MIN_RECORD_OP_SIZE": 1024, "MAX_COMMS_PER_RANK": 128, "PAUSE_CHECK_INTERVAL": 1000, "NUM_FIELDS": 14}
+\ No newline at end of file
+diff --git a/detector/control_plane/local_controller.py b/detector/control_plane/local_controller.py
+index 1285fca..94f9564 100644
+--- a/detector/control_plane/local_controller.py
++++ b/detector/control_plane/local_controller.py
+@@ -162,7 +162,7 @@ def start_local_controller():
+     parser.add_argument("-m", "--master_addr", default="127.0.0.1", type=str)
+     parser.add_argument("-p", "--master_port", default=6379, type=int)
+     parser.add_argument("-l", "--local_id", default="127.0.0.1", type=str)
+-    parser.add_argument("-c", "--config_path", default="/workspace/Greyhound/detector/control_plane/config.json", type=str)
++    parser.add_argument("-c", "--config_path", default="/flash/vendor/Greyhound/detector/control_plane/config.json", type=str)
+     parser.add_argument("-o", "--output_path", default="/workspace/Greyhound/logs/", type=str)
+     args = parser.parse_args()
+     controller = LocalController(
+diff --git a/detector/global_status.cpp b/detector/global_status.cpp
+index e1a9295..6d76e11 100644
+--- a/detector/global_status.cpp
++++ b/detector/global_status.cpp
+@@ -61,7 +61,7 @@ void GlobalStatus::initialize(const char* nccl_path_)
+         new NcclRecordStorage(Record::numFields(), BUFFER_SIZE));
+ 
+     this->topo_buffer =  std::shared_ptr<NcclTopoConnection>(
+-        new NcclTopoConnection(4)  //!!replace to correct n_ranks
++        new NcclTopoConnection(16)  //!!replace to correct n_ranks
+     );
+     this->comm_in_group = nullptr;
+     this->local_comms.clear();

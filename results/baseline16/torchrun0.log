@@ -1,0 +1,21 @@
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+{"kind": "iteration", "rank": 0, "iteration": 1, "time_ms": 2657.003684027586, "loss": 5.552827835083008, "tokens_per_second": 3083.1722399354217}
+{"kind": "iteration", "rank": 0, "iteration": 2, "time_ms": 227.98468597466126, "loss": 4.687597751617432, "tokens_per_second": 35932.23801405011}
+{"kind": "iteration", "rank": 0, "iteration": 3, "time_ms": 66.77792896516621, "loss": 4.270811557769775, "tokens_per_second": 122675.2630240037}
+{"kind": "iteration", "rank": 0, "iteration": 10, "time_ms": 82.30936899781227, "loss": 3.075972557067871, "tokens_per_second": 99526.94449908537}
+{"kind": "iteration", "rank": 0, "iteration": 20, "time_ms": 82.85803499165922, "loss": 2.7590506076812744, "tokens_per_second": 98867.90099263922}
+{"kind": "iteration", "rank": 0, "iteration": 30, "time_ms": 87.44067401858047, "loss": 2.57098388671875, "tokens_per_second": 93686.37755764855}
+{"kind": "iteration", "rank": 0, "iteration": 40, "time_ms": 97.10560401435941, "loss": 2.2911088466644287, "tokens_per_second": 84361.76349604514}
+{"kind": "iteration", "rank": 0, "iteration": 50, "time_ms": 81.60135900834575, "loss": 2.168487548828125, "tokens_per_second": 100390.48490800461}
+{"kind": "iteration", "rank": 0, "iteration": 60, "time_ms": 81.29689400084317, "loss": 2.0746681690216064, "tokens_per_second": 100766.45732511056}
+{"kind": "iteration", "rank": 0, "iteration": 70, "time_ms": 84.59882502211258, "loss": 2.025484323501587, "tokens_per_second": 96833.4961845955}
+{"kind": "iteration", "rank": 0, "iteration": 80, "time_ms": 81.80660003563389, "loss": 2.015902519226074, "tokens_per_second": 100138.61957875857}
+{"kind": "iteration", "rank": 0, "iteration": 90, "time_ms": 82.41678297054023, "loss": 1.9161489009857178, "tokens_per_second": 99397.23081557575}
+{"kind": "iteration", "rank": 0, "iteration": 100, "time_ms": 83.34673603530973, "loss": 1.946683645248413, "tokens_per_second": 98288.19207184634}

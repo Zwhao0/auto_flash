@@ -1,0 +1,7 @@
+{
+  "run": "paper_oom_clean",
+  "exits": [
+    "1",
+    "1"
+  ]
+}

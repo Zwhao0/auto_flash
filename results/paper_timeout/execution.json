@@ -1,0 +1,7 @@
+{
+  "run": "paper_timeout",
+  "exits": [
+    "1",
+    "1"
+  ]
+}

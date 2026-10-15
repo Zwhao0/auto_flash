@@ -1,0 +1,40 @@
+
+
+{"epoch": 1, "seconds": 20.0, "trigger": {"forced": true, "observed_iteration": 37}, "kind": "profile_start", "time": 1792073265.9061189}
+{"epoch": 1, "trigger": {"forced": true, "observed_iteration": 37}, "profile_seconds": 20.0, "nodes_received": 2, "lost": 0, "result": {"suspects": [], "clique_scores": [{"tag": "dp", "hash": "8002725424801440005", "ranks": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], "score": 0.521537343994356, "max_avg_latency": 12315.659620535715, "cv": 0.5215373439943561}, {"tag": "dp", "hash": "7272687435536328482", "ranks": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], "score": -0.5215373439943561, "max_avg_latency": 3872.782508928572, "cv": 0.5215373439943561}, {"tag": "expert_dp", "hash": "14489421956270273854", "ranks": [6, 14], "score": 0.007380813729260346, "max_avg_latency": 9017.381339285714, "cv": 0.10914219692886347}, {"tag": "expert_dp", "hash": "2986787420901369120", "ranks": [5, 13], "score": -0.014011736877289465, "max_avg_latency": 8825.889915178572, "cv": 0.10914219692886347}, {"tag": "expert_dp", "hash": "12933697839471310539", "ranks": [3, 11], "score": -0.0004689057766786596, "max_avg_latency": 8947.116040178573, "cv": 0.10914219692886347}, {"tag": "expert_dp", "hash": "15253419952234103875", "ranks": [7, 15], "score": -0.04321413903730593, "max_avg_latency": 8564.4900625, "cv": 0.10914219692886347}, {"tag": "expert_dp", "hash": "15867677132763928175", "ranks": [1, 9], "score": 0.12324710010228827, "max_avg_latency": 10054.536776785713, "cv": 0.10914219692886347}, {"tag": "expert_dp", "hash": "13786130500470284613", "ranks": [2, 10], "score": 0.1421158241389765, "max_avg_latency": 10223.436638392857, "cv": 0.10914219692886347}, {"tag": "expert_dp", "hash": "7699668539176256377", "ranks": [4, 12], "score": -0.2391829081469014, "max_avg_latency": 6810.312200892857, "cv": 0.10914219692886347}, {"tag": "expert_dp", "hash": "12824216593565929279", "ranks": [0, 8], "score": 0.02413395186764995, "max_avg_latency": 9167.343928571428, "cv": 0.10914219692886347}], "incomplete": [], "complete_cliques": 28}, "kind": "diagnosis", "time": 1792073286.51458}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{"epochs": 1, "kind": "controller_stopped", "time": 1792073298.095084}

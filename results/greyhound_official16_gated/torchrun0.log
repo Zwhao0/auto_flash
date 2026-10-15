@@ -1,0 +1,164 @@
+Looking in indexes: https://pypi.org/simple, https://pypi.ngc.nvidia.com
+Processing ./vendor/Greyhound/detector/dist/control_plane-1.0-py3-none-any.whl
+Requirement already satisfied: redis>=5.0.0 in /usr/local/lib/python3.10/dist-packages (from control-plane==1.0) (5.0.5)
+Requirement already satisfied: numpy>=1.22.2 in /usr/local/lib/python3.10/dist-packages (from control-plane==1.0) (1.26.4)
+Requirement already satisfied: matplotlib>=3.7.0 in /usr/local/lib/python3.10/dist-packages (from control-plane==1.0) (3.8.0)
+Requirement already satisfied: pandas>=1.5.0 in /usr/local/lib/python3.10/dist-packages (from control-plane==1.0) (1.5.3)
+Requirement already satisfied: statsmodels>=0.13.0 in /usr/local/lib/python3.10/dist-packages (from control-plane==1.0) (0.14.2)
+Requirement already satisfied: Rbeast>=0.1.19 in /usr/local/lib/python3.10/dist-packages (from control-plane==1.0) (0.1.19)
+Requirement already satisfied: cvxpy>=1.5.3 in /usr/local/lib/python3.10/dist-packages/cvxpy-1.6.5-py3.10-linux-x86_64.egg (from control-plane==1.0) (1.6.5)
+Requirement already satisfied: osqp>=0.6.2 in /usr/local/lib/python3.10/dist-packages/osqp-1.0.3-py3.10-linux-x86_64.egg (from cvxpy>=1.5.3->control-plane==1.0) (1.0.3)
+Requirement already satisfied: clarabel>=0.5.0 in /usr/local/lib/python3.10/dist-packages/clarabel-0.10.0-py3.10-linux-x86_64.egg (from cvxpy>=1.5.3->control-plane==1.0) (0.10.0)
+Requirement already satisfied: scs>=3.2.4.post1 in /usr/local/lib/python3.10/dist-packages/scs-3.2.7.post2-py3.10-linux-x86_64.egg (from cvxpy>=1.5.3->control-plane==1.0) (3.2.7.post2)
+Requirement already satisfied: scipy>=1.11.0 in /usr/local/lib/python3.10/dist-packages (from cvxpy>=1.5.3->control-plane==1.0) (1.11.1)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.7.0->control-plane==1.0) (1.1.1)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.7.0->control-plane==1.0) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.7.0->control-plane==1.0) (4.43.1)
+Requirement already satisfied: kiwisolver>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.7.0->control-plane==1.0) (1.4.5)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.7.0->control-plane==1.0) (23.1)
+Requirement already satisfied: pillow>=6.2.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.7.0->control-plane==1.0) (9.2.0)
+Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.7.0->control-plane==1.0) (3.1.1)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.7.0->control-plane==1.0) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas>=1.5.0->control-plane==1.0) (2023.3)
+Requirement already satisfied: async-timeout>=4.0.3 in /usr/local/lib/python3.10/dist-packages (from redis>=5.0.0->control-plane==1.0) (4.0.3)
+Requirement already satisfied: patsy>=0.5.6 in /usr/local/lib/python3.10/dist-packages (from statsmodels>=0.13.0->control-plane==1.0) (0.5.6)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.10/dist-packages (from osqp>=0.6.2->cvxpy>=1.5.3->control-plane==1.0) (3.1.2)
+Requirement already satisfied: setuptools in /usr/local/lib/python3.10/dist-packages (from osqp>=0.6.2->cvxpy>=1.5.3->control-plane==1.0) (68.2.2)
+Requirement already satisfied: joblib in /usr/local/lib/python3.10/dist-packages (from osqp>=0.6.2->cvxpy>=1.5.3->control-plane==1.0) (1.3.2)
+Requirement already satisfied: six in /usr/local/lib/python3.10/dist-packages (from patsy>=0.5.6->statsmodels>=0.13.0->control-plane==1.0) (1.16.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.10/dist-packages (from jinja2->osqp>=0.6.2->cvxpy>=1.5.3->control-plane==1.0) (2.1.3)
+control-plane is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.
+Name: control-plane
+Version: 1.0
+Summary: UNKNOWN
+Home-page: 
+Author: 
+Author-email: 
+License: UNKNOWN
+Location: /usr/local/lib/python3.10/dist-packages
+Requires: cvxpy, matplotlib, numpy, pandas, Rbeast, redis, statsmodels
+Required-by: 
+Name: control-plane
+Version: 1.0
+Summary: UNKNOWN
+Home-page: 
+Name: control-plane
+Author: 
+Version: 1.0
+Author-email: 
+License: UNKNOWN
+Summary: UNKNOWN
+Location: /usr/local/lib/python3.10/dist-packages
+Home-page: 
+Requires: cvxpy, matplotlib, numpy, pandas, Rbeast, redis, statsmodels
+Author: 
+Required-by: 
+Author-email: 
+License: UNKNOWN
+Location: /usr/local/lib/python3.10/dist-packages
+Requires: cvxpy, matplotlib, numpy, pandas, Rbeast, redis, statsmodels
+Required-by: 
+Name: control-plane
+Name: control-plane
+Version: 1.0
+Version: 1.0
+Summary: UNKNOWN
+Summary: UNKNOWN
+Home-page: 
+Home-page: 
+Author: 
+Author: 
+Author-email: 
+Author-email: 
+License: UNKNOWN
+License: UNKNOWN
+Location: /usr/local/lib/python3.10/dist-packages
+Location: /usr/local/lib/python3.10/dist-packages
+Requires: cvxpy, matplotlib, numpy, pandas, Rbeast, redis, statsmodels
+Requires: cvxpy, matplotlib, numpy, pandas, Rbeast, redis, statsmodels
+Required-by: 
+Required-by: 
+Name: control-plane
+Version: 1.0
+Summary: UNKNOWN
+Home-page: 
+Author: 
+Author-email: 
+License: UNKNOWN
+Location: /usr/local/lib/python3.10/dist-packages
+Requires: cvxpy, matplotlib, numpy, pandas, Rbeast, redis, statsmodels
+Required-by: 
+Name: control-plane
+Version: 1.0
+Summary: UNKNOWN
+Home-page: 
+Author: 
+Author-email: 
+License: UNKNOWN
+Location: /usr/local/lib/python3.10/dist-packages
+Requires: cvxpy, matplotlib, numpy, pandas, Rbeast, redis, statsmodels
+Required-by: 
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+9307:C 15 Oct 2026 15:19:44.794 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+9307:C 15 Oct 2026 15:19:44.794 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=9307, just started
+9307:C 15 Oct 2026 15:19:44.794 # Configuration loaded
+9307:M 15 Oct 2026 15:19:44.795 # Could not create server TCP listening socket 10.10.4.1:6379: bind: Address already in use
+{"kind": "iteration", "rank": 0, "iteration": 1, "time_ms": 3159.6378830145113, "loss": 5.552827835083008, "tokens_per_second": 2592.702171359039}
+{"kind": "iteration", "rank": 0, "iteration": 2, "time_ms": 230.68204597802833, "loss": 4.687597751617432, "tokens_per_second": 35512.083158739886}
+{"kind": "iteration", "rank": 0, "iteration": 3, "time_ms": 73.96360498387367, "loss": 4.270811557769775, "tokens_per_second": 110757.1757999912}
+{"kind": "iteration", "rank": 0, "iteration": 10, "time_ms": 132.53234303556383, "loss": 3.075972557067871, "tokens_per_second": 61811.327049441454}
+{"kind": "iteration", "rank": 0, "iteration": 20, "time_ms": 78.35633197100833, "loss": 2.7590506076812744, "tokens_per_second": 104548.02814188675}
+{"kind": "iteration", "rank": 0, "iteration": 30, "time_ms": 85.18537401687354, "loss": 2.57098388671875, "tokens_per_second": 96166.74334701315}
+{"kind": "iteration", "rank": 0, "iteration": 40, "time_ms": 80.05583501653746, "loss": 2.2911088466644287, "tokens_per_second": 102328.5810248278}
+{"kind": "iteration", "rank": 0, "iteration": 50, "time_ms": 81.34247502312064, "loss": 2.168487548828125, "tokens_per_second": 100709.99189133992}
+{"kind": "iteration", "rank": 0, "iteration": 60, "time_ms": 100.05820100195706, "loss": 2.0746681690216064, "tokens_per_second": 81872.34947228135}
+{"kind": "iteration", "rank": 0, "iteration": 70, "time_ms": 133.6888350197114, "loss": 2.025484323501587, "tokens_per_second": 61276.620435746576}
+{"kind": "iteration", "rank": 0, "iteration": 80, "time_ms": 136.53408602112904, "loss": 2.015902519226074, "tokens_per_second": 59999.669230819505}
+{"kind": "iteration", "rank": 0, "iteration": 90, "time_ms": 133.0285540316254, "loss": 1.9161489009857178, "tokens_per_second": 61580.76406703244}
+{"kind": "iteration", "rank": 0, "iteration": 100, "time_ms": 148.2199759921059, "loss": 1.946683645248413, "tokens_per_second": 55269.203392910415}
+
+
+
+
+
+
+
+
+{"kind": "iteration", "rank": 0, "iteration": 110, "time_ms": 135.2687639882788, "loss": 1.983006238937378, "tokens_per_second": 60560.91412729879}
+{"kind": "iteration", "rank": 0, "iteration": 120, "time_ms": 135.3769659763202, "loss": 1.6787315607070923, "tokens_per_second": 60512.50994525113}
+{"kind": "iteration", "rank": 0, "iteration": 130, "time_ms": 135.42174600297585, "loss": 1.876481533050537, "tokens_per_second": 60492.50022090236}
+{"kind": "iteration", "rank": 0, "iteration": 140, "time_ms": 139.919514011126, "loss": 1.9614439010620117, "tokens_per_second": 58547.94492316915}
+{"kind": "iteration", "rank": 0, "iteration": 150, "time_ms": 137.13068299693987, "loss": 1.537203073501587, "tokens_per_second": 59738.63632096697}
+
+
+
+
+
+
+
+
+{"kind": "iteration", "rank": 0, "iteration": 160, "time_ms": 138.20517802378163, "loss": 1.826875925064087, "tokens_per_second": 59274.190136279576}
+{"kind": "iteration", "rank": 0, "iteration": 170, "time_ms": 138.8861640007235, "loss": 1.713401436805725, "tokens_per_second": 58983.557209898354}
+{"kind": "iteration", "rank": 0, "iteration": 180, "time_ms": 140.2497700182721, "loss": 1.641819953918457, "tokens_per_second": 58410.07795544139}
+{"kind": "iteration", "rank": 0, "iteration": 190, "time_ms": 139.23096301732585, "loss": 1.741105079650879, "tokens_per_second": 58837.48716857321}
+{"kind": "iteration", "rank": 0, "iteration": 200, "time_ms": 139.25707299495116, "loss": 1.8185925483703613, "tokens_per_second": 58826.45544544086}
+{"kind": "iteration", "rank": 0, "iteration": 210, "time_ms": 140.43327001854777, "loss": 1.6367746591567993, "tokens_per_second": 58333.75523419798}
+{"kind": "iteration", "rank": 0, "iteration": 220, "time_ms": 138.5055260034278, "loss": 1.4415907859802246, "tokens_per_second": 59145.65459140786}
+{"kind": "iteration", "rank": 0, "iteration": 230, "time_ms": 135.78729395521805, "loss": 1.678415060043335, "tokens_per_second": 60329.65059824876}
+{"kind": "iteration", "rank": 0, "iteration": 240, "time_ms": 137.62359000975266, "loss": 1.6145888566970825, "tokens_per_second": 59524.67886805944}
+{"kind": "iteration", "rank": 0, "iteration": 250, "time_ms": 145.7839859649539, "loss": 1.626969337463379, "tokens_per_second": 56192.72889115089}
+{"kind": "iteration", "rank": 0, "iteration": 260, "time_ms": 137.7261119778268, "loss": 1.8132630586624146, "tokens_per_second": 59480.36928043732}
+{"kind": "iteration", "rank": 0, "iteration": 270, "time_ms": 139.24166100332513, "loss": 1.7419087886810303, "tokens_per_second": 58832.96666365085}
+{"kind": "iteration", "rank": 0, "iteration": 280, "time_ms": 139.88013000926003, "loss": 1.712864875793457, "tokens_per_second": 58564.42941150892}
+{"kind": "iteration", "rank": 0, "iteration": 290, "time_ms": 141.26726402901113, "loss": 1.7515466213226318, "tokens_per_second": 57989.372529488945}
+{"kind": "iteration", "rank": 0, "iteration": 300, "time_ms": 137.68774800701067, "loss": 1.5642967224121094, "tokens_per_second": 59496.94231024017}
+{"kind": "iteration", "rank": 0, "iteration": 310, "time_ms": 142.54535996587947, "loss": 1.7649478912353516, "tokens_per_second": 57469.42588633462}
+{"kind": "iteration", "rank": 0, "iteration": 320, "time_ms": 138.53451301110908, "loss": 1.7060105800628662, "tokens_per_second": 59133.27893492565}
+Shutdown gracefully!
+Shutdown gracefully!
+Shutdown gracefully!
+Shutdown gracefully!
+Shutdown gracefully!
+Shutdown gracefully!
+Shutdown gracefully!
+Shutdown gracefully!

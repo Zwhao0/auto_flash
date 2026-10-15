@@ -1,0 +1,448 @@
+{
+  "run_metadata": null,
+  "control": {
+    "mode": 0,
+    "epoch": 0
+  },
+  "world_size": null,
+  "training_done": null,
+  "stats:0": {
+    "epoch": 0,
+    "mode": 0,
+    "stats": [],
+    "operations": {
+      "7": {
+        "1": 1957
+      },
+      "6": {
+        "1": 1957
+      },
+      "1": {
+        "1": 1957
+      },
+      "0": {
+        "1": 1957
+      },
+      "5": {
+        "1": 1957
+      },
+      "4": {
+        "1": 1957
+      },
+      "3": {
+        "1": 1957
+      },
+      "2": {
+        "1": 1957
+      }
+    },
+    "lost": 0,
+    "headers": [
+      [
+        5065495506834174001,
+        0,
+        0,
+        1957,
+        289932392671452,
+        1957,
+        0,
+        0,
+        0,
+        0,
+        6977,
+        1,
+        1,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        0,
+        1957,
+        289932391468073,
+        1957,
+        0,
+        0,
+        0,
+        6,
+        6983,
+        1,
+        1,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        0,
+        1957,
+        289932391447254,
+        1957,
+        0,
+        0,
+        0,
+        1,
+        6978,
+        1,
+        1,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        0,
+        1957,
+        289932391834856,
+        1957,
+        0,
+        0,
+        0,
+        5,
+        6982,
+        1,
+        1,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        0,
+        1957,
+        289932391560848,
+        1957,
+        0,
+        0,
+        0,
+        4,
+        6981,
+        1,
+        1,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        0,
+        1957,
+        289932391536019,
+        1957,
+        0,
+        0,
+        0,
+        3,
+        6980,
+        1,
+        1,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        0,
+        1957,
+        289932391513853,
+        1957,
+        0,
+        0,
+        0,
+        2,
+        6979,
+        1,
+        1,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        0,
+        1957,
+        289932391497786,
+        1957,
+        0,
+        0,
+        0,
+        7,
+        6984,
+        1,
+        1,
+        0,
+        5275776,
+        0
+      ]
+    ],
+    "time": 1792074667.101689
+  },
+  "stats:1": {
+    "epoch": 0,
+    "mode": 0,
+    "stats": [],
+    "operations": {
+      "15": {
+        "1": 1957
+      },
+      "8": {
+        "1": 1957
+      },
+      "14": {
+        "1": 1957
+      },
+      "9": {
+        "1": 1957
+      },
+      "11": {
+        "1": 1957
+      },
+      "12": {
+        "1": 1957
+      },
+      "13": {
+        "1": 1957
+      },
+      "10": {
+        "1": 1957
+      }
+    },
+    "lost": 0,
+    "headers": [
+      [
+        5065495506834174001,
+        0,
+        0,
+        1957,
+        1121839302591078,
+        1957,
+        0,
+        0,
+        0,
+        9,
+        6658,
+        1,
+        1,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        0,
+        1957,
+        1121839302835441,
+        1957,
+        0,
+        0,
+        0,
+        10,
+        6659,
+        1,
+        1,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        0,
+        1957,
+        1121839302658124,
+        1957,
+        0,
+        0,
+        0,
+        13,
+        6662,
+        1,
+        1,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        0,
+        1957,
+        1121839303236702,
+        1957,
+        0,
+        0,
+        0,
+        14,
+        6663,
+        1,
+        1,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        0,
+        1957,
+        1121839302610759,
+        1957,
+        0,
+        0,
+        0,
+        8,
+        6657,
+        1,
+        1,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        0,
+        1957,
+        1121839302590973,
+        1957,
+        0,
+        0,
+        0,
+        15,
+        6664,
+        1,
+        1,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        0,
+        1957,
+        1121839303205833,
+        1957,
+        0,
+        0,
+        0,
+        11,
+        6660,
+        1,
+        1,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        0,
+        1957,
+        1121839302668192,
+        1957,
+        0,
+        0,
+        0,
+        12,
+        6661,
+        1,
+        1,
+        0,
+        5275776,
+        0
+      ]
+    ],
+    "time": 1792074667.1294258
+  },
+  "ack:0": {
+    "epoch": 0,
+    "mode": 0,
+    "time": 1792074198.5211759
+  },
+  "ack:1": {
+    "epoch": 0,
+    "mode": 0,
+    "time": 1792074199.0532844
+  },
+  "parallel_states_0": null,
+  "parallel_states_1": null,
+  "parallel_states_2": null,
+  "parallel_states_3": null,
+  "parallel_states_4": null,
+  "parallel_states_5": null,
+  "parallel_states_6": null,
+  "parallel_states_7": null,
+  "parallel_states_8": null,
+  "parallel_states_9": null,
+  "parallel_states_10": null,
+  "parallel_states_11": null,
+  "parallel_states_12": null,
+  "parallel_states_13": null,
+  "parallel_states_14": null,
+  "parallel_states_15": null,
+  "source_hashes": {
+    "flash/store.py": "86957913a32a866f1f3a636a90483597ddd2c9186852799b500841bd4113b0f5",
+    "flash/shm.py": "83fce4df826489f5a270290c0330350bd7c9bcc61cae815883613821e477c696",
+    "flash/local_controller.py": "c877e2b86e87344ecd4ef1cbda2fd768c881493f6a7cea35755f45ce6a17cd6e",
+    "flash/config.py": "088c285ac6c3d64b680c00fcafb0c12309ed41e6a8c833ad7abba61c64929f6a",
+    "flash/analysis.py": "0cf85a9e1ce2797dd172857fb398f907eea8784aa75ffa228f4c95b6245425a5",
+    "flash/detection.py": "0cdf92cd62e12e6c82fbd61137140d7066e9673a13e479e8dc1a02208a4b9fbd",
+    "flash/global_controller.py": "3e18a0f2c25f16f4df169bbd4b089e1a585d65f5f844b433d5ebc08954808d58",
+    "flash/integration.py": "68cfaad3d719016bf9753320ae03b79aeee902b95a537d70787673cf492742d1",
+    "flash/__init__.py": "f9bd3c3749578ef06aea4163d82c55b717cd5998480c3884a054e01ca4c32775",
+    "csrc/fault.cpp": "f4c2d2298efbe75599bf7aa4b6d807eeb9c39aa0caaefe7379faae7ddb38b85d",
+    "csrc/probe.cpp": "ff4efd13d6947341ce66aa8a7ab8eeb1dea16451703699f90d38ce261b578a7e",
+    "scripts/container.py": "576022cf7245091504f069ffe28d2b782419726b735c43766534f60bd58acc37",
+    "scripts/inspect_runtime.py": "71c2e5fd8e1f33c4342f4727548cfdcd8e1da7b6ea24a7f62bc1317929b1c64d",
+    "scripts/allreduce_bench.py": "52d2314f95432da2ab5e8dbd07de433d986b330aac5e5504ee1fc58f4a7acb56",
+    "scripts/check_model.py": "0104dfa7507de415b88a95360a824d99cd576c05283cec17ac442ea9ee7bdf0c",
+    "scripts/launch.py": "558f7b9117c74e1e18b5353fce445aa1c7173d79b181db41cdae583802250b26",
+    "scripts/greyhound_experiment.py": "d14752e1b72fd4911397dd048ae3b0f17fa7f57bb94d4974ab960ce4ce6dd99a",
+    "scripts/clock_experiment.py": "9d2a7fa96b7bc584ce33cce2baecc1c96768c5a1f075832ba9a209f0d2c21c0d",
+    "scripts/export_run.py": "b723ef69bf8ed92807805dab8215f6401c41c0891bd33cdd34e0e7713b9a3c79",
+    "scripts/network_experiment.py": "b1afbfab43aa25c2982ef1d17ce38b8e773323c75f47b370acb69dff7d49980d",
+    "scripts/suite.py": "1000bb6ab7c723183a625c9e3ba9f7b1b2c3fc1ac6c3c3cf61a514ce03d4da18",
+    "scripts/build.sh": "9289bbd52a17bdb9f1a867f02b46efa478b367ba05b850ff7a37c95d9514b6f7",
+    "scripts/collect_all.py": "c5b8a80b5479af3ebb4eeefae65ceec874fa367b136dd94916ab88cf8644b992",
+    "scripts/run_rank.sh": "35569568b7918b25087795a36315d5c003947944f6ee46b1c318aff9854e736d",
+    "scripts/experiment.py": "7f4bc33d877fc8c88cb72a877728e96272a197fd4a7c32af96d647405aeb7955",
+    "scripts/init_run.py": "2fbd9f8df13f86470d2a7a53d631e764dc79401e6c6bb8d7ed0ad189d52f403d",
+    "scripts/precheck.py": "16f932c6b45792a47871e6a6702cf2566f2f627a56d108f9ffb5f964cf721619",
+    "scripts/remote.py": "e059162568405c416c93f66b4134ee9c5e7352eddcb696abc3416e5dbe6ac606",
+    "scripts/background_comm.py": "372fb3973897557c93451cb399cdb0ada557e3b2c681d9eb85e8b15407008f41",
+    "scripts/prepare_greyhound_remote.py": "63cd64b1d24f368cbf9afbc8acf17935a22a6f3b9aec37fc07b5f7794f278af0",
+    "scripts/sync.py": "4debd9bbab4a9fc08d8da1538d3d3008d331b5c54a2c45fc3dd11203c9d9ed16",
+    "scripts/prepare_rdma.py": "fe4aead6d26e68520e0d6cb1ed1fc02de94047cd010a9d6535ad1d9a3058477c",
+    "scripts/train_moe.py": "8178c670e16a2649be608b4cbee3b87e2e2604d00daf59dc8bc32fcda3727f90",
+    "scripts/prepare_greyhound.py": "8b72377343d1afbf3605db96531d40e0dbb2fad448f3c1615acfa94a34f1331f"
+  },
+  "runtime": {
+    "python": "3.12.3 (main, Jan  8 2026, 11:30:50) [GCC 13.3.0]",
+    "torch": "2.10.0+cu126",
+    "cuda": "12.6",
+    "nccl": [
+      2,
+      27,
+      5
+    ]
+  },
+  "iter_time_0": [],
+  "events": [
+    {
+      "epochs": 0,
+      "kind": "controller_stopped",
+      "time": 1792074667.2140455
+    }
+  ],
+  "failstop_ranks": []
+}

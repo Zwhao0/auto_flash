@@ -1,0 +1,7 @@
+{
+  "run": "paper_profile_healthy_fixed",
+  "exits": [
+    "0",
+    "0"
+  ]
+}

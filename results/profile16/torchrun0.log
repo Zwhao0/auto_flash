@@ -1,0 +1,43 @@
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+{"kind": "iteration", "rank": 0, "iteration": 1, "time_ms": 2723.407214973122, "loss": 5.552827835083008, "tokens_per_second": 3007.9967310657394}
+{"kind": "iteration", "rank": 0, "iteration": 2, "time_ms": 270.51477803615853, "loss": 4.687597751617432, "tokens_per_second": 30283.003610638272}
+{"kind": "iteration", "rank": 0, "iteration": 3, "time_ms": 68.61341599142179, "loss": 4.270811557769775, "tokens_per_second": 119393.56001491287}
+{"kind": "iteration", "rank": 0, "iteration": 10, "time_ms": 82.82520499778911, "loss": 3.075972557067871, "tokens_per_second": 98907.08993981569}
+{"kind": "iteration", "rank": 0, "iteration": 20, "time_ms": 83.06281099794433, "loss": 2.7590506076812744, "tokens_per_second": 98624.16045855635}
+{"kind": "iteration", "rank": 0, "iteration": 30, "time_ms": 84.3699459801428, "loss": 2.57098388671875, "tokens_per_second": 97096.18638286267}
+{"kind": "iteration", "rank": 0, "iteration": 40, "time_ms": 87.49326999532059, "loss": 2.2911088466644287, "tokens_per_second": 93630.05863694583}
+{"kind": "iteration", "rank": 0, "iteration": 50, "time_ms": 85.61287901829928, "loss": 2.168487548828125, "tokens_per_second": 95686.53798278417}
+{"kind": "iteration", "rank": 0, "iteration": 60, "time_ms": 85.34268301445991, "loss": 2.0746681690216064, "tokens_per_second": 95989.48276107045}
+{"kind": "iteration", "rank": 0, "iteration": 70, "time_ms": 85.02246800344437, "loss": 2.025484323501587, "tokens_per_second": 96351.00218060162}
+{"kind": "iteration", "rank": 0, "iteration": 80, "time_ms": 102.10136999376118, "loss": 2.015902519226074, "tokens_per_second": 80233.98707089401}
+{"kind": "iteration", "rank": 0, "iteration": 90, "time_ms": 87.61617302661762, "loss": 1.9161489009857178, "tokens_per_second": 93498.71966573212}
+{"kind": "iteration", "rank": 0, "iteration": 100, "time_ms": 90.2689509675838, "loss": 1.946683645248413, "tokens_per_second": 90751.02692776172}
+{"kind": "iteration", "rank": 0, "iteration": 110, "time_ms": 89.73223104840145, "loss": 1.983006238937378, "tokens_per_second": 91293.8406221199}
+{"kind": "iteration", "rank": 0, "iteration": 120, "time_ms": 85.3572380146943, "loss": 1.6787315607070923, "tokens_per_second": 95973.11476491006}
+{"kind": "iteration", "rank": 0, "iteration": 130, "time_ms": 85.91263700509444, "loss": 1.876481533050537, "tokens_per_second": 95352.67785476346}
+{"kind": "iteration", "rank": 0, "iteration": 140, "time_ms": 87.11338799912483, "loss": 1.9614439010620117, "tokens_per_second": 94038.35837589395}
+{"kind": "iteration", "rank": 0, "iteration": 150, "time_ms": 86.44732797984034, "loss": 1.537203073501587, "tokens_per_second": 94762.90582295832}
+{"kind": "iteration", "rank": 0, "iteration": 160, "time_ms": 94.37234100187197, "loss": 1.826875925064087, "tokens_per_second": 86805.09472407284}
+{"kind": "iteration", "rank": 0, "iteration": 170, "time_ms": 85.64977900823578, "loss": 1.713401436805725, "tokens_per_second": 95645.3139150807}
+{"kind": "iteration", "rank": 0, "iteration": 180, "time_ms": 89.86760897096246, "loss": 1.641819953918457, "tokens_per_second": 91156.3142026729}
+{"kind": "iteration", "rank": 0, "iteration": 190, "time_ms": 98.5807980177924, "loss": 1.741105079650879, "tokens_per_second": 83099.34758817292}
+{"kind": "iteration", "rank": 0, "iteration": 200, "time_ms": 88.20903499145061, "loss": 1.8185925483703613, "tokens_per_second": 92870.30518805681}
+{"kind": "iteration", "rank": 0, "iteration": 210, "time_ms": 86.34430496022105, "loss": 1.6367746591567993, "tokens_per_second": 94875.97362413266}
+{"kind": "iteration", "rank": 0, "iteration": 220, "time_ms": 84.76628101198003, "loss": 1.4415907859802246, "tokens_per_second": 96642.20138243678}
+{"kind": "iteration", "rank": 0, "iteration": 230, "time_ms": 86.7430089856498, "loss": 1.678415060043335, "tokens_per_second": 94439.88738452953}
+{"kind": "iteration", "rank": 0, "iteration": 240, "time_ms": 88.66651798598468, "loss": 1.6145888566970825, "tokens_per_second": 92391.13236966057}
+{"kind": "iteration", "rank": 0, "iteration": 250, "time_ms": 88.84580997982994, "loss": 1.626969337463379, "tokens_per_second": 92204.68586937047}
+{"kind": "iteration", "rank": 0, "iteration": 260, "time_ms": 85.9361729817465, "loss": 1.8132630586624146, "tokens_per_second": 95326.56291012684}
+{"kind": "iteration", "rank": 0, "iteration": 270, "time_ms": 78.4871699870564, "loss": 1.7419087886810303, "tokens_per_second": 104373.74670727676}
+{"kind": "iteration", "rank": 0, "iteration": 280, "time_ms": 87.11134502664208, "loss": 1.712864875793457, "tokens_per_second": 94040.5638036534}
+{"kind": "iteration", "rank": 0, "iteration": 290, "time_ms": 88.95623200805858, "loss": 1.7515466213226318, "tokens_per_second": 92090.23151135587}
+{"kind": "iteration", "rank": 0, "iteration": 300, "time_ms": 82.746859989129, "loss": 1.5642967224121094, "tokens_per_second": 99000.73550919317}
+{"kind": "iteration", "rank": 0, "iteration": 310, "time_ms": 86.98048099176958, "loss": 1.7649478912353516, "tokens_per_second": 94182.04988743576}
+{"kind": "iteration", "rank": 0, "iteration": 320, "time_ms": 83.77066598040983, "loss": 1.7060105800628662, "tokens_per_second": 97790.79471465271}

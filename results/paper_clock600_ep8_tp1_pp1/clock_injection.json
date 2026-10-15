@@ -1,0 +1,32 @@
+[
+  {
+    "time": 1792075673.193171,
+    "command": "nvidia-smi -i 0 --query-gpu=name,clocks.current.sm,clocks.max.sm,power.limit --format=csv",
+    "exit": 0,
+    "output": "name, clocks.current.sm [MHz], clocks.max.sm [MHz], power.limit [W]\nNVIDIA H800, 345 MHz, 1980 MHz, 700.00 W\n"
+  },
+  {
+    "time": 1792075704.60115,
+    "command": "nvidia-smi -i 0 -lgc 600,600",
+    "exit": 0,
+    "output": "GPU clocks set to \"(gpuClkMin 600, gpuClkMax 600)\" for GPU 00000000:10:00.0\n\nWarning: persistence mode is disabled on device 00000000:10:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.\nAll done.\n"
+  },
+  {
+    "time": 1792075706.677017,
+    "command": "nvidia-smi -i 0 --query-gpu=clocks.current.sm,clocks.current.memory,utilization.gpu --format=csv",
+    "exit": 0,
+    "output": "clocks.current.sm [MHz], clocks.current.memory [MHz], utilization.gpu [%]\n600 MHz, 2619 MHz, 72 %\n"
+  },
+  {
+    "time": 1792075744.936703,
+    "command": "nvidia-smi -i 0 -rgc",
+    "exit": 0,
+    "output": "All done.\n"
+  },
+  {
+    "time": 1792075745.752911,
+    "command": "nvidia-smi -i 0 --query-gpu=clocks.current.sm,clocks.max.sm --format=csv",
+    "exit": 0,
+    "output": "clocks.current.sm [MHz], clocks.max.sm [MHz]\n345 MHz, 1980 MHz\n"
+  }
+]

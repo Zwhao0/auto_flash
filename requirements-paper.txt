@@ -1,0 +1,4 @@
+# Control plane; GPU/PyTorch runtime supplied by the pinned container in docs/provenance.md.
+redis==8.1.0
+Rbeast==0.1.25
+einops==0.8.2

@@ -1,0 +1,7 @@
+{
+  "run": "paper_background_clean",
+  "exits": [
+    "0",
+    "0"
+  ]
+}

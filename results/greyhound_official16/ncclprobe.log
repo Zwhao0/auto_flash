@@ -1,0 +1,10 @@
+[Before buffer init] Rank:15, num:0, head:0, tail:0
+Rank: 15, global Status initialized!!
+[ncclCommInitRankConfig] nranks=16, rank=15
+[ncclCommInitRankConfig] nranks=2, rank=1
+[ncclCommInitRankConfig] nranks=16, rank=15
+[ncclCommInitRankConfig] nranks=8, rank=7
+[ncclCommInitRankConfig] nranks=1, rank=0
+rank=8
+[ncclCommInitRankConfig] nranks=8, rank=0
+[ncclCommInitRankConfig] nranks=1, rank=0

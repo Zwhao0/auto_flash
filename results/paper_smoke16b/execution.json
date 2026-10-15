@@ -1,0 +1,7 @@
+{
+  "run": "paper_smoke16b",
+  "exits": [
+    "0",
+    "0"
+  ]
+}

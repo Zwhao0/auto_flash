@@ -1,0 +1,12 @@
+{
+  "final_runs_passed": 5,
+  "checkpoint_shards_equal": 16,
+  "unit_tests": 4,
+  "monitor_timed_events": 0,
+  "delay_prediction": [
+    8
+  ],
+  "credential_scan": "PASS",
+  "python_compile": "PASS",
+  "black_check": "PASS"
+}

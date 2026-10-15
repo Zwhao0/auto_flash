@@ -1,0 +1,7 @@
+{
+  "run": "paper_allreduce_baseline16",
+  "exits": [
+    "0",
+    "0"
+  ]
+}

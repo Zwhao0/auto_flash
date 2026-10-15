@@ -1,0 +1,12 @@
+[
+  [
+    "10.10.4.1",
+    0,
+    "[{\"rank\": 0, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 1, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 2, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 3, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 4, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 5, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 6, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 7, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}]\n"
+  ],
+  [
+    "10.10.4.2",
+    0,
+    "[{\"rank\": 8, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 9, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 10, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 11, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 12, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 13, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 14, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 15, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}]\n"
+  ]
+]

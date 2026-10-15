@@ -1,0 +1,12 @@
+[
+  {
+    "host": "10.10.4.1",
+    "exit": 0,
+    "output": "pid, process_name\nindex, name, clocks.current.sm [MHz], clocks.max.sm [MHz], utilization.gpu [%]\n0, NVIDIA H800, 345 MHz, 1980 MHz, 0 %\n1, NVIDIA H800, 345 MHz, 1980 MHz, 0 %\n2, NVIDIA H800, 345 MHz, 1980 MHz, 0 %\n3, NVIDIA H800, 345 MHz, 1980 MHz, 0 %\n4, NVIDIA H800, 345 MHz, 1980 MHz, 0 %\n5, NVIDIA H800, 345 MHz, 1980 MHz, 0 %\n6, NVIDIA H800, 345 MHz, 1980 MHz, 0 %\n7, NVIDIA H800, 345 MHz, 1980 MHz, 0 %\n"
+  },
+  {
+    "host": "10.10.4.2",
+    "exit": 0,
+    "output": "All done.\npid, process_name\nindex, name, clocks.current.sm [MHz], clocks.max.sm [MHz], utilization.gpu [%]\n0, NVIDIA H800, 345 MHz, 1980 MHz, 0 %\n1, NVIDIA H800, 345 MHz, 1980 MHz, 0 %\n2, NVIDIA H800, 345 MHz, 1980 MHz, 0 %\n3, NVIDIA H800, 345 MHz, 1980 MHz, 0 %\n4, NVIDIA H800, 345 MHz, 1980 MHz, 0 %\n5, NVIDIA H800, 345 MHz, 1980 MHz, 0 %\n6, NVIDIA H800, 345 MHz, 1980 MHz, 0 %\n7, NVIDIA H800, 345 MHz, 1980 MHz, 0 %\n"
+  }
+]

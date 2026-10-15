@@ -1,0 +1,7 @@
+{"kind": "metadata", "rank": 15, "config": {"tp": 1, "pp": 1, "ep": 8, "steps": 5, "min_seconds": 0, "seq": 64, "batch": 1, "microbatches": 2, "hidden": 256, "layers": 4, "seed": 1234, "fault": "none", "fault_rank": 8, "fault_step": 45, "delay_ms": 100, "output": "/flash/results/paper_smoke16b/train_rank15.jsonl"}, "local_parameters": 4073728, "dense_parameters": 2500864, "expert_parameters": 1572864, "torch": "2.10.0+cu126", "groups": [{"tag": "dp", "ranks": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]}, {"tag": "expert_dp", "ranks": [7, 15]}, {"tag": "tp", "ranks": [15]}, {"tag": "pp", "ranks": [15]}, {"tag": "ep", "ranks": [8, 9, 10, 11, 12, 13, 14, 15]}]}
+{"kind": "iteration", "rank": 15, "iteration": 1, "time_ms": 5925.839286996052, "loss": 2.805534839630127, "tokens_per_second": 345.60505285626465}
+{"kind": "iteration", "rank": 15, "iteration": 2, "time_ms": 65.15454384498298, "loss": 2.3773443698883057, "tokens_per_second": 31432.957383181798}
+{"kind": "iteration", "rank": 15, "iteration": 3, "time_ms": 67.84930801950395, "loss": 2.1835227012634277, "tokens_per_second": 30184.537761406238}
+{"kind": "iteration", "rank": 15, "iteration": 4, "time_ms": 60.59545301832259, "loss": 2.0449695587158203, "tokens_per_second": 33797.91548683916}
+{"kind": "iteration", "rank": 15, "iteration": 5, "time_ms": 61.29359407350421, "loss": 1.8656458854675293, "tokens_per_second": 33412.9533592696}
+{"kind": "summary", "rank": 15, "steps": 5, "steady_steps": 0, "steady_wall_seconds": null, "steady_e2e_tokens_per_second": null}

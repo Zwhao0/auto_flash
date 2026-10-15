@@ -1,0 +1,655 @@
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank [Gloo] Rank 32 is connected to  is connected to 33 peer ranks.  peer ranks. Expected number of connected peer ranks is : Expected number of connected peer ranks is : 33
+
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2[Gloo] Rank  is connected to 33 peer ranks.  is connected to Expected number of connected peer ranks is : 33 peer ranks. 
+Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank [Gloo] Rank [Gloo] Rank [Gloo] Rank [Gloo] Rank 1102 is connected to 3 is connected to  is connected to  is connected to 3 is connected to 113 peer ranks. 3 peer ranks.  peer ranks.  peer ranks. Expected number of connected peer ranks is :  peer ranks. Expected number of connected peer ranks is : Expected number of connected peer ranks is : Expected number of connected peer ranks is : 3Expected number of connected peer ranks is : 1
+
+133
+
+
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3[Gloo] Rank  is connected to 3 peer ranks. Expected number of connected peer ranks is : 23 is connected to 
+3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank [Gloo] Rank 1 is connected to 01 is connected to  peer ranks. 1Expected number of connected peer ranks is :  peer ranks. 1Expected number of connected peer ranks is : 
+1
+[Gloo] Rank [Gloo] Rank 10 is connected to  is connected to 11 peer ranks.  peer ranks. Expected number of connected peer ranks is : Expected number of connected peer ranks is : 11
+
+[Gloo] Rank 1 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+[Gloo] Rank 0 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank0]:     return module(
+[rank0]:            ^^^^^^^
+[rank0]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank0]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: AssertionError: sequence parallel not supported by torch LayerNorm
+
+[rank0]: During handling of the above exception, another exception occurred:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank0]:     return module(
+[rank0]:            ^^^^^^^
+[rank0]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_layer.py", line 286, in __init__
+[rank0]:     self.input_layernorm = build_module(
+[rank0]:                            ^^^^^^^^^^^^^
+[rank0]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank0]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank0]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank0]:     return module(
+[rank0]:            ^^^^^^^
+[rank0]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank0]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: AssertionError: sequence parallel not supported by torch LayerNorm when instantiating WrappedTorchNorm
+
+[rank0]: During handling of the above exception, another exception occurred:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/flash/scripts/train_moe.py", line 392, in <module>
+[rank0]:     main()
+[rank0]:   File "/flash/scripts/train_moe.py", line 103, in main
+[rank0]:     model = GPTModel(
+[rank0]:             ^^^^^^^^^
+[rank0]:   File "/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_model.py", line 169, in __init__
+[rank0]:     self.decoder = TransformerBlock(
+[rank0]:                    ^^^^^^^^^^^^^^^^^
+[rank0]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 267, in __init__
+[rank0]:     self._build_layers()
+[rank0]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 294, in _build_layers
+[rank0]:     build_layer(layer_spec, i + 1)
+[rank0]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 288, in build_layer
+[rank0]:     module = build_module(layer_spec, config=layer_config, layer_number=layer_number)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank0]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank0]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank0]:     return module(
+[rank0]:            ^^^^^^^
+[rank0]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_layer.py", line 286, in __init__
+[rank0]:     self.input_layernorm = build_module(
+[rank0]:                            ^^^^^^^^^^^^^
+[rank0]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank0]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank0]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank0]:     return module(
+[rank0]:            ^^^^^^^
+[rank0]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank0]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: AssertionError: sequence parallel not supported by torch LayerNorm when instantiating WrappedTorchNorm when instantiating TransformerLayer
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank4]:     return module(
+[rank4]:            ^^^^^^^
+[rank4]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank4]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]: AssertionError: sequence parallel not supported by torch LayerNorm
+
+[rank4]: During handling of the above exception, another exception occurred:
+
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank4]:     return module(
+[rank4]:            ^^^^^^^
+[rank4]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_layer.py", line 286, in __init__
+[rank4]:     self.input_layernorm = build_module(
+[rank4]:                            ^^^^^^^^^^^^^
+[rank4]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank4]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank4]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank4]:     return module(
+[rank4]:            ^^^^^^^
+[rank4]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank4]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]: AssertionError: sequence parallel not supported by torch LayerNorm when instantiating WrappedTorchNorm
+
+[rank4]: During handling of the above exception, another exception occurred:
+
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/flash/scripts/train_moe.py", line 392, in <module>
+[rank4]:     main()
+[rank4]:   File "/flash/scripts/train_moe.py", line 103, in main
+[rank4]:     model = GPTModel(
+[rank4]:             ^^^^^^^^^
+[rank4]:   File "/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_model.py", line 169, in __init__
+[rank4]:     self.decoder = TransformerBlock(
+[rank4]:                    ^^^^^^^^^^^^^^^^^
+[rank4]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 267, in __init__
+[rank4]:     self._build_layers()
+[rank4]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 294, in _build_layers
+[rank4]:     build_layer(layer_spec, i + 1)
+[rank4]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 288, in build_layer
+[rank4]:     module = build_module(layer_spec, config=layer_config, layer_number=layer_number)
+[rank4]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank4]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank4]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank4]:     return module(
+[rank4]:            ^^^^^^^
+[rank4]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_layer.py", line 286, in __init__
+[rank4]:     self.input_layernorm = build_module(
+[rank4]:                            ^^^^^^^^^^^^^
+[rank4]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank4]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank4]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank4]:     return module(
+[rank4]:            ^^^^^^^
+[rank4]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank4]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]: AssertionError: sequence parallel not supported by torch LayerNorm when instantiating WrappedTorchNorm when instantiating TransformerLayer
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank2]:     return module(
+[rank2]:            ^^^^^^^
+[rank2]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank2]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]: AssertionError: sequence parallel not supported by torch LayerNorm
+
+[rank2]: During handling of the above exception, another exception occurred:
+
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank2]:     return module(
+[rank2]:            ^^^^^^^
+[rank2]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_layer.py", line 286, in __init__
+[rank2]:     self.input_layernorm = build_module(
+[rank2]:                            ^^^^^^^^^^^^^
+[rank2]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank2]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank2]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank2]:     return module(
+[rank2]:            ^^^^^^^
+[rank2]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank2]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]: AssertionError: sequence parallel not supported by torch LayerNorm when instantiating WrappedTorchNorm
+
+[rank2]: During handling of the above exception, another exception occurred:
+
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/flash/scripts/train_moe.py", line 392, in <module>
+[rank2]:     main()
+[rank2]:   File "/flash/scripts/train_moe.py", line 103, in main
+[rank2]:     model = GPTModel(
+[rank2]:             ^^^^^^^^^
+[rank2]:   File "/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_model.py", line 169, in __init__
+[rank2]:     self.decoder = TransformerBlock(
+[rank2]:                    ^^^^^^^^^^^^^^^^^
+[rank2]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 267, in __init__
+[rank2]:     self._build_layers()
+[rank2]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 294, in _build_layers
+[rank2]:     build_layer(layer_spec, i + 1)
+[rank2]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 288, in build_layer
+[rank2]:     module = build_module(layer_spec, config=layer_config, layer_number=layer_number)
+[rank2]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank2]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank2]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank2]:     return module(
+[rank2]:            ^^^^^^^
+[rank2]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_layer.py", line 286, in __init__
+[rank2]:     self.input_layernorm = build_module(
+[rank2]:                            ^^^^^^^^^^^^^
+[rank2]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank2]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank2]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank2]:     return module(
+[rank2]:            ^^^^^^^
+[rank2]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank2]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]: AssertionError: sequence parallel not supported by torch LayerNorm when instantiating WrappedTorchNorm when instantiating TransformerLayer
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank6]:     return module(
+[rank6]:            ^^^^^^^
+[rank6]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank6]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]: AssertionError: sequence parallel not supported by torch LayerNorm
+
+[rank6]: During handling of the above exception, another exception occurred:
+
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank6]:     return module(
+[rank6]:            ^^^^^^^
+[rank6]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_layer.py", line 286, in __init__
+[rank6]:     self.input_layernorm = build_module(
+[rank6]:                            ^^^^^^^^^^^^^
+[rank6]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank6]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank6]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank6]:     return module(
+[rank6]:            ^^^^^^^
+[rank6]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank6]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]: AssertionError: sequence parallel not supported by torch LayerNorm when instantiating WrappedTorchNorm
+
+[rank6]: During handling of the above exception, another exception occurred:
+
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/flash/scripts/train_moe.py", line 392, in <module>
+[rank6]:     main()
+[rank6]:   File "/flash/scripts/train_moe.py", line 103, in main
+[rank6]:     model = GPTModel(
+[rank6]:             ^^^^^^^^^
+[rank6]:   File "/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_model.py", line 169, in __init__
+[rank6]:     self.decoder = TransformerBlock(
+[rank6]:                    ^^^^^^^^^^^^^^^^^
+[rank6]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 267, in __init__
+[rank6]:     self._build_layers()
+[rank6]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 294, in _build_layers
+[rank6]:     build_layer(layer_spec, i + 1)
+[rank6]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 288, in build_layer
+[rank6]:     module = build_module(layer_spec, config=layer_config, layer_number=layer_number)
+[rank6]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank6]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank6]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank6]:     return module(
+[rank6]:            ^^^^^^^
+[rank6]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_layer.py", line 286, in __init__
+[rank6]:     self.input_layernorm = build_module(
+[rank6]:                            ^^^^^^^^^^^^^
+[rank6]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank6]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank6]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank6]:     return module(
+[rank6]:            ^^^^^^^
+[rank6]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank6]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]: AssertionError: sequence parallel not supported by torch LayerNorm when instantiating WrappedTorchNorm when instantiating TransformerLayer
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank5]:     return module(
+[rank5]:            ^^^^^^^
+[rank5]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank5]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]: AssertionError: sequence parallel not supported by torch LayerNorm
+
+[rank5]: During handling of the above exception, another exception occurred:
+
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank5]:     return module(
+[rank5]:            ^^^^^^^
+[rank5]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_layer.py", line 286, in __init__
+[rank5]:     self.input_layernorm = build_module(
+[rank5]:                            ^^^^^^^^^^^^^
+[rank5]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank5]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank5]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank5]:     return module(
+[rank5]:            ^^^^^^^
+[rank5]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank5]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]: AssertionError: sequence parallel not supported by torch LayerNorm when instantiating WrappedTorchNorm
+
+[rank5]: During handling of the above exception, another exception occurred:
+
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/flash/scripts/train_moe.py", line 392, in <module>
+[rank5]:     main()
+[rank5]:   File "/flash/scripts/train_moe.py", line 103, in main
+[rank5]:     model = GPTModel(
+[rank5]:             ^^^^^^^^^
+[rank5]:   File "/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_model.py", line 169, in __init__
+[rank5]:     self.decoder = TransformerBlock(
+[rank5]:                    ^^^^^^^^^^^^^^^^^
+[rank5]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 267, in __init__
+[rank5]:     self._build_layers()
+[rank5]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 294, in _build_layers
+[rank5]:     build_layer(layer_spec, i + 1)
+[rank5]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 288, in build_layer
+[rank5]:     module = build_module(layer_spec, config=layer_config, layer_number=layer_number)
+[rank5]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank5]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank5]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank5]:     return module(
+[rank5]:            ^^^^^^^
+[rank5]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_layer.py", line 286, in __init__
+[rank5]:     self.input_layernorm = build_module(
+[rank5]:                            ^^^^^^^^^^^^^
+[rank5]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank5]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank5]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank5]:     return module(
+[rank5]:            ^^^^^^^
+[rank5]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank5]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]: AssertionError: sequence parallel not supported by torch LayerNorm when instantiating WrappedTorchNorm when instantiating TransformerLayer
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank7]:     return module(
+[rank7]:            ^^^^^^^
+[rank7]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank7]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]: AssertionError: sequence parallel not supported by torch LayerNorm
+
+[rank7]: During handling of the above exception, another exception occurred:
+
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank7]:     return module(
+[rank7]:            ^^^^^^^
+[rank7]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_layer.py", line 286, in __init__
+[rank7]:     self.input_layernorm = build_module(
+[rank7]:                            ^^^^^^^^^^^^^
+[rank7]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank7]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank7]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank7]:     return module(
+[rank7]:            ^^^^^^^
+[rank7]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank7]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]: AssertionError: sequence parallel not supported by torch LayerNorm when instantiating WrappedTorchNorm
+
+[rank7]: During handling of the above exception, another exception occurred:
+
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/flash/scripts/train_moe.py", line 392, in <module>
+[rank7]:     main()
+[rank7]:   File "/flash/scripts/train_moe.py", line 103, in main
+[rank7]:     model = GPTModel(
+[rank7]:             ^^^^^^^^^
+[rank7]:   File "/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_model.py", line 169, in __init__
+[rank7]:     self.decoder = TransformerBlock(
+[rank7]:                    ^^^^^^^^^^^^^^^^^
+[rank7]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 267, in __init__
+[rank7]:     self._build_layers()
+[rank7]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 294, in _build_layers
+[rank7]:     build_layer(layer_spec, i + 1)
+[rank7]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 288, in build_layer
+[rank7]:     module = build_module(layer_spec, config=layer_config, layer_number=layer_number)
+[rank7]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank7]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank7]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank7]:     return module(
+[rank7]:            ^^^^^^^
+[rank7]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_layer.py", line 286, in __init__
+[rank7]:     self.input_layernorm = build_module(
+[rank7]:                            ^^^^^^^^^^^^^
+[rank7]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank7]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank7]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank7]:     return module(
+[rank7]:            ^^^^^^^
+[rank7]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank7]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]: AssertionError: sequence parallel not supported by torch LayerNorm when instantiating WrappedTorchNorm when instantiating TransformerLayer
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank3]:     return module(
+[rank3]:            ^^^^^^^
+[rank3]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank3]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]: AssertionError: sequence parallel not supported by torch LayerNorm
+
+[rank3]: During handling of the above exception, another exception occurred:
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank3]:     return module(
+[rank3]:            ^^^^^^^
+[rank3]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_layer.py", line 286, in __init__
+[rank3]:     self.input_layernorm = build_module(
+[rank3]:                            ^^^^^^^^^^^^^
+[rank3]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank3]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank3]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank3]:     return module(
+[rank3]:            ^^^^^^^
+[rank3]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank3]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]: AssertionError: sequence parallel not supported by torch LayerNorm when instantiating WrappedTorchNorm
+
+[rank3]: During handling of the above exception, another exception occurred:
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/flash/scripts/train_moe.py", line 392, in <module>
+[rank3]:     main()
+[rank3]:   File "/flash/scripts/train_moe.py", line 103, in main
+[rank3]:     model = GPTModel(
+[rank3]:             ^^^^^^^^^
+[rank3]:   File "/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_model.py", line 169, in __init__
+[rank3]:     self.decoder = TransformerBlock(
+[rank3]:                    ^^^^^^^^^^^^^^^^^
+[rank3]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 267, in __init__
+[rank3]:     self._build_layers()
+[rank3]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 294, in _build_layers
+[rank3]:     build_layer(layer_spec, i + 1)
+[rank3]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 288, in build_layer
+[rank3]:     module = build_module(layer_spec, config=layer_config, layer_number=layer_number)
+[rank3]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank3]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank3]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank3]:     return module(
+[rank3]:            ^^^^^^^
+[rank3]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_layer.py", line 286, in __init__
+[rank3]:     self.input_layernorm = build_module(
+[rank3]:                            ^^^^^^^^^^^^^
+[rank3]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank3]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank3]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank3]:     return module(
+[rank3]:            ^^^^^^^
+[rank3]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank3]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]: AssertionError: sequence parallel not supported by torch LayerNorm when instantiating WrappedTorchNorm when instantiating TransformerLayer
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank1]:     return module(
+[rank1]:            ^^^^^^^
+[rank1]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank1]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: AssertionError: sequence parallel not supported by torch LayerNorm
+
+[rank1]: During handling of the above exception, another exception occurred:
+
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank1]:     return module(
+[rank1]:            ^^^^^^^
+[rank1]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_layer.py", line 286, in __init__
+[rank1]:     self.input_layernorm = build_module(
+[rank1]:                            ^^^^^^^^^^^^^
+[rank1]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank1]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank1]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank1]:     return module(
+[rank1]:            ^^^^^^^
+[rank1]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank1]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: AssertionError: sequence parallel not supported by torch LayerNorm when instantiating WrappedTorchNorm
+
+[rank1]: During handling of the above exception, another exception occurred:
+
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/flash/scripts/train_moe.py", line 392, in <module>
+[rank1]:     main()
+[rank1]:   File "/flash/scripts/train_moe.py", line 103, in main
+[rank1]:     model = GPTModel(
+[rank1]:             ^^^^^^^^^
+[rank1]:   File "/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_model.py", line 169, in __init__
+[rank1]:     self.decoder = TransformerBlock(
+[rank1]:                    ^^^^^^^^^^^^^^^^^
+[rank1]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 267, in __init__
+[rank1]:     self._build_layers()
+[rank1]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 294, in _build_layers
+[rank1]:     build_layer(layer_spec, i + 1)
+[rank1]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_block.py", line 288, in build_layer
+[rank1]:     module = build_module(layer_spec, config=layer_config, layer_number=layer_number)
+[rank1]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank1]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank1]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank1]:     return module(
+[rank1]:            ^^^^^^^
+[rank1]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/transformer_layer.py", line 286, in __init__
+[rank1]:     self.input_layernorm = build_module(
+[rank1]:                            ^^^^^^^^^^^^^
+[rank1]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 104, in build_module
+[rank1]:     raise type(e)(f"{str(e)} when instantiating {module.__name__}").with_traceback(
+[rank1]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/spec_utils.py", line 97, in build_module
+[rank1]:     return module(
+[rank1]:            ^^^^^^^
+[rank1]:   File "/flash/vendor/MegatronCore/megatron/core/transformer/torch_norm.py", line 32, in __new__
+[rank1]:     assert not config.sequence_parallel, f"sequence parallel not supported by torch LayerNorm"
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: AssertionError: sequence parallel not supported by torch LayerNorm when instantiating WrappedTorchNorm when instantiating TransformerLayer
+[rank1]:[W1015 14:52:23.142744431 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank5]:[W1015 14:52:23.188628934 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank4]:[W1015 14:52:23.280806473 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank0]:[W1015 14:52:23.303754739 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank7]:[W1015 14:52:23.339676695 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank3]:[W1015 14:52:23.339699422 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank2]:[W1015 14:52:23.341512184 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank6]:[W1015 14:52:23.351326028 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W1015 14:52:23.918000 26945 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 26990 closing signal SIGTERM
+W1015 14:52:23.920000 26945 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 26992 closing signal SIGTERM
+W1015 14:52:23.922000 26945 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 26993 closing signal SIGTERM
+W1015 14:52:23.924000 26945 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 26994 closing signal SIGTERM
+W1015 14:52:23.925000 26945 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 26996 closing signal SIGTERM
+W1015 14:52:23.927000 26945 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 26997 closing signal SIGTERM
+E1015 14:52:24.243000 26945 torch/distributed/elastic/multiprocessing/api.py:984] failed (exitcode: 1) local_rank: 1 (pid: 26991) of binary: bash
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 7, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 362, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 991, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 982, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 170, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 317, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+bash FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-10-15_14:52:23
+  host      : gpu-01
+  rank      : 5 (local_rank: 5)
+  exitcode  : 1 (pid: 26995)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2026-10-15_14:52:24
+  host      : gpu-01
+  rank      : 0 (local_rank: 0)
+  exitcode  : -15 (pid: 26990)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 26990
+[3]:
+  time      : 2026-10-15_14:52:24
+  host      : gpu-01
+  rank      : 2 (local_rank: 2)
+  exitcode  : -15 (pid: 26992)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 26992
+[4]:
+  time      : 2026-10-15_14:52:24
+  host      : gpu-01
+  rank      : 3 (local_rank: 3)
+  exitcode  : -15 (pid: 26993)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 26993
+[5]:
+  time      : 2026-10-15_14:52:24
+  host      : gpu-01
+  rank      : 4 (local_rank: 4)
+  exitcode  : 1 (pid: 26994)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[6]:
+  time      : 2026-10-15_14:52:24
+  host      : gpu-01
+  rank      : 6 (local_rank: 6)
+  exitcode  : -15 (pid: 26996)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 26996
+[7]:
+  time      : 2026-10-15_14:52:24
+  host      : gpu-01
+  rank      : 7 (local_rank: 7)
+  exitcode  : -15 (pid: 26997)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 26997
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-10-15_14:52:23
+  host      : gpu-01
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 26991)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

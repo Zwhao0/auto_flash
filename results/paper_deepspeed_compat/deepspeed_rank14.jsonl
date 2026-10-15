@@ -1,0 +1,26 @@
+{"kind": "framework", "framework": "deepspeed", "version": "0.19.7", "rank": 14, "scope": "stage0_dense_compatibility_only"}
+{"kind": "iteration", "iteration": 0, "loss": 5.727843284606934, "time_ms": 912.4318091198802}
+{"kind": "iteration", "iteration": 1, "loss": 5.673788070678711, "time_ms": 19.669733941555023}
+{"kind": "iteration", "iteration": 2, "loss": 5.629980087280273, "time_ms": 2.0298250019550323}
+{"kind": "iteration", "iteration": 3, "loss": 5.536299705505371, "time_ms": 1.8764908891171217}
+{"kind": "iteration", "iteration": 4, "loss": 5.619148254394531, "time_ms": 1.8562471959739923}
+{"kind": "iteration", "iteration": 5, "loss": 5.561701774597168, "time_ms": 1.8560178577899933}
+{"kind": "iteration", "iteration": 6, "loss": 5.456718921661377, "time_ms": 1.9431039690971375}
+{"kind": "iteration", "iteration": 7, "loss": 5.487360000610352, "time_ms": 2.0183869637548923}
+{"kind": "iteration", "iteration": 8, "loss": 5.48895788192749, "time_ms": 2.3869439028203487}
+{"kind": "iteration", "iteration": 9, "loss": 5.447380542755127, "time_ms": 2.0076679065823555}
+{"kind": "iteration", "iteration": 10, "loss": 5.409140586853027, "time_ms": 2.050866838544607}
+{"kind": "iteration", "iteration": 11, "loss": 5.401057720184326, "time_ms": 2.038568025454879}
+{"kind": "iteration", "iteration": 12, "loss": 5.353931427001953, "time_ms": 2.0144220907241106}
+{"kind": "iteration", "iteration": 13, "loss": 5.427654266357422, "time_ms": 2.0272708497941494}
+{"kind": "iteration", "iteration": 14, "loss": 5.364758491516113, "time_ms": 2.0360960625112057}
+{"kind": "iteration", "iteration": 15, "loss": 5.277442932128906, "time_ms": 2.031336072832346}
+{"kind": "iteration", "iteration": 16, "loss": 5.168776988983154, "time_ms": 2.023490844294429}
+{"kind": "iteration", "iteration": 17, "loss": 5.1622209548950195, "time_ms": 2.0395719911903143}
+{"kind": "iteration", "iteration": 18, "loss": 5.203253269195557, "time_ms": 2.0128379110246897}
+{"kind": "iteration", "iteration": 19, "loss": 5.1137285232543945, "time_ms": 2.0386690739542246}
+{"kind": "iteration", "iteration": 20, "loss": 5.0813798904418945, "time_ms": 2.0354201551526785}
+{"kind": "iteration", "iteration": 21, "loss": 5.051733016967773, "time_ms": 2.050108043476939}
+{"kind": "iteration", "iteration": 22, "loss": 5.075356483459473, "time_ms": 2.0992960780858994}
+{"kind": "iteration", "iteration": 23, "loss": 4.991202354431152, "time_ms": 2.0355340093374252}
+{"kind": "summary", "steps": 24, "finite": true}

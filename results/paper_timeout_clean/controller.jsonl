@@ -1,0 +1,17 @@
+{"rank": 9, "node": "1", "window": 0.180356674, "last_call_age": 0.20737675693817437, "time": 1792075160.1667104, "kind": "failstop"}
+{"rank": 12, "node": "1", "window": 0.180356674, "last_call_age": 0.2070184990298003, "time": 1792075160.1674225, "kind": "failstop"}
+{"rank": 15, "node": "1", "window": 0.180356674, "last_call_age": 0.20498603396117687, "time": 1792075160.167919, "kind": "failstop"}
+{"rank": 10, "node": "1", "window": 0.180356674, "last_call_age": 0.2062528058886528, "time": 1792075160.1683795, "kind": "failstop"}
+{"rank": 11, "node": "1", "window": 0.180356674, "last_call_age": 0.20730548002757132, "time": 1792075160.1688285, "kind": "failstop"}
+{"rank": 14, "node": "1", "window": 0.180356674, "last_call_age": 0.20744467293843627, "time": 1792075160.1693177, "kind": "failstop"}
+{"rank": 13, "node": "1", "window": 0.180356674, "last_call_age": 0.20547731686383486, "time": 1792075160.1697838, "kind": "failstop"}
+{"rank": 8, "node": "1", "window": 0.180356674, "last_call_age": 0.22084778803400695, "time": 1792075160.1702213, "kind": "failstop"}
+{"rank": 6, "node": "0", "window": 0.180356674, "last_call_age": 0.24746727000456303, "time": 1792075160.272014, "kind": "failstop"}
+{"rank": 5, "node": "0", "window": 0.180356674, "last_call_age": 0.2473166220006533, "time": 1792075160.2725072, "kind": "failstop"}
+{"rank": 2, "node": "0", "window": 0.180356674, "last_call_age": 0.24660773697542027, "time": 1792075160.2729566, "kind": "failstop"}
+{"rank": 4, "node": "0", "window": 0.180356674, "last_call_age": 0.24704876699252054, "time": 1792075160.2733884, "kind": "failstop"}
+{"rank": 3, "node": "0", "window": 0.180356674, "last_call_age": 0.2466180310002528, "time": 1792075160.273826, "kind": "failstop"}
+{"rank": 1, "node": "0", "window": 0.180356674, "last_call_age": 0.24644155194982886, "time": 1792075160.2742736, "kind": "failstop"}
+{"rank": 7, "node": "0", "window": 0.180356674, "last_call_age": 0.24689189199125394, "time": 1792075160.2746978, "kind": "failstop"}
+{"rank": 0, "node": "0", "window": 0.180356674, "last_call_age": 0.2462609100039117, "time": 1792075160.2751389, "kind": "failstop"}
+{"epochs": 0, "kind": "controller_stopped", "time": 1792075341.7627423}

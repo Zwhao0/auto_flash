@@ -1,0 +1,1 @@
+背景双rank均显式set_device(0)，但barrier未指定device_ids；ProcessGroupNCCL在rank1推断GPU1而实际payload在GPU0，形成不一致的communicator初始化，背景任务90s超时。训练退出0/0，背景任务失败。该结果不能用于网络故障结论。使用paper_background_devicefixed重测。

@@ -1,0 +1,7423 @@
+[
+  {
+    "run": "allreduce_baseline16",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": null,
+    "post_iter_median_ms": null,
+    "actual_throughput_loss": null,
+    "steady_tokens_per_second": null,
+    "steps": 0,
+    "nccl_events": 0,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 0,
+    "config": {},
+    "fixture_stop_backend": null,
+    "diagnoses": []
+  },
+  {
+    "run": "allreduce_monitor16_early",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": null,
+    "post_iter_median_ms": null,
+    "actual_throughput_loss": null,
+    "steady_tokens_per_second": null,
+    "steps": 0,
+    "nccl_events": 11632,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {},
+    "fixture_stop_backend": null,
+    "diagnoses": []
+  },
+  {
+    "run": "baseline16",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 84.36554303625599,
+    "post_iter_median_ms": 83.08738400228322,
+    "actual_throughput_loss": -0.015383310587052001,
+    "steady_tokens_per_second": 93299.78864694857,
+    "steps": 100,
+    "nccl_events": 0,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 0,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 100,
+      "min_seconds": 0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "output": "/flash/results/baseline16/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": []
+  },
+  {
+    "run": "clock600_ep8",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "gpu_clock",
+    "nominal_severity": null,
+    "target_rank": 8,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 1,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 83.94574001431465,
+    "post_iter_median_ms": 88.31138600362465,
+    "actual_throughput_loss": 0.04943468998585088,
+    "steady_tokens_per_second": 89634.8085107166,
+    "steps": 344,
+    "nccl_events": 446752,
+    "timed_events": 285616,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 100,
+      "min_seconds": 34.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "output": "/flash/results/clock600_ep8/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [
+      {
+        "epoch": 1,
+        "trigger": {
+          "forced": true,
+          "observed_iteration": 60
+        },
+        "profile_seconds": 20.0,
+        "nodes_received": 2,
+        "lost": 0,
+        "result": {
+          "suspects": [],
+          "clique_scores": [
+            {
+              "tag": "dp",
+              "hash": "6675530113805099688",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": 0.6475673277056306,
+              "max_avg_latency": 13695.61905479452,
+              "cv": 0.6475673277056305
+            },
+            {
+              "tag": "dp",
+              "hash": "961895921006678708",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": -0.6475673277056304,
+              "max_avg_latency": 2929.642716894977,
+              "cv": 0.6475673277056305
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "14401772991935753083",
+              "ranks": [
+                4,
+                12
+              ],
+              "score": 0.05629948507613984,
+              "max_avg_latency": 8449.505821100916,
+              "cv": 0.08071670218955808
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "9471440550848858012",
+              "ranks": [
+                2,
+                10
+              ],
+              "score": -0.03622535609572416,
+              "max_avg_latency": 7709.385055045871,
+              "cv": 0.08071670218955808
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "2923246159387592523",
+              "ranks": [
+                1,
+                9
+              ],
+              "score": -0.03267696457710399,
+              "max_avg_latency": 7737.769197247706,
+              "cv": 0.08071670218955808
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "8349180174917568357",
+              "ranks": [
+                6,
+                14
+              ],
+              "score": -0.09336525007425037,
+              "max_avg_latency": 7252.314050458715,
+              "cv": 0.08071670218955808
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "17186846635185989890",
+              "ranks": [
+                7,
+                15
+              ],
+              "score": 0.08184438494688999,
+              "max_avg_latency": 8653.843495412842,
+              "cv": 0.08071670218955808
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "7362225262041118520",
+              "ranks": [
+                3,
+                11
+              ],
+              "score": -0.08550231237192518,
+              "max_avg_latency": 7315.210926605504,
+              "cv": 0.08071670218955808
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "3763712530236831354",
+              "ranks": [
+                5,
+                13
+              ],
+              "score": 0.1492498785245117,
+              "max_avg_latency": 9193.03064678899,
+              "cv": 0.08071670218955808
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "16946397950840105494",
+              "ranks": [
+                0,
+                8
+              ],
+              "score": -0.039623865428537935,
+              "max_avg_latency": 7682.199844036698,
+              "cv": 0.08071670218955808
+            }
+          ],
+          "incomplete": [],
+          "complete_cliques": 28
+        },
+        "kind": "diagnosis",
+        "time": 1792073398.5064838
+      }
+    ],
+    "tp": 0,
+    "fp": 0,
+    "fn": 1,
+    "localization_seconds": 20.58316969871521
+  },
+  {
+    "run": "greyhound_official16",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": true,
+    "fault": "delay",
+    "nominal_severity": 0.45,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 85.01207700464875,
+    "post_iter_median_ms": 137.26392498938367,
+    "actual_throughput_loss": 0.3806670105694283,
+    "steady_tokens_per_second": 64590.457976320205,
+    "steps": 297,
+    "nccl_events": 0,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 0,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 180,
+      "min_seconds": 40.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "delay",
+      "fault_rank": 8,
+      "fault_step": 70,
+      "delay_ms": 100,
+      "severity": 0.45,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/greyhound_official16/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": []
+  },
+  {
+    "run": "greyhound_official16_gated",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "delay",
+    "nominal_severity": 0.45,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 84.64371197624132,
+    "post_iter_median_ms": 136.0568789532408,
+    "actual_throughput_loss": 0.37787995265324914,
+    "steady_tokens_per_second": 22199.083538903353,
+    "steps": 320,
+    "nccl_events": 0,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 0,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 320,
+      "min_seconds": 40.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "delay",
+      "fault_rank": 8,
+      "fault_step": 70,
+      "delay_ms": 100,
+      "severity": 0.45,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/greyhound_official16_gated/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": []
+  },
+  {
+    "run": "greyhound_official16_ready",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": true,
+    "fault": "delay",
+    "nominal_severity": 0.45,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 80.72279201587662,
+    "post_iter_median_ms": 135.61581599060446,
+    "actual_throughput_loss": 0.4047685999878573,
+    "steady_tokens_per_second": 26354.875622627365,
+    "steps": 196,
+    "nccl_events": 0,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 0,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 180,
+      "min_seconds": 40.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "delay",
+      "fault_rank": 8,
+      "fault_step": 70,
+      "delay_ms": 100,
+      "severity": 0.45,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/greyhound_official16_ready/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": []
+  },
+  {
+    "run": "monitor16",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 84.89460800774395,
+    "post_iter_median_ms": 84.33368598343804,
+    "actual_throughput_loss": -0.00665122148717745,
+    "steady_tokens_per_second": 93110.57716340013,
+    "steps": 100,
+    "nccl_events": 130528,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 100,
+      "min_seconds": 0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "output": "/flash/results/monitor16/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": []
+  },
+  {
+    "run": "paper_allreduce_baseline16",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": null,
+    "post_iter_median_ms": null,
+    "actual_throughput_loss": null,
+    "steady_tokens_per_second": null,
+    "steps": 0,
+    "nccl_events": 0,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 0,
+    "config": {},
+    "fixture_stop_backend": null,
+    "diagnoses": []
+  },
+  {
+    "run": "paper_allreduce_monitor16",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": null,
+    "post_iter_median_ms": null,
+    "actual_throughput_loss": null,
+    "steady_tokens_per_second": null,
+    "steps": 0,
+    "nccl_events": 11632,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {},
+    "fixture_stop_backend": null,
+    "diagnoses": []
+  },
+  {
+    "run": "paper_background_clean",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": true,
+    "fault": "background_nccl",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 83.96776398876682,
+    "post_iter_median_ms": 80.75958502013236,
+    "actual_throughput_loss": -0.03972505514775371,
+    "steady_tokens_per_second": 83378.4101182513,
+    "steps": 348,
+    "nccl_events": 4371536,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 100,
+      "min_seconds": 40.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_background_clean/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": []
+  },
+  {
+    "run": "paper_background_devicefixed",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "background_nccl",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 81.73943194560707,
+    "post_iter_median_ms": 95.4310690285638,
+    "actual_throughput_loss": 0.1434714838923018,
+    "steady_tokens_per_second": 86567.38100629776,
+    "steps": 363,
+    "nccl_events": 4559936,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 100,
+      "min_seconds": 40.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_background_devicefixed/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": []
+  },
+  {
+    "run": "paper_background_final",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": true,
+    "fault": "background_nccl",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [
+      0
+    ],
+    "automatic_profiles": 1,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 90.35036998102441,
+    "post_iter_median_ms": 78.74312304193154,
+    "actual_throughput_loss": -0.14740648441022453,
+    "steady_tokens_per_second": 57613.7156965596,
+    "steps": 242,
+    "nccl_events": 3040176,
+    "timed_events": 1186112,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 100,
+      "min_seconds": 40.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_background_final/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [
+      {
+        "epoch": 1,
+        "trigger": {
+          "iteration": 112,
+          "observed_iteration": 114,
+          "prob": 1.0,
+          "baseline_ms": 83.48677614814814,
+          "degraded_ms": 110.61124933333333,
+          "throughput_loss": 0.2452234591749709,
+          "recovery_ratio": 0.008426351058429732
+        },
+        "profile_seconds": 20.0,
+        "nodes_received": 2,
+        "lost": 0,
+        "result": {
+          "suspects": [
+            {
+              "rank": 0,
+              "tags": 2,
+              "score": 1.7611432657558124,
+              "evidence": [
+                {
+                  "tag": "dp",
+                  "hash": "3646694074781480707",
+                  "clique": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "mean_us": 631.4607204301075,
+                  "clique_mean_us": 64249.27828158603,
+                  "cv": 0.9620209538559701,
+                  "score": 0.990171707179922
+                },
+                {
+                  "tag": "expert_dp",
+                  "hash": "14021734339527004931",
+                  "clique": [
+                    0,
+                    8
+                  ],
+                  "mean_us": 301.1435268817205,
+                  "clique_mean_us": 1314.8739301075268,
+                  "cv": 0.7709715585758904,
+                  "score": 0.7709715585758904
+                }
+              ]
+            }
+          ],
+          "clique_scores": [
+            {
+              "tag": "dp",
+              "hash": "3646694074781480707",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": 0.8416036318569656,
+              "max_avg_latency": 126528.96223655916,
+              "cv": 0.8416036318569657
+            },
+            {
+              "tag": "dp",
+              "hash": "4854605400682947475",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": -0.8416036318569657,
+              "max_avg_latency": 10882.758774193548,
+              "cv": 0.8416036318569657
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "4080824616752443746",
+              "ranks": [
+                1,
+                9
+              ],
+              "score": -0.3210775802926679,
+              "max_avg_latency": 463.4806344086022,
+              "cv": 0.9200914133028337
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "10323383785371047471",
+              "ranks": [
+                2,
+                10
+              ],
+              "score": -0.5339649067001826,
+              "max_avg_latency": 318.1486344086021,
+              "cv": 0.9200914133028337
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "14023797714385455731",
+              "ranks": [
+                5,
+                13
+              ],
+              "score": -0.33271810022149517,
+              "max_avg_latency": 455.5339892473118,
+              "cv": 0.9200914133028337
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "10435047728756387352",
+              "ranks": [
+                4,
+                12
+              ],
+              "score": -0.39832717082319047,
+              "max_avg_latency": 410.7445806451612,
+              "cv": 0.9200914133028337
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "14534221928730687488",
+              "ranks": [
+                7,
+                15
+              ],
+              "score": -0.17101554041731354,
+              "max_avg_latency": 565.9236344086022,
+              "cv": 0.9200914133028337
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "4020761767795118513",
+              "ranks": [
+                3,
+                11
+              ],
+              "score": -0.4985734185580867,
+              "max_avg_latency": 342.309376344086,
+              "cv": 0.9200914133028337
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "4393295984469924321",
+              "ranks": [
+                6,
+                14
+              ],
+              "score": -0.15534322893348965,
+              "max_avg_latency": 576.6226666666666,
+              "cv": 0.9200914133028337
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "14021734339527004931",
+              "ranks": [
+                0,
+                8
+              ],
+              "score": 2.4110199459464257,
+              "max_avg_latency": 2328.604333333333,
+              "cv": 0.9200914133028337
+            }
+          ],
+          "incomplete": [],
+          "complete_cliques": 30
+        },
+        "kind": "diagnosis",
+        "time": 1792076837.9450228
+      }
+    ],
+    "localization_seconds": 24.801164150238037,
+    "detection_seconds": 4.2144997119903564
+  },
+  {
+    "run": "paper_baseline16",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 82.70906994584948,
+    "post_iter_median_ms": 83.46017898293212,
+    "actual_throughput_loss": 0.008999609708915779,
+    "steady_tokens_per_second": 97657.28359691806,
+    "steps": 120,
+    "nccl_events": 0,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 0,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 120,
+      "min_seconds": 0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_baseline16/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": []
+  },
+  {
+    "run": "paper_baseline16b",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 83.31791101954877,
+    "post_iter_median_ms": 81.6996109788306,
+    "actual_throughput_loss": -0.019807928352773896,
+    "steady_tokens_per_second": 97948.90525825377,
+    "steps": 120,
+    "nccl_events": 0,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 0,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 120,
+      "min_seconds": 0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_baseline16b/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": []
+  },
+  {
+    "run": "paper_baseline_final",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 82.71876198705286,
+    "post_iter_median_ms": 82.39639695966616,
+    "actual_throughput_loss": -0.003912368007359612,
+    "steady_tokens_per_second": 96950.53075203975,
+    "steps": 160,
+    "nccl_events": 0,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 0,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 160,
+      "min_seconds": 0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_baseline_final/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": []
+  },
+  {
+    "run": "paper_batch_base1",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": null,
+    "post_iter_median_ms": null,
+    "actual_throughput_loss": null,
+    "steady_tokens_per_second": null,
+    "steps": 0,
+    "nccl_events": 0,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 0,
+    "config": {},
+    "fixture_stop_backend": null,
+    "diagnoses": []
+  },
+  {
+    "run": "paper_batch_base2",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": null,
+    "post_iter_median_ms": null,
+    "actual_throughput_loss": null,
+    "steady_tokens_per_second": null,
+    "steps": 0,
+    "nccl_events": 0,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 0,
+    "config": {},
+    "fixture_stop_backend": null,
+    "diagnoses": []
+  },
+  {
+    "run": "paper_batch_mon1",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": null,
+    "post_iter_median_ms": null,
+    "actual_throughput_loss": null,
+    "steady_tokens_per_second": null,
+    "steps": 0,
+    "nccl_events": 31312,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {},
+    "fixture_stop_backend": null,
+    "diagnoses": []
+  },
+  {
+    "run": "paper_batch_mon2",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": null,
+    "post_iter_median_ms": null,
+    "actual_throughput_loss": null,
+    "steady_tokens_per_second": null,
+    "steps": 0,
+    "nccl_events": 31312,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {},
+    "fixture_stop_backend": null,
+    "diagnoses": []
+  },
+  {
+    "run": "paper_clock1200",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "gpu_clock",
+    "nominal_severity": null,
+    "target_rank": 8,
+    "predicted_ranks": [
+      6
+    ],
+    "automatic_profiles": 0,
+    "forced_profiles": 1,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 83.87891901656985,
+    "post_iter_median_ms": 84.64775094762444,
+    "actual_throughput_loss": 0.00908272130620813,
+    "steady_tokens_per_second": 96000.3455173134,
+    "steps": 332,
+    "nccl_events": 4170576,
+    "timed_events": 2990977,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 100,
+      "min_seconds": 34.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_clock1200/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [
+      {
+        "epoch": 1,
+        "trigger": {
+          "forced": true,
+          "observed_iteration": 60
+        },
+        "profile_seconds": 20.0,
+        "nodes_received": 2,
+        "lost": 0,
+        "result": {
+          "suspects": [
+            {
+              "rank": 6,
+              "tags": 1,
+              "score": 0.8840022858622074,
+              "evidence": [
+                {
+                  "tag": "dp",
+                  "hash": "14692587996922306719",
+                  "clique": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "mean_us": 700.9353021276595,
+                  "clique_mean_us": 6042.6647829889525,
+                  "cv": 0.865336243960258,
+                  "score": 0.8840022858622074
+                }
+              ]
+            }
+          ],
+          "clique_scores": [
+            {
+              "tag": "dp",
+              "hash": "14692587996922306719",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": 0.8409161881077968,
+              "max_avg_latency": 12024.83829787234,
+              "cv": 0.8409161881077968
+            },
+            {
+              "tag": "dp",
+              "hash": "16914781494106172079",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": -0.8409161881077968,
+              "max_avg_latency": 1039.1331914893617,
+              "cv": 0.8409161881077968
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "8773425606578567093",
+              "ranks": [
+                2,
+                10
+              ],
+              "score": -0.15980003658660766,
+              "max_avg_latency": 447.1737446808511,
+              "cv": 0.16805545551052592
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "10251968370795413952",
+              "ranks": [
+                4,
+                12
+              ],
+              "score": -0.14608561251589194,
+              "max_avg_latency": 454.4728765957447,
+              "cv": 0.16805545551052592
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "8429049600040591416",
+              "ranks": [
+                1,
+                9
+              ],
+              "score": -0.03761972818626529,
+              "max_avg_latency": 512.200914893617,
+              "cv": 0.16805545551052592
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "17881027768329052739",
+              "ranks": [
+                6,
+                14
+              ],
+              "score": 0.2728321419829099,
+              "max_avg_latency": 677.430540425532,
+              "cv": 0.16805545551052592
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "3695843914455205428",
+              "ranks": [
+                7,
+                15
+              ],
+              "score": 0.2328958666311082,
+              "max_avg_latency": 656.1755361702127,
+              "cv": 0.16805545551052592
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "16019765915514843618",
+              "ranks": [
+                3,
+                11
+              ],
+              "score": -0.15617228192359087,
+              "max_avg_latency": 449.1045191489362,
+              "cv": 0.16805545551052592
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "12283004633949928487",
+              "ranks": [
+                5,
+                13
+              ],
+              "score": -0.11384674252670561,
+              "max_avg_latency": 471.6311446808511,
+              "cv": 0.16805545551052592
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "6403169568021324225",
+              "ranks": [
+                0,
+                8
+              ],
+              "score": 0.10779639312504254,
+              "max_avg_latency": 589.5947191489362,
+              "cv": 0.16805545551052592
+            }
+          ],
+          "incomplete": [],
+          "complete_cliques": 30
+        },
+        "kind": "diagnosis",
+        "time": 1792076221.26533
+      }
+    ],
+    "tp": 0,
+    "fp": 1,
+    "fn": 1,
+    "localization_seconds": 19.843080282211304
+  },
+  {
+    "run": "paper_clock1600",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "gpu_clock",
+    "nominal_severity": null,
+    "target_rank": 8,
+    "predicted_ranks": [
+      0,
+      1
+    ],
+    "automatic_profiles": 0,
+    "forced_profiles": 1,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 82.87168596871197,
+    "post_iter_median_ms": 90.2924170368351,
+    "actual_throughput_loss": 0.08218554017770752,
+    "steady_tokens_per_second": 94598.550632326,
+    "steps": 326,
+    "nccl_events": 4095216,
+    "timed_events": 2964648,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 100,
+      "min_seconds": 34.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_clock1600/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [
+      {
+        "epoch": 1,
+        "trigger": {
+          "forced": true,
+          "observed_iteration": 60
+        },
+        "profile_seconds": 20.0,
+        "nodes_received": 2,
+        "lost": 0,
+        "result": {
+          "suspects": [
+            {
+              "rank": 1,
+              "tags": 1,
+              "score": 0.9063639666371266,
+              "evidence": [
+                {
+                  "tag": "dp",
+                  "hash": "17707159707138800813",
+                  "clique": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "mean_us": 583.1283695652173,
+                  "clique_mean_us": 6227.606495304906,
+                  "cv": 0.8648582336007244,
+                  "score": 0.9063639666371266
+                }
+              ]
+            },
+            {
+              "rank": 0,
+              "tags": 1,
+              "score": 0.22123320544818642,
+              "evidence": [
+                {
+                  "tag": "expert_dp",
+                  "hash": "10870108583031927859",
+                  "clique": [
+                    0,
+                    8
+                  ],
+                  "mean_us": 449.52593478260866,
+                  "clique_mean_us": 577.2279171729637,
+                  "cv": 0.22123320544818648,
+                  "score": 0.22123320544818642
+                }
+              ]
+            }
+          ],
+          "clique_scores": [
+            {
+              "tag": "dp",
+              "hash": "17707159707138800813",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": 0.8034347119111165,
+              "max_avg_latency": 11970.600393013101,
+              "cv": 0.8034347119111165
+            },
+            {
+              "tag": "dp",
+              "hash": "10759494127020727517",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": -0.8034347119111165,
+              "max_avg_latency": 1304.7350698689957,
+              "cv": 0.8034347119111165
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "5830447245644435270",
+              "ranks": [
+                6,
+                14
+              ],
+              "score": 0.2487148509600009,
+              "max_avg_latency": 683.6538596491228,
+              "cv": 0.2019210855524305
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "2615462956029647230",
+              "ranks": [
+                4,
+                12
+              ],
+              "score": -0.12318126146092769,
+              "max_avg_latency": 480.04595633187773,
+              "cv": 0.2019210855524305
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "3924224592021343334",
+              "ranks": [
+                5,
+                13
+              ],
+              "score": -0.1271024549898451,
+              "max_avg_latency": 477.89915789473685,
+              "cv": 0.2019210855524305
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "9422847509356665438",
+              "ranks": [
+                3,
+                11
+              ],
+              "score": -0.16673792797718734,
+              "max_avg_latency": 456.1992925764192,
+              "cv": 0.2019210855524305
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "13824304151983346285",
+              "ranks": [
+                7,
+                15
+              ],
+              "score": 0.1548354187433578,
+              "max_avg_latency": 632.2561877729258,
+              "cv": 0.2019210855524305
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "13220579445171220535",
+              "ranks": [
+                1,
+                9
+              ],
+              "score": 0.03751409259937344,
+              "max_avg_latency": 568.0244078947368,
+              "cv": 0.2019210855524305
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "812500860557358125",
+              "ranks": [
+                2,
+                10
+              ],
+              "score": -0.3116189116554076,
+              "max_avg_latency": 376.8789868995633,
+              "cv": 0.2019210855524305
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "10870108583031927859",
+              "ranks": [
+                0,
+                8
+              ],
+              "score": 0.28757619378063504,
+              "max_avg_latency": 704.9298995633187,
+              "cv": 0.2019210855524305
+            }
+          ],
+          "incomplete": [],
+          "complete_cliques": 30
+        },
+        "kind": "diagnosis",
+        "time": 1792076154.4002688
+      }
+    ],
+    "tp": 0,
+    "fp": 2,
+    "fn": 1,
+    "localization_seconds": 19.71330738067627
+  },
+  {
+    "run": "paper_clock1965",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "gpu_clock",
+    "nominal_severity": null,
+    "target_rank": 8,
+    "predicted_ranks": [
+      0
+    ],
+    "automatic_profiles": 0,
+    "forced_profiles": 1,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 82.50089501962066,
+    "post_iter_median_ms": 84.06029199250042,
+    "actual_throughput_loss": 0.018550934524696805,
+    "steady_tokens_per_second": 94377.0530251919,
+    "steps": 326,
+    "nccl_events": 4095216,
+    "timed_events": 2965827,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 100,
+      "min_seconds": 34.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_clock1965/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [
+      {
+        "epoch": 1,
+        "trigger": {
+          "forced": true,
+          "observed_iteration": 61
+        },
+        "profile_seconds": 20.0,
+        "nodes_received": 2,
+        "lost": 0,
+        "result": {
+          "suspects": [
+            {
+              "rank": 0,
+              "tags": 1,
+              "score": 0.6913082029135106,
+              "evidence": [
+                {
+                  "tag": "dp",
+                  "hash": "12286730863616552662",
+                  "clique": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "mean_us": 1752.84025974026,
+                  "clique_mean_us": 5678.285838120759,
+                  "cv": 0.617672285163519,
+                  "score": 0.6913082029135106
+                }
+              ]
+            }
+          ],
+          "clique_scores": [
+            {
+              "tag": "dp",
+              "hash": "12286730863616552662",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": 0.7866206755530987,
+              "max_avg_latency": 9351.098283842794,
+              "cv": 0.7866206755530987
+            },
+            {
+              "tag": "dp",
+              "hash": "16265994208165927392",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": -0.7866206755530987,
+              "max_avg_latency": 1116.8185065502182,
+              "cv": 0.7866206755530987
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "7573581680008205072",
+              "ranks": [
+                3,
+                11
+              ],
+              "score": -0.2525040275574289,
+              "max_avg_latency": 356.56581385281385,
+              "cv": 0.22406149327495517
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "14723272872626239190",
+              "ranks": [
+                4,
+                12
+              ],
+              "score": -0.09368846218047748,
+              "max_avg_latency": 432.3230131004367,
+              "cv": 0.22406149327495517
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "11228037794617975201",
+              "ranks": [
+                5,
+                13
+              ],
+              "score": 0.03539428986310014,
+              "max_avg_latency": 493.89725327510916,
+              "cv": 0.22406149327495517
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "18073140739571830918",
+              "ranks": [
+                2,
+                10
+              ],
+              "score": -0.40347566201401186,
+              "max_avg_latency": 284.5502770562771,
+              "cv": 0.22406149327495517
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "16516175097870632060",
+              "ranks": [
+                1,
+                9
+              ],
+              "score": 0.036535359156398606,
+              "max_avg_latency": 494.4415589519651,
+              "cv": 0.22406149327495517
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "1261343122460391738",
+              "ranks": [
+                7,
+                15
+              ],
+              "score": 0.24242595117386304,
+              "max_avg_latency": 592.6541904761906,
+              "cv": 0.22406149327495517
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "1581391904353255895",
+              "ranks": [
+                6,
+                14
+              ],
+              "score": 0.28904801771890565,
+              "max_avg_latency": 614.8935545851529,
+              "cv": 0.22406149327495517
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "9817121835679065681",
+              "ranks": [
+                0,
+                8
+              ],
+              "score": 0.1462645338396506,
+              "max_avg_latency": 546.7838777292576,
+              "cv": 0.22406149327495517
+            }
+          ],
+          "incomplete": [],
+          "complete_cliques": 30
+        },
+        "kind": "diagnosis",
+        "time": 1792076086.8507938
+      }
+    ],
+    "tp": 0,
+    "fp": 1,
+    "fn": 1,
+    "localization_seconds": 20.682178497314453
+  },
+  {
+    "run": "paper_clock345",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "gpu_clock",
+    "nominal_severity": null,
+    "target_rank": 8,
+    "predicted_ranks": [
+      0
+    ],
+    "automatic_profiles": 0,
+    "forced_profiles": 1,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 83.81306898081675,
+    "post_iter_median_ms": 85.74945596046746,
+    "actual_throughput_loss": 0.022581915628052784,
+    "steady_tokens_per_second": 95637.15857472294,
+    "steps": 331,
+    "nccl_events": 4158016,
+    "timed_events": 2994712,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 100,
+      "min_seconds": 34.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_clock345/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [
+      {
+        "epoch": 1,
+        "trigger": {
+          "forced": true,
+          "observed_iteration": 60
+        },
+        "profile_seconds": 20.0,
+        "nodes_received": 2,
+        "lost": 0,
+        "result": {
+          "suspects": [
+            {
+              "rank": 0,
+              "tags": 1,
+              "score": 0.5234158207477025,
+              "evidence": [
+                {
+                  "tag": "dp",
+                  "hash": "7360770096295683544",
+                  "clique": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "mean_us": 2838.577562770562,
+                  "clique_mean_us": 5956.088528209108,
+                  "cv": 0.46875801570461145,
+                  "score": 0.5234158207477025
+                }
+              ]
+            }
+          ],
+          "clique_scores": [
+            {
+              "tag": "dp",
+              "hash": "7360770096295683544",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": 0.7274392584236435,
+              "max_avg_latency": 9206.522416309013,
+              "cv": 0.7274392584236434
+            },
+            {
+              "tag": "dp",
+              "hash": "9136344697566047247",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": -0.7274392584236434,
+              "max_avg_latency": 1452.633755364807,
+              "cv": 0.7274392584236434
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "9812392644167279457",
+              "ranks": [
+                1,
+                9
+              ],
+              "score": 0.379524732093207,
+              "max_avg_latency": 727.3659783549783,
+              "cv": 0.2880266084241789
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "16923717455867837642",
+              "ranks": [
+                7,
+                15
+              ],
+              "score": 0.18140709583844894,
+              "max_avg_latency": 622.9067939914163,
+              "cv": 0.2880266084241789
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "11888535906721983117",
+              "ranks": [
+                4,
+                12
+              ],
+              "score": -0.13849073229149167,
+              "max_avg_latency": 454.23798268398275,
+              "cv": 0.2880266084241789
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "16415255111370097556",
+              "ranks": [
+                6,
+                14
+              ],
+              "score": 0.1968878163084843,
+              "max_avg_latency": 631.0691336206897,
+              "cv": 0.2880266084241789
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "15107624315445928436",
+              "ranks": [
+                2,
+                10
+              ],
+              "score": -0.4028315052152418,
+              "max_avg_latency": 314.86209442060084,
+              "cv": 0.2880266084241789
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "13225462662759227720",
+              "ranks": [
+                3,
+                11
+              ],
+              "score": -0.34061730778724675,
+              "max_avg_latency": 347.6650515021459,
+              "cv": 0.2880266084241789
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "968429428873875855",
+              "ranks": [
+                5,
+                13
+              ],
+              "score": -0.20513503312111478,
+              "max_avg_latency": 419.09921645021643,
+              "cv": 0.2880266084241789
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "3006966998406451030",
+              "ranks": [
+                0,
+                8
+              ],
+              "score": 0.3292549341749556,
+              "max_avg_latency": 700.8608060344827,
+              "cv": 0.2880266084241789
+            }
+          ],
+          "incomplete": [],
+          "complete_cliques": 30
+        },
+        "kind": "diagnosis",
+        "time": 1792076357.6512926
+      }
+    ],
+    "tp": 0,
+    "fp": 1,
+    "fn": 1,
+    "localization_seconds": 20.545214891433716
+  },
+  {
+    "run": "paper_clock600_ep4_tp1_pp2",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "gpu_clock",
+    "nominal_severity": null,
+    "target_rank": 8,
+    "predicted_ranks": [
+      5,
+      13
+    ],
+    "automatic_profiles": 0,
+    "forced_profiles": 1,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 76.491657004226,
+    "post_iter_median_ms": 78.12498899875209,
+    "actual_throughput_loss": 0.020906652473924536,
+    "steady_tokens_per_second": 52541.381633085584,
+    "steps": 354,
+    "nccl_events": 1167192,
+    "timed_events": 861106,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 2,
+      "ep": 4,
+      "steps": 100,
+      "min_seconds": 34.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_clock600_ep4_tp1_pp2/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [
+      {
+        "epoch": 1,
+        "trigger": {
+          "forced": true,
+          "observed_iteration": 60
+        },
+        "profile_seconds": 20.0,
+        "nodes_received": 2,
+        "lost": 0,
+        "result": {
+          "suspects": [
+            {
+              "rank": 5,
+              "tags": 1,
+              "score": 0.5747657256702178,
+              "evidence": [
+                {
+                  "tag": "ppstage0_dp",
+                  "hash": "16867181481825565846",
+                  "clique": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7
+                  ],
+                  "mean_us": 694.5576461538462,
+                  "clique_mean_us": 1633.3529258631572,
+                  "cv": 0.5716860332048828,
+                  "score": 0.5747657256702178
+                }
+              ]
+            },
+            {
+              "rank": 13,
+              "tags": 1,
+              "score": 0.4996149685577629,
+              "evidence": [
+                {
+                  "tag": "ppstage1_dp",
+                  "hash": "9763952233746158817",
+                  "clique": [
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "mean_us": 808.8617209302327,
+                  "clique_mean_us": 1616.4786516472868,
+                  "cv": 0.4326946190182635,
+                  "score": 0.4996149685577629
+                }
+              ]
+            }
+          ],
+          "clique_scores": [
+            {
+              "tag": "ppstage0_dp",
+              "hash": "16867181481825565846",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "score": 0.0,
+              "max_avg_latency": 3438.590795366795,
+              "cv": 0.0
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "12639517388048399293",
+              "ranks": [
+                2,
+                6
+              ],
+              "score": -0.1259816066519713,
+              "max_avg_latency": 89.38691153846155,
+              "cv": 0.25397306759705407
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "15252607692615654550",
+              "ranks": [
+                1,
+                5
+              ],
+              "score": -0.12112423505842611,
+              "max_avg_latency": 89.88368076923078,
+              "cv": 0.25397306759705407
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "12035048479418977530",
+              "ranks": [
+                0,
+                4
+              ],
+              "score": -0.10913725285242906,
+              "max_avg_latency": 91.10960384615385,
+              "cv": 0.25397306759705407
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "16423021883709477079",
+              "ranks": [
+                3,
+                7
+              ],
+              "score": -0.23538122810327353,
+              "max_avg_latency": 78.19848076923077,
+              "cv": 0.25397306759705407
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "10786290861455730927",
+              "ranks": [
+                9,
+                13
+              ],
+              "score": 0.3431338279970798,
+              "max_avg_latency": 137.36391085271316,
+              "cv": 0.25397306759705407
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "16851993866475538327",
+              "ranks": [
+                10,
+                14
+              ],
+              "score": -0.07369386362589787,
+              "max_avg_latency": 94.73444186046513,
+              "cv": 0.25397306759705407
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "4909810086905535010",
+              "ranks": [
+                11,
+                15
+              ],
+              "score": -0.1875393273630579,
+              "max_avg_latency": 83.09132945736434,
+              "cv": 0.25397306759705407
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "15309366942333353149",
+              "ranks": [
+                8,
+                12
+              ],
+              "score": 0.5097236856579758,
+              "max_avg_latency": 154.4012558139535,
+              "cv": 0.25397306759705407
+            },
+            {
+              "tag": "pp",
+              "hash": "4660541830765492596",
+              "ranks": [
+                6,
+                14
+              ],
+              "score": 0.05043958222710724,
+              "max_avg_latency": 11901.162020192307,
+              "cv": 0.042663734405642216
+            },
+            {
+              "tag": "pp",
+              "hash": "10054573482862744011",
+              "ranks": [
+                1,
+                9
+              ],
+              "score": -0.05199762545580563,
+              "max_avg_latency": 10740.57951153846,
+              "cv": 0.042663734405642216
+            },
+            {
+              "tag": "pp",
+              "hash": "16774859084210646295",
+              "ranks": [
+                5,
+                13
+              ],
+              "score": 0.040847385774252024,
+              "max_avg_latency": 11792.485342307693,
+              "cv": 0.042663734405642216
+            },
+            {
+              "tag": "pp",
+              "hash": "16635429469912987356",
+              "ranks": [
+                2,
+                10
+              ],
+              "score": -0.027310304909728175,
+              "max_avg_latency": 11020.27936923077,
+              "cv": 0.042663734405642216
+            },
+            {
+              "tag": "pp",
+              "hash": "16225688717562708623",
+              "ranks": [
+                4,
+                12
+              ],
+              "score": 0.022506958861392964,
+              "max_avg_latency": 11584.693865384615,
+              "cv": 0.042663734405642216
+            },
+            {
+              "tag": "pp",
+              "hash": "16314615737708980317",
+              "ranks": [
+                3,
+                11
+              ],
+              "score": 0.010943845731080516,
+              "max_avg_latency": 11453.687299038462,
+              "cv": 0.042663734405642216
+            },
+            {
+              "tag": "pp",
+              "hash": "3838140628243183482",
+              "ranks": [
+                7,
+                15
+              ],
+              "score": 0.02847600308791571,
+              "max_avg_latency": 11652.321326923076,
+              "cv": 0.042663734405642216
+            },
+            {
+              "tag": "pp",
+              "hash": "11714081258921902407",
+              "ranks": [
+                0,
+                8
+              ],
+              "score": -0.07390584531621353,
+              "max_avg_latency": 10492.366022115384,
+              "cv": 0.042663734405642216
+            },
+            {
+              "tag": "ppstage1_dp",
+              "hash": "9763952233746158817",
+              "ranks": [
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": 0.0,
+              "max_avg_latency": 2758.081918604651,
+              "cv": 0.0
+            }
+          ],
+          "incomplete": [],
+          "complete_cliques": 35
+        },
+        "kind": "diagnosis",
+        "time": 1792075903.217975
+      }
+    ],
+    "tp": 0,
+    "fp": 2,
+    "fn": 1,
+    "localization_seconds": 19.948025941848755
+  },
+  {
+    "run": "paper_clock600_ep4_tp2_pp1",
+    "exits": [
+      "1",
+      "1"
+    ],
+    "invalid": true,
+    "fault": "gpu_clock",
+    "nominal_severity": null,
+    "target_rank": 8,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": null,
+    "post_iter_median_ms": null,
+    "actual_throughput_loss": null,
+    "steady_tokens_per_second": null,
+    "steps": 0,
+    "nccl_events": 0,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {},
+    "fixture_stop_backend": null,
+    "diagnoses": [],
+    "tp": 0,
+    "fp": 0,
+    "fn": 1
+  },
+  {
+    "run": "paper_clock600_ep4_tp2_pp1_fixed",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "gpu_clock",
+    "nominal_severity": null,
+    "target_rank": 8,
+    "predicted_ranks": [
+      15
+    ],
+    "automatic_profiles": 0,
+    "forced_profiles": 1,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 95.04866402130574,
+    "post_iter_median_ms": 102.57780499523506,
+    "actual_throughput_loss": 0.07339931844202607,
+    "steady_tokens_per_second": 40543.71839776904,
+    "steps": 289,
+    "nccl_events": 2368272,
+    "timed_events": 1650349,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 2,
+      "pp": 1,
+      "ep": 4,
+      "steps": 100,
+      "min_seconds": 34.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_clock600_ep4_tp2_pp1_fixed/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [
+      {
+        "epoch": 1,
+        "trigger": {
+          "forced": true,
+          "observed_iteration": 60
+        },
+        "profile_seconds": 20.0,
+        "nodes_received": 2,
+        "lost": 0,
+        "result": {
+          "suspects": [
+            {
+              "rank": 15,
+              "tags": 1,
+              "score": 0.5819041957950016,
+              "evidence": [
+                {
+                  "tag": "tp",
+                  "hash": "2077119490911041056",
+                  "clique": [
+                    14,
+                    15
+                  ],
+                  "mean_us": 29.709676181649673,
+                  "clique_mean_us": 71.05949374005817,
+                  "cv": 0.5819041957950015,
+                  "score": 0.5819041957950016
+                }
+              ]
+            }
+          ],
+          "clique_scores": [
+            {
+              "tag": "tp",
+              "hash": "17191345017670869236",
+              "ranks": [
+                2,
+                3
+              ],
+              "score": -0.018830380739420543,
+              "max_avg_latency": 68.97982971081231,
+              "cv": 0.21822969320223143
+            },
+            {
+              "tag": "tp",
+              "hash": "2896898049920059757",
+              "ranks": [
+                2,
+                3
+              ],
+              "score": -0.014701766457078077,
+              "max_avg_latency": 69.27008646616541,
+              "cv": 0.21822969320223143
+            },
+            {
+              "tag": "tp",
+              "hash": "10704854945169302330",
+              "ranks": [
+                6,
+                7
+              ],
+              "score": 0.2605277712218052,
+              "max_avg_latency": 88.61973434334132,
+              "cv": 0.21822969320223143
+            },
+            {
+              "tag": "tp",
+              "hash": "8899691336976057555",
+              "ranks": [
+                6,
+                7
+              ],
+              "score": 0.05120579545644062,
+              "max_avg_latency": 73.90363025737602,
+              "cv": 0.21822969320223143
+            },
+            {
+              "tag": "tp",
+              "hash": "9849545604008618548",
+              "ranks": [
+                4,
+                5
+              ],
+              "score": -0.042037851079166924,
+              "max_avg_latency": 67.34825926608039,
+              "cv": 0.21822969320223143
+            },
+            {
+              "tag": "tp",
+              "hash": "5222151701894533938",
+              "ranks": [
+                4,
+                5
+              ],
+              "score": -0.18901182470968858,
+              "max_avg_latency": 57.01544883866918,
+              "cv": 0.21822969320223143
+            },
+            {
+              "tag": "tp",
+              "hash": "6278195777513252746",
+              "ranks": [
+                0,
+                1
+              ],
+              "score": -0.043771486968689405,
+              "max_avg_latency": 67.22637829250323,
+              "cv": 0.21822969320223143
+            },
+            {
+              "tag": "tp",
+              "hash": "7844592806571029969",
+              "ranks": [
+                0,
+                1
+              ],
+              "score": 0.08203149157230472,
+              "max_avg_latency": 76.07078996865204,
+              "cv": 0.21822969320223143
+            },
+            {
+              "tag": "tp",
+              "hash": "9712187001904732790",
+              "ranks": [
+                10,
+                11
+              ],
+              "score": -0.13765295251917953,
+              "max_avg_latency": 60.6261662806855,
+              "cv": 0.21822969320223143
+            },
+            {
+              "tag": "tp",
+              "hash": "11621198640486632915",
+              "ranks": [
+                10,
+                11
+              ],
+              "score": -0.169744301599455,
+              "max_avg_latency": 58.370026515151515,
+              "cv": 0.21822969320223143
+            },
+            {
+              "tag": "tp",
+              "hash": "2077119490911041056",
+              "ranks": [
+                14,
+                15
+              ],
+              "score": 0.598910893669147,
+              "max_avg_latency": 112.40931129846666,
+              "cv": 0.21822969320223143
+            },
+            {
+              "tag": "tp",
+              "hash": "5460915616134423250",
+              "ranks": [
+                14,
+                15
+              ],
+              "score": -0.45435589914242097,
+              "max_avg_latency": 38.360785353535356,
+              "cv": 0.21822969320223143
+            },
+            {
+              "tag": "tp",
+              "hash": "8948347027192880580",
+              "ranks": [
+                12,
+                13
+              ],
+              "score": -0.12979385895518775,
+              "max_avg_latency": 61.17868943782732,
+              "cv": 0.21822969320223143
+            },
+            {
+              "tag": "tp",
+              "hash": "2106149616171079107",
+              "ranks": [
+                12,
+                13
+              ],
+              "score": 0.05604923770417304,
+              "max_avg_latency": 74.24414204545454,
+              "cv": 0.21822969320223143
+            },
+            {
+              "tag": "tp",
+              "hash": "8709923587669041447",
+              "ranks": [
+                8,
+                9
+              ],
+              "score": 0.09095015186541767,
+              "max_avg_latency": 76.69780456041156,
+              "cv": 0.21822969320223143
+            },
+            {
+              "tag": "tp",
+              "hash": "13848431324473239822",
+              "ranks": [
+                8,
+                9
+              ],
+              "score": 0.06022498068099603,
+              "max_avg_latency": 74.53771212121212,
+              "cv": 0.21822969320223143
+            },
+            {
+              "tag": "dp",
+              "hash": "14541370461870990667",
+              "ranks": [
+                0,
+                2,
+                4,
+                6,
+                8,
+                10,
+                12,
+                14
+              ],
+              "score": 0.0005073336722521567,
+              "max_avg_latency": 13132.382045454544,
+              "cv": 0.0005073336722521567
+            },
+            {
+              "tag": "dp",
+              "hash": "15845896424996896847",
+              "ranks": [
+                1,
+                3,
+                5,
+                7,
+                9,
+                11,
+                13,
+                15
+              ],
+              "score": -0.0005073336722521567,
+              "max_avg_latency": 13119.063803030303,
+              "cv": 0.0005073336722521567
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "6132530415436205351",
+              "ranks": [
+                2,
+                6,
+                10,
+                14
+              ],
+              "score": -0.032306428806934934,
+              "max_avg_latency": 1243.979303030303,
+              "cv": 0.056490831247564745
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "10911387971972672591",
+              "ranks": [
+                0,
+                4,
+                8,
+                12
+              ],
+              "score": 0.09784423114460561,
+              "max_avg_latency": 1411.289216080402,
+              "cv": 0.056490831247564745
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "16127073369069018744",
+              "ranks": [
+                3,
+                7,
+                11,
+                15
+              ],
+              "score": -0.03293530730003056,
+              "max_avg_latency": 1243.1708737373738,
+              "cv": 0.056490831247564745
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "18252966945173443754",
+              "ranks": [
+                1,
+                5,
+                9,
+                13
+              ],
+              "score": -0.03260249503763994,
+              "max_avg_latency": 1243.598707070707,
+              "cv": 0.056490831247564745
+            }
+          ],
+          "incomplete": [],
+          "complete_cliques": 31
+        },
+        "kind": "diagnosis",
+        "time": 1792076460.3041575
+      }
+    ],
+    "tp": 0,
+    "fp": 1,
+    "fn": 1,
+    "localization_seconds": 19.775240182876587
+  },
+  {
+    "run": "paper_clock600_ep4_tp2_pp2",
+    "exits": [
+      "1",
+      "1"
+    ],
+    "invalid": true,
+    "fault": "gpu_clock",
+    "nominal_severity": null,
+    "target_rank": 8,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": null,
+    "post_iter_median_ms": null,
+    "actual_throughput_loss": null,
+    "steady_tokens_per_second": null,
+    "steps": 0,
+    "nccl_events": 0,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {},
+    "fixture_stop_backend": null,
+    "diagnoses": [],
+    "tp": 0,
+    "fp": 0,
+    "fn": 1
+  },
+  {
+    "run": "paper_clock600_ep4_tp2_pp2_fixed",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "gpu_clock",
+    "nominal_severity": null,
+    "target_rank": 8,
+    "predicted_ranks": [
+      5,
+      9
+    ],
+    "automatic_profiles": 0,
+    "forced_profiles": 1,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 85.27044701622799,
+    "post_iter_median_ms": 89.2099229968153,
+    "actual_throughput_loss": 0.044159616422132064,
+    "steady_tokens_per_second": 22544.700556230036,
+    "steps": 279,
+    "nccl_events": 1167744,
+    "timed_events": 908342,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 2,
+      "pp": 2,
+      "ep": 4,
+      "steps": 100,
+      "min_seconds": 34.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_clock600_ep4_tp2_pp2_fixed/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [
+      {
+        "epoch": 1,
+        "trigger": {
+          "forced": true,
+          "observed_iteration": 60
+        },
+        "profile_seconds": 20.0,
+        "nodes_received": 2,
+        "lost": 0,
+        "result": {
+          "suspects": [
+            {
+              "rank": 5,
+              "tags": 1,
+              "score": 0.7528021658150842,
+              "evidence": [
+                {
+                  "tag": "ppstage0_tp",
+                  "hash": "3094574456328729914",
+                  "clique": [
+                    4,
+                    5
+                  ],
+                  "mean_us": 41.04235865952733,
+                  "clique_mean_us": 166.03041363552438,
+                  "cv": 0.7528021658150842,
+                  "score": 0.7528021658150842
+                }
+              ]
+            },
+            {
+              "rank": 9,
+              "tags": 1,
+              "score": 0.2791984539914124,
+              "evidence": [
+                {
+                  "tag": "ppstage1_tp",
+                  "hash": "4869476499449056567",
+                  "clique": [
+                    8,
+                    9
+                  ],
+                  "mean_us": 67.14123588505569,
+                  "clique_mean_us": 93.14801869786191,
+                  "cv": 0.2791984539914124,
+                  "score": 0.2791984539914124
+                }
+              ]
+            }
+          ],
+          "clique_scores": [
+            {
+              "tag": "ppstage0_tp",
+              "hash": "3094574456328729914",
+              "ranks": [
+                4,
+                5
+              ],
+              "score": 2.2151469494135103,
+              "max_avg_latency": 291.0184686115214,
+              "cv": 0.8960400694216227
+            },
+            {
+              "tag": "ppstage0_tp",
+              "hash": "17772315745236102204",
+              "ranks": [
+                4,
+                5
+              ],
+              "score": -0.7008443221575487,
+              "max_avg_latency": 27.078024305555555,
+              "cv": 0.8960400694216227
+            },
+            {
+              "tag": "ppstage0_tp",
+              "hash": "1643950139072263806",
+              "ranks": [
+                2,
+                3
+              ],
+              "score": -0.011984779013456778,
+              "max_avg_latency": 89.43002640324963,
+              "cv": 0.8960400694216227
+            },
+            {
+              "tag": "ppstage0_tp",
+              "hash": "7171608273669912128",
+              "ranks": [
+                2,
+                3
+              ],
+              "score": -0.6178974038663029,
+              "max_avg_latency": 34.58595023148148,
+              "cv": 0.8960400694216227
+            },
+            {
+              "tag": "ppstage0_tp",
+              "hash": "6457589230133180346",
+              "ranks": [
+                6,
+                7
+              ],
+              "score": 0.14233658792627538,
+              "max_avg_latency": 103.39839817208272,
+              "cv": 0.8960400694216227
+            },
+            {
+              "tag": "ppstage0_tp",
+              "hash": "15360187343717875804",
+              "ranks": [
+                6,
+                7
+              ],
+              "score": -0.6755430268095959,
+              "max_avg_latency": 29.368166666666667,
+              "cv": 0.8960400694216227
+            },
+            {
+              "tag": "ppstage0_tp",
+              "hash": "764772932807166076",
+              "ranks": [
+                0,
+                1
+              ],
+              "score": 0.0533134156121404,
+              "max_avg_latency": 95.34048116691285,
+              "cv": 0.8960400694216227
+            },
+            {
+              "tag": "ppstage0_tp",
+              "hash": "8459020093826406446",
+              "ranks": [
+                0,
+                1
+              ],
+              "score": -0.40452742110502155,
+              "max_avg_latency": 53.899097222222224,
+              "cv": 0.8960400694216227
+            },
+            {
+              "tag": "pp",
+              "hash": "11278106037586697956",
+              "ranks": [
+                5,
+                13
+              ],
+              "score": -0.00876375568937872,
+              "max_avg_latency": 12407.402443930636,
+              "cv": 0.009751812608876533
+            },
+            {
+              "tag": "pp",
+              "hash": "2468774575553649879",
+              "ranks": [
+                3,
+                11
+              ],
+              "score": 0.008429353432010622,
+              "max_avg_latency": 12622.610297109826,
+              "cv": 0.009751812608876533
+            },
+            {
+              "tag": "pp",
+              "hash": "15316088191548498093",
+              "ranks": [
+                7,
+                15
+              ],
+              "score": -0.00976201962760516,
+              "max_avg_latency": 12394.907075144507,
+              "cv": 0.009751812608876533
+            },
+            {
+              "tag": "pp",
+              "hash": "7432144188226775609",
+              "ranks": [
+                1,
+                9
+              ],
+              "score": 0.0145672484000846,
+              "max_avg_latency": 12699.438937572257,
+              "cv": 0.009751812608876533
+            },
+            {
+              "tag": "pp",
+              "hash": "5282074955707329460",
+              "ranks": [
+                4,
+                12
+              ],
+              "score": -0.007702753342285646,
+              "max_avg_latency": 12420.683115606937,
+              "cv": 0.009751812608876533
+            },
+            {
+              "tag": "pp",
+              "hash": "2698590254444812884",
+              "ranks": [
+                6,
+                14
+              ],
+              "score": -0.011565432898586267,
+              "max_avg_latency": 12372.333572254336,
+              "cv": 0.009751812608876533
+            },
+            {
+              "tag": "pp",
+              "hash": "9361850990714907337",
+              "ranks": [
+                2,
+                10
+              ],
+              "score": 0.008592633889253814,
+              "max_avg_latency": 12624.654094797686,
+              "cv": 0.009751812608876533
+            },
+            {
+              "tag": "pp",
+              "hash": "8329796125888452661",
+              "ranks": [
+                0,
+                8
+              ],
+              "score": 0.006204725836506902,
+              "max_avg_latency": 12594.764412716762,
+              "cv": 0.009751812608876533
+            },
+            {
+              "tag": "ppstage0_dp",
+              "hash": "6174884661661873075",
+              "ranks": [
+                1,
+                3,
+                5,
+                7
+              ],
+              "score": 0.00014166659546269834,
+              "max_avg_latency": 2630.9568018433183,
+              "cv": 0.00014166659546269834
+            },
+            {
+              "tag": "ppstage0_dp",
+              "hash": "14049229895938624557",
+              "ranks": [
+                0,
+                2,
+                4,
+                6
+              ],
+              "score": -0.00014166659546269834,
+              "max_avg_latency": 2630.2114700460834,
+              "cv": 0.00014166659546269834
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "12964703667054488303",
+              "ranks": [
+                1,
+                5
+              ],
+              "score": -0.1677358998991167,
+              "max_avg_latency": 79.92416589861752,
+              "cv": 0.23218264977568154
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "15835583020986470640",
+              "ranks": [
+                3,
+                7
+              ],
+              "score": -0.0945764072896014,
+              "max_avg_latency": 86.94983410138249,
+              "cv": 0.23218264977568154
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "15476481824897606755",
+              "ranks": [
+                0,
+                4
+              ],
+              "score": -0.14687759623670205,
+              "max_avg_latency": 81.92723502304148,
+              "cv": 0.23218264977568154
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "8771817249371479063",
+              "ranks": [
+                2,
+                6
+              ],
+              "score": -0.13801205178802764,
+              "max_avg_latency": 82.77861290322582,
+              "cv": 0.23218264977568154
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "1693482737473043080",
+              "ranks": [
+                8,
+                12
+              ],
+              "score": 0.458364810271609,
+              "max_avg_latency": 140.05000458715597,
+              "cv": 0.23218264977568154
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "13115437254744625073",
+              "ranks": [
+                11,
+                15
+              ],
+              "score": -0.13772638756561462,
+              "max_avg_latency": 82.80604587155963,
+              "cv": 0.23218264977568154
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "12948193095203820528",
+              "ranks": [
+                9,
+                13
+              ],
+              "score": 0.3355850556476721,
+              "max_avg_latency": 128.25919266055047,
+              "cv": 0.23218264977568154
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "8591083406311951212",
+              "ranks": [
+                10,
+                14
+              ],
+              "score": -0.10902152314021861,
+              "max_avg_latency": 85.56263761467889,
+              "cv": 0.23218264977568154
+            },
+            {
+              "tag": "ppstage1_tp",
+              "hash": "2104794949971003545",
+              "ranks": [
+                12,
+                13
+              ],
+              "score": 0.008980578710054553,
+              "max_avg_latency": 69.54026811989101,
+              "cv": 0.5214649471763069
+            },
+            {
+              "tag": "ppstage1_tp",
+              "hash": "10670047927610044095",
+              "ranks": [
+                12,
+                13
+              ],
+              "score": -0.584184405897039,
+              "max_avg_latency": 28.658557471264366,
+              "cv": 0.5214649471763069
+            },
+            {
+              "tag": "ppstage1_tp",
+              "hash": "16861083062300487579",
+              "ranks": [
+                10,
+                11
+              ],
+              "score": 0.5025556333001648,
+              "max_avg_latency": 103.55810984818996,
+              "cv": 0.5214649471763069
+            },
+            {
+              "tag": "ppstage1_tp",
+              "hash": "5348133722925135553",
+              "ranks": [
+                10,
+                11
+              ],
+              "score": -0.5623361025546405,
+              "max_avg_latency": 30.164371264367812,
+              "cv": 0.5214649471763069
+            },
+            {
+              "tag": "ppstage1_tp",
+              "hash": "3885438118532758330",
+              "ranks": [
+                14,
+                15
+              ],
+              "score": 0.6165983853496257,
+              "max_avg_latency": 111.41808626596075,
+              "cv": 0.5214649471763069
+            },
+            {
+              "tag": "ppstage1_tp",
+              "hash": "6651351920301694166",
+              "ranks": [
+                14,
+                15
+              ],
+              "score": -0.5804755287478471,
+              "max_avg_latency": 28.91417816091954,
+              "cv": 0.5214649471763069
+            },
+            {
+              "tag": "ppstage1_tp",
+              "hash": "4869476499449056567",
+              "ranks": [
+                8,
+                9
+              ],
+              "score": 0.7288527041201757,
+              "max_avg_latency": 119.15480151066814,
+              "cv": 0.5214649471763069
+            },
+            {
+              "tag": "ppstage1_tp",
+              "hash": "9463717381339301628",
+              "ranks": [
+                8,
+                9
+              ],
+              "score": -0.12999126428049437,
+              "max_avg_latency": 59.96214597701149,
+              "cv": 0.5214649471763069
+            },
+            {
+              "tag": "ppstage1_dp",
+              "hash": "9166405869695630120",
+              "ranks": [
+                8,
+                10,
+                12,
+                14
+              ],
+              "score": 0.001693194274150262,
+              "max_avg_latency": 2876.5584724770642,
+              "cv": 0.0016931942741501829
+            },
+            {
+              "tag": "ppstage1_dp",
+              "hash": "5099437269726575626",
+              "ranks": [
+                9,
+                11,
+                13,
+                15
+              ],
+              "score": -0.0016931942741501037,
+              "max_avg_latency": 2866.8337935779814,
+              "cv": 0.0016931942741501829
+            }
+          ],
+          "incomplete": [],
+          "complete_cliques": 45
+        },
+        "kind": "diagnosis",
+        "time": 1792076531.2464533
+      }
+    ],
+    "tp": 0,
+    "fp": 2,
+    "fn": 1,
+    "localization_seconds": 20.482779264450073
+  },
+  {
+    "run": "paper_clock600_ep8_tp1_pp1",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "gpu_clock",
+    "nominal_severity": null,
+    "target_rank": 8,
+    "predicted_ranks": [
+      4
+    ],
+    "automatic_profiles": 0,
+    "forced_profiles": 1,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 85.34642698941752,
+    "post_iter_median_ms": 88.48850498907268,
+    "actual_throughput_loss": 0.035508318284314666,
+    "steady_tokens_per_second": 96306.79224809802,
+    "steps": 332,
+    "nccl_events": 4170576,
+    "timed_events": 3038533,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 100,
+      "min_seconds": 34.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_clock600_ep8_tp1_pp1/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [
+      {
+        "epoch": 1,
+        "trigger": {
+          "forced": true,
+          "observed_iteration": 60
+        },
+        "profile_seconds": 20.0,
+        "nodes_received": 2,
+        "lost": 0,
+        "result": {
+          "suspects": [
+            {
+              "rank": 4,
+              "tags": 1,
+              "score": 0.7477869170298141,
+              "evidence": [
+                {
+                  "tag": "dp",
+                  "hash": "16713338856613256939",
+                  "clique": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "mean_us": 1230.72343220339,
+                  "clique_mean_us": 4879.697031215759,
+                  "cv": 0.664546044929374,
+                  "score": 0.7477869170298141
+                }
+              ]
+            }
+          ],
+          "clique_scores": [
+            {
+              "tag": "dp",
+              "hash": "16713338856613256939",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": 0.7849393881334006,
+              "max_avg_latency": 8475.080564102564,
+              "cv": 0.7849393881334005
+            },
+            {
+              "tag": "dp",
+              "hash": "16855351675967799084",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": -0.7849393881334005,
+              "max_avg_latency": 1021.1304786324786,
+              "cv": 0.7849393881334005
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "9821310276999086050",
+              "ranks": [
+                1,
+                9
+              ],
+              "score": 0.0877038730956857,
+              "max_avg_latency": 555.2103162393163,
+              "cv": 0.1787793249644321
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "6193853398002514688",
+              "ranks": [
+                3,
+                11
+              ],
+              "score": -0.18465650540115508,
+              "max_avg_latency": 416.1859957264958,
+              "cv": 0.1787793249644321
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "13199134336449015471",
+              "ranks": [
+                5,
+                13
+              ],
+              "score": -0.015354198265271476,
+              "max_avg_latency": 502.6050936170213,
+              "cv": 0.1787793249644321
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "712637387238685005",
+              "ranks": [
+                2,
+                10
+              ],
+              "score": -0.35907460224675014,
+              "max_avg_latency": 327.1555811965812,
+              "cv": 0.1787793249644321
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "2265979481329004539",
+              "ranks": [
+                7,
+                15
+              ],
+              "score": 0.19897307883646786,
+              "max_avg_latency": 612.0068510638297,
+              "cv": 0.1787793249644321
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "3651055644053559814",
+              "ranks": [
+                4,
+                12
+              ],
+              "score": -0.0007793881046121914,
+              "max_avg_latency": 510.0446965811966,
+              "cv": 0.1787793249644321
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "4459126022162163564",
+              "ranks": [
+                6,
+                14
+              ],
+              "score": 0.19916141770847115,
+              "max_avg_latency": 612.1029872340425,
+              "cv": 0.1787793249644321
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "5262474148444586650",
+              "ranks": [
+                0,
+                8
+              ],
+              "score": 0.07402632437716393,
+              "max_avg_latency": 548.2287136752137,
+              "cv": 0.1787793249644321
+            }
+          ],
+          "incomplete": [],
+          "complete_cliques": 30
+        },
+        "kind": "diagnosis",
+        "time": 1792075725.447285
+      }
+    ],
+    "tp": 0,
+    "fp": 1,
+    "fn": 1,
+    "localization_seconds": 20.17168426513672
+  },
+  {
+    "run": "paper_clock900",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "gpu_clock",
+    "nominal_severity": null,
+    "target_rank": 8,
+    "predicted_ranks": [
+      7
+    ],
+    "automatic_profiles": 0,
+    "forced_profiles": 1,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 84.37757403589785,
+    "post_iter_median_ms": 83.69398501235992,
+    "actual_throughput_loss": -0.00816771985987974,
+    "steady_tokens_per_second": 96146.02431376356,
+    "steps": 332,
+    "nccl_events": 4170576,
+    "timed_events": 3010005,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 100,
+      "min_seconds": 34.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_clock900/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [
+      {
+        "epoch": 1,
+        "trigger": {
+          "forced": true,
+          "observed_iteration": 61
+        },
+        "profile_seconds": 20.0,
+        "nodes_received": 2,
+        "lost": 0,
+        "result": {
+          "suspects": [
+            {
+              "rank": 7,
+              "tags": 1,
+              "score": 0.6822381893297277,
+              "evidence": [
+                {
+                  "tag": "dp",
+                  "hash": "14822421689194258048",
+                  "clique": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "mean_us": 1552.5082415254237,
+                  "clique_mean_us": 4885.760935999935,
+                  "cv": 0.6340084958742589,
+                  "score": 0.6822381893297277
+                }
+              ]
+            }
+          ],
+          "clique_scores": [
+            {
+              "tag": "dp",
+              "hash": "14822421689194258048",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": 0.8197861635305412,
+              "max_avg_latency": 8541.236763948498,
+              "cv": 0.8197861635305412
+            },
+            {
+              "tag": "dp",
+              "hash": "4125915246925071765",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": -0.8197861635305413,
+              "max_avg_latency": 845.8406137339057,
+              "cv": 0.8197861635305412
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "938374396925645624",
+              "ranks": [
+                4,
+                12
+              ],
+              "score": -0.011641280720595174,
+              "max_avg_latency": 503.12550643776825,
+              "cv": 0.1898165732242922
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "6960904580895688471",
+              "ranks": [
+                2,
+                10
+              ],
+              "score": -0.25554194673732317,
+              "max_avg_latency": 378.96750214592277,
+              "cv": 0.1898165732242922
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "1927677371788201427",
+              "ranks": [
+                1,
+                9
+              ],
+              "score": 0.021377883018805256,
+              "max_avg_latency": 519.9339618644068,
+              "cv": 0.1898165732242922
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "2726532671366604038",
+              "ranks": [
+                7,
+                15
+              ],
+              "score": 0.335519530960418,
+              "max_avg_latency": 679.8482446351932,
+              "cv": 0.1898165732242922
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "8266827988352788964",
+              "ranks": [
+                5,
+                13
+              ],
+              "score": -0.15533153582074785,
+              "max_avg_latency": 429.97976394849786,
+              "cv": 0.1898165732242922
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "959854872477977810",
+              "ranks": [
+                6,
+                14
+              ],
+              "score": 0.19088237937145508,
+              "max_avg_latency": 606.2204830508475,
+              "cv": 0.1898165732242922
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "9140505301637519198",
+              "ranks": [
+                3,
+                11
+              ],
+              "score": -0.20644740232712042,
+              "max_avg_latency": 403.9591545064378,
+              "cv": 0.1898165732242922
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "17551917889717714140",
+              "ranks": [
+                0,
+                8
+              ],
+              "score": 0.08118237225510941,
+              "max_avg_latency": 550.3775278969957,
+              "cv": 0.1898165732242922
+            }
+          ],
+          "incomplete": [],
+          "complete_cliques": 30
+        },
+        "kind": "diagnosis",
+        "time": 1792076289.8334923
+      }
+    ],
+    "tp": 0,
+    "fp": 1,
+    "fn": 1,
+    "localization_seconds": 20.423207998275757
+  },
+  {
+    "run": "paper_deepspeed_compat",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": null,
+    "post_iter_median_ms": null,
+    "actual_throughput_loss": null,
+    "steady_tokens_per_second": null,
+    "steps": 0,
+    "nccl_events": 816,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {},
+    "fixture_stop_backend": null,
+    "diagnoses": []
+  },
+  {
+    "run": "paper_delay25",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "delay",
+    "nominal_severity": 0.25,
+    "target_rank": 8,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 84.93217203067616,
+    "post_iter_median_ms": 101.65204602526501,
+    "actual_throughput_loss": 0.1644814310027093,
+    "steady_tokens_per_second": 84195.25183466155,
+    "steps": 289,
+    "nccl_events": 3630496,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 100,
+      "min_seconds": 34.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "delay",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": 0.25,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_delay25/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [],
+    "tp": 0,
+    "fp": 0,
+    "fn": 1
+  },
+  {
+    "run": "paper_delay45",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "delay",
+    "nominal_severity": 0.45,
+    "target_rank": 8,
+    "predicted_ranks": [
+      8
+    ],
+    "automatic_profiles": 1,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 84.14792199619114,
+    "post_iter_median_ms": 142.0398160116747,
+    "actual_throughput_loss": 0.4075751126763304,
+    "steady_tokens_per_second": 61710.800624141775,
+    "steps": 214,
+    "nccl_events": 2688496,
+    "timed_events": 1781746,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 100,
+      "min_seconds": 34.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "delay",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": 0.45,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_delay45/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [
+      {
+        "epoch": 1,
+        "trigger": {
+          "iteration": 45,
+          "observed_iteration": 48,
+          "prob": 1.0,
+          "baseline_ms": 83.92572834615385,
+          "degraded_ms": 142.21960575,
+          "throughput_loss": 0.40988636620409247,
+          "recovery_ratio": 0.015394717077796884
+        },
+        "profile_seconds": 20.0,
+        "nodes_received": 2,
+        "lost": 0,
+        "result": {
+          "suspects": [
+            {
+              "rank": 8,
+              "tags": 1,
+              "score": 0.9926862949505756,
+              "evidence": [
+                {
+                  "tag": "dp",
+                  "hash": "3043023696896733697",
+                  "clique": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "mean_us": 455.4319,
+                  "clique_mean_us": 62271.02363607721,
+                  "cv": 0.25643823145291966,
+                  "score": 0.9926862949505756
+                }
+              ]
+            }
+          ],
+          "clique_scores": [
+            {
+              "tag": "dp",
+              "hash": "3043023696896733697",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": 0.9815963854644502,
+              "max_avg_latency": 67434.62148571429,
+              "cv": 0.9815963854644502
+            },
+            {
+              "tag": "dp",
+              "hash": "1411344660825329891",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": -0.9815963854644502,
+              "max_avg_latency": 626.2833285714286,
+              "cv": 0.9815963854644502
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "10889053984953428000",
+              "ranks": [
+                3,
+                11
+              ],
+              "score": -0.18724376657345335,
+              "max_avg_latency": 401.7917071428571,
+              "cv": 0.14706603012705619
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "8295154126088291592",
+              "ranks": [
+                4,
+                12
+              ],
+              "score": -0.0845464610330198,
+              "max_avg_latency": 452.5608357142857,
+              "cv": 0.14706603012705619
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "14963412216902774348",
+              "ranks": [
+                2,
+                10
+              ],
+              "score": -0.15854278491347112,
+              "max_avg_latency": 415.98023741007194,
+              "cv": 0.14706603012705619
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "14317609889121352184",
+              "ranks": [
+                1,
+                9
+              ],
+              "score": 0.021937435821840018,
+              "max_avg_latency": 505.201892086331,
+              "cv": 0.14706603012705619
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "10094200123428411564",
+              "ranks": [
+                6,
+                14
+              ],
+              "score": 0.22009267754957637,
+              "max_avg_latency": 603.1613165467626,
+              "cv": 0.14706603012705619
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "6900490653030150450",
+              "ranks": [
+                7,
+                15
+              ],
+              "score": 0.21226533041194773,
+              "max_avg_latency": 599.2918129496403,
+              "cv": 0.14706603012705619
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "3197423767447909775",
+              "ranks": [
+                5,
+                13
+              ],
+              "score": -0.08753743160504027,
+              "max_avg_latency": 451.0822285714286,
+              "cv": 0.14706603012705619
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "16814852692612984536",
+              "ranks": [
+                0,
+                8
+              ],
+              "score": 0.06357500034161995,
+              "max_avg_latency": 525.7857122302157,
+              "cv": 0.14706603012705619
+            }
+          ],
+          "incomplete": [],
+          "complete_cliques": 30
+        },
+        "kind": "diagnosis",
+        "time": 1792074027.586005
+      }
+    ],
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "localization_seconds": 21.141533613204956,
+    "detection_seconds": 0.6018776893615723
+  },
+  {
+    "run": "paper_delay5",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "delay",
+    "nominal_severity": 0.05,
+    "target_rank": 8,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 83.65427900571376,
+    "post_iter_median_ms": 86.09306399011984,
+    "actual_throughput_loss": 0.028327310835237096,
+    "steady_tokens_per_second": 96101.92745868582,
+    "steps": 100,
+    "nccl_events": 1256656,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 100,
+      "min_seconds": 12.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "delay",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": 0.05,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_delay5/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [],
+    "tp": 0,
+    "fp": 0,
+    "fn": 1
+  },
+  {
+    "run": "paper_delay65",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "delay",
+    "nominal_severity": 0.65,
+    "target_rank": 8,
+    "predicted_ranks": [
+      8
+    ],
+    "automatic_profiles": 1,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 86.17368602426723,
+    "post_iter_median_ms": 232.38911799853668,
+    "actual_throughput_loss": 0.6291836435094613,
+    "steady_tokens_per_second": 42249.70215863069,
+    "steps": 148,
+    "nccl_events": 1859536,
+    "timed_events": 1092704,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 100,
+      "min_seconds": 34.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "delay",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": 0.65,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_delay65/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [
+      {
+        "epoch": 1,
+        "trigger": {
+          "iteration": 44,
+          "observed_iteration": 46,
+          "prob": 1.0,
+          "baseline_ms": 86.34967265384616,
+          "degraded_ms": 176.47844566666666,
+          "throughput_loss": 0.5107069742843053,
+          "recovery_ratio": -0.5075628049083296
+        },
+        "profile_seconds": 20.0,
+        "nodes_received": 2,
+        "lost": 0,
+        "result": {
+          "suspects": [
+            {
+              "rank": 8,
+              "tags": 1,
+              "score": 0.9968523487149429,
+              "evidence": [
+                {
+                  "tag": "dp",
+                  "hash": "12008353988406686848",
+                  "clique": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "mean_us": 447.35869411764696,
+                  "clique_mean_us": 142124.60453970588,
+                  "cv": 0.2574221617889001,
+                  "score": 0.9968523487149429
+                }
+              ]
+            }
+          ],
+          "clique_scores": [
+            {
+              "tag": "dp",
+              "hash": "5047917478383319113",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": -0.9872279049170869,
+              "max_avg_latency": 980.2083372093024,
+              "cv": 0.9872279049170869
+            },
+            {
+              "tag": "dp",
+              "hash": "12008353988406686848",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": 0.9872279049170869,
+              "max_avg_latency": 152511.96829411766,
+              "cv": 0.9872279049170869
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "5312598508815348366",
+              "ranks": [
+                7,
+                15
+              ],
+              "score": 0.2166380235369054,
+              "max_avg_latency": 600.7630705882353,
+              "cv": 0.1676674611372102
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "4315833047940815577",
+              "ranks": [
+                4,
+                12
+              ],
+              "score": -0.006742686319885319,
+              "max_avg_latency": 490.46002352941184,
+              "cv": 0.1676674611372102
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "2445596760590546376",
+              "ranks": [
+                2,
+                10
+              ],
+              "score": -0.2325420024335566,
+              "max_avg_latency": 378.96269411764706,
+              "cv": 0.1676674611372102
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "14540376453823446511",
+              "ranks": [
+                1,
+                9
+              ],
+              "score": 0.10387353858524132,
+              "max_avg_latency": 545.0811529411764,
+              "cv": 0.1676674611372102
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "5811332484425710875",
+              "ranks": [
+                6,
+                14
+              ],
+              "score": 0.2047793145384585,
+              "max_avg_latency": 594.9073647058824,
+              "cv": 0.1676674611372102
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "15779315810248441550",
+              "ranks": [
+                5,
+                13
+              ],
+              "score": -0.07870807557211798,
+              "max_avg_latency": 454.92427058823523,
+              "cv": 0.1676674611372102
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "6333396671770240421",
+              "ranks": [
+                3,
+                11
+              ],
+              "score": -0.25102654038208366,
+              "max_avg_latency": 369.83522352941173,
+              "cv": 0.1676674611372102
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "2685252760288447602",
+              "ranks": [
+                0,
+                8
+              ],
+              "score": 0.04372842804703848,
+              "max_avg_latency": 515.3821294117646,
+              "cv": 0.1676674611372102
+            }
+          ],
+          "incomplete": [],
+          "complete_cliques": 30
+        },
+        "kind": "diagnosis",
+        "time": 1792074599.971693
+      }
+    ],
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "localization_seconds": 21.18900156021118,
+    "detection_seconds": 0.6803772449493408
+  },
+  {
+    "run": "paper_delay85",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "delay",
+    "nominal_severity": 0.85,
+    "target_rank": 8,
+    "predicted_ranks": [
+      8
+    ],
+    "automatic_profiles": 1,
+    "forced_profiles": 0,
+    "failstop_ranks": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "baseline_iter_median_ms": 83.65881000645459,
+    "post_iter_median_ms": 545.1716170064174,
+    "actual_throughput_loss": 0.8465459180251678,
+    "steady_tokens_per_second": 23049.47707055862,
+    "steps": 100,
+    "nccl_events": 1256656,
+    "timed_events": 466472,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 100,
+      "min_seconds": 34.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "delay",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": 0.85,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_delay85/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [
+      {
+        "epoch": 1,
+        "trigger": {
+          "iteration": 45,
+          "observed_iteration": 48,
+          "prob": 1.0,
+          "baseline_ms": 83.4756911153846,
+          "degraded_ms": 535.77475125,
+          "throughput_loss": 0.8441962953262916,
+          "recovery_ratio": -0.0012152507012428066
+        },
+        "profile_seconds": 20.0,
+        "nodes_received": 2,
+        "lost": 0,
+        "result": {
+          "suspects": [
+            {
+              "rank": 8,
+              "tags": 1,
+              "score": 0.9989700582223003,
+              "evidence": [
+                {
+                  "tag": "dp",
+                  "hash": "12388841970338885509",
+                  "clique": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "mean_us": 445.9826388888889,
+                  "clique_mean_us": 433017.3302465278,
+                  "cv": 0.2579370185131677,
+                  "score": 0.9989700582223003
+                }
+              ]
+            }
+          ],
+          "clique_scores": [
+            {
+              "tag": "dp",
+              "hash": "11791603318330401257",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": -0.9929399847010424,
+              "max_avg_latency": 1640.1525945945943,
+              "cv": 0.9929399847010426
+            },
+            {
+              "tag": "dp",
+              "hash": "12388841970338885509",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": 0.9929399847010426,
+              "max_avg_latency": 462991.3036111111,
+              "cv": 0.9929399847010426
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "16651901289804349969",
+              "ranks": [
+                1,
+                9
+              ],
+              "score": 0.13644139909282027,
+              "max_avg_latency": 583.4269444444444,
+              "cv": 0.19073216238093266
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "8049960379742636252",
+              "ranks": [
+                7,
+                15
+              ],
+              "score": 0.18235973776412503,
+              "max_avg_latency": 607.0005277777777,
+              "cv": 0.19073216238093266
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "16892658166739254306",
+              "ranks": [
+                2,
+                10
+              ],
+              "score": -0.3089391995692062,
+              "max_avg_latency": 354.7771944444445,
+              "cv": 0.19073216238093266
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "17615888763294692751",
+              "ranks": [
+                3,
+                11
+              ],
+              "score": -0.299802269957472,
+              "max_avg_latency": 359.4679166666667,
+              "cv": 0.19073216238093266
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "8209854562782067172",
+              "ranks": [
+                4,
+                12
+              ],
+              "score": 0.07318656081214187,
+              "max_avg_latency": 550.9531388888889,
+              "cv": 0.19073216238093266
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "8697361643914490227",
+              "ranks": [
+                5,
+                13
+              ],
+              "score": -0.07534154374739042,
+              "max_avg_latency": 474.7016944444445,
+              "cv": 0.19073216238093266
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "11101758911238368709",
+              "ranks": [
+                6,
+                14
+              ],
+              "score": 0.15445732751044777,
+              "max_avg_latency": 592.6759722222223,
+              "cv": 0.19073216238093266
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "18073212413181439257",
+              "ranks": [
+                0,
+                8
+              ],
+              "score": 0.13763798809453467,
+              "max_avg_latency": 584.04125,
+              "cv": 0.19073216238093266
+            }
+          ],
+          "incomplete": [],
+          "complete_cliques": 30
+        },
+        "kind": "diagnosis",
+        "time": 1792074664.8010924
+      }
+    ],
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "localization_seconds": 22.72315812110901,
+    "detection_seconds": 2.1995623111724854,
+    "failstop_detection_seconds": 0.20376133918762207
+  },
+  {
+    "run": "paper_delay_boundary",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "delay",
+    "nominal_severity": null,
+    "target_rank": 8,
+    "predicted_ranks": [
+      8
+    ],
+    "automatic_profiles": 1,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 83.78364297095686,
+    "post_iter_median_ms": 115.78223301330581,
+    "actual_throughput_loss": 0.27636874164166136,
+    "steady_tokens_per_second": 74111.75756001743,
+    "steps": 255,
+    "nccl_events": 3203456,
+    "timed_events": 2231999,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 120,
+      "min_seconds": 34.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "delay",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 42.0,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_delay_boundary/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [
+      {
+        "epoch": 1,
+        "trigger": {
+          "iteration": 45,
+          "observed_iteration": 47,
+          "prob": 1.0,
+          "baseline_ms": 84.79485525925926,
+          "degraded_ms": 111.22591166666666,
+          "throughput_loss": 0.23763398304721228,
+          "recovery_ratio": 0.007321828673197803
+        },
+        "profile_seconds": 20.0,
+        "nodes_received": 2,
+        "lost": 0,
+        "result": {
+          "suspects": [
+            {
+              "rank": 8,
+              "tags": 1,
+              "score": 0.9941203119943693,
+              "evidence": [
+                {
+                  "tag": "dp",
+                  "hash": "1518817812761866382",
+                  "clique": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "mean_us": 221.76221142857145,
+                  "clique_mean_us": 37716.66306378819,
+                  "cv": 0.2568582453030528,
+                  "score": 0.9941203119943693
+                }
+              ]
+            }
+          ],
+          "clique_scores": [
+            {
+              "tag": "dp",
+              "hash": "14404060385453507099",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": -0.9699366000706258,
+              "max_avg_latency": 631.5805852272726,
+              "cv": 0.9699366000706255
+            },
+            {
+              "tag": "dp",
+              "hash": "1518817812761866382",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": 0.9699366000706255,
+              "max_avg_latency": 41384.99682857143,
+              "cv": 0.9699366000706255
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "9667458182022867679",
+              "ranks": [
+                6,
+                14
+              ],
+              "score": 0.16831236380712392,
+              "max_avg_latency": 583.6212658959537,
+              "cv": 0.15707796363404197
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "16284181092249338342",
+              "ranks": [
+                2,
+                10
+              ],
+              "score": -0.2013586668395708,
+              "max_avg_latency": 398.9550057803468,
+              "cv": 0.15707796363404197
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "1112350317049978283",
+              "ranks": [
+                5,
+                13
+              ],
+              "score": 0.07437526979154331,
+              "max_avg_latency": 536.6957283236994,
+              "cv": 0.15707796363404197
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "6729018996558197244",
+              "ranks": [
+                3,
+                11
+              ],
+              "score": -0.24167907986058873,
+              "max_avg_latency": 378.8132601156069,
+              "cv": 0.15707796363404197
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "15384005788946969211",
+              "ranks": [
+                4,
+                12
+              ],
+              "score": -0.12259618932012341,
+              "max_avg_latency": 438.3001828571429,
+              "cv": 0.15707796363404197
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "3955315846574252822",
+              "ranks": [
+                1,
+                9
+              ],
+              "score": 0.05502545854498345,
+              "max_avg_latency": 527.0296820809248,
+              "cv": 0.15707796363404197
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "10559290929771990278",
+              "ranks": [
+                7,
+                15
+              ],
+              "score": 0.2068461350070587,
+              "max_avg_latency": 602.8705086705202,
+              "cv": 0.15707796363404197
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "11714148138620477442",
+              "ranks": [
+                0,
+                8
+              ],
+              "score": 0.06107470886957379,
+              "max_avg_latency": 530.0515375722545,
+              "cv": 0.15707796363404197
+            }
+          ],
+          "incomplete": [],
+          "complete_cliques": 30
+        },
+        "kind": "diagnosis",
+        "time": 1792076763.0068994
+      }
+    ],
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "localization_seconds": 20.928446769714355,
+    "detection_seconds": 0.35659170150756836
+  },
+  {
+    "run": "paper_gloo_baseline",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 96.73055697930977,
+    "post_iter_median_ms": 94.61822500452399,
+    "actual_throughput_loss": -0.02232478969759555,
+    "steady_tokens_per_second": 83873.97168057703,
+    "steps": 160,
+    "nccl_events": 0,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 0,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 160,
+      "min_seconds": 0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_gloo_baseline/train_rank0.jsonl",
+      "stop_backend": "gloo"
+    },
+    "fixture_stop_backend": "gloo",
+    "diagnoses": []
+  },
+  {
+    "run": "paper_gloo_clock600",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "gpu_clock",
+    "nominal_severity": null,
+    "target_rank": 8,
+    "predicted_ranks": [
+      5
+    ],
+    "automatic_profiles": 0,
+    "forced_profiles": 1,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 94.70611799042672,
+    "post_iter_median_ms": 96.20940504828468,
+    "actual_throughput_loss": 0.015625156990665356,
+    "steady_tokens_per_second": 84366.4225169365,
+    "steps": 291,
+    "nccl_events": 3650960,
+    "timed_events": 2666605,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 100,
+      "min_seconds": 34.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_gloo_clock600/train_rank0.jsonl",
+      "stop_backend": "gloo"
+    },
+    "fixture_stop_backend": "gloo",
+    "diagnoses": [
+      {
+        "epoch": 1,
+        "trigger": {
+          "forced": true,
+          "observed_iteration": 71
+        },
+        "profile_seconds": 20.0,
+        "nodes_received": 2,
+        "lost": 0,
+        "result": {
+          "suspects": [
+            {
+              "rank": 5,
+              "tags": 1,
+              "score": 0.9017057812539684,
+              "evidence": [
+                {
+                  "tag": "dp",
+                  "hash": "3297431726307735971",
+                  "clique": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "mean_us": 645.4163285024155,
+                  "clique_mean_us": 6566.167743496842,
+                  "cv": 0.8620295920187596,
+                  "score": 0.9017057812539684
+                }
+              ]
+            }
+          ],
+          "clique_scores": [
+            {
+              "tag": "dp",
+              "hash": "3297431726307735971",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": 0.0,
+              "max_avg_latency": 12746.587115384616,
+              "cv": 0.0
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "9748690916036236427",
+              "ranks": [
+                6,
+                14
+              ],
+              "score": 0.07747846698675116,
+              "max_avg_latency": 499.66483173076927,
+              "cv": 0.08060791016979241
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "16993194670266698762",
+              "ranks": [
+                2,
+                10
+              ],
+              "score": -0.04239311489311723,
+              "max_avg_latency": 444.0761442307693,
+              "cv": 0.08060791016979241
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "14469158826399944713",
+              "ranks": [
+                4,
+                12
+              ],
+              "score": -0.07638964962695252,
+              "max_avg_latency": 428.31075,
+              "cv": 0.08060791016979241
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "8514738692805371833",
+              "ranks": [
+                7,
+                15
+              ],
+              "score": 0.16176574878895317,
+              "max_avg_latency": 538.7518221153846,
+              "cv": 0.08060791016979241
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "6939430985021937955",
+              "ranks": [
+                1,
+                9
+              ],
+              "score": 0.04302347901872523,
+              "max_avg_latency": 483.6868365384616,
+              "cv": 0.08060791016979241
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "3266508298439100082",
+              "ranks": [
+                5,
+                13
+              ],
+              "score": -0.03370924076039979,
+              "max_avg_latency": 448.10316346153854,
+              "cv": 0.08060791016979241
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "9001570197562458079",
+              "ranks": [
+                3,
+                11
+              ],
+              "score": -0.08449981703495431,
+              "max_avg_latency": 424.5497788461538,
+              "cv": 0.08060791016979241
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "12241239783672547466",
+              "ranks": [
+                0,
+                8
+              ],
+              "score": -0.045275872479005344,
+              "max_avg_latency": 442.73930769230776,
+              "cv": 0.08060791016979241
+            }
+          ],
+          "incomplete": [],
+          "complete_cliques": 29
+        },
+        "kind": "diagnosis",
+        "time": 1792078010.6796281
+      }
+    ],
+    "tp": 0,
+    "fp": 1,
+    "fn": 1,
+    "localization_seconds": 21.21072244644165
+  },
+  {
+    "run": "paper_gloo_delay45",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "delay",
+    "nominal_severity": 0.45,
+    "target_rank": 8,
+    "predicted_ranks": [
+      8
+    ],
+    "automatic_profiles": 1,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 97.02943300362676,
+    "post_iter_median_ms": 156.7027130513452,
+    "actual_throughput_loss": 0.38080565987498816,
+    "steady_tokens_per_second": 56601.259063830286,
+    "steps": 198,
+    "nccl_events": 2484368,
+    "timed_events": 1633648,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 120,
+      "min_seconds": 34.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "delay",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": 0.45,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_gloo_delay45/train_rank0.jsonl",
+      "stop_backend": "gloo"
+    },
+    "fixture_stop_backend": "gloo",
+    "diagnoses": [
+      {
+        "epoch": 1,
+        "trigger": {
+          "iteration": 45,
+          "observed_iteration": 48,
+          "prob": 1.0,
+          "baseline_ms": 96.70905946153849,
+          "degraded_ms": 153.18335224999998,
+          "throughput_loss": 0.36867121628395816,
+          "recovery_ratio": 0.036095424708882724
+        },
+        "profile_seconds": 20.0,
+        "nodes_received": 2,
+        "lost": 0,
+        "result": {
+          "suspects": [
+            {
+              "rank": 8,
+              "tags": 1,
+              "score": 0.9937755947659292,
+              "evidence": [
+                {
+                  "tag": "dp",
+                  "hash": "20556503291414681",
+                  "clique": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "mean_us": 438.7671496062992,
+                  "clique_mean_us": 70491.41775098426,
+                  "cv": 0.25687885987918996,
+                  "score": 0.9937755947659292
+                }
+              ]
+            }
+          ],
+          "clique_scores": [
+            {
+              "tag": "dp",
+              "hash": "20556503291414681",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": 0.0,
+              "max_avg_latency": 77698.00012598424,
+              "cv": 0.0
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "4118812563084114851",
+              "ranks": [
+                4,
+                12
+              ],
+              "score": -0.12394094212117848,
+              "max_avg_latency": 314.3895826771654,
+              "cv": 0.08539970354069631
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "12797342755218378645",
+              "ranks": [
+                1,
+                9
+              ],
+              "score": 0.043656761585790446,
+              "max_avg_latency": 374.5350393700788,
+              "cv": 0.08539970354069631
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "2564799707665219689",
+              "ranks": [
+                3,
+                11
+              ],
+              "score": 0.004661112997937288,
+              "max_avg_latency": 360.54074803149604,
+              "cv": 0.08539970354069631
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "7772699308289606089",
+              "ranks": [
+                2,
+                10
+              ],
+              "score": -0.09730379463737655,
+              "max_avg_latency": 323.94880314960636,
+              "cv": 0.08539970354069631
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "9560257633025662683",
+              "ranks": [
+                6,
+                14
+              ],
+              "score": 0.1326331468465398,
+              "max_avg_latency": 406.46581889763775,
+              "cv": 0.08539970354069631
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "14742610002520499042",
+              "ranks": [
+                5,
+                13
+              ],
+              "score": -0.08033339477616828,
+              "max_avg_latency": 330.03893700787404,
+              "cv": 0.08539970354069631
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "14168964473340946759",
+              "ranks": [
+                7,
+                15
+              ],
+              "score": 0.0718763125671691,
+              "max_avg_latency": 384.66213385826774,
+              "cv": 0.08539970354069631
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "1960117065564171587",
+              "ranks": [
+                0,
+                8
+              ],
+              "score": 0.04875079753728671,
+              "max_avg_latency": 376.3631259842519,
+              "cv": 0.08539970354069631
+            }
+          ],
+          "incomplete": [],
+          "complete_cliques": 29
+        },
+        "kind": "diagnosis",
+        "time": 1792077942.4722471
+      }
+    ],
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "localization_seconds": 21.226618766784668,
+    "detection_seconds": 0.6826422214508057
+  },
+  {
+    "run": "paper_gloo_healthy",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [
+      6
+    ],
+    "automatic_profiles": 0,
+    "forced_profiles": 1,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 95.28267703717574,
+    "post_iter_median_ms": 93.56716700131074,
+    "actual_throughput_loss": -0.018334530058401466,
+    "steady_tokens_per_second": 84471.03150145207,
+    "steps": 291,
+    "nccl_events": 3650960,
+    "timed_events": 2656658,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 120,
+      "min_seconds": 34.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_gloo_healthy/train_rank0.jsonl",
+      "stop_backend": "gloo"
+    },
+    "fixture_stop_backend": "gloo",
+    "diagnoses": [
+      {
+        "epoch": 1,
+        "trigger": {
+          "forced": true,
+          "observed_iteration": 35
+        },
+        "profile_seconds": 20.0,
+        "nodes_received": 2,
+        "lost": 0,
+        "result": {
+          "suspects": [
+            {
+              "rank": 6,
+              "tags": 2,
+              "score": 1.1350096260565918,
+              "evidence": [
+                {
+                  "tag": "dp",
+                  "hash": "12391798198658815314",
+                  "clique": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "mean_us": 544.158218446602,
+                  "clique_mean_us": 6913.7659776276905,
+                  "cv": 0.8755475508243677,
+                  "score": 0.9212935149660187
+                },
+                {
+                  "tag": "expert_dp",
+                  "hash": "5012392939807194031",
+                  "clique": [
+                    6,
+                    14
+                  ],
+                  "mean_us": 343.40393689320393,
+                  "clique_mean_us": 436.7429394610947,
+                  "cv": 0.21371611109057317,
+                  "score": 0.21371611109057312
+                }
+              ]
+            }
+          ],
+          "clique_scores": [
+            {
+              "tag": "dp",
+              "hash": "12391798198658815314",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": 0.0,
+              "max_avg_latency": 13189.990140096617,
+              "cv": 0.0
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "9095402262191251425",
+              "ranks": [
+                2,
+                10
+              ],
+              "score": -0.17257208080101824,
+              "max_avg_latency": 383.78871980676337,
+              "cv": 0.11698071685259993
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "9761383553376450173",
+              "ranks": [
+                3,
+                11
+              ],
+              "score": -0.184227856249512,
+              "max_avg_latency": 378.38238164251203,
+              "cv": 0.11698071685259993
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "2806582323848991955",
+              "ranks": [
+                7,
+                15
+              ],
+              "score": 0.1176558342422984,
+              "max_avg_latency": 518.4061256038648,
+              "cv": 0.11698071685259993
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "4968598510083885522",
+              "ranks": [
+                1,
+                9
+              ],
+              "score": 0.0879847829760012,
+              "max_avg_latency": 504.6437004830917,
+              "cv": 0.11698071685259993
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "11213777077127507940",
+              "ranks": [
+                4,
+                12
+              ],
+              "score": 0.05118889118920152,
+              "max_avg_latency": 487.576536231884,
+              "cv": 0.11698071685259993
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "5012392939807194031",
+              "ranks": [
+                6,
+                14
+              ],
+              "score": 0.1428282689466096,
+              "max_avg_latency": 530.0819420289855,
+              "cv": 0.11698071685259993
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "7779284383826651081",
+              "ranks": [
+                5,
+                13
+              ],
+              "score": -0.03220034616479909,
+              "max_avg_latency": 448.89782125603864,
+              "cv": 0.11698071685259993
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "17465694854160822676",
+              "ranks": [
+                0,
+                8
+              ],
+              "score": -0.010657494138781153,
+              "max_avg_latency": 458.8901159420289,
+              "cv": 0.11698071685259993
+            }
+          ],
+          "incomplete": [],
+          "complete_cliques": 29
+        },
+        "kind": "diagnosis",
+        "time": 1792077876.1048412
+      }
+    ]
+  },
+  {
+    "run": "paper_gloo_monitor",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 94.32433400070295,
+    "post_iter_median_ms": 96.84274299070239,
+    "actual_throughput_loss": 0.026005138972996944,
+    "steady_tokens_per_second": 83961.42302379465,
+    "steps": 160,
+    "nccl_events": 2007696,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 160,
+      "min_seconds": 0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_gloo_monitor/train_rank0.jsonl",
+      "stop_backend": "gloo"
+    },
+    "fixture_stop_backend": "gloo",
+    "diagnoses": []
+  },
+  {
+    "run": "paper_monitor16",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 84.35813605319709,
+    "post_iter_median_ms": 83.69142399169505,
+    "actual_throughput_loss": -0.00796631279171689,
+    "steady_tokens_per_second": 95304.25820660987,
+    "steps": 120,
+    "nccl_events": 1507856,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 120,
+      "min_seconds": 0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_monitor16/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": []
+  },
+  {
+    "run": "paper_monitor16b",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 84.57143703708425,
+    "post_iter_median_ms": 81.71892300015315,
+    "actual_throughput_loss": -0.034906407625143965,
+    "steady_tokens_per_second": 97309.72547822591,
+    "steps": 120,
+    "nccl_events": 1507856,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 120,
+      "min_seconds": 0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_monitor16b/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": []
+  },
+  {
+    "run": "paper_monitor_final",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 86.47683699382469,
+    "post_iter_median_ms": 80.58898901799694,
+    "actual_throughput_loss": -0.07306020397542023,
+    "steady_tokens_per_second": 95414.76941189643,
+    "steps": 160,
+    "nccl_events": 2010256,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 160,
+      "min_seconds": 0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_monitor_final/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": []
+  },
+  {
+    "run": "paper_oom",
+    "exits": [
+      "1",
+      "1"
+    ],
+    "invalid": true,
+    "fault": "oom",
+    "nominal_severity": null,
+    "target_rank": 8,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "baseline_iter_median_ms": 78.34968698443845,
+    "post_iter_median_ms": null,
+    "actual_throughput_loss": null,
+    "steady_tokens_per_second": null,
+    "steps": 44,
+    "nccl_events": 565822,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 120,
+      "min_seconds": 0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "oom",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_oom/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [],
+    "tp": 0,
+    "fp": 0,
+    "fn": 1,
+    "failstop_detection_seconds": 0.19405841827392578
+  },
+  {
+    "run": "paper_oom_clean",
+    "exits": [
+      "1",
+      "1"
+    ],
+    "invalid": false,
+    "fault": "oom",
+    "nominal_severity": null,
+    "target_rank": 8,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "baseline_iter_median_ms": 87.39575796062127,
+    "post_iter_median_ms": null,
+    "actual_throughput_loss": null,
+    "steady_tokens_per_second": null,
+    "steps": 44,
+    "nccl_events": 565822,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 120,
+      "min_seconds": 0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "oom",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_oom_clean/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [],
+    "tp": 0,
+    "fp": 0,
+    "fn": 1,
+    "failstop_detection_seconds": 0.21660852432250977
+  },
+  {
+    "run": "paper_precheck",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": null,
+    "post_iter_median_ms": null,
+    "actual_throughput_loss": null,
+    "steady_tokens_per_second": null,
+    "steps": 0,
+    "nccl_events": 0,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 0,
+    "config": {},
+    "fixture_stop_backend": null,
+    "diagnoses": []
+  },
+  {
+    "run": "paper_probe_final",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [
+      3
+    ],
+    "automatic_profiles": 0,
+    "forced_profiles": 1,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 83.6109439842403,
+    "post_iter_median_ms": 84.79447604622692,
+    "actual_throughput_loss": 0.013957655229114296,
+    "steady_tokens_per_second": 94851.19134068998,
+    "steps": 280,
+    "nccl_events": 3517456,
+    "timed_events": 2995065,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 120,
+      "min_seconds": 30.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_probe_final/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [
+      {
+        "epoch": 1,
+        "trigger": {
+          "forced": true,
+          "observed_iteration": 1
+        },
+        "profile_seconds": 20.0,
+        "nodes_received": 2,
+        "lost": 0,
+        "result": {
+          "suspects": [
+            {
+              "rank": 3,
+              "tags": 1,
+              "score": 0.897596501817065,
+              "evidence": [
+                {
+                  "tag": "dp",
+                  "hash": "5900081192624172984",
+                  "clique": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "mean_us": 631.0203175965665,
+                  "clique_mean_us": 6162.097279814629,
+                  "cv": 0.8642883855071983,
+                  "score": 0.897596501817065
+                }
+              ]
+            }
+          ],
+          "clique_scores": [
+            {
+              "tag": "dp",
+              "hash": "5900081192624172984",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": 0.8364186928045024,
+              "max_avg_latency": 11599.256570212769,
+              "cv": 0.8364186928045024
+            },
+            {
+              "tag": "dp",
+              "hash": "786985023365822586",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": -0.8364186928045023,
+              "max_avg_latency": 1033.2183829787234,
+              "cv": 0.8364186928045024
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "4277731024002201084",
+              "ranks": [
+                4,
+                12
+              ],
+              "score": -0.012321575446943874,
+              "max_avg_latency": 543.0008638297872,
+              "cv": 0.18449988824340086
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "9012313932800775112",
+              "ranks": [
+                7,
+                15
+              ],
+              "score": 0.28453681802414876,
+              "max_avg_latency": 706.2061744680851,
+              "cv": 0.18449988824340086
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "12395825125281031446",
+              "ranks": [
+                5,
+                13
+              ],
+              "score": -0.1940888850343135,
+              "max_avg_latency": 443.06974893617024,
+              "cv": 0.18449988824340086
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "12143798467523119078",
+              "ranks": [
+                6,
+                14
+              ],
+              "score": 0.1778347140336684,
+              "max_avg_latency": 647.5440297872339,
+              "cv": 0.18449988824340086
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "8389777751948368464",
+              "ranks": [
+                2,
+                10
+              ],
+              "score": -0.2706651228241435,
+              "max_avg_latency": 400.97005106382977,
+              "cv": 0.18449988824340086
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "16148814651189262740",
+              "ranks": [
+                3,
+                11
+              ],
+              "score": -0.16078237505535609,
+              "max_avg_latency": 461.38083404255326,
+              "cv": 0.18449988824340086
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "17932090150352667551",
+              "ranks": [
+                1,
+                9
+              ],
+              "score": 0.026896506164243657,
+              "max_avg_latency": 564.5619829787233,
+              "cv": 0.18449988824340086
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "12170280548156147337",
+              "ranks": [
+                0,
+                8
+              ],
+              "score": 0.14858992013869682,
+              "max_avg_latency": 631.4659744680852,
+              "cv": 0.18449988824340086
+            }
+          ],
+          "incomplete": [],
+          "complete_cliques": 30
+        },
+        "kind": "diagnosis",
+        "time": 1792077348.5822768
+      }
+    ]
+  },
+  {
+    "run": "paper_profile_healthy",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [
+      4
+    ],
+    "automatic_profiles": 0,
+    "forced_profiles": 1,
+    "failstop_ranks": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "baseline_iter_median_ms": 85.97470005042851,
+    "post_iter_median_ms": 81.66048198472708,
+    "actual_throughput_loss": -0.05283116093422402,
+    "steady_tokens_per_second": 96003.8647472915,
+    "steps": 332,
+    "nccl_events": 4170576,
+    "timed_events": 3022695,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 120,
+      "min_seconds": 34.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_profile_healthy/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [
+      {
+        "epoch": 1,
+        "trigger": {
+          "forced": true,
+          "observed_iteration": 35
+        },
+        "profile_seconds": 20.0,
+        "nodes_received": 2,
+        "lost": 0,
+        "result": {
+          "suspects": [
+            {
+              "rank": 4,
+              "tags": 1,
+              "score": 0.8519158457407304,
+              "evidence": [
+                {
+                  "tag": "dp",
+                  "hash": "14395865950874196114",
+                  "clique": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "mean_us": 753.2439316239316,
+                  "clique_mean_us": 5086.593737133635,
+                  "cv": 0.8161540154740339,
+                  "score": 0.8519158457407304
+                }
+              ]
+            }
+          ],
+          "clique_scores": [
+            {
+              "tag": "dp",
+              "hash": "14395865950874196114",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": 0.7325853521639805,
+              "max_avg_latency": 9511.842236051501,
+              "cv": 0.7325853521639804
+            },
+            {
+              "tag": "dp",
+              "hash": "13429075636896132304",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": -0.7325853521639804,
+              "max_avg_latency": 1468.0984914529913,
+              "cv": 0.7325853521639804
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "4727963661089036757",
+              "ranks": [
+                7,
+                15
+              ],
+              "score": 0.08967439607352391,
+              "max_avg_latency": 627.4116995708155,
+              "cv": 0.30046384073913107
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "13166054208063051497",
+              "ranks": [
+                5,
+                13
+              ],
+              "score": 0.6584115952142201,
+              "max_avg_latency": 954.8786695278969,
+              "cv": 0.30046384073913107
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "1314911129751179490",
+              "ranks": [
+                3,
+                11
+              ],
+              "score": -0.36116727415732547,
+              "max_avg_latency": 367.8265064377682,
+              "cv": 0.30046384073913107
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "12044773188125575595",
+              "ranks": [
+                2,
+                10
+              ],
+              "score": -0.31178596976288603,
+              "max_avg_latency": 396.2592274678112,
+              "cv": 0.30046384073913107
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "489013231227022743",
+              "ranks": [
+                1,
+                9
+              ],
+              "score": -0.02580929331046071,
+              "max_avg_latency": 560.9186094420601,
+              "cv": 0.30046384073913107
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "16499042692036828534",
+              "ranks": [
+                6,
+                14
+              ],
+              "score": 0.125820682246225,
+              "max_avg_latency": 648.223974248927,
+              "cv": 0.30046384073913107
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "4400619350919327184",
+              "ranks": [
+                4,
+                12
+              ],
+              "score": -0.19051341529645066,
+              "max_avg_latency": 466.08542489270377,
+              "cv": 0.30046384073913107
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "11460982011942732728",
+              "ranks": [
+                0,
+                8
+              ],
+              "score": 0.015369278993154796,
+              "max_avg_latency": 584.6283690987125,
+              "cv": 0.30046384073913107
+            }
+          ],
+          "incomplete": [],
+          "complete_cliques": 30
+        },
+        "kind": "diagnosis",
+        "time": 1792074309.902186
+      }
+    ]
+  },
+  {
+    "run": "paper_profile_healthy_fixed",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [
+      0
+    ],
+    "automatic_profiles": 0,
+    "forced_profiles": 1,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 83.13174697104841,
+    "post_iter_median_ms": 85.48941800836474,
+    "actual_throughput_loss": 0.02757851313346915,
+    "steady_tokens_per_second": 94335.37592652503,
+    "steps": 326,
+    "nccl_events": 4095216,
+    "timed_events": 2947041,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 120,
+      "min_seconds": 34.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_profile_healthy_fixed/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [
+      {
+        "epoch": 1,
+        "trigger": {
+          "forced": true,
+          "observed_iteration": 35
+        },
+        "profile_seconds": 20.0,
+        "nodes_received": 2,
+        "lost": 0,
+        "result": {
+          "suspects": [
+            {
+              "rank": 0,
+              "tags": 1,
+              "score": 0.9117543267320167,
+              "evidence": [
+                {
+                  "tag": "dp",
+                  "hash": "16293379089117916712",
+                  "clique": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "mean_us": 616.5954155844156,
+                  "clique_mean_us": 6987.259462704156,
+                  "cv": 0.8339798425990737,
+                  "score": 0.9117543267320167
+                }
+              ]
+            }
+          ],
+          "clique_scores": [
+            {
+              "tag": "dp",
+              "hash": "16293379089117916712",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": 0.825077214631011,
+              "max_avg_latency": 13125.242716157207,
+              "cv": 0.825077214631011
+            },
+            {
+              "tag": "dp",
+              "hash": "11100711729286958767",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": -0.825077214631011,
+              "max_avg_latency": 1257.9763728070177,
+              "cv": 0.825077214631011
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "11902418143140365852",
+              "ranks": [
+                3,
+                11
+              ],
+              "score": -0.2201875410691428,
+              "max_avg_latency": 413.45015350877196,
+              "cv": 0.22732095949582987
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "6195068734073364013",
+              "ranks": [
+                1,
+                9
+              ],
+              "score": 0.048489696731971454,
+              "max_avg_latency": 555.900615720524,
+              "cv": 0.22732095949582987
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "382653175643553427",
+              "ranks": [
+                6,
+                14
+              ],
+              "score": 0.2184087019999502,
+              "max_avg_latency": 645.9902751091703,
+              "cv": 0.22732095949582987
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "1142998605140146901",
+              "ranks": [
+                2,
+                10
+              ],
+              "score": -0.4361835070674079,
+              "max_avg_latency": 298.9308684210527,
+              "cv": 0.22732095949582987
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "4373002220165596069",
+              "ranks": [
+                4,
+                12
+              ],
+              "score": -0.07908432760124032,
+              "max_avg_latency": 488.26191703056764,
+              "cv": 0.22732095949582987
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "12088880415404599747",
+              "ranks": [
+                7,
+                15
+              ],
+              "score": 0.26153563612720604,
+              "max_avg_latency": 668.8558209606987,
+              "cv": 0.22732095949582987
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "11859861148979344890",
+              "ranks": [
+                5,
+                13
+              ],
+              "score": -0.015909165652656335,
+              "max_avg_latency": 521.7568684210526,
+              "cv": 0.22732095949582987
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "14309771587762755946",
+              "ranks": [
+                0,
+                8
+              ],
+              "score": 0.22293050653132018,
+              "max_avg_latency": 648.3876986899563,
+              "cv": 0.22732095949582987
+            }
+          ],
+          "incomplete": [],
+          "complete_cliques": 30
+        },
+        "kind": "diagnosis",
+        "time": 1792076694.4662051
+      }
+    ]
+  },
+  {
+    "run": "paper_smoke16",
+    "exits": [
+      "1",
+      "1"
+    ],
+    "invalid": true,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": null,
+    "post_iter_median_ms": null,
+    "actual_throughput_loss": null,
+    "steady_tokens_per_second": null,
+    "steps": 0,
+    "nccl_events": 0,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {},
+    "fixture_stop_backend": null,
+    "diagnoses": []
+  },
+  {
+    "run": "paper_smoke16b",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": null,
+    "post_iter_median_ms": null,
+    "actual_throughput_loss": null,
+    "steady_tokens_per_second": null,
+    "steps": 5,
+    "nccl_events": 63456,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 5,
+      "min_seconds": 0,
+      "seq": 64,
+      "batch": 1,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "output": "/flash/results/paper_smoke16b/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": []
+  },
+  {
+    "run": "paper_timeout",
+    "exits": [
+      "1",
+      "1"
+    ],
+    "invalid": true,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": null,
+    "post_iter_median_ms": null,
+    "actual_throughput_loss": null,
+    "steady_tokens_per_second": null,
+    "steps": 0,
+    "nccl_events": 0,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {},
+    "fixture_stop_backend": null,
+    "diagnoses": []
+  },
+  {
+    "run": "paper_timeout_clean",
+    "exits": [
+      "1",
+      "1"
+    ],
+    "invalid": false,
+    "fault": "timeout",
+    "nominal_severity": null,
+    "target_rank": 8,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "baseline_iter_median_ms": 83.37072399444878,
+    "post_iter_median_ms": null,
+    "actual_throughput_loss": null,
+    "steady_tokens_per_second": null,
+    "steps": 45,
+    "nccl_events": 578368,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 120,
+      "min_seconds": 0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "timeout",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 0,
+      "output": "/flash/results/paper_timeout_clean/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [],
+    "tp": 0,
+    "fp": 0,
+    "fn": 1,
+    "failstop_detection_seconds": 0.22376775741577148
+  },
+  {
+    "run": "paper_transient",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "delay",
+    "nominal_severity": null,
+    "target_rank": 8,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 0,
+    "failstop_ranks": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "baseline_iter_median_ms": 85.4331930167973,
+    "post_iter_median_ms": 79.95897700311616,
+    "actual_throughput_loss": -0.06846280704001262,
+    "steady_tokens_per_second": 92954.90323531181,
+    "steps": 120,
+    "nccl_events": 1507856,
+    "timed_events": 0,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 120,
+      "min_seconds": 12.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "delay",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 500.0,
+      "severity": null,
+      "fault_placement": "before-sync",
+      "fault_duration": 1,
+      "output": "/flash/results/paper_transient/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [],
+    "tp": 0,
+    "fp": 0,
+    "fn": 1,
+    "failstop_detection_seconds": 0.2186124324798584
+  },
+  {
+    "run": "profile16",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "invalid": false,
+    "fault": "none",
+    "nominal_severity": null,
+    "target_rank": null,
+    "predicted_ranks": [],
+    "automatic_profiles": 0,
+    "forced_profiles": 1,
+    "failstop_ranks": [],
+    "baseline_iter_median_ms": 87.07180101191625,
+    "post_iter_median_ms": 85.61287901829928,
+    "actual_throughput_loss": -0.017040917328631444,
+    "steady_tokens_per_second": 90782.62412939842,
+    "steps": 324,
+    "nccl_events": 420832,
+    "timed_events": 292316,
+    "probe_errors": 0,
+    "capture_skipped": 0,
+    "lost": 0,
+    "nodes_observed": 2,
+    "config": {
+      "tp": 1,
+      "pp": 1,
+      "ep": 8,
+      "steps": 100,
+      "min_seconds": 32.0,
+      "seq": 128,
+      "batch": 2,
+      "microbatches": 2,
+      "hidden": 256,
+      "layers": 4,
+      "seed": 1234,
+      "fault": "none",
+      "fault_rank": 8,
+      "fault_step": 45,
+      "delay_ms": 100,
+      "output": "/flash/results/profile16/train_rank0.jsonl"
+    },
+    "fixture_stop_backend": "nccl",
+    "diagnoses": [
+      {
+        "epoch": 1,
+        "trigger": {
+          "forced": true,
+          "observed_iteration": 37
+        },
+        "profile_seconds": 20.0,
+        "nodes_received": 2,
+        "lost": 0,
+        "result": {
+          "suspects": [],
+          "clique_scores": [
+            {
+              "tag": "dp",
+              "hash": "8002725424801440005",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": 0.521537343994356,
+              "max_avg_latency": 12315.659620535715,
+              "cv": 0.5215373439943561
+            },
+            {
+              "tag": "dp",
+              "hash": "7272687435536328482",
+              "ranks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "score": -0.5215373439943561,
+              "max_avg_latency": 3872.782508928572,
+              "cv": 0.5215373439943561
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "14489421956270273854",
+              "ranks": [
+                6,
+                14
+              ],
+              "score": 0.007380813729260346,
+              "max_avg_latency": 9017.381339285714,
+              "cv": 0.10914219692886347
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "2986787420901369120",
+              "ranks": [
+                5,
+                13
+              ],
+              "score": -0.014011736877289465,
+              "max_avg_latency": 8825.889915178572,
+              "cv": 0.10914219692886347
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "12933697839471310539",
+              "ranks": [
+                3,
+                11
+              ],
+              "score": -0.0004689057766786596,
+              "max_avg_latency": 8947.116040178573,
+              "cv": 0.10914219692886347
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "15253419952234103875",
+              "ranks": [
+                7,
+                15
+              ],
+              "score": -0.04321413903730593,
+              "max_avg_latency": 8564.4900625,
+              "cv": 0.10914219692886347
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "15867677132763928175",
+              "ranks": [
+                1,
+                9
+              ],
+              "score": 0.12324710010228827,
+              "max_avg_latency": 10054.536776785713,
+              "cv": 0.10914219692886347
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "13786130500470284613",
+              "ranks": [
+                2,
+                10
+              ],
+              "score": 0.1421158241389765,
+              "max_avg_latency": 10223.436638392857,
+              "cv": 0.10914219692886347
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "7699668539176256377",
+              "ranks": [
+                4,
+                12
+              ],
+              "score": -0.2391829081469014,
+              "max_avg_latency": 6810.312200892857,
+              "cv": 0.10914219692886347
+            },
+            {
+              "tag": "expert_dp",
+              "hash": "12824216593565929279",
+              "ranks": [
+                0,
+                8
+              ],
+              "score": 0.02413395186764995,
+              "max_avg_latency": 9167.343928571428,
+              "cv": 0.10914219692886347
+            }
+          ],
+          "incomplete": [],
+          "complete_cliques": 28
+        },
+        "kind": "diagnosis",
+        "time": 1792073286.5151453
+      }
+    ]
+  }
+]

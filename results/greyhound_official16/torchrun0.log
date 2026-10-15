@@ -1,0 +1,157 @@
+Looking in indexes: https://pypi.org/simple, https://pypi.ngc.nvidia.com
+Processing ./vendor/Greyhound/detector/dist/control_plane-1.0-py3-none-any.whl
+Requirement already satisfied: redis>=5.0.0 in /usr/local/lib/python3.10/dist-packages (from control-plane==1.0) (5.0.5)
+Requirement already satisfied: numpy>=1.22.2 in /usr/local/lib/python3.10/dist-packages (from control-plane==1.0) (1.26.4)
+Requirement already satisfied: matplotlib>=3.7.0 in /usr/local/lib/python3.10/dist-packages (from control-plane==1.0) (3.8.0)
+Requirement already satisfied: pandas>=1.5.0 in /usr/local/lib/python3.10/dist-packages (from control-plane==1.0) (1.5.3)
+Requirement already satisfied: statsmodels>=0.13.0 in /usr/local/lib/python3.10/dist-packages (from control-plane==1.0) (0.14.2)
+Requirement already satisfied: Rbeast>=0.1.19 in /usr/local/lib/python3.10/dist-packages (from control-plane==1.0) (0.1.19)
+Requirement already satisfied: cvxpy>=1.5.3 in /usr/local/lib/python3.10/dist-packages/cvxpy-1.6.5-py3.10-linux-x86_64.egg (from control-plane==1.0) (1.6.5)
+Requirement already satisfied: osqp>=0.6.2 in /usr/local/lib/python3.10/dist-packages/osqp-1.0.3-py3.10-linux-x86_64.egg (from cvxpy>=1.5.3->control-plane==1.0) (1.0.3)
+Requirement already satisfied: clarabel>=0.5.0 in /usr/local/lib/python3.10/dist-packages/clarabel-0.10.0-py3.10-linux-x86_64.egg (from cvxpy>=1.5.3->control-plane==1.0) (0.10.0)
+Requirement already satisfied: scs>=3.2.4.post1 in /usr/local/lib/python3.10/dist-packages/scs-3.2.7.post2-py3.10-linux-x86_64.egg (from cvxpy>=1.5.3->control-plane==1.0) (3.2.7.post2)
+Requirement already satisfied: scipy>=1.11.0 in /usr/local/lib/python3.10/dist-packages (from cvxpy>=1.5.3->control-plane==1.0) (1.11.1)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.7.0->control-plane==1.0) (1.1.1)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.7.0->control-plane==1.0) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.7.0->control-plane==1.0) (4.43.1)
+Requirement already satisfied: kiwisolver>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.7.0->control-plane==1.0) (1.4.5)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.7.0->control-plane==1.0) (23.1)
+Requirement already satisfied: pillow>=6.2.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.7.0->control-plane==1.0) (9.2.0)
+Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.7.0->control-plane==1.0) (3.1.1)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.7.0->control-plane==1.0) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas>=1.5.0->control-plane==1.0) (2023.3)
+Requirement already satisfied: async-timeout>=4.0.3 in /usr/local/lib/python3.10/dist-packages (from redis>=5.0.0->control-plane==1.0) (4.0.3)
+Requirement already satisfied: patsy>=0.5.6 in /usr/local/lib/python3.10/dist-packages (from statsmodels>=0.13.0->control-plane==1.0) (0.5.6)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.10/dist-packages (from osqp>=0.6.2->cvxpy>=1.5.3->control-plane==1.0) (3.1.2)
+Requirement already satisfied: setuptools in /usr/local/lib/python3.10/dist-packages (from osqp>=0.6.2->cvxpy>=1.5.3->control-plane==1.0) (68.2.2)
+Requirement already satisfied: joblib in /usr/local/lib/python3.10/dist-packages (from osqp>=0.6.2->cvxpy>=1.5.3->control-plane==1.0) (1.3.2)
+Requirement already satisfied: six in /usr/local/lib/python3.10/dist-packages (from patsy>=0.5.6->statsmodels>=0.13.0->control-plane==1.0) (1.16.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.10/dist-packages (from jinja2->osqp>=0.6.2->cvxpy>=1.5.3->control-plane==1.0) (2.1.3)
+control-plane is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.
+Name: control-plane
+Version: 1.0
+Summary: UNKNOWN
+Home-page: 
+Author: 
+Author-email: 
+License: UNKNOWN
+Location: /usr/local/lib/python3.10/dist-packages
+Requires: cvxpy, matplotlib, numpy, pandas, Rbeast, redis, statsmodels
+Required-by: 
+Name: control-plane
+Version: 1.0
+Summary: UNKNOWN
+Home-page: 
+Author: 
+Author-email: 
+License: UNKNOWN
+Location: /usr/local/lib/python3.10/dist-packages
+Requires: cvxpy, matplotlib, numpy, pandas, Rbeast, redis, statsmodels
+Required-by: 
+Name: control-plane
+Version: 1.0
+Summary: UNKNOWN
+Home-page: 
+Author: 
+Author-email: 
+License: UNKNOWN
+Location: /usr/local/lib/python3.10/dist-packages
+Requires: cvxpy, matplotlib, numpy, pandas, Rbeast, redis, statsmodels
+Required-by: 
+Name: control-plane
+Version: 1.0
+Summary: UNKNOWN
+Home-page: 
+Author: 
+Author-email: 
+License: UNKNOWN
+Location: /usr/local/lib/python3.10/dist-packages
+Requires: cvxpy, matplotlib, numpy, pandas, Rbeast, redis, statsmodels
+Required-by: 
+Name: control-plane
+Version: 1.0
+Summary: UNKNOWN
+Home-page: 
+Author: 
+Author-email: 
+License: UNKNOWN
+Location: /usr/local/lib/python3.10/dist-packages
+Requires: cvxpy, matplotlib, numpy, pandas, Rbeast, redis, statsmodels
+Required-by: 
+Name: control-plane
+Version: 1.0
+Summary: UNKNOWN
+Home-page: 
+Author: 
+Author-email: 
+License: UNKNOWN
+Location: /usr/local/lib/python3.10/dist-packages
+Requires: cvxpy, matplotlib, numpy, pandas, Rbeast, redis, statsmodels
+Required-by: 
+Name: control-plane
+Version: 1.0
+Summary: UNKNOWN
+Home-page: 
+Author: 
+Author-email: 
+License: UNKNOWN
+Location: /usr/local/lib/python3.10/dist-packages
+Requires: cvxpy, matplotlib, numpy, pandas, Rbeast, redis, statsmodels
+Required-by: 
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+3389:C 15 Oct 2026 15:12:59.290 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+3389:C 15 Oct 2026 15:12:59.290 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=3389, just started
+3389:C 15 Oct 2026 15:12:59.290 # Configuration loaded
+3389:M 15 Oct 2026 15:12:59.291 # Could not create server TCP listening socket 10.10.4.1:6379: bind: Address already in use
+Traceback (most recent call last):
+  File "/usr/local/bin/global_controller", line 8, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python3.10/dist-packages/control_plane/global_controller.py", line 292, in main
+    server = GlobalServer(args.output_path, args.master_addr, args.port)
+  File "/usr/local/lib/python3.10/dist-packages/control_plane/global_controller.py", line 41, in __init__
+    self.analyzer = GlobalAnalyzer(self.storage)
+  File "/usr/local/lib/python3.10/dist-packages/control_plane/global_analyzer.py", line 103, in __init__
+    self.tp, self.dp, self.pp = self.get_parallel_states()
+  File "/usr/local/lib/python3.10/dist-packages/control_plane/global_analyzer.py", line 127, in get_parallel_states
+    tp_r = parse_rankstr(self.storage.get(f"{rank}_tp").decode())
+AttributeError: 'NoneType' object has no attribute 'decode'
+{"kind": "iteration", "rank": 0, "iteration": 1, "time_ms": 2654.30335898418, "loss": 5.552827835083008, "tokens_per_second": 3086.3088698102447}
+{"kind": "iteration", "rank": 0, "iteration": 2, "time_ms": 194.5377699448727, "loss": 4.687597751617432, "tokens_per_second": 42110.07457483148}
+{"kind": "iteration", "rank": 0, "iteration": 3, "time_ms": 57.31291195843369, "loss": 4.270811557769775, "tokens_per_second": 142934.63235546756}
+{"kind": "iteration", "rank": 0, "iteration": 10, "time_ms": 71.4405530015938, "loss": 3.075972557067871, "tokens_per_second": 114668.76522942426}
+{"kind": "iteration", "rank": 0, "iteration": 20, "time_ms": 85.12273099040613, "loss": 2.7590506076812744, "tokens_per_second": 96237.51381899731}
+{"kind": "iteration", "rank": 0, "iteration": 30, "time_ms": 99.84452102798969, "loss": 2.57098388671875, "tokens_per_second": 82047.5667132853}
+{"kind": "iteration", "rank": 0, "iteration": 40, "time_ms": 87.22668798873201, "loss": 2.2911088466644287, "tokens_per_second": 93916.21061042977}
+{"kind": "iteration", "rank": 0, "iteration": 50, "time_ms": 84.03633901616558, "loss": 2.168487548828125, "tokens_per_second": 97481.63825204418}
+{"kind": "iteration", "rank": 0, "iteration": 60, "time_ms": 86.63829998113215, "loss": 2.0746681690216064, "tokens_per_second": 94554.02520344964}
+{"kind": "iteration", "rank": 0, "iteration": 70, "time_ms": 130.87588601047173, "loss": 2.025484323501587, "tokens_per_second": 62593.654566315876}
+{"kind": "iteration", "rank": 0, "iteration": 80, "time_ms": 136.7827949579805, "loss": 2.015902519226074, "tokens_per_second": 59890.57324436579}
+{"kind": "iteration", "rank": 0, "iteration": 90, "time_ms": 136.8249660008587, "loss": 1.9161489009857178, "tokens_per_second": 59872.114274441614}
+{"kind": "iteration", "rank": 0, "iteration": 100, "time_ms": 137.12162495357916, "loss": 1.946683645248413, "tokens_per_second": 59742.58256327768}
+{"kind": "iteration", "rank": 0, "iteration": 110, "time_ms": 147.6854209904559, "loss": 1.983006238937378, "tokens_per_second": 55469.25312640984}
+{"kind": "iteration", "rank": 0, "iteration": 120, "time_ms": 136.45792298484594, "loss": 1.6787315607070923, "tokens_per_second": 60033.15762698327}
+{"kind": "iteration", "rank": 0, "iteration": 130, "time_ms": 140.29038802254945, "loss": 1.876481533050537, "tokens_per_second": 58393.16659872141}
+{"kind": "iteration", "rank": 0, "iteration": 140, "time_ms": 136.97863003471866, "loss": 1.9614439010620117, "tokens_per_second": 59804.94912179843}
+{"kind": "iteration", "rank": 0, "iteration": 150, "time_ms": 136.7194940103218, "loss": 1.537203073501587, "tokens_per_second": 59918.30250177444}
+{"kind": "iteration", "rank": 0, "iteration": 160, "time_ms": 137.53680896479636, "loss": 1.826875925064087, "tokens_per_second": 59562.23691431439}
+{"kind": "iteration", "rank": 0, "iteration": 170, "time_ms": 137.82536098733544, "loss": 1.713401436805725, "tokens_per_second": 59437.53704917015}
+{"kind": "iteration", "rank": 0, "iteration": 180, "time_ms": 136.45733200246468, "loss": 1.641819953918457, "tokens_per_second": 60033.417624287395}
+{"kind": "iteration", "rank": 0, "iteration": 190, "time_ms": 142.7463369909674, "loss": 1.741105079650879, "tokens_per_second": 57388.51288715288}
+{"kind": "iteration", "rank": 0, "iteration": 200, "time_ms": 136.28906197845936, "loss": 1.8185925483703613, "tokens_per_second": 60107.53820651253}
+{"kind": "iteration", "rank": 0, "iteration": 210, "time_ms": 136.69527601450682, "loss": 1.6367746591567993, "tokens_per_second": 59928.918093194545}
+{"kind": "iteration", "rank": 0, "iteration": 220, "time_ms": 136.49139105109498, "loss": 1.4415907859802246, "tokens_per_second": 60018.43733084499}
+{"kind": "iteration", "rank": 0, "iteration": 230, "time_ms": 135.82715700613335, "loss": 1.678415060043335, "tokens_per_second": 60311.944831695815}
+{"kind": "iteration", "rank": 0, "iteration": 240, "time_ms": 136.9176180451177, "loss": 1.6145888566970825, "tokens_per_second": 59831.59886188303}
+{"kind": "iteration", "rank": 0, "iteration": 250, "time_ms": 136.2992860376835, "loss": 1.626969337463379, "tokens_per_second": 60103.029429920185}
+{"kind": "iteration", "rank": 0, "iteration": 260, "time_ms": 136.21641404461116, "loss": 1.8132630586624146, "tokens_per_second": 60139.59519824904}
+{"kind": "iteration", "rank": 0, "iteration": 270, "time_ms": 139.5844150101766, "loss": 1.7419087886810303, "tokens_per_second": 58688.50042752087}
+{"kind": "iteration", "rank": 0, "iteration": 280, "time_ms": 138.1819189991802, "loss": 1.712864875793457, "tokens_per_second": 59284.16727262705}
+{"kind": "iteration", "rank": 0, "iteration": 290, "time_ms": 136.87111804028973, "loss": 1.7515466213226318, "tokens_per_second": 59851.9257918868}
+Shutdown gracefully!
+Shutdown gracefully!
+Shutdown gracefully!
+Shutdown gracefully!
+Shutdown gracefully!
+Shutdown gracefully!
+Shutdown gracefully!
+Shutdown gracefully!

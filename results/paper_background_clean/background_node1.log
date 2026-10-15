@@ -1,0 +1,78 @@
+[rank1]:[W1015 14:44:49.876058649 socket.cpp:469] [c10d] waitForInput: poll for socket SocketImpl(fd=94, addr=[::ffff:10.10.4.2]:54032, remote=[::ffff:10.10.4.1]:29588) returned 0, likely a timeout
+[rank1]:[W1015 14:44:49.930170882 socket.cpp:494] [c10d] waitForInput: socket SocketImpl(fd=94, addr=[::ffff:10.10.4.2]:54032, remote=[::ffff:10.10.4.1]:29588) timed out after 90000ms
+[rank1]:[E1015 14:44:49.931825534 ProcessGroupNCCL.cpp:1825] [PG ID 0 PG GUID 0(default_pg) Rank 1] Observed flight recorder dump signal from another rank via TCPStore.
+[rank1]:[E1015 14:44:49.932194037 ProcessGroupNCCL.cpp:1890] [PG ID 0 PG GUID 0(default_pg) Rank 1] Received a dump signal due to a collective timeout from  rank 0 and we will try our best to dump the debug info. Last enqueued NCCL work: 1, last completed NCCL work: 1.This is most likely caused by incorrect usages of collectives, e.g., wrong sizes used across ranks, the order of collectives is not same for all ranks or the scheduled collective, for some reason, didn't run. Additionally, this can be caused by GIL deadlock or other reasons such as network errors or bugs in the communications library (e.g. NCCL), etc. 
+[rank1]:[E1015 14:44:49.932414662 ProcessGroupNCCL.cpp:1606] [PG ID 0 PG GUID 0(default_pg) Rank 1] ProcessGroupNCCL preparing to dump debug info. Include stack trace: 1, only active collectives: 0
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/flash/scripts/background_comm.py", line 7, in <module>
+[rank1]:     p.add_argument("--seconds", type=float, default=30)
+[rank1]:                         ^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 83, in wrapper
+[rank1]:     return func(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 3007, in all_reduce
+[rank1]:     work = group.allreduce([tensor], opts)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: torch.distributed.DistBackendError: [1] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '1', but store->get('1') got error: wait timeout after 90000ms, keys: /default_pg/0//cuda//1
+[rank1]: Exception raised from doWait at /pytorch/torch/csrc/distributed/c10d/TCPStore.cpp:603 (most recent call first):
+[rank1]: frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x9d (0x70d953172fdd in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+[rank1]: frame #1: <unknown function> + 0x16ac54f (0x70d89d7fd54f in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+[rank1]: frame #2: c10d::TCPStore::doGet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2a (0x70d8a2b7e62a in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+[rank1]: frame #3: c10d::TCPStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x112 (0x70d8a2b7e7c2 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+[rank1]: frame #4: c10d::PrefixStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x36e (0x70d8a2b172ce in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+[rank1]: frame #5: c10d::ProcessGroupNCCL::broadcastUniqueNCCLID(ncclUniqueId*, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int) + 0x7d4 (0x70d8632625b4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so)
+[rank1]: frame #6: c10d::ProcessGroupNCCL::initNCCLComm(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, c10::Device&, c10d::OpType, int, bool) + 0x81e (0x70d863263dce in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so)
+[rank1]: frame #7: <unknown function> + 0x146f62c (0x70d86326a62c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so)
+[rank1]: frame #8: c10d::ProcessGroupNCCL::allreduce_impl(at::Tensor&, char const*, c10d::AllreduceOptions const&) + 0xf2 (0x70d86326adc2 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so)
+[rank1]: frame #9: c10d::ProcessGroupNCCL::allreduce(std::vector<at::Tensor, std::allocator<at::Tensor> >&, c10d::AllreduceOptions const&) + 0x629 (0x70d86326b4f9 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so)
+[rank1]: frame #10: <unknown function> + 0x69bb8d1 (0x70d8a2b0c8d1 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+[rank1]: frame #11: <unknown function> + 0x69c21ee (0x70d8a2b131ee in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+[rank1]: frame #12: <unknown function> + 0x5ddf5d5 (0x70d8a1f305d5 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+[rank1]: frame #13: <unknown function> + 0x69d77f0 (0x70d8a2b287f0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+[rank1]: frame #14: <unknown function> + 0x69e717c (0x70d8a2b3817c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+[rank1]: frame #15: <unknown function> + 0xf6f504 (0x70d8b252a504 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+[rank1]: frame #16: <unknown function> + 0x40e440 (0x70d8b19c9440 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+[rank1]: frame #17: /usr/bin/python3() [0x581ecf]
+[rank1]: frame #18: _PyObject_MakeTpCall + 0x75 (0x549205 in /usr/bin/python3)
+[rank1]: frame #19: _PyEval_EvalFrameDefault + 0xa89 (0x5d7109 in /usr/bin/python3)
+[rank1]: frame #20: PyEval_EvalCode + 0x15b (0x5d564b in /usr/bin/python3)
+[rank1]: frame #21: /usr/bin/python3() [0x6087b2]
+[rank1]: frame #22: /usr/bin/python3() [0x6b4853]
+[rank1]: frame #23: _PyRun_SimpleFileObject + 0x1aa (0x6b45ba in /usr/bin/python3)
+[rank1]: frame #24: _PyRun_AnyFileObject + 0x4f (0x6b43ef in /usr/bin/python3)
+[rank1]: frame #25: Py_RunMain + 0x3b5 (0x6bc455 in /usr/bin/python3)
+[rank1]: frame #26: Py_BytesMain + 0x2d (0x6bbf3d in /usr/bin/python3)
+[rank1]: frame #27: <unknown function> + 0x2a1ca (0x70d95ab211ca in /lib/x86_64-linux-gnu/libc.so.6)
+[rank1]: frame #28: __libc_start_main + 0x8b (0x70d95ab2128b in /lib/x86_64-linux-gnu/libc.so.6)
+[rank1]: frame #29: _start + 0x25 (0x6574f5 in /usr/bin/python3)
+[rank1]: . This may indicate a possible application crash on rank 0 or a network set up issue.
+W1015 14:47:21.075000 20288 torch/distributed/elastic/agent/server/api.py:739] Received 15 death signal, shutting down workers
+W1015 14:47:21.076000 20288 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 20355 closing signal SIGTERM
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 7, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 362, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 991, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 982, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 170, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 308, in launch_agent
+    result = agent.run()
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 134, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 731, in run
+    result = self._invoke_run(role)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 908, in _invoke_run
+    time.sleep(monitor_interval)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/api.py", line 86, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 20288 got signal: 15

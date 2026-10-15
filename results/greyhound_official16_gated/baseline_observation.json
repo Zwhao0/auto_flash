@@ -1,0 +1,19 @@
+{
+  "local_reported_ranks": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "precheck_serviced": true,
+  "global_validation": true,
+  "reason": [
+    "comm"
+  ],
+  "comparable_accuracy": false,
+  "limitation": "旧软件/模型栈；训练GPU sleep在stop-the-world独立计算验证中不持续，不构成物理退化的同条件对照。"
+}

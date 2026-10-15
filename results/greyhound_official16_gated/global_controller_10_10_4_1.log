@@ -1,0 +1,561 @@
+CRITICAL:root:write BW=706.18MB/s, read BW=547.21MB/s
+CRITICAL:root:checkpointing=0ms, restoring=0ms, initialization=10000ms
+INFO:root:===== Performing pre-check before training start =====
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [2, 10]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [2, 10]!
+INFO:root:Build PP clique: [9]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [0, 1, 2, 3, 4, 5, 6, 7]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [0, 1, 2, 3, 4, 5, 6, 7]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [0, 1, 2, 3, 4, 5, 6, 7]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [0, 1, 2, 3, 4, 5, 6, 7]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [0, 1, 2, 3, 4, 5, 6, 7]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [0, 1, 2, 3, 4, 5, 6, 7]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [0, 1, 2, 3, 4, 5, 6, 7]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [0, 1, 2, 3, 4, 5, 6, 7]!
+INFO:root:Build PP clique: [2]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build PP clique: [13]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [8, 9, 10, 11, 12, 13, 14, 15]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [8, 9, 10, 11, 12, 13, 14, 15]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [8, 9, 10, 11, 12, 13, 14, 15]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [8, 9, 10, 11, 12, 13, 14, 15]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [8, 9, 10, 11, 12, 13, 14, 15]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [8, 9, 10, 11, 12, 13, 14, 15]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [8, 9, 10, 11, 12, 13, 14, 15]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build PP clique: [8]!
+INFO:root:Build PP clique: [3]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [3, 11]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [3, 11]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [6, 14]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [6, 14]!
+INFO:root:Build PP clique: [10]!
+INFO:root:Build PP clique: [7]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [7, 15]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [7, 15]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [1, 9]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [1, 9]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [4, 12]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [4, 12]!
+INFO:root:Build PP clique: [14]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [5, 13]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [5, 13]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [0, 8]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [0, 8]!
+INFO:root:Build PP clique: [1]!
+INFO:root:Build PP clique: [6]!
+INFO:root:Build PP clique: [0]!
+INFO:root:Build PP clique: [5]!
+INFO:root:Build PP clique: [11]!
+INFO:root:Build PP clique: [4]!
+INFO:root:Build PP clique: [12]!
+INFO:root:Build PP clique: [15]!
+INFO:root:All rings: [Clique(tag=ppstage0_dp, ranks=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], ncomms=16), Clique(tag=special_[2, 10], ranks=[2, 10], ncomms=2), Clique(tag=special_[0, 1, 2, 3, 4, 5, 6, 7], ranks=[0, 1, 2, 3, 4, 5, 6, 7], ncomms=8), Clique(tag=special_[8, 9, 10, 11, 12, 13, 14, 15], ranks=[8, 9, 10, 11, 12, 13, 14, 15], ncomms=8), Clique(tag=special_[3, 11], ranks=[3, 11], ncomms=2), Clique(tag=special_[6, 14], ranks=[6, 14], ncomms=2), Clique(tag=special_[7, 15], ranks=[7, 15], ncomms=2), Clique(tag=special_[1, 9], ranks=[1, 9], ncomms=2), Clique(tag=special_[4, 12], ranks=[4, 12], ncomms=2), Clique(tag=special_[5, 13], ranks=[5, 13], ncomms=2), Clique(tag=special_[0, 8], ranks=[0, 8], ncomms=2)]
+INFO:root:Computation tasks are dispatched!
+INFO:root:Computation result of rank 0 collected = (Perf: min=26.280160903930664, max=26.465152740478516, avg=26.30727367401123, std=0.05301969010431332)!!
+INFO:root:Computation result of rank 1 collected = (Perf: min=26.158592224121094, max=26.36604881286621, avg=26.189148712158204, std=0.06026608152308524)!!
+INFO:root:Computation result of rank 2 collected = (Perf: min=26.187776565551758, max=26.41948890686035, avg=26.219715309143066, std=0.06679911939115071)!!
+INFO:root:Computation result of rank 3 collected = (Perf: min=26.189632415771484, max=26.4432315826416, avg=26.272031784057617, std=0.07145709353001022)!!
+INFO:root:Computation result of rank 4 collected = (Perf: min=26.28860855102539, max=26.461471557617188, avg=26.314681625366212, std=0.05085107835495264)!!
+INFO:root:Computation result of rank 5 collected = (Perf: min=26.170976638793945, max=26.391584396362305, avg=26.201289939880372, std=0.06428071454743427)!!
+INFO:root:Computation result of rank 6 collected = (Perf: min=26.285663604736328, max=26.427295684814453, avg=26.30427494049072, std=0.04110675115450721)!!
+INFO:root:Computation result of rank 7 collected = (Perf: min=26.192127227783203, max=26.48476791381836, avg=26.231782341003417, std=0.08555821014517541)!!
+INFO:root:Computation result of rank 8 collected = (Perf: min=26.276832580566406, max=26.443359375, avg=26.298431968688966, std=0.04844210207598751)!!
+INFO:root:Computation result of rank 9 collected = (Perf: min=26.27859115600586, max=26.47439956665039, avg=26.3021183013916, std=0.057487022389158836)!!
+INFO:root:Computation result of rank 10 collected = (Perf: min=26.180255889892578, max=26.341567993164062, avg=26.2032320022583, std=0.04638841554124885)!!
+INFO:root:Computation result of rank 11 collected = (Perf: min=26.287647247314453, max=26.439359664916992, avg=26.31539821624756, std=0.04560661245123275)!!
+INFO:root:Computation result of rank 12 collected = (Perf: min=26.162368774414062, max=26.325599670410156, avg=26.183734703063966, std=0.04734837588807766)!!
+INFO:root:Computation result of rank 13 collected = (Perf: min=26.177600860595703, max=26.33942413330078, avg=26.197375869750978, std=0.047420177114911796)!!
+INFO:root:Computation result of rank 14 collected = (Perf: min=26.28339195251465, max=26.442848205566406, avg=26.305247497558593, std=0.045994786660729765)!!
+INFO:root:Computation result of rank 15 collected = (Perf: min=26.284223556518555, max=26.466495513916016, avg=26.322019386291505, std=0.05459705794940072)!!
+INFO:root:validating ring:[11, 12, 13, 14, 15, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], the corresponding tasks are [([11, 13, 15, 1, 3, 5, 7, 9], [12, 14, 0, 2, 4, 6, 8, 10]), ([12, 14, 0, 2, 4, 6, 8, 10], [13, 15, 1, 3, 5, 7, 9, 11])]
+INFO:root:task ([11, 13, 15, 1, 3, 5, 7, 9], [12, 14, 0, 2, 4, 6, 8, 10]) dispatched!
+INFO:root:Result of rank 0 collected = (Perf: min=2.498591899871826, max=2.676255941390991, avg=2.6035999774932863, std=0.04521669154996662)!!
+INFO:root:Result of rank 1 collected = (Perf: min=1.3163199424743652, max=1.3973759412765503, avg=1.3438687682151795, std=0.022613175462755868)!!
+INFO:root:Result of rank 2 collected = (Perf: min=1.2973120212554932, max=1.3643519878387451, avg=1.3362272024154662, std=0.01974414773765476)!!
+INFO:root:Result of rank 3 collected = (Perf: min=1.314911961555481, max=1.351199984550476, avg=1.3291743993759155, std=0.013375912750590494)!!
+INFO:root:Result of rank 4 collected = (Perf: min=1.3087040185928345, max=1.3464640378952026, avg=1.3249568104743958, std=0.011973800688743362)!!
+INFO:root:Result of rank 5 collected = (Perf: min=1.3303680419921875, max=1.3672959804534912, avg=1.3455360054969787, std=0.01491033297174692)!!
+INFO:root:Result of rank 6 collected = (Perf: min=1.3328959941864014, max=1.3694080114364624, avg=1.3510207891464234, std=0.015004947916364843)!!
+INFO:root:Result of rank 7 collected = (Perf: min=2.5587520599365234, max=2.6795198917388916, avg=2.6089343786239625, std=0.03609304992710931)!!
+INFO:root:Result of rank 8 collected = (Perf: min=2.574496030807495, max=2.6749439239501953, avg=2.61496319770813, std=0.03036357035455422)!!
+INFO:root:Result of rank 9 collected = (Perf: min=1.329535961151123, max=1.3865920305252075, avg=1.3539231896400452, std=0.016032314079494042)!!
+INFO:root:Result of rank 10 collected = (Perf: min=1.3163199424743652, max=1.3583040237426758, avg=1.334991991519928, std=0.012492240764235992)!!
+INFO:root:Result of rank 11 collected = (Perf: min=1.3367359638214111, max=3.4932479858398438, avg=1.800431990623474, std=0.7629586414550055)!!
+INFO:root:Result of rank 12 collected = (Perf: min=1.3407679796218872, max=3.499743938446045, avg=1.8093119859695435, std=0.7708948237968202)!!
+INFO:root:Result of rank 13 collected = (Perf: min=1.3246400356292725, max=1.359328031539917, avg=1.341760015487671, std=0.013018429561455623)!!
+INFO:root:Result of rank 14 collected = (Perf: min=1.3252480030059814, max=1.3604799509048462, avg=1.3423551797866822, std=0.01364774632532386)!!
+INFO:root:Result of rank 15 collected = (Perf: min=2.485759973526001, max=2.6655681133270264, avg=2.596016001701355, std=0.044718784147358304)!!
+INFO:root:********************task completed!********************
+INFO:root:task ([12, 14, 0, 2, 4, 6, 8, 10], [13, 15, 1, 3, 5, 7, 9, 11]) dispatched!
+INFO:root:Result of rank 0 collected = (Perf: min=1.3247040510177612, max=1.3536959886550903, avg=1.3389440059661866, std=0.009359770142320768)!!
+INFO:root:Result of rank 1 collected = (Perf: min=1.3239680528640747, max=1.3551039695739746, avg=1.3385599970817565, std=0.009576460043702049)!!
+INFO:root:Result of rank 2 collected = (Perf: min=1.3175040483474731, max=1.3542720079421997, avg=1.335049605369568, std=0.014053947776621261)!!
+INFO:root:Result of rank 3 collected = (Perf: min=1.3210879564285278, max=1.3643200397491455, avg=1.3393503904342652, std=0.015087870044942208)!!
+INFO:root:Result of rank 4 collected = (Perf: min=1.3261120319366455, max=1.3704639673233032, avg=1.344534409046173, std=0.018849852838381267)!!
+INFO:root:Result of rank 5 collected = (Perf: min=1.3272000551223755, max=1.369439959526062, avg=1.3448192000389099, std=0.018034896072198388)!!
+INFO:root:Result of rank 6 collected = (Perf: min=1.3278720378875732, max=1.3691840171813965, avg=1.3443039894104003, std=0.01338178101211056)!!
+INFO:root:Result of rank 7 collected = (Perf: min=1.3291200399398804, max=1.3698879480361938, avg=1.3445888042449952, std=0.013753395450812129)!!
+INFO:root:Result of rank 8 collected = (Perf: min=1.3361279964447021, max=1.3699840307235718, avg=1.353820812702179, std=0.014234694571404171)!!
+INFO:root:Result of rank 9 collected = (Perf: min=1.3355200290679932, max=1.3718719482421875, avg=1.3535679936408997, std=0.01453479185304659)!!
+INFO:root:Result of rank 10 collected = (Perf: min=1.3189120292663574, max=1.3598079681396484, avg=1.3349727988243103, std=0.01507828932131982)!!
+INFO:root:Result of rank 11 collected = (Perf: min=1.3158719539642334, max=1.3564480543136597, avg=1.3325663924217224, std=0.015106204314331075)!!
+INFO:root:Result of rank 12 collected = (Perf: min=1.3237760066986084, max=1.3583040237426758, avg=1.3426976084709168, std=0.013842856548720363)!!
+INFO:root:Result of rank 13 collected = (Perf: min=1.3240959644317627, max=1.3583999872207642, avg=1.342351996898651, std=0.013367386580293463)!!
+INFO:root:Result of rank 14 collected = (Perf: min=1.3160640001296997, max=1.4347200393676758, avg=1.3444000005722045, std=0.03539826997659788)!!
+INFO:root:Result of rank 15 collected = (Perf: min=1.3107839822769165, max=1.3682559728622437, avg=1.3326336145401, std=0.020282133184740724)!!
+INFO:root:********************task completed!********************
+INFO:root:validating ring:[0, 1], the corresponding tasks are [([0], [1]), ([1], [0])]
+INFO:root:task ([0], [1]) dispatched!
+INFO:root:Result of rank 2 collected = (Perf: min=1.818560004234314, max=1.9005759954452515, avg=1.845628809928894, std=0.022467794169841838)!!
+INFO:root:Result of rank 10 collected = (Perf: min=1.8206080198287964, max=1.8945599794387817, avg=1.8443456053733827, std=0.0212317956341506)!!
+INFO:root:********************task completed!********************
+INFO:root:task ([1], [0]) dispatched!
+INFO:root:Result of rank 2 collected = (Perf: min=1.8428479433059692, max=1.91484797000885, avg=1.8830528020858766, std=0.023027619258007264)!!
+INFO:root:Result of rank 10 collected = (Perf: min=1.8422399759292603, max=1.9157439470291138, avg=1.881715214252472, std=0.022190834926003898)!!
+INFO:root:********************task completed!********************
+INFO:root:validating ring:[2, 3, 4, 5, 6, 7, 0, 1], the corresponding tasks are [([2, 4, 6, 0], [3, 5, 7, 1]), ([3, 5, 7, 1], [4, 6, 0, 2])]
+INFO:root:task ([2, 4, 6, 0], [3, 5, 7, 1]) dispatched!
+INFO:root:Result of rank 0 collected = (Perf: min=0.532800018787384, max=0.5369600057601929, avg=0.5347616016864777, std=0.001392865901438831)!!
+INFO:root:Result of rank 1 collected = (Perf: min=0.5310400128364563, max=0.5363199710845947, avg=0.5338847935199738, std=0.0015520041906251583)!!
+INFO:root:Result of rank 2 collected = (Perf: min=0.5308799743652344, max=0.5374720096588135, avg=0.5336607992649078, std=0.0020287307903228994)!!
+INFO:root:Result of rank 3 collected = (Perf: min=0.5309759974479675, max=0.5430399775505066, avg=0.5344543993473053, std=0.00348309169917024)!!
+INFO:root:Result of rank 4 collected = (Perf: min=0.532863974571228, max=0.5353919863700867, avg=0.5342943966388702, std=0.0007960337201767341)!!
+INFO:root:Result of rank 5 collected = (Perf: min=0.53193598985672, max=0.5356159806251526, avg=0.534201592206955, std=0.0011668182812795268)!!
+INFO:root:Result of rank 6 collected = (Perf: min=0.5330880284309387, max=0.5414080023765564, avg=0.5359200000762939, std=0.002427038394874942)!!
+INFO:root:Result of rank 7 collected = (Perf: min=0.5338559746742249, max=0.5414720177650452, avg=0.5364864051342011, std=0.002576183054759006)!!
+INFO:root:********************task completed!********************
+INFO:root:task ([3, 5, 7, 1], [4, 6, 0, 2]) dispatched!
+INFO:root:Result of rank 0 collected = (Perf: min=0.5256320238113403, max=0.5337920188903809, avg=0.5306751966476441, std=0.00249498014825531)!!
+INFO:root:Result of rank 1 collected = (Perf: min=0.5320640206336975, max=0.5372480154037476, avg=0.5344160079956055, std=0.001561670551688597)!!
+INFO:root:Result of rank 2 collected = (Perf: min=0.5235520005226135, max=0.5373439788818359, avg=0.533843195438385, std=0.0036771946034835964)!!
+INFO:root:Result of rank 3 collected = (Perf: min=0.5315200090408325, max=0.5366399884223938, avg=0.5346143960952758, std=0.0016258394739108336)!!
+INFO:root:Result of rank 4 collected = (Perf: min=0.5309439897537231, max=0.5374720096588135, avg=0.5342975854873657, std=0.0020213693363636876)!!
+INFO:root:Result of rank 5 collected = (Perf: min=0.5326399803161621, max=0.5429440140724182, avg=0.5353343963623047, std=0.0026556519352840167)!!
+INFO:root:Result of rank 6 collected = (Perf: min=0.5328959822654724, max=0.5445119738578796, avg=0.536460793018341, std=0.003940886544958522)!!
+INFO:root:Result of rank 7 collected = (Perf: min=0.5286719799041748, max=0.5332480072975159, avg=0.5306879937648773, std=0.0014893617602759683)!!
+INFO:root:********************task completed!********************
+INFO:root:validating ring:[5, 6, 7, 0, 1, 2, 3, 4], the corresponding tasks are [([5, 7, 1, 3], [6, 0, 2, 4]), ([6, 0, 2, 4], [7, 1, 3, 5])]
+INFO:root:task ([5, 7, 1, 3], [6, 0, 2, 4]) dispatched!
+INFO:root:Result of rank 8 collected = (Perf: min=0.5188159942626953, max=0.5341759920120239, avg=0.5257279992103576, std=0.004595156182609158)!!
+INFO:root:Result of rank 9 collected = (Perf: min=0.5327360033988953, max=0.5368319749832153, avg=0.5349248051643372, std=0.001185741980903672)!!
+INFO:root:Result of rank 10 collected = (Perf: min=0.5333439707756042, max=0.5368319749832153, avg=0.5346623957157135, std=0.001022076461958701)!!
+INFO:root:Result of rank 11 collected = (Perf: min=0.5235840082168579, max=0.5590720176696777, avg=0.5290176093578338, std=0.01018196824115863)!!
+INFO:root:Result of rank 12 collected = (Perf: min=0.5126399993896484, max=3.9263360500335693, avg=0.8621088027954101, std=1.0214151026992029)!!
+INFO:root:Result of rank 13 collected = (Perf: min=0.5242239832878113, max=0.528223991394043, avg=0.5266847908496857, std=0.0012456620099782984)!!
+INFO:root:Result of rank 14 collected = (Perf: min=0.523360013961792, max=0.5293440222740173, avg=0.5261344075202942, std=0.001948437525565675)!!
+INFO:root:Result of rank 15 collected = (Perf: min=0.5244160294532776, max=0.5338240265846252, avg=0.5282400071620941, std=0.0027313532809539703)!!
+INFO:root:********************task completed!********************
+INFO:root:task ([6, 0, 2, 4], [7, 1, 3, 5]) dispatched!
+INFO:root:Result of rank 8 collected = (Perf: min=0.5216000080108643, max=0.5256320238113403, avg=0.5228128075599671, std=0.0012111506455208282)!!
+INFO:root:Result of rank 9 collected = (Perf: min=0.5148159861564636, max=0.5314880013465881, avg=0.5194431900978088, std=0.004327585983197521)!!
+INFO:root:Result of rank 10 collected = (Perf: min=0.532256007194519, max=0.5360320210456848, avg=0.5344160079956055, std=0.001234076537767803)!!
+INFO:root:Result of rank 11 collected = (Perf: min=0.5366719961166382, max=0.5419520139694214, avg=0.5390111982822419, std=0.001515837707916017)!!
+INFO:root:Result of rank 12 collected = (Perf: min=0.5332480072975159, max=0.5369920134544373, avg=0.5345344007015228, std=0.0010080544747988974)!!
+INFO:root:Result of rank 13 collected = (Perf: min=0.5324479937553406, max=0.5393919944763184, avg=0.5350655972957611, std=0.001928183426524748)!!
+INFO:root:Result of rank 14 collected = (Perf: min=0.5325120091438293, max=0.5371519923210144, avg=0.5347487986087799, std=0.0013307075940568618)!!
+INFO:root:Result of rank 15 collected = (Perf: min=0.5349119901657104, max=0.540224015712738, avg=0.5374816000461579, std=0.0017070203134890768)!!
+INFO:root:********************task completed!********************
+INFO:root:validating ring:[1, 0], the corresponding tasks are [([1], [0]), ([0], [1])]
+INFO:root:task ([1], [0]) dispatched!
+INFO:root:Result of rank 3 collected = (Perf: min=1.8617279529571533, max=1.9335999488830566, avg=1.910211193561554, std=0.022858526810953007)!!
+INFO:root:Result of rank 11 collected = (Perf: min=1.8730560541152954, max=1.931391954421997, avg=1.9072640061378479, std=0.017435542096980176)!!
+INFO:root:********************task completed!********************
+INFO:root:task ([0], [1]) dispatched!
+INFO:root:Result of rank 3 collected = (Perf: min=1.9193600416183472, max=1.9854400157928467, avg=1.9418272018432616, std=0.0196501561201262)!!
+INFO:root:Result of rank 11 collected = (Perf: min=1.917631983757019, max=1.978559970855713, avg=1.9394431829452514, std=0.018040333085207895)!!
+INFO:root:********************task completed!********************
+INFO:root:validating ring:[1, 0], the corresponding tasks are [([1], [0]), ([0], [1])]
+INFO:root:task ([1], [0]) dispatched!
+INFO:root:Result of rank 6 collected = (Perf: min=2.743391990661621, max=2.7831039428710938, avg=2.7644927978515623, std=0.011552750557745768)!!
+INFO:root:Result of rank 14 collected = (Perf: min=2.742464065551758, max=2.7858240604400635, avg=2.764287996292114, std=0.013070117169855632)!!
+INFO:root:********************task completed!********************
+INFO:root:task ([0], [1]) dispatched!
+INFO:root:Result of rank 6 collected = (Perf: min=2.824863910675049, max=3.25600004196167, avg=3.0324031829833986, std=0.13602073930262848)!!
+INFO:root:Result of rank 14 collected = (Perf: min=2.82207989692688, max=3.2504959106445312, avg=3.0297311782836913, std=0.13549363721408714)!!
+INFO:root:********************task completed!********************
+INFO:root:validating ring:[0, 1], the corresponding tasks are [([0], [1]), ([1], [0])]
+INFO:root:task ([0], [1]) dispatched!
+INFO:root:Result of rank 7 collected = (Perf: min=2.801664113998413, max=2.898240089416504, avg=2.830672025680542, std=0.03109938168365935)!!
+INFO:root:Result of rank 15 collected = (Perf: min=2.7965760231018066, max=2.874880075454712, avg=2.8250656127929688, std=0.025073166187744696)!!
+INFO:root:********************task completed!********************
+INFO:root:task ([1], [0]) dispatched!
+INFO:root:Result of rank 7 collected = (Perf: min=2.7363200187683105, max=3.4188480377197266, avg=2.8338847875595095, std=0.19559887094435205)!!
+INFO:root:Result of rank 15 collected = (Perf: min=2.7504639625549316, max=2.8393280506134033, avg=2.774176001548767, std=0.024366567820977028)!!
+INFO:root:********************task completed!********************
+INFO:root:validating ring:[0, 1], the corresponding tasks are [([0], [1]), ([1], [0])]
+INFO:root:task ([0], [1]) dispatched!
+INFO:root:Result of rank 1 collected = (Perf: min=2.7210559844970703, max=2.7720959186553955, avg=2.752143979072571, std=0.01689259893418951)!!
+INFO:root:Result of rank 9 collected = (Perf: min=2.723167896270752, max=2.769887924194336, avg=2.7525503873825072, std=0.016752202153566546)!!
+INFO:root:********************task completed!********************
+INFO:root:task ([1], [0]) dispatched!
+INFO:root:Result of rank 1 collected = (Perf: min=2.7166080474853516, max=2.789088010787964, avg=2.757036828994751, std=0.022456029732599535)!!
+INFO:root:Result of rank 9 collected = (Perf: min=2.723615884780884, max=2.790112018585205, avg=2.758131194114685, std=0.019834478902888007)!!
+INFO:root:********************task completed!********************
+INFO:root:validating ring:[0, 1], the corresponding tasks are [([0], [1]), ([1], [0])]
+INFO:root:task ([0], [1]) dispatched!
+INFO:root:Result of rank 4 collected = (Perf: min=1.853279948234558, max=1.8980159759521484, avg=1.868560004234314, std=0.0124501731312039)!!
+INFO:root:Result of rank 12 collected = (Perf: min=1.8492799997329712, max=1.8824959993362427, avg=1.8689183950424195, std=0.008859237378960877)!!
+INFO:root:********************task completed!********************
+INFO:root:task ([1], [0]) dispatched!
+INFO:root:Result of rank 4 collected = (Perf: min=1.9016319513320923, max=2.0891199111938477, avg=1.940060794353485, std=0.05120079420342091)!!
+INFO:root:Result of rank 12 collected = (Perf: min=1.9095360040664673, max=2.0974080562591553, avg=1.9403552055358886, std=0.05341147643261998)!!
+INFO:root:********************task completed!********************
+INFO:root:validating ring:[1, 0], the corresponding tasks are [([1], [0]), ([0], [1])]
+INFO:root:task ([1], [0]) dispatched!
+INFO:root:Result of rank 5 collected = (Perf: min=1.8880000114440918, max=1.9216639995574951, avg=1.9088096261024474, std=0.010618191828448472)!!
+INFO:root:Result of rank 13 collected = (Perf: min=1.8892799615859985, max=1.920192003250122, avg=1.9070687890052795, std=0.0094764791228137)!!
+INFO:root:********************task completed!********************
+INFO:root:task ([0], [1]) dispatched!
+INFO:root:Result of rank 5 collected = (Perf: min=1.8455040454864502, max=1.9100159406661987, avg=1.8716512084007264, std=0.021489732905228848)!!
+INFO:root:Result of rank 13 collected = (Perf: min=1.850335955619812, max=1.904863953590393, avg=1.873587191104889, std=0.01921173116553238)!!
+INFO:root:********************task completed!********************
+INFO:root:validating ring:[1, 0], the corresponding tasks are [([1], [0]), ([0], [1])]
+INFO:root:task ([1], [0]) dispatched!
+INFO:root:Result of rank 0 collected = (Perf: min=2.7728641033172607, max=2.8451199531555176, avg=2.8140255928039553, std=0.021837716852782105)!!
+INFO:root:Result of rank 8 collected = (Perf: min=2.7705280780792236, max=2.8449599742889404, avg=2.8136895895004272, std=0.02192404448609904)!!
+INFO:root:********************task completed!********************
+INFO:root:task ([0], [1]) dispatched!
+INFO:root:Result of rank 0 collected = (Perf: min=2.8289918899536133, max=2.976128101348877, avg=2.8918943881988524, std=0.04299949277580207)!!
+INFO:root:Result of rank 8 collected = (Perf: min=2.827967882156372, max=2.9639039039611816, avg=2.886959981918335, std=0.03854026724463872)!!
+INFO:root:********************task completed!********************
+INFO:root:[GlobalController] failslow events are reported from local: ["b'8'", "b'9'", "b'10'", "b'11'", "b'12'", "b'13'", "b'14'", "b'15'"]
+INFO:root:===== Fail-slow is reported to global controller, proflining =====
+INFO:root:waiting for profiling results, current #res=0
+INFO:root:waiting for profiling results, current #res=0
+INFO:root:waiting for profiling results, current #res=0
+INFO:root:waiting for profiling results, current #res=0
+INFO:root:waiting for profiling results, current #res=0
+INFO:root:waiting for profiling results, current #res=0
+INFO:root:waiting for profiling results, current #res=0
+INFO:root:waiting for profiling results, current #res=0
+INFO:root:waiting for profiling results, current #res=0
+INFO:root:waiting for profiling results, current #res=0
+INFO:root:waiting for profiling results, current #res=0
+INFO:root:waiting for profiling results, current #res=0
+INFO:root:waiting for profiling results, current #res=0
+INFO:root:waiting for profiling results, current #res=0
+INFO:root:waiting for profiling results, current #res=0
+INFO:root:waiting for profiling results, current #res=0
+INFO:root:waiting for profiling results, current #res=0
+INFO:root:waiting for profiling results, current #res=0
+INFO:root:waiting for profiling results, current #res=0
+INFO:root:waiting for profiling results, current #res=0
+INFO:root:waiting for profiling results, current #res=0
+INFO:root:waiting for profiling results, current #res=0
+INFO:root:waiting for profiling results, current #res=24
+INFO:root:===== Performing validation =====
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [2, 10]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [2, 10]!
+INFO:root:Build PP clique: [9]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [0, 1, 2, 3, 4, 5, 6, 7]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [0, 1, 2, 3, 4, 5, 6, 7]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [0, 1, 2, 3, 4, 5, 6, 7]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [0, 1, 2, 3, 4, 5, 6, 7]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [0, 1, 2, 3, 4, 5, 6, 7]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [0, 1, 2, 3, 4, 5, 6, 7]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [0, 1, 2, 3, 4, 5, 6, 7]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [0, 1, 2, 3, 4, 5, 6, 7]!
+INFO:root:Build PP clique: [2]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build DP clique: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build PP clique: [13]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [8, 9, 10, 11, 12, 13, 14, 15]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [8, 9, 10, 11, 12, 13, 14, 15]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [8, 9, 10, 11, 12, 13, 14, 15]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [8, 9, 10, 11, 12, 13, 14, 15]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [8, 9, 10, 11, 12, 13, 14, 15]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [8, 9, 10, 11, 12, 13, 14, 15]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [8, 9, 10, 11, 12, 13, 14, 15]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [8, 9, 10, 11, 12, 13, 14, 15]!
+INFO:root:Build PP clique: [8]!
+INFO:root:Build PP clique: [3]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [3, 11]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [3, 11]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [6, 14]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [6, 14]!
+INFO:root:Build PP clique: [10]!
+INFO:root:Build PP clique: [7]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [7, 15]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [7, 15]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [1, 9]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [1, 9]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [4, 12]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [4, 12]!
+INFO:root:Build PP clique: [14]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [5, 13]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [5, 13]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [0, 8]!
+WARNING:root:Can only build a special clique (not TP/DP/PP) for [0, 8]!
+INFO:root:Build PP clique: [1]!
+INFO:root:Build PP clique: [6]!
+INFO:root:Build PP clique: [0]!
+INFO:root:Build PP clique: [5]!
+INFO:root:Build PP clique: [11]!
+INFO:root:Build PP clique: [4]!
+INFO:root:Build PP clique: [12]!
+INFO:root:Build PP clique: [15]!
+INFO:root:Only one clique Clique(tag=special_[1, 9], ranks=[1, 9], ncomms=2) in same position, verify it!
+INFO:root:Only one clique Clique(tag=special_[0, 8], ranks=[0, 8], ncomms=2) in same position, verify it!
+INFO:root:Only one clique Clique(tag=special_[4, 12], ranks=[4, 12], ncomms=2) in same position, verify it!
+INFO:root:Only one clique Clique(tag=ppstage0_dp, ranks=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], ncomms=16) in same position, verify it!
+INFO:root:Only one clique Clique(tag=special_[2, 10], ranks=[2, 10], ncomms=2) in same position, verify it!
+INFO:root:Only one clique Clique(tag=special_[8, 9, 10, 11, 12, 13, 14, 15], ranks=[8, 9, 10, 11, 12, 13, 14, 15], ncomms=8) in same position, verify it!
+INFO:root:Only one clique Clique(tag=special_[3, 11], ranks=[3, 11], ncomms=2) in same position, verify it!
+INFO:root:Only one clique Clique(tag=special_[7, 15], ranks=[7, 15], ncomms=2) in same position, verify it!
+INFO:root:Only one clique Clique(tag=special_[5, 13], ranks=[5, 13], ncomms=2) in same position, verify it!
+INFO:root:Only one clique Clique(tag=special_[6, 14], ranks=[6, 14], ncomms=2) in same position, verify it!
+INFO:root:Topos to validate: [(Clique(tag=special_[1, 9], ranks=[1, 9], ncomms=2), <control_plane.global_topo.GlobalTopo object at 0x74f61055be80>), (Clique(tag=special_[0, 8], ranks=[0, 8], ncomms=2), <control_plane.global_topo.GlobalTopo object at 0x74f6105bf7f0>), (Clique(tag=special_[4, 12], ranks=[4, 12], ncomms=2), <control_plane.global_topo.GlobalTopo object at 0x74f6105bf580>), (Clique(tag=ppstage0_dp, ranks=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], ncomms=16), <control_plane.global_topo.GlobalTopo object at 0x74f6105bf880>), (Clique(tag=special_[2, 10], ranks=[2, 10], ncomms=2), <control_plane.global_topo.GlobalTopo object at 0x74f6105bfa00>), (Clique(tag=special_[8, 9, 10, 11, 12, 13, 14, 15], ranks=[8, 9, 10, 11, 12, 13, 14, 15], ncomms=8), <control_plane.global_topo.GlobalTopo object at 0x74f6105bfb50>), (Clique(tag=special_[3, 11], ranks=[3, 11], ncomms=2), <control_plane.global_topo.GlobalTopo object at 0x74f6105bf6d0>), (Clique(tag=special_[7, 15], ranks=[7, 15], ncomms=2), <control_plane.global_topo.GlobalTopo object at 0x74f6105bf670>), (Clique(tag=special_[5, 13], ranks=[5, 13], ncomms=2), <control_plane.global_topo.GlobalTopo object at 0x74f6105bf8e0>), (Clique(tag=special_[6, 14], ranks=[6, 14], ncomms=2), <control_plane.global_topo.GlobalTopo object at 0x74f6105bfe50>), (Clique(tag=ppstage0_dp, ranks=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], ncomms=16), <control_plane.global_topo.GlobalTopo object at 0x74f61055bdf0>)]
+INFO:root:Computation tasks are dispatched!
+INFO:root:Computation result of rank 0 collected = (Perf: min=26.311840057373047, max=26.333023071289062, avg=26.319353294372558, std=0.007120315793116787)!!
+INFO:root:Computation result of rank 1 collected = (Perf: min=26.160032272338867, max=26.17977523803711, avg=26.171900939941406, std=0.005916701167703804)!!
+INFO:root:Computation result of rank 2 collected = (Perf: min=26.18364715576172, max=26.299808502197266, avg=26.236531257629395, std=0.051116416716709495)!!
+INFO:root:Computation result of rank 3 collected = (Perf: min=26.16713523864746, max=26.185823440551758, avg=26.17223987579346, std=0.0053202211928928414)!!
+INFO:root:Computation result of rank 4 collected = (Perf: min=26.285280227661133, max=26.323392868041992, avg=26.298745536804198, std=0.01117503590640923)!!
+INFO:root:Computation result of rank 5 collected = (Perf: min=26.16499137878418, max=26.28531265258789, avg=26.220716667175292, std=0.045774313693479084)!!
+INFO:root:Computation result of rank 6 collected = (Perf: min=26.27484893798828, max=26.291072845458984, avg=26.28048973083496, std=0.005649554814771249)!!
+INFO:root:Computation result of rank 7 collected = (Perf: min=26.182048797607422, max=26.20012855529785, avg=26.192864227294923, std=0.004701978363742405)!!
+INFO:root:Computation result of rank 8 collected = (Perf: min=26.271039962768555, max=26.284128189086914, avg=26.278269004821777, std=0.003346002016425009)!!
+INFO:root:Computation result of rank 9 collected = (Perf: min=26.161663055419922, max=26.2807674407959, avg=26.238860511779784, std=0.048945907076222574)!!
+INFO:root:Computation result of rank 10 collected = (Perf: min=26.16819190979004, max=26.18943977355957, avg=26.178595352172852, std=0.007196304720636898)!!
+INFO:root:Computation result of rank 11 collected = (Perf: min=26.28937530517578, max=26.34752082824707, avg=26.30647029876709, std=0.01614883216951865)!!
+INFO:root:Computation result of rank 12 collected = (Perf: min=26.274784088134766, max=26.294784545898438, avg=26.28281307220459, std=0.0058781026686506215)!!
+INFO:root:Computation result of rank 13 collected = (Perf: min=26.168832778930664, max=26.185216903686523, avg=26.17636203765869, std=0.0042643206611118045)!!
+INFO:root:Computation result of rank 14 collected = (Perf: min=26.27859115600586, max=26.29292869567871, avg=26.28512020111084, std=0.00455710459160932)!!
+INFO:root:Computation result of rank 15 collected = (Perf: min=26.297887802124023, max=26.357215881347656, avg=26.312585639953614, std=0.016150408575454276)!!
+INFO:root:validating ring:[0, 1], the corresponding tasks are [([0], [1]), ([1], [0])]
+INFO:root:task ([0], [1]) dispatched!
+INFO:root:Result of rank 1 collected = (Perf: min=3.1100480556488037, max=3.298624038696289, avg=3.2173343896865845, std=0.06495505560132654)!!
+INFO:root:Result of rank 9 collected = (Perf: min=3.113408088684082, max=3.2941439151763916, avg=3.2160831928253173, std=0.06453890103775665)!!
+INFO:root:********************task completed!********************
+INFO:root:task ([1], [0]) dispatched!
+INFO:root:Result of rank 1 collected = (Perf: min=2.9058239459991455, max=3.0880959033966064, avg=2.9570240020751952, std=0.049363365357146215)!!
+INFO:root:Result of rank 9 collected = (Perf: min=2.9079360961914062, max=3.1038401126861572, avg=2.957814431190491, std=0.05348844162358379)!!
+INFO:root:********************task completed!********************
+INFO:root:validating ring:[1, 0], the corresponding tasks are [([1], [0]), ([0], [1])]
+INFO:root:task ([1], [0]) dispatched!
+INFO:root:Result of rank 0 collected = (Perf: min=3.252095937728882, max=4.192768096923828, avg=3.4585343837738036, std=0.25743963259122515)!!
+INFO:root:Result of rank 8 collected = (Perf: min=3.250783920288086, max=4.284416198730469, avg=3.4653248310089113, std=0.28412233519638463)!!
+INFO:root:********************task completed!********************
+INFO:root:task ([0], [1]) dispatched!
+INFO:root:Result of rank 0 collected = (Perf: min=3.2723519802093506, max=3.6284799575805664, avg=3.42565438747406, std=0.11721638588115292)!!
+INFO:root:Result of rank 8 collected = (Perf: min=3.2777280807495117, max=3.632159948348999, avg=3.421766424179077, std=0.11523812759188846)!!
+INFO:root:********************task completed!********************
+INFO:root:validating ring:[0, 1], the corresponding tasks are [([0], [1]), ([1], [0])]
+INFO:root:task ([0], [1]) dispatched!
+INFO:root:Result of rank 4 collected = (Perf: min=1.8773759603500366, max=1.9415040016174316, avg=1.9098304033279419, std=0.01583567769409499)!!
+INFO:root:Result of rank 12 collected = (Perf: min=1.8846720457077026, max=1.9276800155639648, avg=1.9115264058113097, std=0.013203710408582692)!!
+INFO:root:********************task completed!********************
+INFO:root:task ([1], [0]) dispatched!
+INFO:root:Result of rank 4 collected = (Perf: min=1.8915519714355469, max=1.9449280500411987, avg=1.9157055974006654, std=0.018638957060049692)!!
+INFO:root:Result of rank 12 collected = (Perf: min=1.897760033607483, max=1.9404480457305908, avg=1.9156224131584167, std=0.014661360501869466)!!
+INFO:root:********************task completed!********************
+INFO:root:validating ring:[6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0, 1, 2, 3, 4, 5], the corresponding tasks are [([6, 8, 10, 12, 14, 0, 2, 4], [7, 9, 11, 13, 15, 1, 3, 5]), ([7, 9, 11, 13, 15, 1, 3, 5], [8, 10, 12, 14, 0, 2, 4, 6])]
+INFO:root:task ([6, 8, 10, 12, 14, 0, 2, 4], [7, 9, 11, 13, 15, 1, 3, 5]) dispatched!
+INFO:root:Result of rank 0 collected = (Perf: min=1.330880045890808, max=1.3648639917373657, avg=1.3474048137664796, std=0.014082727557727088)!!
+INFO:root:Result of rank 1 collected = (Perf: min=1.3335039615631104, max=1.3704639673233032, avg=1.3507936000823975, std=0.014425795015095423)!!
+INFO:root:Result of rank 2 collected = (Perf: min=1.3209279775619507, max=1.3555519580841064, avg=1.3357568025588988, std=0.012495410843785797)!!
+INFO:root:Result of rank 3 collected = (Perf: min=1.322432041168213, max=1.3579519987106323, avg=1.3381376028060914, std=0.013041702360280587)!!
+INFO:root:Result of rank 4 collected = (Perf: min=1.328320026397705, max=1.3722879886627197, avg=1.3445727944374084, std=0.01682897659853614)!!
+INFO:root:Result of rank 5 collected = (Perf: min=1.3276159763336182, max=1.3722879886627197, avg=1.3437503814697265, std=0.017137026500016875)!!
+INFO:root:Result of rank 6 collected = (Perf: min=1.3336000442504883, max=1.3691519498825073, avg=1.3486655950546265, std=0.013813908114586226)!!
+INFO:root:Result of rank 7 collected = (Perf: min=1.3346240520477295, max=1.3695039749145508, avg=1.3493056178092957, std=0.013647411511739316)!!
+INFO:root:Result of rank 8 collected = (Perf: min=1.3356479406356812, max=1.374559998512268, avg=1.3531871914863587, std=0.015377834059559376)!!
+INFO:root:Result of rank 9 collected = (Perf: min=1.3347840309143066, max=1.3740479946136475, avg=1.3520448207855225, std=0.015399087211884304)!!
+INFO:root:Result of rank 10 collected = (Perf: min=1.3255360126495361, max=1.3619840145111084, avg=1.3427200078964234, std=0.014313154421636914)!!
+INFO:root:Result of rank 11 collected = (Perf: min=1.3303680419921875, max=1.3674240112304688, avg=1.347535991668701, std=0.014613996542269077)!!
+INFO:root:Result of rank 12 collected = (Perf: min=1.335263967514038, max=1.3682559728622437, avg=1.352182388305664, std=0.013127457928402638)!!
+INFO:root:Result of rank 13 collected = (Perf: min=1.3345919847488403, max=1.370527982711792, avg=1.3514943957328795, std=0.013272904198213547)!!
+INFO:root:Result of rank 14 collected = (Perf: min=1.3237119913101196, max=1.3671040534973145, avg=1.3442976117134093, std=0.016342342066203698)!!
+INFO:root:Result of rank 15 collected = (Perf: min=1.3215999603271484, max=1.3658239841461182, avg=1.342419195175171, std=0.016557031659621572)!!
+INFO:root:********************task completed!********************
+INFO:root:task ([7, 9, 11, 13, 15, 1, 3, 5], [8, 10, 12, 14, 0, 2, 4, 6]) dispatched!
+INFO:root:Result of rank 0 collected = (Perf: min=2.491584062576294, max=2.628416061401367, avg=2.566752004623413, std=0.04742502420406323)!!
+INFO:root:Result of rank 1 collected = (Perf: min=1.319648027420044, max=1.371616005897522, avg=1.342031991481781, std=0.015980996122169036)!!
+INFO:root:Result of rank 2 collected = (Perf: min=1.3051520586013794, max=1.3568960428237915, avg=1.3380288124084472, std=0.0166745127338105)!!
+INFO:root:Result of rank 3 collected = (Perf: min=1.3256959915161133, max=1.3629440069198608, avg=1.3394463896751403, std=0.012256084979816752)!!
+INFO:root:Result of rank 4 collected = (Perf: min=1.3262720108032227, max=1.3644800186157227, avg=1.3403200030326843, std=0.012081694362503675)!!
+INFO:root:Result of rank 5 collected = (Perf: min=1.3300479650497437, max=1.3646080493927002, avg=1.3420063972473144, std=0.013009105118394388)!!
+INFO:root:Result of rank 6 collected = (Perf: min=1.3282560110092163, max=1.363327980041504, avg=1.3408991813659668, std=0.0134554264946982)!!
+INFO:root:Result of rank 7 collected = (Perf: min=2.5723841190338135, max=2.638079881668091, avg=2.60642557144165, std=0.016996169289853088)!!
+INFO:root:Result of rank 8 collected = (Perf: min=2.5842878818511963, max=2.6382720470428467, avg=2.606591987609863, std=0.017024923506899377)!!
+INFO:root:Result of rank 9 collected = (Perf: min=1.3215680122375488, max=1.3995840549468994, avg=1.3625888228416443, std=0.024364823619231236)!!
+INFO:root:Result of rank 10 collected = (Perf: min=1.3178240060806274, max=1.3613760471343994, avg=1.3404160141944885, std=0.013789781594423787)!!
+INFO:root:Result of rank 11 collected = (Perf: min=1.35971200466156, max=2.7640318870544434, avg=2.445967996120453, std=0.37801058625109935)!!
+INFO:root:Result of rank 12 collected = (Perf: min=1.363711953163147, max=2.767807960510254, avg=2.46336635351181, std=0.3804128460248243)!!
+INFO:root:Result of rank 13 collected = (Perf: min=1.3291200399398804, max=1.366368055343628, avg=1.3416032195091248, std=0.014335066723314978)!!
+INFO:root:Result of rank 14 collected = (Perf: min=1.3289599418640137, max=1.3661760091781616, avg=1.3412831902503968, std=0.014489509539342249)!!
+INFO:root:Result of rank 15 collected = (Perf: min=2.4799039363861084, max=2.6288321018218994, avg=2.564848017692566, std=0.05014635468161754)!!
+INFO:root:********************task completed!********************
+INFO:root:validating ring:[0, 1], the corresponding tasks are [([0], [1]), ([1], [0])]
+INFO:root:task ([0], [1]) dispatched!
+INFO:root:Result of rank 2 collected = (Perf: min=1.8889600038528442, max=1.9456640481948853, avg=1.9204480171203613, std=0.017553715755053562)!!
+INFO:root:Result of rank 10 collected = (Perf: min=1.888159990310669, max=1.9456959962844849, avg=1.9187871813774109, std=0.017243352460181972)!!
+INFO:root:********************task completed!********************
+INFO:root:task ([1], [0]) dispatched!
+INFO:root:Result of rank 2 collected = (Perf: min=1.8741120100021362, max=1.9229120016098022, avg=1.8933472156524658, std=0.01355680470962613)!!
+INFO:root:Result of rank 10 collected = (Perf: min=1.8666880130767822, max=1.9288959503173828, avg=1.8924383878707887, std=0.017656318766643943)!!
+INFO:root:********************task completed!********************
+INFO:root:validating ring:[5, 6, 7, 0, 1, 2, 3, 4], the corresponding tasks are [([5, 7, 1, 3], [6, 0, 2, 4]), ([6, 0, 2, 4], [7, 1, 3, 5])]
+INFO:root:task ([5, 7, 1, 3], [6, 0, 2, 4]) dispatched!
+INFO:root:Result of rank 8 collected = (Perf: min=0.5278720259666443, max=0.5417919754981995, avg=0.5376448035240173, std=0.0036688469757641755)!!
+INFO:root:Result of rank 9 collected = (Perf: min=0.5312640070915222, max=0.5370240211486816, avg=0.5349120020866394, std=0.0015879924174548067)!!
+INFO:root:Result of rank 10 collected = (Perf: min=0.5317440032958984, max=0.538815975189209, avg=0.5352671980857849, std=0.0019877334529068962)!!
+INFO:root:Result of rank 11 collected = (Perf: min=0.5339199900627136, max=0.5369920134544373, avg=0.5352991998195649, std=0.000980419515740662)!!
+INFO:root:Result of rank 12 collected = (Perf: min=0.533951997756958, max=0.5400959849357605, avg=0.5358720004558564, std=0.0017845563559642577)!!
+INFO:root:Result of rank 13 collected = (Perf: min=0.5335360169410706, max=0.5389119982719421, avg=0.5355167925357819, std=0.0014598074189431118)!!
+INFO:root:Result of rank 14 collected = (Perf: min=0.5338240265846252, max=0.5392320156097412, avg=0.5355967998504638, std=0.0014965745001396685)!!
+INFO:root:Result of rank 15 collected = (Perf: min=0.5341119766235352, max=0.5426560044288635, avg=0.5372767984867096, std=0.002474468756220301)!!
+INFO:root:********************task completed!********************
+INFO:root:task ([6, 0, 2, 4], [7, 1, 3, 5]) dispatched!
+INFO:root:Result of rank 8 collected = (Perf: min=0.5311359763145447, max=0.5428159832954407, avg=0.5343392014503479, std=0.0031990495304972098)!!
+INFO:root:Result of rank 9 collected = (Perf: min=0.5298879742622375, max=0.5444480180740356, avg=0.5329279959201813, std=0.003993115951818171)!!
+INFO:root:Result of rank 10 collected = (Perf: min=0.53302401304245, max=0.541375994682312, avg=0.5351488053798675, std=0.002396973454861595)!!
+INFO:root:Result of rank 11 collected = (Perf: min=0.5341119766235352, max=0.539680004119873, avg=0.5358047902584075, std=0.0014990552422176804)!!
+INFO:root:Result of rank 12 collected = (Perf: min=0.5319679975509644, max=0.5389119982719421, avg=0.5343584001064301, std=0.001985345412468884)!!
+INFO:root:Result of rank 13 collected = (Perf: min=0.531711995601654, max=0.5368959903717041, avg=0.5337568104267121, std=0.0016087763878666129)!!
+INFO:root:Result of rank 14 collected = (Perf: min=0.5316159725189209, max=0.539359986782074, avg=0.5349823951721191, std=0.002076491442084061)!!
+INFO:root:Result of rank 15 collected = (Perf: min=0.5295360088348389, max=0.5378879904747009, avg=0.5338784039020539, std=0.002182300239979664)!!
+INFO:root:********************task completed!********************
+INFO:root:validating ring:[1, 0], the corresponding tasks are [([1], [0]), ([0], [1])]
+INFO:root:task ([1], [0]) dispatched!
+INFO:root:Result of rank 3 collected = (Perf: min=1.8640639781951904, max=1.901792049407959, avg=1.8796831965446472, std=0.010195766863517806)!!
+INFO:root:Result of rank 11 collected = (Perf: min=1.859328031539917, max=1.9084160327911377, avg=1.8769920110702514, std=0.012911645410125051)!!
+INFO:root:********************task completed!********************
+INFO:root:task ([0], [1]) dispatched!
+INFO:root:Result of rank 3 collected = (Perf: min=1.8850239515304565, max=1.9722880125045776, avg=1.9184224009513855, std=0.023549696200336576)!!
+INFO:root:Result of rank 11 collected = (Perf: min=1.8905600309371948, max=1.9706239700317383, avg=1.9182432055473329, std=0.02313330027858713)!!
+INFO:root:********************task completed!********************
+INFO:root:validating ring:[0, 1], the corresponding tasks are [([0], [1]), ([1], [0])]
+INFO:root:task ([0], [1]) dispatched!
+INFO:root:Result of rank 7 collected = (Perf: min=3.1564478874206543, max=3.6061758995056152, avg=3.350729560852051, std=0.12406858161578545)!!
+INFO:root:Result of rank 15 collected = (Perf: min=3.145279884338379, max=3.601792097091675, avg=3.3419615983963014, std=0.12477393384590031)!!
+INFO:root:********************task completed!********************
+INFO:root:task ([1], [0]) dispatched!
+INFO:root:Result of rank 7 collected = (Perf: min=3.1409919261932373, max=3.3628480434417725, avg=3.2589055776596068, std=0.07679660744203115)!!
+INFO:root:Result of rank 15 collected = (Perf: min=3.149791955947876, max=3.3596479892730713, avg=3.2597984075546265, std=0.07565999645016817)!!
+INFO:root:********************task completed!********************
+INFO:root:validating ring:[1, 0], the corresponding tasks are [([1], [0]), ([0], [1])]
+INFO:root:task ([1], [0]) dispatched!
+INFO:root:Result of rank 5 collected = (Perf: min=1.8866239786148071, max=1.9144959449768066, avg=1.8999615788459778, std=0.007894869071252975)!!
+INFO:root:Result of rank 13 collected = (Perf: min=1.89193594455719, max=1.9149119853973389, avg=1.9006207823753356, std=0.006867411622802589)!!
+INFO:root:********************task completed!********************
+INFO:root:task ([0], [1]) dispatched!
+INFO:root:Result of rank 5 collected = (Perf: min=1.868224024772644, max=1.9476159811019897, avg=1.9167392015457154, std=0.021998718473972372)!!
+INFO:root:Result of rank 13 collected = (Perf: min=1.8681919574737549, max=1.9402559995651245, avg=1.9136191964149476, std=0.020051582393956244)!!
+INFO:root:********************task completed!********************
+INFO:root:validating ring:[1, 0], the corresponding tasks are [([1], [0]), ([0], [1])]
+INFO:root:task ([1], [0]) dispatched!
+INFO:root:Result of rank 6 collected = (Perf: min=3.083712100982666, max=3.353408098220825, avg=3.2295008182525633, std=0.08355200298602783)!!
+INFO:root:Result of rank 14 collected = (Perf: min=3.077984094619751, max=3.335616111755371, avg=3.226915192604065, std=0.08429981242663305)!!
+INFO:root:********************task completed!********************
+INFO:root:task ([0], [1]) dispatched!
+INFO:root:Result of rank 6 collected = (Perf: min=2.7701120376586914, max=2.8459200859069824, avg=2.80907199382782, std=0.02077273515977367)!!
+INFO:root:Result of rank 14 collected = (Perf: min=2.7735679149627686, max=2.848992109298706, avg=2.8145663738250732, std=0.020436500360907148)!!
+INFO:root:********************task completed!********************
+INFO:root:validating ring:[11, 12, 13, 14, 15, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], the corresponding tasks are [([11, 13, 15, 1, 3, 5, 7, 9], [12, 14, 0, 2, 4, 6, 8, 10]), ([12, 14, 0, 2, 4, 6, 8, 10], [13, 15, 1, 3, 5, 7, 9, 11])]
+INFO:root:task ([11, 13, 15, 1, 3, 5, 7, 9], [12, 14, 0, 2, 4, 6, 8, 10]) dispatched!
+INFO:root:Result of rank 0 collected = (Perf: min=2.497472047805786, max=2.523263931274414, avg=2.503382420539856, std=0.007173973339185561)!!
+INFO:root:Result of rank 1 collected = (Perf: min=1.3212800025939941, max=1.3576639890670776, avg=1.3361247897148132, std=0.012892187533352887)!!
+INFO:root:Result of rank 2 collected = (Perf: min=1.321984052658081, max=1.3589760065078735, avg=1.3368672132492065, std=0.012868223529344365)!!
+INFO:root:Result of rank 3 collected = (Perf: min=1.3160320520401, max=1.3540480136871338, avg=1.3283008098602296, std=0.013460740761753343)!!
+INFO:root:Result of rank 4 collected = (Perf: min=1.3159359693527222, max=1.3533439636230469, avg=1.3281887888908386, std=0.013443232335979384)!!
+INFO:root:Result of rank 5 collected = (Perf: min=1.3284480571746826, max=1.3646399974822998, avg=1.3460320115089417, std=0.013981651903748582)!!
+INFO:root:Result of rank 6 collected = (Perf: min=1.3270399570465088, max=1.362496018409729, avg=1.3439008116722106, std=0.013374932822216504)!!
+INFO:root:Result of rank 7 collected = (Perf: min=2.4895999431610107, max=2.5294721126556396, avg=2.5065664052963257, std=0.011743656954362393)!!
+INFO:root:Result of rank 8 collected = (Perf: min=2.5028159618377686, max=2.5171520709991455, avg=2.50796160697937, std=0.004326501826021862)!!
+INFO:root:Result of rank 9 collected = (Perf: min=1.3284800052642822, max=1.3703360557556152, avg=1.3485151886940003, std=0.015448409140827277)!!
+INFO:root:Result of rank 10 collected = (Perf: min=1.3281919956207275, max=1.3702399730682373, avg=1.348476803302765, std=0.015510180353185936)!!
+INFO:root:Result of rank 11 collected = (Perf: min=1.334015965461731, max=1.3698559999465942, avg=1.3512832045555114, std=0.013756932806302368)!!
+INFO:root:Result of rank 12 collected = (Perf: min=1.3345279693603516, max=1.370527982711792, avg=1.3509119749069214, std=0.013877667098851064)!!
+INFO:root:Result of rank 13 collected = (Perf: min=1.327455997467041, max=1.3574719429016113, avg=1.3400959849357605, std=0.012121510660739345)!!
+INFO:root:Result of rank 14 collected = (Perf: min=1.327679991722107, max=1.3566720485687256, avg=1.340380811691284, std=0.011995303785639731)!!
+INFO:root:Result of rank 15 collected = (Perf: min=2.4912641048431396, max=2.523616075515747, avg=2.5054208040237427, std=0.010724007009413644)!!
+INFO:root:********************task completed!********************
+INFO:root:task ([12, 14, 0, 2, 4, 6, 8, 10], [13, 15, 1, 3, 5, 7, 9, 11]) dispatched!
+INFO:root:Result of rank 0 collected = (Perf: min=1.324671983718872, max=1.35971200466156, avg=1.338105595111847, std=0.011443702662707856)!!
+INFO:root:Result of rank 1 collected = (Perf: min=1.3207679986953735, max=1.3576639890670776, avg=1.3357984185218812, std=0.011789190925537743)!!
+INFO:root:Result of rank 2 collected = (Perf: min=1.3120640516281128, max=1.346783995628357, avg=1.3296736001968383, std=0.013640560634661847)!!
+INFO:root:Result of rank 3 collected = (Perf: min=1.313088059425354, max=1.3482880592346191, avg=1.3312416076660156, std=0.013648555161297362)!!
+INFO:root:Result of rank 4 collected = (Perf: min=1.3309439420700073, max=1.3667839765548706, avg=1.34857280254364, std=0.016026146055872312)!!
+INFO:root:Result of rank 5 collected = (Perf: min=1.3307199478149414, max=1.3668160438537598, avg=1.3486143946647644, std=0.01593205062070448)!!
+INFO:root:Result of rank 6 collected = (Perf: min=1.3301440477371216, max=1.366976022720337, avg=1.3410784006118774, std=0.012237100816373593)!!
+INFO:root:Result of rank 7 collected = (Perf: min=1.3233280181884766, max=1.3636159896850586, avg=1.3373599886894225, std=0.012658640858083096)!!
+INFO:root:Result of rank 8 collected = (Perf: min=1.3336639404296875, max=1.3667839765548706, avg=1.3459456086158752, std=0.012922630563094261)!!
+INFO:root:Result of rank 9 collected = (Perf: min=1.334496021270752, max=1.3685439825057983, avg=1.3476800203323365, std=0.01298758379620579)!!
+INFO:root:Result of rank 10 collected = (Perf: min=1.3102400302886963, max=1.3468799591064453, avg=1.3307072043418884, std=0.015155789473860558)!!
+INFO:root:Result of rank 11 collected = (Perf: min=1.3113600015640259, max=1.346176028251648, avg=1.3309727907180786, std=0.014619743740075047)!!
+INFO:root:Result of rank 12 collected = (Perf: min=1.3212480545043945, max=1.3583680391311646, avg=1.3363839983940125, std=0.01494027346186197)!!
+INFO:root:Result of rank 13 collected = (Perf: min=1.321120023727417, max=1.3585920333862305, avg=1.336019217967987, std=0.015313170532253036)!!
+INFO:root:Result of rank 14 collected = (Perf: min=1.3069119453430176, max=1.3553919792175293, avg=1.326691210269928, std=0.01793492146959047)!!
+INFO:root:Result of rank 15 collected = (Perf: min=1.3075200319290161, max=1.3541760444641113, avg=1.3258880138397218, std=0.017552923235268466)!!
+INFO:root:********************task completed!********************
+INFO:root:Mitigating fail-slow problem...
+INFO:root:Max times of each communicator: {1: 3.2173343896865845, 0: 2.50796160697937, 4: 1.9157055974006654, 2: 1.9204480171203613, 8: 0.5376448035240173, 3: 1.9184224009513855, 7: 3.350729560852051, 5: 1.9167392015457154, 6: 3.2295008182525633}
+INFO:root:TP degree: 1
+INFO:root:max_comm_time_per_pp_stage: [2.50796160697937, 3.2173343896865845, 1.9204480171203613, 1.9184224009513855, 1.9157055974006654, 1.9167392015457154, 3.2295008182525633, 3.350729560852051, 0.5376448035240173]
+INFO:root:Reason of fail-slow is comm
+INFO:root:DP computation results: {0: (Perf: min=26.319353294372558, max=26.319353294372558, avg=26.319353294372558, std=0), 1: (Perf: min=26.171900939941406, max=26.171900939941406, avg=26.171900939941406, std=0), 2: (Perf: min=26.236531257629395, max=26.236531257629395, avg=26.236531257629395, std=0), 3: (Perf: min=26.17223987579346, max=26.17223987579346, avg=26.17223987579346, std=0), 4: (Perf: min=26.298745536804198, max=26.298745536804198, avg=26.298745536804198, std=0), 5: (Perf: min=26.220716667175292, max=26.220716667175292, avg=26.220716667175292, std=0), 6: (Perf: min=26.28048973083496, max=26.28048973083496, avg=26.28048973083496, std=0), 7: (Perf: min=26.192864227294923, max=26.192864227294923, avg=26.192864227294923, std=0), 8: (Perf: min=26.278269004821777, max=26.278269004821777, avg=26.278269004821777, std=0), 9: (Perf: min=26.238860511779784, max=26.238860511779784, avg=26.238860511779784, std=0), 10: (Perf: min=26.178595352172852, max=26.178595352172852, avg=26.178595352172852, std=0), 11: (Perf: min=26.30647029876709, max=26.30647029876709, avg=26.30647029876709, std=0), 12: (Perf: min=26.28281307220459, max=26.28281307220459, avg=26.28281307220459, std=0), 13: (Perf: min=26.17636203765869, max=26.17636203765869, avg=26.17636203765869, std=0), 14: (Perf: min=26.28512020111084, max=26.28512020111084, avg=26.28512020111084, std=0), 15: (Perf: min=26.312585639953614, max=26.312585639953614, avg=26.312585639953614, std=0)}
+INFO:root:Min iter time: 136.9835, slow time: 148.231, compute_time: {0: (Perf: min=26.319353294372558, max=26.319353294372558, avg=26.319353294372558, std=0), 1: (Perf: min=26.171900939941406, max=26.171900939941406, avg=26.171900939941406, std=0), 2: (Perf: min=26.236531257629395, max=26.236531257629395, avg=26.236531257629395, std=0), 3: (Perf: min=26.17223987579346, max=26.17223987579346, avg=26.17223987579346, std=0), 4: (Perf: min=26.298745536804198, max=26.298745536804198, avg=26.298745536804198, std=0), 5: (Perf: min=26.220716667175292, max=26.220716667175292, avg=26.220716667175292, std=0), 6: (Perf: min=26.28048973083496, max=26.28048973083496, avg=26.28048973083496, std=0), 7: (Perf: min=26.192864227294923, max=26.192864227294923, avg=26.192864227294923, std=0), 8: (Perf: min=26.278269004821777, max=26.278269004821777, avg=26.278269004821777, std=0), 9: (Perf: min=26.238860511779784, max=26.238860511779784, avg=26.238860511779784, std=0), 10: (Perf: min=26.178595352172852, max=26.178595352172852, avg=26.178595352172852, std=0), 11: (Perf: min=26.30647029876709, max=26.30647029876709, avg=26.30647029876709, std=0), 12: (Perf: min=26.28281307220459, max=26.28281307220459, avg=26.28281307220459, std=0), 13: (Perf: min=26.17636203765869, max=26.17636203765869, avg=26.17636203765869, std=0), 14: (Perf: min=26.28512020111084, max=26.28512020111084, avg=26.28512020111084, std=0), 15: (Perf: min=26.312585639953614, max=26.312585639953614, avg=26.312585639953614, std=0)}
+WARNING:root:batch size not found: microbsz=None, globalbsz=None

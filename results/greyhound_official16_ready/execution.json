@@ -1,0 +1,10 @@
+{
+  "run": "greyhound_official16_ready",
+  "exits": [
+    "0",
+    "0"
+  ],
+  "source": "official",
+  "config_adaptations": "patches/greyhound-hardware.patch",
+  "topology_preseed": true
+}

@@ -1,0 +1,7 @@
+{
+  "run": "paper_precheck",
+  "exits": [
+    "0",
+    "0"
+  ]
+}

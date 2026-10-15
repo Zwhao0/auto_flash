@@ -1,0 +1,7 @@
+{
+  "run": "paper_baseline16b",
+  "exits": [
+    "0",
+    "0"
+  ]
+}

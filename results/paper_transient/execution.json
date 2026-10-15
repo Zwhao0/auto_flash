@@ -1,0 +1,7 @@
+{
+  "run": "paper_transient",
+  "exits": [
+    "0",
+    "0"
+  ]
+}

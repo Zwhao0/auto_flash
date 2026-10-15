@@ -1,0 +1,7 @@
+{
+  "run": "paper_gloo_monitor",
+  "exits": [
+    "0",
+    "0"
+  ]
+}

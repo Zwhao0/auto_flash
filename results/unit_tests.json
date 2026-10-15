@@ -1,0 +1,5 @@
+{
+  "host": "10.10.4.1",
+  "exit": 0,
+  "output": "test_detector_sustained_vs_recovery_and_low_severity (test_algorithms.Algorithms.test_detector_sustained_vs_recovery_and_low_severity) ... ok\ntest_low_cv_and_missing_rank_reject (test_algorithms.Algorithms.test_low_cv_and_missing_rank_reject) ... ok\ntest_reverse_rank_and_stage1 (test_algorithms.Algorithms.test_reverse_rank_and_stage1) ... ok\ntest_sequence_shards_equal_dense_forward_and_gradients (test_model_support.NormEquivalence.test_sequence_shards_equal_dense_forward_and_gradients) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 2.501s\n\nOK\n"
+}

@@ -1,0 +1,34 @@
+[
+  [
+    "paper_gloo_baseline",
+    [
+      "0",
+      "0"
+    ]
+  ],
+  [
+    "paper_gloo_monitor",
+    [
+      "0",
+      "0"
+    ]
+  ],
+  [
+    "paper_gloo_healthy",
+    [
+      "0",
+      "0"
+    ]
+  ],
+  [
+    "paper_gloo_delay45",
+    [
+      "0",
+      "0"
+    ]
+  ],
+  [
+    "paper_gloo_clock600",
+    0
+  ]
+]

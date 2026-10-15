@@ -1,0 +1,1 @@
+预填实际topology后训练0/0，但短训练在precheck结束前退出。只保留上游启动排障；后续gated按原协议等待precheck完成。

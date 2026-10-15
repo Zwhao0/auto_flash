@@ -1,0 +1,7 @@
+{
+  "run": "paper_gloo_baseline",
+  "exits": [
+    "0",
+    "0"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "run": "paper_delay_boundary",
+  "exits": [
+    "0",
+    "0"
+  ]
+}

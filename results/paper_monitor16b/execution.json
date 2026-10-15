@@ -1,0 +1,7 @@
+{
+  "run": "paper_monitor16b",
+  "exits": [
+    "0",
+    "0"
+  ]
+}

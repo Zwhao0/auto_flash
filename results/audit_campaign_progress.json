@@ -1,0 +1,492 @@
+[
+  {
+    "label": "allreduce_base1",
+    "run": "audit_allreduce_base1_20261015T162151Z_83d2755d",
+    "mode": "baseline",
+    "task": "allreduce",
+    "args": "--warmup 100 --batches 5 --repeats 100",
+    "exits": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "label": "allreduce_mon1",
+    "run": "audit_allreduce_mon1_20261015T162219Z_6ac0c83d",
+    "mode": "monitor",
+    "task": "allreduce",
+    "args": "--warmup 100 --batches 5 --repeats 100",
+    "exits": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "label": "allreduce_mon2",
+    "run": "audit_allreduce_mon2_20261015T162248Z_071ba563",
+    "mode": "monitor",
+    "task": "allreduce",
+    "args": "--warmup 100 --batches 5 --repeats 100",
+    "exits": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "label": "allreduce_base2",
+    "run": "audit_allreduce_base2_20261015T162317Z_01135d0e",
+    "mode": "baseline",
+    "task": "allreduce",
+    "args": "--warmup 100 --batches 5 --repeats 100",
+    "exits": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "label": "train_base1",
+    "run": "audit_train_base1_20261015T162520Z_183230ee",
+    "mode": "baseline",
+    "task": "train",
+    "args": "--seq 128 --batch 2 --steps 800",
+    "force": false,
+    "exits": [
+      "0",
+      "0"
+    ],
+    "status": "completed"
+  },
+  {
+    "label": "train_mon1",
+    "run": "audit_train_mon1_20261015T162727Z_ffedc8e0",
+    "mode": "monitor",
+    "task": "train",
+    "args": "--seq 128 --batch 2 --steps 800",
+    "force": false,
+    "exits": [
+      "0",
+      "0"
+    ],
+    "status": "completed"
+  },
+  {
+    "label": "train_mon2",
+    "run": "audit_train_mon2_20261015T162938Z_14073461",
+    "mode": "monitor",
+    "task": "train",
+    "args": "--seq 128 --batch 2 --steps 800 --no-save-checkpoint",
+    "force": false,
+    "exits": [
+      "0",
+      "0"
+    ],
+    "status": "completed"
+  },
+  {
+    "label": "healthy_forced",
+    "run": "audit_healthy_forced_post_gradient_fix_20261015T163528Z_47b835d1",
+    "cohort": "post_gradient_fix",
+    "mode": "monitor",
+    "task": "train",
+    "args": "--seq 128 --batch 2 --steps 800 --no-save-checkpoint",
+    "force": true,
+    "exits": [
+      "0",
+      "0"
+    ],
+    "status": "completed"
+  },
+  {
+    "label": "delay45_auto",
+    "run": "audit_delay45_auto_post_gradient_fix_20261015T163747Z_2a995db6",
+    "cohort": "post_gradient_fix",
+    "mode": "monitor",
+    "task": "train",
+    "args": "--seq 128 --batch 2 --steps 800 --fault delay --severity 0.45 --fault-step 80 --no-save-checkpoint",
+    "force": false,
+    "exits": [
+      "0",
+      "0"
+    ],
+    "status": "completed"
+  },
+  {
+    "label": "train_base1",
+    "run": "audit_train_base1_post_gradient_fix_20261015T164153Z_221f1ae3",
+    "cohort": "post_gradient_fix",
+    "mode": "baseline",
+    "task": "train",
+    "args": "--seq 128 --batch 2 --steps 800",
+    "force": false,
+    "exits": [
+      "0",
+      "0"
+    ],
+    "status": "completed"
+  },
+  {
+    "label": "train_mon1",
+    "run": "audit_train_mon1_post_gradient_fix_20261015T164358Z_8736c8a0",
+    "cohort": "post_gradient_fix",
+    "mode": "monitor",
+    "task": "train",
+    "args": "--seq 128 --batch 2 --steps 800",
+    "force": false,
+    "exits": [
+      "0",
+      "0"
+    ],
+    "status": "completed"
+  },
+  {
+    "label": "train_mon2",
+    "run": "audit_train_mon2_post_gradient_fix_20261015T164608Z_65c53bf2",
+    "cohort": "post_gradient_fix",
+    "mode": "monitor",
+    "task": "train",
+    "args": "--seq 128 --batch 2 --steps 800 --no-save-checkpoint",
+    "force": false,
+    "exits": [
+      "0",
+      "0"
+    ],
+    "status": "completed"
+  },
+  {
+    "label": "train_base2",
+    "run": "audit_train_base2_post_gradient_fix_20261015T164819Z_ddb8d164",
+    "cohort": "post_gradient_fix",
+    "mode": "baseline",
+    "task": "train",
+    "args": "--seq 128 --batch 2 --steps 800 --no-save-checkpoint",
+    "force": false,
+    "exits": [
+      "0",
+      "0"
+    ],
+    "status": "completed"
+  },
+  {
+    "kind": "checkpoint_comparison",
+    "baseline": "audit_train_base1_post_gradient_fix_20261015T164153Z_221f1ae3",
+    "observed": "audit_train_mon1_post_gradient_fix_20261015T164358Z_8736c8a0",
+    "checks": [
+      {
+        "host": "10.10.4.1",
+        "exit": 0,
+        "output": "[{\"rank\": 0, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 1, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 2, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 3, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 4, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 5, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 6, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 7, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}]\n"
+      },
+      {
+        "host": "10.10.4.2",
+        "exit": 0,
+        "output": "[{\"rank\": 8, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 9, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 10, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 11, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 12, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 13, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 14, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}, {\"rank\": 15, \"finite\": true, \"elements\": 4073728, \"max_abs_difference\": 0.0}]\n"
+      }
+    ]
+  },
+  {
+    "label": "delay5",
+    "run": "audit_delay5_post_gradient_fix_20261015T165105Z_66d7d32b",
+    "cohort": "post_gradient_fix",
+    "mode": "monitor",
+    "task": "train",
+    "args": "--seq 128 --batch 2 --steps 300 --fault delay --severity 0.05 --fault-step 60 --no-save-checkpoint",
+    "force": false,
+    "exits": [
+      "0",
+      "0"
+    ],
+    "status": "completed"
+  },
+  {
+    "label": "delay25",
+    "run": "audit_delay25_post_gradient_fix_20261015T165232Z_7f75a06c",
+    "cohort": "post_gradient_fix",
+    "mode": "monitor",
+    "task": "train",
+    "args": "--seq 128 --batch 2 --steps 300 --fault delay --severity 0.25 --fault-step 60 --no-save-checkpoint",
+    "force": false,
+    "exits": [
+      "0",
+      "0"
+    ],
+    "status": "completed"
+  },
+  {
+    "label": "delay65",
+    "run": "audit_delay65_post_gradient_fix_20261015T165404Z_8c9cf2cd",
+    "cohort": "post_gradient_fix",
+    "mode": "monitor",
+    "task": "train",
+    "args": "--seq 128 --batch 2 --steps 250 --fault delay --severity 0.65 --fault-step 60 --no-save-checkpoint",
+    "force": false,
+    "exits": [
+      "0",
+      "0"
+    ],
+    "status": "completed"
+  },
+  {
+    "label": "delay85",
+    "run": "audit_delay85_post_gradient_fix_20261015T165554Z_7ab4d13f",
+    "cohort": "post_gradient_fix",
+    "mode": "monitor",
+    "task": "train",
+    "args": "--seq 128 --batch 2 --steps 180 --fault delay --severity 0.85 --fault-step 60 --no-save-checkpoint",
+    "force": false,
+    "exits": [
+      "0",
+      "0"
+    ],
+    "status": "completed"
+  },
+  {
+    "label": "transient500ms",
+    "run": "audit_transient500ms_post_gradient_fix_20261015T165808Z_d933a743",
+    "cohort": "post_gradient_fix",
+    "mode": "monitor",
+    "task": "train",
+    "args": "--seq 128 --batch 2 --steps 200 --fault delay --delay-ms 500 --fault-duration 1 --fault-step 60 --no-save-checkpoint",
+    "force": false,
+    "exits": [
+      "0",
+      "0"
+    ],
+    "status": "completed"
+  },
+  {
+    "label": "oom",
+    "run": "audit_oom_post_gradient_fix_20261015T170018Z_08e12f16",
+    "cohort": "post_gradient_fix",
+    "mode": "monitor",
+    "task": "train",
+    "args": "--seq 128 --batch 2 --steps 120 --fault oom --fault-step 45 --no-save-checkpoint",
+    "force": false,
+    "injection": {
+      "rank": 8,
+      "step": 45,
+      "fault": "oom",
+      "delay_ms": 100,
+      "severity": null,
+      "placement": "before-sync",
+      "kind": "injection",
+      "time": 1792083661.337957
+    },
+    "liveness": [
+      {
+        "label": "after_injection_0.5s",
+        "time": 1792083663.3184268,
+        "nodes": [
+          {
+            "node": 0,
+            "host": "10.10.4.1",
+            "exit": 0,
+            "output": "  85516 S    bash            bash -lc export FLASH_RUN_ID=audit_oom_post_gradient_fix_20261015T170018Z_08e12f16 FLASH_REDIS_HOST=10.10.4.1 FLASH_REDIS_PORT=16379; export PYTHONPATH=/flash:/flash/deps:/flash/vendor/MegatronCore; export FLASH_NCCL_LIB=/usr/local/lib/python3.12/dist-packages/nvidia/nccl/lib/libnccl.so.2 LD_LIBRARY_PATH=/usr/local/lib/python3.12/dist-packages/nvidia/cuda_runtime/lib:$LD_LIBRARY_PATH; export OMP_NUM_THREADS=2 CUDA_DEVICE_MAX_CONNECTIONS=1 NCCL_SOCKET_IFNAME=bond0 GLOO_SOCKET_IFNAME=bond0 NCCL_IB_HCA=mlx5_0,mlx5_1,mlx5_2,mlx5_3 NCCL_NET=IB NCCL_DEBUG=INFO TORCH_NCCL_ASYNC_ERROR_HANDLING=1; export FLASH_MODE=monitor FLASH_TASK=train; torchrun --nnodes=2 --nproc_per_node=8 --node_rank=0 --master_addr=10.10.4.1 --master_port=29541 --no_python bash scripts/run_rank.sh --seq 128 --batch 2 --steps 120 --fault oom --fault-step 45 --no-save-checkpoint; code=$?; echo $code > /flash/results/audit_oom_post_gradient_fix_20261015T170018Z_08e12f16/exit0\n  85519 Sl   pt_elastic      /usr/bin/python3 /usr/local/bin/torchrun --nnodes=2 --nproc_per_node=8 --node_rank=0 --master_addr=10.10.4.1 --master_port=29541 --no_python bash scripts/run_rank.sh --seq 128 --batch 2 --steps 120 --fault oom --fault-step 45 --no-save-checkpoint\n  85556 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault oom --fault-step 45 --no-save-checkpoint --output /flash/results/audit_oom_post_gradient_fix_20261015T170018Z_08e12f16/train_rank0.jsonl\n  85557 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault oom --fault-step 45 --no-save-checkpoint --output /flash/results/audit_oom_post_gradient_fix_20261015T170018Z_08e12f16/train_rank1.jsonl\n  85558 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault oom --fault-step 45 --no-save-checkpoint --output /flash/results/audit_oom_post_gradient_fix_20261015T170018Z_08e12f16/train_rank2.jsonl\n  85559 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault oom --fault-step 45 --no-save-checkpoint --output /flash/results/audit_oom_post_gradient_fix_20261015T170018Z_08e12f16/train_rank3.jsonl\n  85560 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault oom --fault-step 45 --no-save-checkpoint --output /flash/results/audit_oom_post_gradient_fix_20261015T170018Z_08e12f16/train_rank4.jsonl\n  85561 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault oom --fault-step 45 --no-save-checkpoint --output /flash/results/audit_oom_post_gradient_fix_20261015T170018Z_08e12f16/train_rank5.jsonl\n  85562 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault oom --fault-step 45 --no-save-checkpoint --output /flash/results/audit_oom_post_gradient_fix_20261015T170018Z_08e12f16/train_rank6.jsonl\n  85563 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault oom --fault-step 45 --no-save-checkpoint --output /flash/results/audit_oom_post_gradient_fix_20261015T170018Z_08e12f16/train_rank7.jsonl\n85556, 4542 MiB\n85557, 4534 MiB\n85558, 5016 MiB\n85559, 5078 MiB\n85560, 5036 MiB\n85561, 5054 MiB\n85562, 4604 MiB\n85563, 4592 MiB\n"
+          },
+          {
+            "node": 1,
+            "host": "10.10.4.2",
+            "exit": 0,
+            "output": "  71385 S    bash            bash -lc export FLASH_RUN_ID=audit_oom_post_gradient_fix_20261015T170018Z_08e12f16 FLASH_REDIS_HOST=10.10.4.1 FLASH_REDIS_PORT=16379; export PYTHONPATH=/flash:/flash/deps:/flash/vendor/MegatronCore; export FLASH_NCCL_LIB=/usr/local/lib/python3.12/dist-packages/nvidia/nccl/lib/libnccl.so.2 LD_LIBRARY_PATH=/usr/local/lib/python3.12/dist-packages/nvidia/cuda_runtime/lib:$LD_LIBRARY_PATH; export OMP_NUM_THREADS=2 CUDA_DEVICE_MAX_CONNECTIONS=1 NCCL_SOCKET_IFNAME=bond0 GLOO_SOCKET_IFNAME=bond0 NCCL_IB_HCA=mlx5_0,mlx5_1,mlx5_2,mlx5_3 NCCL_NET=IB NCCL_DEBUG=INFO TORCH_NCCL_ASYNC_ERROR_HANDLING=1; export FLASH_MODE=monitor FLASH_TASK=train; torchrun --nnodes=2 --nproc_per_node=8 --node_rank=1 --master_addr=10.10.4.1 --master_port=29541 --no_python bash scripts/run_rank.sh --seq 128 --batch 2 --steps 120 --fault oom --fault-step 45 --no-save-checkpoint; code=$?; echo $code > /flash/results/audit_oom_post_gradient_fix_20261015T170018Z_08e12f16/exit1\n  71388 Sl   pt_elastic      /usr/bin/python3 /usr/local/bin/torchrun --nnodes=2 --nproc_per_node=8 --node_rank=1 --master_addr=10.10.4.1 --master_port=29541 --no_python bash scripts/run_rank.sh --seq 128 --batch 2 --steps 120 --fault oom --fault-step 45 --no-save-checkpoint\n  71391 Ssl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault oom --fault-step 45 --no-save-checkpoint --output /flash/results/audit_oom_post_gradient_fix_20261015T170018Z_08e12f16/train_rank8.jsonl\n  71392 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault oom --fault-step 45 --no-save-checkpoint --output /flash/results/audit_oom_post_gradient_fix_20261015T170018Z_08e12f16/train_rank9.jsonl\n  71393 Isl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault oom --fault-step 45 --no-save-checkpoint --output /flash/results/audit_oom_post_gradient_fix_20261015T170018Z_08e12f16/train_rank10.jsonl\n  71394 Isl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault oom --fault-step 45 --no-save-checkpoint --output /flash/results/audit_oom_post_gradient_fix_20261015T170018Z_08e12f16/train_rank11.jsonl\n  71395 Isl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault oom --fault-step 45 --no-save-checkpoint --output /flash/results/audit_oom_post_gradient_fix_20261015T170018Z_08e12f16/train_rank12.jsonl\n  71396 Isl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault oom --fault-step 45 --no-save-checkpoint --output /flash/results/audit_oom_post_gradient_fix_20261015T170018Z_08e12f16/train_rank13.jsonl\n  71397 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault oom --fault-step 45 --no-save-checkpoint --output /flash/results/audit_oom_post_gradient_fix_20261015T170018Z_08e12f16/train_rank14.jsonl\n  71398 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault oom --fault-step 45 --no-save-checkpoint --output /flash/results/audit_oom_post_gradient_fix_20261015T170018Z_08e12f16/train_rank15.jsonl\n71391, 3634 MiB\n71392, 4534 MiB\n71393, 5016 MiB\n71394, 5076 MiB\n71395, 5036 MiB\n71396, 5054 MiB\n71397, 4582 MiB\n71398, 4592 MiB\n"
+          }
+        ]
+      },
+      {
+        "label": "after_training_exit",
+        "time": 1792083837.5450969,
+        "nodes": [
+          {
+            "node": 0,
+            "host": "10.10.4.1",
+            "exit": 0,
+            "output": ""
+          },
+          {
+            "node": 1,
+            "host": "10.10.4.2",
+            "exit": 0,
+            "output": ""
+          }
+        ]
+      }
+    ],
+    "exits": [
+      "1",
+      "1"
+    ],
+    "status": "completed"
+  },
+  {
+    "label": "timeout",
+    "run": "audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b",
+    "cohort": "post_gradient_fix",
+    "mode": "monitor",
+    "task": "train",
+    "args": "--seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint",
+    "force": false,
+    "injection": {
+      "rank": 8,
+      "step": 45,
+      "fault": "timeout",
+      "delay_ms": 100,
+      "severity": null,
+      "placement": "before-sync",
+      "kind": "injection",
+      "time": 1792083880.4639132
+    },
+    "liveness": [
+      {
+        "label": "after_injection_0.5s",
+        "time": 1792083882.6347551,
+        "nodes": [
+          {
+            "node": 0,
+            "host": "10.10.4.1",
+            "exit": 0,
+            "output": "  87696 S    bash            bash -lc export FLASH_RUN_ID=audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b FLASH_REDIS_HOST=10.10.4.1 FLASH_REDIS_PORT=16379; export PYTHONPATH=/flash:/flash/deps:/flash/vendor/MegatronCore; export FLASH_NCCL_LIB=/usr/local/lib/python3.12/dist-packages/nvidia/nccl/lib/libnccl.so.2 LD_LIBRARY_PATH=/usr/local/lib/python3.12/dist-packages/nvidia/cuda_runtime/lib:$LD_LIBRARY_PATH; export OMP_NUM_THREADS=2 CUDA_DEVICE_MAX_CONNECTIONS=1 NCCL_SOCKET_IFNAME=bond0 GLOO_SOCKET_IFNAME=bond0 NCCL_IB_HCA=mlx5_0,mlx5_1,mlx5_2,mlx5_3 NCCL_NET=IB NCCL_DEBUG=INFO TORCH_NCCL_ASYNC_ERROR_HANDLING=1; export FLASH_FAULT_INJECT=TRUE; export FLASH_MODE=monitor FLASH_TASK=train; torchrun --nnodes=2 --nproc_per_node=8 --node_rank=0 --master_addr=10.10.4.1 --master_port=29541 --no_python bash scripts/run_rank.sh --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint; code=$?; echo $code > /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/exit0\n  87699 Sl   pt_elastic      /usr/bin/python3 /usr/local/bin/torchrun --nnodes=2 --nproc_per_node=8 --node_rank=0 --master_addr=10.10.4.1 --master_port=29541 --no_python bash scripts/run_rank.sh --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint\n  87735 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank0.jsonl\n  87736 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank1.jsonl\n  87737 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank2.jsonl\n  87738 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank3.jsonl\n  87739 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank4.jsonl\n  87740 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank5.jsonl\n  87741 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank6.jsonl\n  87742 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank7.jsonl\n87735, 4542 MiB\n87736, 4534 MiB\n87737, 5016 MiB\n87738, 5076 MiB\n87739, 5036 MiB\n87740, 5054 MiB\n87741, 4604 MiB\n87742, 4592 MiB\n"
+          },
+          {
+            "node": 1,
+            "host": "10.10.4.2",
+            "exit": 0,
+            "output": "  73170 S    bash            bash -lc export FLASH_RUN_ID=audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b FLASH_REDIS_HOST=10.10.4.1 FLASH_REDIS_PORT=16379; export PYTHONPATH=/flash:/flash/deps:/flash/vendor/MegatronCore; export FLASH_NCCL_LIB=/usr/local/lib/python3.12/dist-packages/nvidia/nccl/lib/libnccl.so.2 LD_LIBRARY_PATH=/usr/local/lib/python3.12/dist-packages/nvidia/cuda_runtime/lib:$LD_LIBRARY_PATH; export OMP_NUM_THREADS=2 CUDA_DEVICE_MAX_CONNECTIONS=1 NCCL_SOCKET_IFNAME=bond0 GLOO_SOCKET_IFNAME=bond0 NCCL_IB_HCA=mlx5_0,mlx5_1,mlx5_2,mlx5_3 NCCL_NET=IB NCCL_DEBUG=INFO TORCH_NCCL_ASYNC_ERROR_HANDLING=1; export FLASH_FAULT_INJECT=TRUE; export FLASH_MODE=monitor FLASH_TASK=train; torchrun --nnodes=2 --nproc_per_node=8 --node_rank=1 --master_addr=10.10.4.1 --master_port=29541 --no_python bash scripts/run_rank.sh --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint; code=$?; echo $code > /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/exit1\n  73173 Sl   pt_elastic      /usr/bin/python3 /usr/local/bin/torchrun --nnodes=2 --nproc_per_node=8 --node_rank=1 --master_addr=10.10.4.1 --master_port=29541 --no_python bash scripts/run_rank.sh --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint\n  73176 Ssl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank8.jsonl\n  73177 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank9.jsonl\n  73178 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank10.jsonl\n  73179 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank11.jsonl\n  73180 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank12.jsonl\n  73181 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank13.jsonl\n  73182 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank14.jsonl\n  73183 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank15.jsonl\n73176, 4540 MiB\n73177, 4534 MiB\n73178, 5016 MiB\n73179, 5076 MiB\n73180, 5036 MiB\n73181, 5054 MiB\n73182, 4582 MiB\n73183, 4592 MiB\n"
+          }
+        ]
+      },
+      {
+        "label": "after_injection_10s",
+        "time": 1792083893.7763221,
+        "nodes": [
+          {
+            "node": 0,
+            "host": "10.10.4.1",
+            "exit": 0,
+            "output": "  87696 S    bash            bash -lc export FLASH_RUN_ID=audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b FLASH_REDIS_HOST=10.10.4.1 FLASH_REDIS_PORT=16379; export PYTHONPATH=/flash:/flash/deps:/flash/vendor/MegatronCore; export FLASH_NCCL_LIB=/usr/local/lib/python3.12/dist-packages/nvidia/nccl/lib/libnccl.so.2 LD_LIBRARY_PATH=/usr/local/lib/python3.12/dist-packages/nvidia/cuda_runtime/lib:$LD_LIBRARY_PATH; export OMP_NUM_THREADS=2 CUDA_DEVICE_MAX_CONNECTIONS=1 NCCL_SOCKET_IFNAME=bond0 GLOO_SOCKET_IFNAME=bond0 NCCL_IB_HCA=mlx5_0,mlx5_1,mlx5_2,mlx5_3 NCCL_NET=IB NCCL_DEBUG=INFO TORCH_NCCL_ASYNC_ERROR_HANDLING=1; export FLASH_FAULT_INJECT=TRUE; export FLASH_MODE=monitor FLASH_TASK=train; torchrun --nnodes=2 --nproc_per_node=8 --node_rank=0 --master_addr=10.10.4.1 --master_port=29541 --no_python bash scripts/run_rank.sh --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint; code=$?; echo $code > /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/exit0\n  87699 Sl   pt_elastic      /usr/bin/python3 /usr/local/bin/torchrun --nnodes=2 --nproc_per_node=8 --node_rank=0 --master_addr=10.10.4.1 --master_port=29541 --no_python bash scripts/run_rank.sh --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint\n  87735 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank0.jsonl\n  87736 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank1.jsonl\n  87737 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank2.jsonl\n  87738 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank3.jsonl\n  87739 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank4.jsonl\n  87740 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank5.jsonl\n  87741 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank6.jsonl\n  87742 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank7.jsonl\n87735, 4542 MiB\n87736, 4534 MiB\n87737, 5016 MiB\n87738, 5076 MiB\n87739, 5036 MiB\n87740, 5054 MiB\n87741, 4604 MiB\n87742, 4592 MiB\n"
+          },
+          {
+            "node": 1,
+            "host": "10.10.4.2",
+            "exit": 0,
+            "output": "  73170 S    bash            bash -lc export FLASH_RUN_ID=audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b FLASH_REDIS_HOST=10.10.4.1 FLASH_REDIS_PORT=16379; export PYTHONPATH=/flash:/flash/deps:/flash/vendor/MegatronCore; export FLASH_NCCL_LIB=/usr/local/lib/python3.12/dist-packages/nvidia/nccl/lib/libnccl.so.2 LD_LIBRARY_PATH=/usr/local/lib/python3.12/dist-packages/nvidia/cuda_runtime/lib:$LD_LIBRARY_PATH; export OMP_NUM_THREADS=2 CUDA_DEVICE_MAX_CONNECTIONS=1 NCCL_SOCKET_IFNAME=bond0 GLOO_SOCKET_IFNAME=bond0 NCCL_IB_HCA=mlx5_0,mlx5_1,mlx5_2,mlx5_3 NCCL_NET=IB NCCL_DEBUG=INFO TORCH_NCCL_ASYNC_ERROR_HANDLING=1; export FLASH_FAULT_INJECT=TRUE; export FLASH_MODE=monitor FLASH_TASK=train; torchrun --nnodes=2 --nproc_per_node=8 --node_rank=1 --master_addr=10.10.4.1 --master_port=29541 --no_python bash scripts/run_rank.sh --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint; code=$?; echo $code > /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/exit1\n  73173 Sl   pt_elastic      /usr/bin/python3 /usr/local/bin/torchrun --nnodes=2 --nproc_per_node=8 --node_rank=1 --master_addr=10.10.4.1 --master_port=29541 --no_python bash scripts/run_rank.sh --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint\n  73176 Ssl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank8.jsonl\n  73177 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank9.jsonl\n  73178 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank10.jsonl\n  73179 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank11.jsonl\n  73180 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank12.jsonl\n  73181 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank13.jsonl\n  73182 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank14.jsonl\n  73183 Rsl  python          python scripts/train_moe.py --seq 128 --batch 2 --steps 120 --fault timeout --fault-step 45 --no-save-checkpoint --output /flash/results/audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b/train_rank15.jsonl\n73176, 4540 MiB\n73177, 4534 MiB\n73178, 5016 MiB\n73179, 5076 MiB\n73180, 5036 MiB\n73181, 5054 MiB\n73182, 4582 MiB\n73183, 4592 MiB\n"
+          }
+        ]
+      },
+      {
+        "label": "after_training_exit",
+        "time": 1792084077.175732,
+        "nodes": [
+          {
+            "node": 0,
+            "host": "10.10.4.1",
+            "exit": 0,
+            "output": ""
+          },
+          {
+            "node": 1,
+            "host": "10.10.4.2",
+            "exit": 0,
+            "output": ""
+          }
+        ]
+      }
+    ],
+    "exits": [
+      "1",
+      "1"
+    ],
+    "status": "completed"
+  },
+  {
+    "label": "background_mild",
+    "run": "audit_background_mild_post_gradient_fix_20261015T171155Z_434df2ff",
+    "mode": "monitor",
+    "args": "--seq 128 --batch 2 --steps 800 --no-save-checkpoint",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "duty": 0.25,
+    "gpu_contention": true,
+    "background_complete": true
+  },
+  {
+    "label": "background_strong",
+    "run": "audit_background_strong_post_gradient_fix_20261015T171422Z_caf37609",
+    "mode": "monitor",
+    "args": "--seq 128 --batch 2 --steps 800 --no-save-checkpoint",
+    "exits": [
+      "0",
+      "0"
+    ],
+    "duty": 1.0,
+    "gpu_contention": true,
+    "background_complete": true
+  },
+  {
+    "label": "clock600_topology1",
+    "run": "audit_clock600_topology1_post_gradient_fix_20261015T171705Z_199281be",
+    "mode": "monitor",
+    "task": "train",
+    "args": "--seq 128 --batch 2 --steps 400 --tp 1 --pp 1 --ep 8 --no-save-checkpoint",
+    "force": true,
+    "mhz": 600,
+    "tp": 1,
+    "pp": 1,
+    "ep": 8,
+    "exits": [
+      "0",
+      "0"
+    ],
+    "status": "completed"
+  },
+  {
+    "label": "clock600_topology2",
+    "run": "audit_clock600_topology2_post_gradient_fix_20261015T171844Z_0bb98786",
+    "mode": "monitor",
+    "task": "train",
+    "args": "--seq 128 --batch 2 --steps 400 --tp 2 --pp 1 --ep 4 --no-save-checkpoint",
+    "force": true,
+    "mhz": 600,
+    "tp": 2,
+    "pp": 1,
+    "ep": 4,
+    "exits": [
+      "0",
+      "0"
+    ],
+    "status": "completed"
+  },
+  {
+    "label": "clock600_topology3",
+    "run": "audit_clock600_topology3_post_gradient_fix_20261015T172027Z_714a8dcb",
+    "mode": "monitor",
+    "task": "train",
+    "args": "--seq 128 --batch 2 --steps 400 --tp 1 --pp 2 --ep 4 --no-save-checkpoint",
+    "force": true,
+    "mhz": 600,
+    "tp": 1,
+    "pp": 2,
+    "ep": 4,
+    "exits": [
+      "0",
+      "0"
+    ],
+    "status": "completed"
+  },
+  {
+    "label": "clock600_topology4",
+    "run": "audit_clock600_topology4_post_gradient_fix_20261015T172201Z_bab9449e",
+    "mode": "monitor",
+    "task": "train",
+    "args": "--seq 128 --batch 2 --steps 400 --tp 2 --pp 2 --ep 4 --no-save-checkpoint",
+    "force": true,
+    "mhz": 600,
+    "tp": 2,
+    "pp": 2,
+    "ep": 4,
+    "exits": [
+      "0",
+      "0"
+    ],
+    "status": "completed"
+  }
+]

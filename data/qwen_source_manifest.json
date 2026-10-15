@@ -1,0 +1,136 @@
+{
+  "repository": "Qwen/Qwen1.5-MoE-A2.7B",
+  "revision": "1a758c50ecb6350748b9ce0a99d2352fd9fc11c9",
+  "files": [
+    {
+      "rfilename": "LICENSE",
+      "blobId": "e1d93ee92bb67a804fdddbfe397ad2c1dffdb62e",
+      "size": 6897
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "09fae78b1115abda6495154a10569c77527a4141",
+      "size": 1417
+    },
+    {
+      "rfilename": "config.json",
+      "blobId": "dfc234f42382385eb91bf94d8125bcc6dbde4855",
+      "size": 919
+    },
+    {
+      "rfilename": "configuration.json",
+      "blobId": "66c6cae06cd27e956932eccf19f15679c1f7bf9e",
+      "size": 81
+    },
+    {
+      "rfilename": "generation_config.json",
+      "blobId": "0bb9eec5097b496a91f152a3082ef4cc0f88a438",
+      "size": 144
+    },
+    {
+      "rfilename": "merges.txt",
+      "blobId": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+      "size": 1671839
+    },
+    {
+      "rfilename": "model-00001-of-00008.safetensors",
+      "blobId": "d21944c538e4eec7260c29bed160e1c0668bdb1a",
+      "size": 3999614664,
+      "lfs": {
+        "sha256": "44f12f5b3d4e8eebeb55fa733e9dbbd7e119c9bf1502251638223e0dc2a926f0",
+        "size": 3999614664,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "model-00002-of-00008.safetensors",
+      "blobId": "83d72959c389fd020ebe509df326c9f2b77edfc6",
+      "size": 3999385424,
+      "lfs": {
+        "sha256": "20a99873170c32cd91b489a10ab9408ca73d3f20cf5f57370cf31699aaf2d266",
+        "size": 3999385424,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "model-00003-of-00008.safetensors",
+      "blobId": "f03a5067ecc632cf688e005cdf721765d9aca51a",
+      "size": 3988628968,
+      "lfs": {
+        "sha256": "e0b7cd920fc98f99e1d83ea856e73f451029ed16dba7ff83b4b839e77ba2d229",
+        "size": 3988628968,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "model-00004-of-00008.safetensors",
+      "blobId": "1254c6e9020f7c817c706edc818b633dab68c6d9",
+      "size": 3999386088,
+      "lfs": {
+        "sha256": "e2be2af186e5c042e2246947d13640df5bd4ed59512932573996aca155b8e9a9",
+        "size": 3999386088,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "model-00005-of-00008.safetensors",
+      "blobId": "c287780283d56212cdc28c24e5747c5cdde6abd9",
+      "size": 3988629648,
+      "lfs": {
+        "sha256": "3b75e01d4df9de74823e146a2c1e8826c80f838dcc7d1bd3bf376b68b8a527da",
+        "size": 3988629648,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "model-00006-of-00008.safetensors",
+      "blobId": "0b5e9367239fe2315816bba01fd7c7d03dc6845b",
+      "size": 3999386104,
+      "lfs": {
+        "sha256": "c2fc223a88189b3950a4b737fe4c75ae40f792f2e7b30df159afe3cf392589d3",
+        "size": 3999386104,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "model-00007-of-00008.safetensors",
+      "blobId": "5ee5cbdf50ebe45d332427848a52f421871ef7ff",
+      "size": 3988629648,
+      "lfs": {
+        "sha256": "88b206c85ee08b9704d2ddb5dcf15b91e5d750884c767c29a93fc91781cb7267",
+        "size": 3988629648,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "model-00008-of-00008.safetensors",
+      "blobId": "4ec611c6569d4084019fbae49b4f2d37db29125f",
+      "size": 668484400,
+      "lfs": {
+        "sha256": "996c5057f123db509d3c40c97d6e65dac35eb9ffc71f3ac324a0a531da43e112",
+        "size": 668484400,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "model.safetensors.index.json",
+      "blobId": "8058add31525101e7da55a6e62fcb6dae493114d",
+      "size": 416452
+    },
+    {
+      "rfilename": "tokenizer.json",
+      "blobId": "33ea6c72ebb92a237fa2bdf26c5ff16592efcdae",
+      "size": 7028015
+    },
+    {
+      "rfilename": "tokenizer_config.json",
+      "blobId": "c30ea5ba8d46126caa255160308702aeef70d75e",
+      "size": 1290
+    },
+    {
+      "rfilename": "vocab.json",
+      "blobId": "4783fe10ac3adce15ac8f358ef5462739852c569",
+      "size": 2776833
+    }
+  ]
+}

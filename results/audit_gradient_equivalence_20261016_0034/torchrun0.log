@@ -1,0 +1,64 @@
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+[Gloo] Rank 0 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 1 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 2 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 3 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 4 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 5 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 6 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 7 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank [Gloo] Rank 50 is connected to  is connected to 1515 peer ranks.  peer ranks. Expected number of connected peer ranks is : Expected number of connected peer ranks is : 1515
+
+[Gloo] Rank 2 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 1 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 3 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 6 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 4 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 7 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+NCCL version 2.27.5+cuda12.9
+NCCL version 2.27.5+cuda12.9
+NCCL version 2.27.5+cuda12.9
+NCCL version 2.27.5+cuda12.9
+NCCL version 2.27.5+cuda12.9
+{"rank": 0, "world_size": 16, "ep": 4, "dense_dp": 16, "expert_dp": 4, "checks": [{"name": "embedding.word_embeddings.weight", "relative_l2": 3.9317509958891605e-07, "norm_ratio": 1.0, "old_normalization_norm_ratio": 1.0, "passed": true}, {"name": "output_layer.weight", "relative_l2": 3.618827690843318e-07, "norm_ratio": 1.0, "old_normalization_norm_ratio": 1.0, "passed": true}, {"name": "decoder.layers.0.mlp.router.weight", "relative_l2": 7.794865268806461e-07, "norm_ratio": 1.0, "old_normalization_norm_ratio": 1.0, "passed": true}, {"name": "decoder.layers.0.mlp.shared_experts.gate_weight", "relative_l2": 8.006639404811722e-07, "norm_ratio": 1.0, "old_normalization_norm_ratio": 1.0, "passed": true}, {"name": "decoder.layers.0.mlp.experts.local_experts.0.linear_fc1.weight", "relative_l2": 5.520652734958276e-07, "norm_ratio": 1.0, "old_normalization_norm_ratio": 4.0, "passed": true}, {"name": "decoder.layers.0.mlp.experts.local_experts.0.linear_fc2.weight", "relative_l2": 5.307186938807718e-07, "norm_ratio": 1.0, "old_normalization_norm_ratio": 4.0, "passed": true}, {"name": "decoder.layers.0.mlp.experts.local_experts.1.linear_fc1.weight", "relative_l2": 5.223514563112985e-07, "norm_ratio": 1.0, "old_normalization_norm_ratio": 4.0, "passed": true}, {"name": "decoder.layers.0.mlp.experts.local_experts.1.linear_fc2.weight", "relative_l2": 5.356490078156639e-07, "norm_ratio": 1.0000001192092896, "old_normalization_norm_ratio": 4.000000476837158, "passed": true}, {"name": "decoder.layers.1.mlp.router.weight", "relative_l2": 8.506783615302993e-07, "norm_ratio": 1.0, "old_normalization_norm_ratio": 1.0, "passed": true}, {"name": "decoder.layers.1.mlp.shared_experts.gate_weight", "relative_l2": 5.265937375042995e-07, "norm_ratio": 1.0, "old_normalization_norm_ratio": 1.0, "passed": true}, {"name": "decoder.layers.1.mlp.experts.local_experts.0.linear_fc1.weight", "relative_l2": 6.352538548526354e-07, "norm_ratio": 0.9999998807907104, "old_normalization_norm_ratio": 3.999999523162842, "passed": true}, {"name": "decoder.layers.1.mlp.experts.local_experts.0.linear_fc2.weight", "relative_l2": 6.044051019671315e-07, "norm_ratio": 0.9999999403953552, "old_normalization_norm_ratio": 3.999999761581421, "passed": true}, {"name": "decoder.layers.1.mlp.experts.local_experts.1.linear_fc1.weight", "relative_l2": 5.819898660774925e-07, "norm_ratio": 0.9999999403953552, "old_normalization_norm_ratio": 3.999999761581421, "passed": true}, {"name": "decoder.layers.1.mlp.experts.local_experts.1.linear_fc2.weight", "relative_l2": 5.742165853916958e-07, "norm_ratio": 1.0, "old_normalization_norm_ratio": 4.0, "passed": true}], "passed": true}
+/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)

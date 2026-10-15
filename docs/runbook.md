@@ -78,9 +78,9 @@ python -m scripts.collect_all
 
 GPU 降频脚本通过 `finally` 调用 `nvidia-smi -rgc`。若本地进程异常中断，应直接检查两节点当前频率和训练进程，不要在未确认 GPU 空闲时运行下一项实验。
 
-## 已完成开发矩阵与报告重建
+## 首轮历史矩阵与报告重建
 
-本轮有效运行见 `docs/report.md` 和 `results/trials.csv`。`scripts/suite.py` 及 `scripts/validate_final.py` 内的编号是本轮记录；不要原样再次执行覆盖结果。后续重跑逐项用新编号。
+首轮历史运行见 `docs/report.md` 和 `results/trials.csv`；审计后的v1以 `docs/v1_report.md`、`docs/audit_test_results.md` 为准。`scripts/suite.py` 及 `scripts/validate_final.py` 内的编号是首轮记录；不要原样再次执行覆盖结果。后续重跑逐项用新编号。
 
 ```bash
 FLASH_RUNTIME=paper python -m scripts.experiment NEW_PROFILE \
@@ -93,7 +93,7 @@ python -m scripts.write_report
 
 `plot_results.py` 使用标准matplotlib，基于固定报告编号重建静态图；本轮在早期工具容器3.8环境运行，结果为 `results/figures/*.png`。脱离当前机器时可在任意有matplotlib的Python环境运行。
 
-DeepSpeed只做独立兼容性检查，主FLASH工作负载仍为Megatron MoE。离线准备DeepSpeed0.19.7源码包以及hjson、py-cpuinfo、pydantic及其依赖、tqdm、msgpack的Linux cp312 wheels；清单与哈希见 `data/offline_assets.json`。传至两节点wheelhouse后，依赖以 `--no-index --no-deps --target /flash/deps` 安装，DeepSpeed以 `DS_BUILD_OPS=0 python -m pip install --no-deps --no-build-isolation --target /flash/deps /flash/wheelhouse/deepspeed-0.19.7.tar.gz` 安装，避免联网和JIT自定义优化器。
+DeepSpeed只做独立兼容性检查，主FLASH工作负载仍为Megatron MoE。离线准备DeepSpeed0.19.7源码包以及hjson、py-cpuinfo、pydantic及其依赖、tqdm、msgpack的Linux cp312 wheels；清单与哈希见 `data/offline_assets.json`。传至两节点wheelhouse后，依赖以 `--no-index --no-deps --target /flash/deps` 安装，DeepSpeed本体以 `DS_BUILD_OPS=0 python -m pip install --no-deps --no-build-isolation --target /flash/deps-optional /flash/wheelhouse/deepspeed-0.19.7.tar.gz` 安装，避免联网和JIT自定义优化器。兼容脚本显式加载可选目录，防止共同依赖里的DeepSpeed影响Transformers导入。
 
 ```bash
 FLASH_RUNTIME=paper python -m scripts.experiment NEW_DS \
@@ -102,7 +102,7 @@ FLASH_RUNTIME=paper python -m scripts.experiment NEW_DS \
 
 官方GreyHound构建：`python -m scripts.prepare_greyhound`生成仅硬件/路径差异，`python -m scripts.prepare_greyhound_remote`在独立baseline容器构建并安装。运行入口 `FLASH_RUNTIME=greyhound python -m scripts.greyhound_experiment` 内使用本轮固定编号；再次执行须先改为新编号。无论成功失败，保留原始退出和日志，不将其与不同现代栈的FLASH作无条件对比。
 
-最终训练fixture默认 `--stop-backend gloo`：每步的结束协调走Gloo CPU控制组，避免额外NCCL communicator被成员集合标签误归为DP，污染定位。`--stop-backend nccl`仅用于重现本轮早期条件；相应数据在报告中明确分开。最终主对照为paper_gloo_*。四种拓扑与初始频率扫描保留旧fixture数据，不据此断定论文算法失效。
+首轮后期 `paper_gloo_*` 曾用每步Gloo结束协调，避免更早的额外NCCL退出communicator污染DP标签。审计后发现该CPU屏障也属额外干扰，v1固定步数已移除全部每步退出通信；仅 `--min-seconds > 0` 仍需该协调。`--stop-backend nccl`只用于明确重现早期条件。首轮四种拓扑与六频率扫描保留为旧fixture证据，审计后的四拓扑另用新ID；不将两代结果混算。
 
 官方baseline复测可使用新ID：
 
@@ -112,3 +112,12 @@ FLASH_RUNTIME=greyhound python -m scripts.greyhound_experiment \
 ```
 
 该入口预填实际TP1/PP1/DP16上游键，避免world_size早于并行状态发布的竞争；先预热惰性communicator，再服务上游503-byte marker验证协议，等待其真正precheck_done，随后才做训练故障注入。没有伪造precheck完成标记，也没有修改上游检测/定位算法。上游缓解器的输出仅保留观察，不作为本轮FLASH恢复能力。
+
+
+## v1审计后入口说明
+
+默认训练启动器会先协同完成两节点GEMM数值与AllReduce结果预检。固定步数不再执行每步退出通信，建议较长运行使用 `--steps 800 --no-save-checkpoint`，让真实采样窗口有足够迭代；若要检查参数一致性，对应baseline/monitor不要禁存checkpoint。min-seconds仍使用额外Gloo协调，必须记录这一测试条件。
+
+采样完整性以两个节点相同epoch、complete=true、active_scopes_at_finish=0以及lost/errors计数核对，不凭等满20秒认定完成。后台iteration_reporter包含received和last_iteration，应与rank0最终步数一致。incomplete_profile不应计定位成功。SFTP导出先写.part，校验大小稳定后原子替换，失败重试；不能把中断留下的空文件当证据。
+
+官方近似Qwen下载是可恢复资产准备，v1尚未完成完整权重验证或训练。后续获准继续时使用 `python -m scripts.download_qwen_ranges`，固定官方SHA256全部通过后才能上传并运行；不让服务器连接公网。小型转换fixture验证不等于论文13.3B模型已测。

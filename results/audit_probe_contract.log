@@ -1,0 +1,6 @@
+HOST 10.10.4.1 EXIT 0
+PASS actual probe nested-group epoch latch and all-stop-events-before-wait contract
+
+HOST 10.10.4.2 EXIT 0
+PASS actual probe nested-group epoch latch and all-stop-events-before-wait contract
+

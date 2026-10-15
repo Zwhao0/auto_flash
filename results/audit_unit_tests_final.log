@@ -1,0 +1,34 @@
+HOST 10.10.4.1 EXIT 0
+test_detector_sustained_vs_recovery_and_low_severity (test_algorithms.Algorithms.test_detector_sustained_vs_recovery_and_low_severity) ... ok
+test_low_cv_and_missing_rank_reject (test_algorithms.Algorithms.test_low_cv_and_missing_rank_reject) ... ok
+test_reverse_rank_and_stage1 (test_algorithms.Algorithms.test_reverse_rank_and_stage1) ... ok
+test_adjacent_points_deduplicated_within_one_update (test_audit.AuditRegressions.test_adjacent_points_deduplicated_within_one_update) ... ok
+test_all_nodes_must_finish_same_epoch (test_audit.AuditRegressions.test_all_nodes_must_finish_same_epoch) ... ok
+test_handle_reuse_keeps_hash_generations_distinct (test_audit.AuditRegressions.test_handle_reuse_keeps_hash_generations_distinct) ... ok
+test_liveness_is_evidence_only (test_audit.AuditRegressions.test_liveness_is_evidence_only) ... ok
+test_multiple_handles_per_rank_are_aggregated (test_audit.AuditRegressions.test_multiple_handles_per_rank_are_aggregated) ... ok
+test_unmatched_group_has_special_tag_but_ep_is_excluded (test_audit.AuditRegressions.test_unmatched_group_has_special_tag_but_ep_is_excluded) ... ok
+test_sequence_shards_equal_dense_forward_and_gradients (test_model_support.NormEquivalence.test_sequence_shards_equal_dense_forward_and_gradients) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 2.501s
+
+OK
+
+HOST 10.10.4.2 EXIT 0
+test_detector_sustained_vs_recovery_and_low_severity (test_algorithms.Algorithms.test_detector_sustained_vs_recovery_and_low_severity) ... ok
+test_low_cv_and_missing_rank_reject (test_algorithms.Algorithms.test_low_cv_and_missing_rank_reject) ... ok
+test_reverse_rank_and_stage1 (test_algorithms.Algorithms.test_reverse_rank_and_stage1) ... ok
+test_adjacent_points_deduplicated_within_one_update (test_audit.AuditRegressions.test_adjacent_points_deduplicated_within_one_update) ... ok
+test_all_nodes_must_finish_same_epoch (test_audit.AuditRegressions.test_all_nodes_must_finish_same_epoch) ... ok
+test_handle_reuse_keeps_hash_generations_distinct (test_audit.AuditRegressions.test_handle_reuse_keeps_hash_generations_distinct) ... ok
+test_liveness_is_evidence_only (test_audit.AuditRegressions.test_liveness_is_evidence_only) ... ok
+test_multiple_handles_per_rank_are_aggregated (test_audit.AuditRegressions.test_multiple_handles_per_rank_are_aggregated) ... ok
+test_unmatched_group_has_special_tag_but_ep_is_excluded (test_audit.AuditRegressions.test_unmatched_group_has_special_tag_but_ep_is_excluded) ... ok
+test_sequence_shards_equal_dense_forward_and_gradients (test_model_support.NormEquivalence.test_sequence_shards_equal_dense_forward_and_gradients) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 2.528s
+
+OK
+

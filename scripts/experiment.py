@@ -48,14 +48,60 @@ def wait_run(run, timeout=300):
 def finish(run, mode, timeout=300):
     exits = wait_run(run, timeout)
     if mode != "baseline":
-        # Allow final profile report to complete if still active; never pretend partial samples are complete.
-        for _ in range(25):
-            _, _, out = redis_command(run, "print(s.get('control'))")
-            if "'mode': 1" not in out:
-                break
-            time.sleep(1)
+        # Wait for the actual requested profile budget and local drain, then
+        # require several unchanged idle samples before stopping controllers.
+        # This avoids truncating profiles longer than the old fixed 25s wait.
+        started = time.monotonic()
+        active_deadline = None
+        overall_deadline = started + 300
+        previous = None
+        stable = 0
+        while time.monotonic() < overall_deadline:
+            _, _, out = redis_command(
+                run,
+                "import json; c=s.get('control',{}); "
+                "e=s.items('events'); f=s.items('failstop_ranks'); "
+                "v=s.items('iter_time_0'); "
+                "print(json.dumps({'control':c,'profiles':sum(x.get('kind')=='profile_start' for x in e),"
+                "'diagnoses':sum(x.get('kind')=='diagnosis' for x in e),"
+                "'failstops':len(f),'latest':v[-1] if v else None}))",
+            )
+            try:
+                state = json.loads(out.strip().splitlines()[-1])
+            except (IndexError, json.JSONDecodeError) as exc:
+                raise RuntimeError(
+                    f"could not read controller state for {run}: {out}"
+                ) from exc
+            control = state.get("control") or {}
+            if control.get("mode") == 1:
+                stable = 0
+                if active_deadline is None:
+                    seconds = max(float(control.get("seconds", 20)), 1.0)
+                    active_deadline = time.monotonic() + 2 * seconds + 10
+                if time.monotonic() > active_deadline:
+                    raise TimeoutError(
+                        f"profile for {run} stayed active beyond its budget; leaving evidence intact"
+                    )
+            else:
+                signature = (
+                    control.get("epoch"),
+                    state.get("profiles"),
+                    state.get("diagnoses"),
+                    state.get("failstops"),
+                    state.get("latest"),
+                )
+                stable = stable + 1 if signature == previous else 0
+                previous = signature
+                if stable >= 3:
+                    break
+                active_deadline = None
+            time.sleep(0.5)
+        else:
+            raise TimeoutError(
+                f"controller state for {run} did not settle; leaving evidence intact"
+            )
         redis_command(run, "s.set('stop',True)")
-        time.sleep(0.3)
+        time.sleep(0.5)
     env = "/flash:/flash/deps" if os.getenv("FLASH_RUNTIME") == "paper" else "/flash"
     exported = execute(
         "10.10.4.1", f"PYTHONPATH={env} python scripts/export_run.py {run}"

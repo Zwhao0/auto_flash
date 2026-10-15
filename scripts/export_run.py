@@ -10,6 +10,7 @@ keys = [
     "control",
     "world_size",
     "training_done",
+    "iteration_reporter",
     "stats:0",
     "stats:1",
     "ack:0",

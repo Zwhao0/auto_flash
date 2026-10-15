@@ -1,0 +1,625 @@
+{
+  "generated_at_utc": "2026-10-15T17:28:38Z",
+  "campaign": "FLASH paper-style small-model audit, v1 closeout",
+  "runtime": "paper",
+  "python": "/Users/henry/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "scope": "Finite campaign for v1 evidence. No algorithm optimization was performed.",
+  "cohorts": {
+    "pre_gradient_fix": {
+      "note": "AllReduce microbenchmark is independent of training gradient normalization and was not repeated after the fix.",
+      "allreduce_abba": {
+        "bench_source_sha256": "8520c160b32623f51f30646eb7a465526e81bb8136d7fffc04083b1b9e2f2d95",
+        "warmup": 100,
+        "batches": 5,
+        "repeats_per_batch": 100,
+        "ranks": 16,
+        "sizes_mib": [
+          4,
+          8,
+          16,
+          32,
+          64,
+          128
+        ],
+        "runs_in_order": [
+          "audit_allreduce_base1_20261015T162151Z_83d2755d",
+          "audit_allreduce_mon1_20261015T162219Z_6ac0c83d",
+          "audit_allreduce_mon2_20261015T162248Z_071ba563",
+          "audit_allreduce_base2_20261015T162317Z_01135d0e"
+        ],
+        "median_mean_ms_by_size_and_run": {
+          "4": [
+            0.144107,
+            0.138037,
+            0.147871,
+            0.142509
+          ],
+          "8": [
+            0.188417,
+            0.172097,
+            0.180736,
+            0.182347
+          ],
+          "16": [
+            0.266506,
+            0.262809,
+            0.262767,
+            0.264071
+          ],
+          "32": [
+            0.470931,
+            0.46767,
+            0.464848,
+            0.466479
+          ],
+          "64": [
+            0.828141,
+            0.834983,
+            0.831359,
+            0.831692
+          ],
+          "128": [
+            1.549492,
+            1.555547,
+            1.552648,
+            1.558005
+          ]
+        },
+        "mean_monitor_overhead_percent_by_size": {
+          "4": -0.25,
+          "8": -4.84,
+          "16": -0.94,
+          "32": -0.52,
+          "64": 0.39,
+          "128": 0.02
+        },
+        "interpretation": "Near-zero overhead for large payloads; negative small-message values are measurement noise and are not interpreted as speedup."
+      }
+    },
+    "post_gradient_fix": {
+      "runs": 19,
+      "source_sha256": {
+        "scripts/train_moe.py": "dc275946b8d22a3d9d3e4318d4b94e511fb3e19c19a0184eb4ebd0e2d573c529",
+        "scripts/gradient_sync.py": "1b96293e61bfc2d3769873c02e370e9eb9b7edbc91ed775d8ad1b5dd5c39d9b4",
+        "flash/global_controller.py": "51bf4f4fe532381ecba03ac2a10180e926e171c265fb491d7a917d37ca974286"
+      },
+      "healthy_forced": {
+        "run_id": "audit_healthy_forced_post_gradient_fix_20261015T163528Z_47b835d1",
+        "steps_per_rank": 800,
+        "exit_codes": [
+          0,
+          0
+        ],
+        "nodes_complete": [
+          true,
+          true
+        ],
+        "lost_errors_unknown_pending": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "profile": "forced, complete, 20.14 s; no failstop",
+        "forced_candidate": "rank 5, score approximately 0.812",
+        "rank0_steady_e2e_tokens_per_second": 97406.2,
+        "peak_allocated_bytes": 209829376,
+        "peak_reserved_bytes": 236978176,
+        "rank0_median_step_time_ms_before_vs_profile": [
+          81.25965,
+          84.197137
+        ],
+        "within_run_step_time_increase_percent": 3.6149,
+        "measurement_note": "Before/profile comparison is observational, not a strict causal estimate.",
+        "iteration_reporter": {
+          "received": 800,
+          "last_iteration": 800
+        }
+      },
+      "delay45_auto": {
+        "run_id": "audit_delay45_auto_post_gradient_fix_20261015T163747Z_2a995db6",
+        "steps_per_rank": 800,
+        "exit_codes": [
+          0,
+          0
+        ],
+        "nodes_complete": [
+          true,
+          true
+        ],
+        "lost_errors_unknown_pending": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "injection_step": 80,
+        "profile_step": 83,
+        "auto_probability": 1.0,
+        "controller_estimated_loss_percent": 39.56,
+        "controller_baseline_and_degraded_ms": [
+          83.2056,
+          137.67
+        ],
+        "suspect": "rank 8, score 0.99278",
+        "comparison_windows": "steps 65-79 vs 85-99",
+        "rank0_steady_e2e_tokens_per_second": 60252.8,
+        "time_ms_median_before_after": [
+          83.6531,
+          141.5379
+        ],
+        "time_ms_increase_and_inverse_time_throughput_loss_percent": [
+          69.2,
+          40.87
+        ],
+        "monotonic_e2e_median_ms_before_after": [
+          83.9187,
+          141.7777
+        ],
+        "monotonic_e2e_increase_and_inverse_time_throughput_loss_percent": [
+          68.87,
+          40.81
+        ],
+        "failstop": false,
+        "iteration_reporter": {
+          "received": 800,
+          "last_iteration": 800
+        }
+      },
+      "training_monitor_abba": {
+        "steps_per_rank": 800,
+        "exit_codes_each": [
+          0,
+          0
+        ],
+        "runs_in_order": [
+          "audit_train_base1_post_gradient_fix_20261015T164153Z_221f1ae3",
+          "audit_train_mon1_post_gradient_fix_20261015T164358Z_8736c8a0",
+          "audit_train_mon2_post_gradient_fix_20261015T164608Z_65c53bf2",
+          "audit_train_base2_post_gradient_fix_20261015T164819Z_ddb8d164"
+        ],
+        "rank0_steady_e2e_tokens_per_second": [
+          97333.4382,
+          98320.1614,
+          97562.3949,
+          96691.3475
+        ],
+        "monitor_relative_to_adjacent_baseline_percent": [
+          1.01,
+          0.9
+        ],
+        "interpretation": "Small positive differences are run-to-run variation; no speedup claim.",
+        "checkpoint_pair": {
+          "base_run": "audit_train_base1_post_gradient_fix_20261015T164153Z_221f1ae3",
+          "monitor_run": "audit_train_mon1_post_gradient_fix_20261015T164358Z_8736c8a0",
+          "comparison": "all 16 ranks, 4,073,728 elements per rank; finite values; max absolute difference 0.0"
+        },
+        "peak_allocated_and_reserved_bytes_each": [
+          209829376,
+          236978176
+        ]
+      },
+      "fault_sweep": [
+        {
+          "condition": "delay5",
+          "run_id": "audit_delay5_post_gradient_fix_20261015T165105Z_66d7d32b",
+          "steps_per_rank": 300,
+          "exit_codes": [
+            0,
+            0
+          ],
+          "profile": "not triggered",
+          "time_ms_median_before_after": [
+            84.798,
+            83.145
+          ],
+          "inverse_time_throughput_loss_percent": -1.99,
+          "monotonic_e2e_median_ms_before_after": [
+            85.029,
+            83.357
+          ],
+          "monotonic_e2e_inverse_time_throughput_loss_percent": -2.01,
+          "interpretation": "No material degradation observed; no automatic profile expected.",
+          "measurement_rank": 8,
+          "comparison_windows_inclusive": {
+            "before": [
+              45,
+              59
+            ],
+            "after": [
+              65,
+              79
+            ]
+          },
+          "aggregation": "Within-rank median; monotonic deltas are assigned to the later iteration."
+        },
+        {
+          "condition": "delay25",
+          "run_id": "audit_delay25_post_gradient_fix_20261015T165232Z_7f75a06c",
+          "steps_per_rank": 300,
+          "exit_codes": [
+            0,
+            0
+          ],
+          "profile": "not triggered; measured below the 20% automatic threshold",
+          "time_ms_median_before_after": [
+            83.821,
+            99.182
+          ],
+          "time_ms_increase_and_inverse_time_throughput_loss_percent": [
+            18.33,
+            15.49
+          ],
+          "monotonic_e2e_median_ms_before_after": [
+            84.039,
+            99.372
+          ],
+          "monotonic_e2e_increase_and_inverse_time_throughput_loss_percent": [
+            18.24,
+            15.43
+          ],
+          "interpretation": "Below-threshold observation, not a detector miss.",
+          "measurement_rank": 8,
+          "comparison_windows_inclusive": {
+            "before": [
+              45,
+              59
+            ],
+            "after": [
+              65,
+              79
+            ]
+          },
+          "aggregation": "Within-rank median; monotonic deltas are assigned to the later iteration."
+        },
+        {
+          "condition": "delay65",
+          "run_id": "audit_delay65_post_gradient_fix_20261015T165404Z_8c9cf2cd",
+          "steps_per_rank": 250,
+          "exit_codes": [
+            0,
+            0
+          ],
+          "profile": "automatic, step 63, complete, lost 0",
+          "controller_estimated_loss_percent": 61.44,
+          "suspect": "rank 8, score 0.9968",
+          "comparison_windows": "steps 45-59 vs 65-79",
+          "time_ms_median_before_after": [
+            84.118,
+            229.105
+          ],
+          "time_ms_increase_and_inverse_time_throughput_loss_percent": [
+            172.36,
+            63.28
+          ],
+          "monotonic_e2e_median_ms_before_after": [
+            84.33,
+            229.273
+          ],
+          "monotonic_e2e_increase_and_inverse_time_throughput_loss_percent": [
+            171.88,
+            63.22
+          ],
+          "measurement_rank": 8,
+          "comparison_windows_inclusive": {
+            "before": [
+              45,
+              59
+            ],
+            "after": [
+              65,
+              79
+            ]
+          },
+          "aggregation": "Within-rank median; monotonic deltas are assigned to the later iteration."
+        },
+        {
+          "condition": "delay85",
+          "run_id": "audit_delay85_post_gradient_fix_20261015T165554Z_7ab4d13f",
+          "steps_per_rank": 180,
+          "exit_codes": [
+            0,
+            0
+          ],
+          "profile": "automatic, step 63, complete, lost 0",
+          "controller_estimated_loss_percent": 84.4,
+          "suspect": "rank 8, score 0.99898",
+          "comparison_windows": "steps 45-59 vs 65-79",
+          "time_ms_median_before_after": [
+            83.707,
+            550.042
+          ],
+          "time_ms_increase_and_inverse_time_throughput_loss_percent": [
+            557.1,
+            84.78
+          ],
+          "monotonic_e2e_median_ms_before_after": [
+            83.945,
+            550.215
+          ],
+          "monotonic_e2e_increase_and_inverse_time_throughput_loss_percent": [
+            555.45,
+            84.74
+          ],
+          "failstop_alerts": 16,
+          "process_alive_at_alert": true,
+          "interpretation": "Communication silence alerts with live processes; not process deaths.",
+          "measurement_rank": 8,
+          "comparison_windows_inclusive": {
+            "before": [
+              45,
+              59
+            ],
+            "after": [
+              65,
+              79
+            ]
+          },
+          "aggregation": "Within-rank median; monotonic deltas are assigned to the later iteration."
+        },
+        {
+          "condition": "transient_500ms_single_step",
+          "run_id": "audit_transient500ms_post_gradient_fix_20261015T165808Z_d933a743",
+          "steps_per_rank": 200,
+          "exit_codes": [
+            0,
+            0
+          ],
+          "profile": "not triggered",
+          "time_ms_median_before_after": [
+            84.182,
+            81.822
+          ],
+          "inverse_time_throughput_loss_percent": -2.88,
+          "monotonic_e2e_median_ms_before_after": [
+            84.374,
+            82.036
+          ],
+          "monotonic_e2e_inverse_time_throughput_loss_percent": -2.85,
+          "failstop_alerts": 16,
+          "process_alive_at_alert": true,
+          "interpretation": "Transient cleared without automatic profile; alerts occurred while processes remained alive.",
+          "measurement_rank": 8,
+          "comparison_windows_inclusive": {
+            "before": [
+              45,
+              59
+            ],
+            "after": [
+              65,
+              79
+            ]
+          },
+          "aggregation": "Within-rank median; monotonic deltas are assigned to the later iteration."
+        }
+      ],
+      "real_failure_paths": [
+        {
+          "condition": "OOM",
+          "run_id": "audit_oom_post_gradient_fix_20261015T170018Z_08e12f16",
+          "evidence": "CUDA OutOfMemoryError at injected step 45 on rank 8; requested 158.36 GiB on a 79.18 GiB GPU.",
+          "launcher_exit_codes": [
+            1,
+            1
+          ],
+          "exit": "natural on both nodes; no cleanup signal sent",
+          "liveness_at_injection_plus_0_5s": "8 training processes and 8 GPU PIDs on each node",
+          "final_process_snapshot": "empty"
+        },
+        {
+          "condition": "NCCL timeout",
+          "run_id": "audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b",
+          "evidence": "Both node logs show watchdog Timeout(ms)=90000; observed timeouts approximately 90073-90094 ms.",
+          "launcher_exit_codes": [
+            1,
+            1
+          ],
+          "exit": "natural on both nodes after approximately 156 s; no cleanup signal sent",
+          "liveness_snapshots": "captured at injection plus 0.5 s and plus 10 s; final snapshot empty"
+        }
+      ],
+      "background_network_contention": [
+        {
+          "condition": "mild",
+          "run_id": "audit_background_mild_post_gradient_fix_20261015T171155Z_434df2ff",
+          "steps_per_rank": 800,
+          "exit_codes": [
+            0,
+            0
+          ],
+          "background": "128 MiB NCCL traffic, duty 0.25, 30 s, 664 calls",
+          "alignment": "Intersection of actual worker started_at/finished_at; baseline is preceding 15 seconds.",
+          "time_ms_median_before_after": [
+            83.31779669970274,
+            84.54004346276633
+          ],
+          "time_ms_increase_and_inverse_time_throughput_loss_percent": [
+            1.4669696169101298,
+            1.4457607460326205
+          ],
+          "monotonic_e2e_median_ms_before_after": [
+            83.54737429181114,
+            84.74702303647064
+          ],
+          "monotonic_e2e_increase_and_inverse_time_throughput_loss_percent": [
+            1.4358904212470103,
+            1.4155644666636102
+          ],
+          "profile": "not triggered; measured below 20% threshold",
+          "interpretation": "Shared-GPU contention from background NCCL communication; not a pure network-only effect.",
+          "aggregation": "Within-rank window median, then median across all 16 ranks; see v1_window_metrics.json."
+        },
+        {
+          "condition": "strong",
+          "run_id": "audit_background_strong_post_gradient_fix_20261015T171422Z_caf37609",
+          "steps_per_rank": 800,
+          "exit_codes": [
+            0,
+            0
+          ],
+          "background": "128 MiB NCCL traffic, duty 1.0, 30 s, 3467 calls",
+          "alignment": "Intersection of actual worker started_at/finished_at; baseline is preceding 15 seconds.",
+          "time_ms_median_before_after": [
+            82.45166545384564,
+            96.57696972135454
+          ],
+          "time_ms_increase_and_inverse_time_throughput_loss_percent": [
+            17.131617887592455,
+            14.62595514050966
+          ],
+          "monotonic_e2e_median_ms_before_after": [
+            82.66877150163054,
+            96.7716807499528
+          ],
+          "monotonic_e2e_increase_and_inverse_time_throughput_loss_percent": [
+            17.059536499879012,
+            14.573384629706487
+          ],
+          "profile": "not triggered; measured below 20% threshold",
+          "interpretation": "Shared-GPU contention from background NCCL communication; not a pure network-only effect.",
+          "aggregation": "Within-rank window median, then median across all 16 ranks; see v1_window_metrics.json."
+        }
+      ],
+      "clock600_forced_topology_profiles": [
+        {
+          "topology": "TP1/PP1/EP8",
+          "run_id": "audit_clock600_topology1_post_gradient_fix_20261015T171705Z_199281be",
+          "steps_per_rank": 400,
+          "exit_codes": [
+            0,
+            0
+          ],
+          "profile": "forced, complete, lost 0; capture 19.933 s",
+          "candidate": "rank 9, score 0.549",
+          "time_ms_median_pre_locked_vs_profile": [
+            81.1,
+            83.73
+          ],
+          "time_ms_increase_and_inverse_time_throughput_loss_percent": [
+            3.24,
+            3.14
+          ],
+          "monotonic_e2e_median_ms_pre_locked_vs_profile": [
+            81.21,
+            83.95
+          ],
+          "monotonic_e2e_increase_and_inverse_time_throughput_loss_percent": [
+            3.38,
+            3.27
+          ]
+        },
+        {
+          "topology": "TP2/PP1/EP4",
+          "run_id": "audit_clock600_topology2_post_gradient_fix_20261015T171844Z_0bb98786",
+          "steps_per_rank": 400,
+          "exit_codes": [
+            0,
+            0
+          ],
+          "profile": "forced, complete, lost 0; capture 20.006 s",
+          "candidate": "rank 4, score 0.424",
+          "time_ms_median_pre_locked_vs_profile": [
+            96.06,
+            100.52
+          ],
+          "time_ms_increase_and_inverse_time_throughput_loss_percent": [
+            4.64,
+            4.44
+          ],
+          "monotonic_e2e_median_ms_pre_locked_vs_profile": [
+            96.21,
+            100.71
+          ],
+          "monotonic_e2e_increase_and_inverse_time_throughput_loss_percent": [
+            4.68,
+            4.47
+          ]
+        },
+        {
+          "topology": "TP1/PP2/EP4",
+          "run_id": "audit_clock600_topology3_post_gradient_fix_20261015T172027Z_714a8dcb",
+          "steps_per_rank": 400,
+          "exit_codes": [
+            0,
+            0
+          ],
+          "profile": "forced, complete, lost 0; capture 20.048 s",
+          "candidates": [
+            "rank 0, score 0.704",
+            "rank 9, score 0.577"
+          ],
+          "time_ms_median_pre_locked_vs_profile": [
+            74.63,
+            77.75
+          ],
+          "time_ms_increase_and_inverse_time_throughput_loss_percent": [
+            4.18,
+            4.01
+          ],
+          "monotonic_e2e_median_ms_pre_locked_vs_profile": [
+            74.77,
+            77.93
+          ],
+          "monotonic_e2e_increase_and_inverse_time_throughput_loss_percent": [
+            4.23,
+            4.05
+          ]
+        },
+        {
+          "topology": "TP2/PP2/EP4",
+          "run_id": "audit_clock600_topology4_post_gradient_fix_20261015T172201Z_bab9449e",
+          "steps_per_rank": 400,
+          "exit_codes": [
+            0,
+            0
+          ],
+          "profile": "forced, complete, lost 0; capture 20.051 s",
+          "candidates": [
+            "rank 4, score 0.614",
+            "rank 8, score 0.581"
+          ],
+          "time_ms_median_pre_locked_vs_profile": [
+            86.15,
+            88.25
+          ],
+          "time_ms_increase_and_inverse_time_throughput_loss_percent": [
+            2.43,
+            2.38
+          ],
+          "monotonic_e2e_median_ms_pre_locked_vs_profile": [
+            86.23,
+            88.37
+          ],
+          "monotonic_e2e_increase_and_inverse_time_throughput_loss_percent": [
+            2.49,
+            2.43
+          ]
+        }
+      ],
+      "clock_test_method": "Each topology used a forced profile, lock was applied to node 1 GPU 0, comparisons used the 15 s pre-lock baseline versus stats.profile.started_at/capture_stopped_at. nvidia-smi -i 0 -rgc reset was verified in each finally path and in the final snapshot. Rows are selected by timestamp; compute median within each rank then median across 16 ranks. Profile interval is the intersection of node capture intervals; see v1_window_metrics.json.",
+      "clock_result_interpretation": "Observed global loss range 2.43-4.47%; these runs do not test severe-degradation automatic recall."
+    }
+  },
+  "cleanup_and_final_state": {
+    "post_gradient_fix_run_ids": "results/audit_campaign_cleanup_runs.json",
+    "shared_memory_removed_buffers_per_host": 136,
+    "redis_and_paper_container_preserved": true,
+    "audit_workers_idle": true,
+    "audit_controllers_stopped": true,
+    "lock_frequency_reset": true,
+    "host_exclusivity_claimed": false,
+    "final_server_state": "results/v1_server_state.json"
+  },
+  "reproducibility_scripts": {
+    "campaign_entry": "scripts/audit_campaign.py",
+    "experiment_finish_wait_budget_fix": true,
+    "formatted_with_black_and_py_compile_passed": [
+      "scripts/experiment.py",
+      "scripts/launch.py",
+      "scripts/audit_campaign.py",
+      "scripts/export_run.py"
+    ]
+  },
+  "window_metrics_reproducer": "python -m scripts.audit_window_metrics",
+  "window_metrics_file": "results/v1_window_metrics.json"
+}

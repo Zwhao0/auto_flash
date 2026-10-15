@@ -1,0 +1,3530 @@
+{
+  "run_metadata": {
+    "run": "audit_delay85_post_gradient_fix_20261015T165554Z_7ab4d13f",
+    "time": 1792083356.757437,
+    "mode": "monitor",
+    "task": "train",
+    "args": "--seq 128 --batch 2 --steps 180 --fault delay --severity 0.85 --fault-step 60 --no-save-checkpoint",
+    "config": {
+      "redis_host": "10.10.4.1",
+      "redis_port": 16379,
+      "window": 30,
+      "thresh_prob": 0.8,
+      "degradation_thresh": 0.2,
+      "recovery_ratio": 0.75,
+      "right_guard": 2,
+      "min_persistence": 0,
+      "poll_seconds": 0.1,
+      "profile_multiplier": 2.2,
+      "profile_min_seconds": 20.0,
+      "cv_threshold": 0.1,
+      "rank_threshold": 0.2,
+      "failstop_multiplier": 2.0
+    },
+    "source_hashes": {
+      "flash/store.py": "fc1f4b403090cdbdbefd8aba5231fd19d36d1ed7829027006b30adf68b0c7828",
+      "flash/shm.py": "b9066455ed4601a8731d5a40ed547a9eb370a7624d8cc61929a9452e7944ad57",
+      "flash/local_controller.py": "312dfbdcb0a57d15f6f41469684ece9d9abd06e2e455793b5619a40c4191e653",
+      "flash/driver_status.py": "b17b80d1683e6ebfe1598cf00c29e75f8d173920bc1455116f53b9e271d53ffe",
+      "flash/profile.py": "cf95334c93501f74ea70a93962a9aeb078aa96ad964df133196e935fdf47bd7b",
+      "flash/config.py": "a420dfbc6b183d5ca6bc7cf25d6f386b835978c57cf27f6943ff5914924ab442",
+      "flash/analysis.py": "fadf441cb962c9752f293de553a5105f42be2c1843f7b01a60ad3f291427cd43",
+      "flash/detection.py": "7d4c75405ce4f563140692bdfcee69c3f67b53c24a4989af320fc3c5dd896f0d",
+      "flash/global_controller.py": "51bf4f4fe532381ecba03ac2a10180e926e171c265fb491d7a917d37ca974286",
+      "flash/integration.py": "4c5e1129d0a0e843221fe4f6828cf91b753cbe77a239d76a4bbb98cd57a0ca53",
+      "flash/__init__.py": "5c782816326133c7a15ac6a76e883ccebbef1adbe2b165a4635b1b0e4ee828fa",
+      "flash/iteration_writer.py": "bcf58e81bb3835583f6a359f7f3a67b35f71c12d2fc8707b5453ac91babc3cca",
+      "csrc/fault.cpp": "d221b5f3ff8c4ac6f2af00bfdd15fb1aaf011e3988f56557cf99dbea2e0c5a00",
+      "csrc/probe.cpp": "4463b8ef01027a23fc4d2bba1b8a377b10bcaf132e80679275b2bb0f4745d713",
+      "scripts/cleanup_run_shm.py": "60d7b7b6858cbba56f0184a57a473d3f507ef5b5738a7033a88d0cb681633646",
+      "scripts/container.py": "1190c85b13f74a21f5778f96f1fe309910fd4f5682c1ebd65d80bd48bd95f6ba",
+      "scripts/inspect_runtime.py": "1f3725ffcc25886f9c84aa6d5372ec4d4f29909bdcec1156e549e67e687e4d66",
+      "scripts/allreduce_bench.py": "8520c160b32623f51f30646eb7a465526e81bb8136d7fffc04083b1b9e2f2d95",
+      "scripts/check_model.py": "69eb3e40d376cbed1876113e7928a97af7a309bb49c1a19245d771836e22fd3d",
+      "scripts/paper_metrics.py": "916a0cf7a0cd10f09f4f3b352360f19073ef323a2aa25842776c0d2554924393",
+      "scripts/audit_campaign.py": "50019fffef795bbda16fc1149ed4f55f65efabe532e1c05a45a84cb729910649",
+      "scripts/launch.py": "457960e726a336c426efc849ce97464b4f0ae0fde9b8e9101b3eaecd79efbd07",
+      "scripts/greyhound_experiment.py": "be94f842d7a08cdec6db4790e84956e31331ba8f4df81d17cca1f62945785028",
+      "scripts/validate_final.py": "d99c9d722e97408cdc8afc6c3b792a09c656126286ec32a48318f49a6982c835",
+      "scripts/summarize.py": "a17cc16c4ef68c71631ca63f2a3e7c9b81fef1c2117726a9546f1c572d99e8b5",
+      "scripts/clock_experiment.py": "ac2c4e42665aff68c5848d7e5e5ac25a77b0dc7349d9716082f13ea9f636ec68",
+      "scripts/export_run.py": "3edf088152d53143be317456ae8e1b7aa29a0c8c1e9cdf1bcf74075faf674ed2",
+      "scripts/deepspeed_smoke.py": "aba9a70e8f5796f0a66d5e2c5ee4417b3298630073f10c0b10686450f5c2b174",
+      "scripts/network_experiment.py": "6e622ec8b1c1370695078cbad964762dbbf46f5aa043b507cbc19f38a062a6f2",
+      "scripts/download_qwen.py": "9c20ac01508d3905d1eb1592ead161c0b7ab8389d6e7718fa83e0243cd7f61f9",
+      "scripts/bootstrap.py": "dec615ce975d65b27d5d3b83f916aae2262e413bb1a639f6b381d9b6cc676562",
+      "scripts/suite.py": "de420384786daece693a59ad687550b062f7e7f2b9c5b31c04726da0675c5c56",
+      "scripts/qwen_support.py": "71b89dc2138adc26e57a4e6972ca4de3290224b5086595ca7e4520bfb0be4ed9",
+      "scripts/build.sh": "9289bbd52a17bdb9f1a867f02b46efa478b367ba05b850ff7a37c95d9514b6f7",
+      "scripts/collect_all.py": "a9789e9287727a43366cddf47be17b1605bd246e8f0d0fa78f95f3edbe21b761",
+      "scripts/write_report.py": "830fb0d48e39c15f6a35af35e87beadefd2a9d596fc478731db40febc58eefe9",
+      "scripts/run_rank.sh": "0c370bb6ebe3923d253222a6d415faba59b6ff2eb4735ba45d64386208580d7a",
+      "scripts/validate_control.py": "2b8b35742c0bd157d740d27934b2ef18081005bab5a11370c8d96a1ef256660c",
+      "scripts/check_publish_secrets.py": "c44b345b03f3ece46c656ef5a115da3d47504f77fc8e10df14a61e14e64e7a6b",
+      "scripts/experiment.py": "72f3233b4b231dfd54e9fc78bbb5bad5c28b4aba79b0d37d3cd2128cde5d1fa5",
+      "scripts/init_run.py": "d2755783674f778b893fea84dc8379dba02b749282b48eea50e19456bf5abb0a",
+      "scripts/precheck.py": "95300b5152e87609d78f5d0c0d4ef8b1aad0c86cde6e4d108fbba1da0f981298",
+      "scripts/remote.py": "89e37f7d166c4b6a4a7f43eb3e0e6f901f739fbfdc4f5f0b71be70663ada36d0",
+      "scripts/test_probe_contract.sh": "860a0111dd247da8a9f0298aaa1eab7394a66c6f6b93184407026d0084e6ab49",
+      "scripts/download_qwen_ranges.py": "49ceef4378f23ed1cd54ac81bbafd0195f67016b31f27afca6d375412dc1c1ad",
+      "scripts/background_comm.py": "d8e992f0e66afcde33b01762153ed3dd5fc5c698e16bf8eb338aa74bb0d53ef7",
+      "scripts/assert_idle.py": "22ecfb2e50cd80a9a3af381e7c7946cd7000044cda77b8d41fff865b27b148ff",
+      "scripts/final_state.py": "791fd95cf29d8432f2778931f2cd912b60fe3240500bb07bc361c8ea18ac5ca1",
+      "scripts/validate_qwen_gradients.py": "ae03b02d10eb3b5529f923f8affda654f0509718996bb00bdebfe2881e57e1fd",
+      "scripts/gradient_experiment.py": "2991a6b2a4f89274416cbce2631390ffa7e05bc53619b977874c8a9733c872bf",
+      "scripts/plot_results.py": "a697ad9b5024fc628e79a96d9fe48d99cbaf0f8f60211b438f129f0e8cbb8c4a",
+      "scripts/prepare_greyhound_remote.py": "11983462c592b77d0f78a74aab69171d2de8a70cf5a1759ed4de225108b938b6",
+      "scripts/verify_evidence.py": "b9f5887d6b18e235deadcb9774243f0a23207eefb35baa4a0a444b2aecbf588a",
+      "scripts/gradient_sync.py": "1b96293e61bfc2d3769873c02e370e9eb9b7edbc91ed775d8ad1b5dd5c39d9b4",
+      "scripts/sync.py": "92e2801d654a10c22d8e5334514d1b173b00f8a584c64ac0d7532b41ff256dfd",
+      "scripts/prepare_rdma.py": "3e2fff906f274313792783da6b377721c620a5200cd40efce0bfb4fd565a1b61",
+      "scripts/train_moe.py": "dc275946b8d22a3d9d3e4318d4b94e511fb3e19c19a0184eb4ebd0e2d573c529",
+      "scripts/install_qwen_deps.py": "7006fb1a6adb52d6159b604cdf754345b669ae7de6f57f41a85cd60b87b15bf1",
+      "scripts/model_support.py": "2e189d420ee080425ae01b9405856a4d90ed7414397111eae14479799dde1d28",
+      "scripts/prepare_greyhound.py": "323ae9ce8886653123b2da5f586927b1c0a04d4a14d3b7a3338326b833e67bcf"
+    },
+    "libraries": {
+      "build/libncclprobe.so": "ad28f2682dabed46a90ee9f7b00909df92c6fe75f8cec632fe833de4f6623fd2",
+      "build/libncclfault.so": "132f0fb89ba08171475474392c5730b36cad44a842093aa5bf09a4fa8d1bfaa4"
+    },
+    "runtime": null
+  },
+  "control": {
+    "mode": 0,
+    "epoch": 1
+  },
+  "world_size": 16,
+  "training_done": true,
+  "iteration_reporter": {
+    "backend": "background_process",
+    "received": 180,
+    "last_iteration": 180
+  },
+  "stats:0": {
+    "epoch": 1,
+    "mode": 0,
+    "node": "0",
+    "host": "10.10.4.1",
+    "complete": true,
+    "stats": [
+      {
+        "comm": 875278880,
+        "hash": "14380232137938754851",
+        "rank": 6,
+        "local": 6,
+        "size": 8,
+        "count": 288,
+        "mean_us": 623.7743993055556,
+        "min_us": 42.879,
+        "max_us": 8209.024,
+        "std_us": 996.5936860918544
+      },
+      {
+        "comm": 883286208,
+        "hash": "3015672924322930637",
+        "rank": 6,
+        "local": 6,
+        "size": 8,
+        "count": 27648,
+        "mean_us": 457.33850868055555,
+        "min_us": 17.983,
+        "max_us": 3409.44,
+        "std_us": 741.3770675125468
+      },
+      {
+        "comm": 911394816,
+        "hash": "7809361361355082216",
+        "rank": 6,
+        "local": 0,
+        "size": 1,
+        "count": 216,
+        "mean_us": 3.511398148148148,
+        "min_us": 2.752,
+        "max_us": 6.655,
+        "std_us": 0.5242420443914069
+      },
+      {
+        "comm": 1070061616,
+        "hash": "14380232137938754851",
+        "rank": 4,
+        "local": 4,
+        "size": 8,
+        "count": 288,
+        "mean_us": 500.9364722222222,
+        "min_us": 77.44,
+        "max_us": 8436.544,
+        "std_us": 905.4496247135847
+      },
+      {
+        "comm": 1078069456,
+        "hash": "3015672924322930637",
+        "rank": 4,
+        "local": 4,
+        "size": 8,
+        "count": 27648,
+        "mean_us": 153.8851822916667,
+        "min_us": 16.799,
+        "max_us": 1778.367,
+        "std_us": 183.9802258244994
+      },
+      {
+        "comm": 1106136384,
+        "hash": "7066672883054904690",
+        "rank": 4,
+        "local": 0,
+        "size": 1,
+        "count": 216,
+        "mean_us": 3.517527777777778,
+        "min_us": 2.752,
+        "max_us": 10.912,
+        "std_us": 0.64439525853966
+      },
+      {
+        "comm": 1214237008,
+        "hash": "14380232137938754851",
+        "rank": 7,
+        "local": 7,
+        "size": 8,
+        "count": 288,
+        "mean_us": 645.4871493055556,
+        "min_us": 155.744,
+        "max_us": 8499.456,
+        "std_us": 948.5589673645401
+      },
+      {
+        "comm": 1222245440,
+        "hash": "3015672924322930637",
+        "rank": 7,
+        "local": 7,
+        "size": 8,
+        "count": 27648,
+        "mean_us": 317.2541452546296,
+        "min_us": 17.728,
+        "max_us": 2961.568,
+        "std_us": 471.43337478235793
+      },
+      {
+        "comm": 1250309152,
+        "hash": "1211439569310219882",
+        "rank": 7,
+        "local": 0,
+        "size": 1,
+        "count": 216,
+        "mean_us": 3.4514444444444443,
+        "min_us": 2.687,
+        "max_us": 6.24,
+        "std_us": 0.46359108205187116
+      },
+      {
+        "comm": 1310902624,
+        "hash": "14380232137938754851",
+        "rank": 5,
+        "local": 5,
+        "size": 8,
+        "count": 288,
+        "mean_us": 513.1927916666667,
+        "min_us": 28.799,
+        "max_us": 8423.775,
+        "std_us": 881.6461880137906
+      },
+      {
+        "comm": 1318910128,
+        "hash": "3015672924322930637",
+        "rank": 5,
+        "local": 5,
+        "size": 8,
+        "count": 27648,
+        "mean_us": 267.5960515046296,
+        "min_us": 16.736,
+        "max_us": 3496.288,
+        "std_us": 490.0770385208977
+      },
+      {
+        "comm": 1346976112,
+        "hash": "18126147074067343059",
+        "rank": 5,
+        "local": 0,
+        "size": 1,
+        "count": 216,
+        "mean_us": 3.543462962962963,
+        "min_us": 2.719,
+        "max_us": 13.279,
+        "std_us": 0.8608846163698897
+      },
+      {
+        "comm": 1763862400,
+        "hash": "14380232137938754851",
+        "rank": 0,
+        "local": 0,
+        "size": 8,
+        "count": 288,
+        "mean_us": 289.1235173611111,
+        "min_us": 29.44,
+        "max_us": 8001.055,
+        "std_us": 709.9221140487484
+      },
+      {
+        "comm": 1771870464,
+        "hash": "3015672924322930637",
+        "rank": 0,
+        "local": 0,
+        "size": 8,
+        "count": 27648,
+        "mean_us": 114.70890219907406,
+        "min_us": 17.376,
+        "max_us": 1739.967,
+        "std_us": 131.7918824679146
+      },
+      {
+        "comm": 1800207616,
+        "hash": "102089921470919754",
+        "rank": 0,
+        "local": 0,
+        "size": 1,
+        "count": 216,
+        "mean_us": 3.7706388888888887,
+        "min_us": 2.719,
+        "max_us": 12.608,
+        "std_us": 0.9689731244441517
+      },
+      {
+        "comm": 943404768,
+        "hash": "14380232137938754851",
+        "rank": 3,
+        "local": 3,
+        "size": 8,
+        "count": 288,
+        "mean_us": 184.26028472222222,
+        "min_us": 28.543,
+        "max_us": 7300.608,
+        "std_us": 676.6436936552853
+      },
+      {
+        "comm": 951413216,
+        "hash": "3015672924322930637",
+        "rank": 3,
+        "local": 3,
+        "size": 8,
+        "count": 27648,
+        "mean_us": 119.58077083333335,
+        "min_us": 17.343,
+        "max_us": 1847.264,
+        "std_us": 174.57396542722753
+      },
+      {
+        "comm": 979521184,
+        "hash": "2116065381915160367",
+        "rank": 3,
+        "local": 0,
+        "size": 1,
+        "count": 216,
+        "mean_us": 3.922648148148148,
+        "min_us": 2.719,
+        "max_us": 12.64,
+        "std_us": 1.2966710533688637
+      },
+      {
+        "comm": 1919564192,
+        "hash": "14380232137938754851",
+        "rank": 2,
+        "local": 2,
+        "size": 8,
+        "count": 288,
+        "mean_us": 263.5371666666667,
+        "min_us": 29.023,
+        "max_us": 4550.848,
+        "std_us": 561.1431910634902
+      },
+      {
+        "comm": 1927572736,
+        "hash": "3015672924322930637",
+        "rank": 2,
+        "local": 2,
+        "size": 8,
+        "count": 27648,
+        "mean_us": 107.3520318287037,
+        "min_us": 17.503,
+        "max_us": 1913.727,
+        "std_us": 127.46386675095826
+      },
+      {
+        "comm": 1955642000,
+        "hash": "9475555495909412174",
+        "rank": 2,
+        "local": 0,
+        "size": 1,
+        "count": 216,
+        "mean_us": 3.832263888888889,
+        "min_us": 2.719,
+        "max_us": 13.695,
+        "std_us": 1.1814395016687884
+      },
+      {
+        "comm": 1320903072,
+        "hash": "14380232137938754851",
+        "rank": 1,
+        "local": 1,
+        "size": 8,
+        "count": 288,
+        "mean_us": 516.5603680555555,
+        "min_us": 28.255,
+        "max_us": 7600.607,
+        "std_us": 872.2742317092378
+      },
+      {
+        "comm": 1328909744,
+        "hash": "3015672924322930637",
+        "rank": 1,
+        "local": 1,
+        "size": 8,
+        "count": 27648,
+        "mean_us": 289.9852181712963,
+        "min_us": 17.855,
+        "max_us": 2930.016,
+        "std_us": 443.84077769863734
+      },
+      {
+        "comm": 1356979552,
+        "hash": "10845943666872959549",
+        "rank": 1,
+        "local": 0,
+        "size": 1,
+        "count": 216,
+        "mean_us": 3.5270833333333336,
+        "min_us": 2.912,
+        "max_us": 5.632,
+        "std_us": 0.41900543895082115
+      },
+      {
+        "comm": 275686256,
+        "hash": "10791766484202222090",
+        "rank": 6,
+        "local": 6,
+        "size": 16,
+        "count": 36,
+        "mean_us": 465986.3208055556,
+        "min_us": 457560.424,
+        "max_us": 472579.04,
+        "std_us": 3913.097260732194
+      },
+      {
+        "comm": 276879840,
+        "hash": "15635225119235042840",
+        "rank": 6,
+        "local": 0,
+        "size": 2,
+        "count": 35,
+        "mean_us": 392.8379714285714,
+        "min_us": 317.247,
+        "max_us": 730.015,
+        "std_us": 95.26181976231483
+      },
+      {
+        "comm": 470466432,
+        "hash": "10791766484202222090",
+        "rank": 4,
+        "local": 4,
+        "size": 16,
+        "count": 36,
+        "mean_us": 464677.1785833333,
+        "min_us": 455892.242,
+        "max_us": 471341.461,
+        "std_us": 3587.334118821648
+      },
+      {
+        "comm": 471659568,
+        "hash": "6762408076210334134",
+        "rank": 4,
+        "local": 0,
+        "size": 2,
+        "count": 35,
+        "mean_us": 328.8516,
+        "min_us": 234.495,
+        "max_us": 541.728,
+        "std_us": 58.43146330834344
+      },
+      {
+        "comm": 614644896,
+        "hash": "10791766484202222090",
+        "rank": 7,
+        "local": 7,
+        "size": 16,
+        "count": 36,
+        "mean_us": 465351.6848611111,
+        "min_us": 455878.845,
+        "max_us": 471544.738,
+        "std_us": 3743.726856747356
+      },
+      {
+        "comm": 615838016,
+        "hash": "17764696143290309792",
+        "rank": 7,
+        "local": 0,
+        "size": 2,
+        "count": 35,
+        "mean_us": 398.60619999999994,
+        "min_us": 308.896,
+        "max_us": 625.504,
+        "std_us": 92.88623218133952
+      },
+      {
+        "comm": 711309264,
+        "hash": "10791766484202222090",
+        "rank": 5,
+        "local": 5,
+        "size": 16,
+        "count": 36,
+        "mean_us": 465205.1988611112,
+        "min_us": 456110.595,
+        "max_us": 471092.773,
+        "std_us": 3742.434481531676
+      },
+      {
+        "comm": 712502080,
+        "hash": "4554413722762669515",
+        "rank": 5,
+        "local": 0,
+        "size": 2,
+        "count": 35,
+        "mean_us": 456.01962857142854,
+        "min_us": 221.824,
+        "max_us": 1514.528,
+        "std_us": 290.0744652771655
+      },
+      {
+        "comm": 1164256480,
+        "hash": "10791766484202222090",
+        "rank": 0,
+        "local": 0,
+        "size": 16,
+        "count": 36,
+        "mean_us": 464417.12899999996,
+        "min_us": 455570.007,
+        "max_us": 471286.468,
+        "std_us": 3650.406095720716
+      },
+      {
+        "comm": 1165449888,
+        "hash": "3682194076287552009",
+        "rank": 0,
+        "local": 0,
+        "size": 2,
+        "count": 35,
+        "mean_us": 373.3938285714286,
+        "min_us": 317.216,
+        "max_us": 559.871,
+        "std_us": 64.40679254927153
+      },
+      {
+        "comm": 343808928,
+        "hash": "10791766484202222090",
+        "rank": 3,
+        "local": 3,
+        "size": 16,
+        "count": 36,
+        "mean_us": 464412.26230555563,
+        "min_us": 455572.662,
+        "max_us": 471140.808,
+        "std_us": 3646.929500578547
+      },
+      {
+        "comm": 345001648,
+        "hash": "14381772574928379460",
+        "rank": 3,
+        "local": 0,
+        "size": 2,
+        "count": 35,
+        "mean_us": 306.5494285714286,
+        "min_us": 208.575,
+        "max_us": 581.6,
+        "std_us": 90.7063873703928
+      },
+      {
+        "comm": 1319969792,
+        "hash": "10791766484202222090",
+        "rank": 2,
+        "local": 2,
+        "size": 16,
+        "count": 36,
+        "mean_us": 464342.18638888886,
+        "min_us": 455476.135,
+        "max_us": 470962.341,
+        "std_us": 3669.5357513520607
+      },
+      {
+        "comm": 1321163328,
+        "hash": "11827321118717201634",
+        "rank": 2,
+        "local": 0,
+        "size": 2,
+        "count": 35,
+        "mean_us": 454.9360571428572,
+        "min_us": 220.479,
+        "max_us": 1734.303,
+        "std_us": 339.64423011943734
+      },
+      {
+        "comm": 721309408,
+        "hash": "10791766484202222090",
+        "rank": 1,
+        "local": 1,
+        "size": 16,
+        "count": 36,
+        "mean_us": 465173.59113888885,
+        "min_us": 455998.321,
+        "max_us": 471489.959,
+        "std_us": 3737.240852154016
+      },
+      {
+        "comm": 722502864,
+        "hash": "15854168990494983846",
+        "rank": 1,
+        "local": 0,
+        "size": 2,
+        "count": 35,
+        "mean_us": 488.25362857142846,
+        "min_us": 316.255,
+        "max_us": 1191.583,
+        "std_us": 212.1030748635586
+      }
+    ],
+    "operations": {
+      "6": {
+        "2": 39,
+        "1": 1442,
+        "4": 1440,
+        "6": 69120,
+        "7": 69120
+      },
+      "4": {
+        "2": 39,
+        "1": 1442,
+        "4": 1440,
+        "6": 69120,
+        "7": 69120
+      },
+      "7": {
+        "2": 39,
+        "1": 1442,
+        "4": 1440,
+        "6": 69120,
+        "7": 69120
+      },
+      "5": {
+        "2": 39,
+        "1": 1442,
+        "4": 1440,
+        "6": 69120,
+        "7": 69120
+      },
+      "0": {
+        "2": 39,
+        "1": 1442,
+        "4": 1440,
+        "6": 69120,
+        "7": 69120
+      },
+      "3": {
+        "2": 39,
+        "1": 1442,
+        "4": 1440,
+        "6": 69120,
+        "7": 69120
+      },
+      "2": {
+        "2": 39,
+        "1": 1442,
+        "4": 1440,
+        "6": 69120,
+        "7": 69120
+      },
+      "1": {
+        "2": 39,
+        "1": 1442,
+        "4": 1440,
+        "6": 69120,
+        "7": 69120
+      }
+    },
+    "lost": 0,
+    "headers": [
+      [
+        5065495506834174001,
+        0,
+        1,
+        141161,
+        299185188410947,
+        141161,
+        2,
+        28223,
+        0,
+        6,
+        82472,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        141161,
+        299185188296668,
+        141161,
+        2,
+        28223,
+        0,
+        4,
+        82470,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        141161,
+        299185188382360,
+        141161,
+        2,
+        28223,
+        0,
+        7,
+        82473,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        141161,
+        299185188326071,
+        141161,
+        2,
+        28223,
+        0,
+        5,
+        82471,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        141161,
+        299185253527955,
+        141161,
+        2,
+        28223,
+        0,
+        0,
+        82466,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        141161,
+        299185188594282,
+        141161,
+        2,
+        28223,
+        0,
+        3,
+        82469,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        141161,
+        299185188675315,
+        141161,
+        2,
+        28223,
+        0,
+        2,
+        82468,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        141161,
+        299185188418619,
+        141161,
+        2,
+        28223,
+        0,
+        1,
+        82467,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ]
+    ],
+    "profile": {
+      "started_at": 1792083401.6354446,
+      "requested_seconds": 20.0,
+      "capture_stopped_at": 1792083421.6393712,
+      "finished_at": 1792083422.146737,
+      "active_scopes_at_finish": 0,
+      "unknown_records": 0,
+      "driver_status": {
+        "backend": "nvidia-smi/NVML",
+        "devices": [
+          {
+            "index": "0",
+            "uuid": "GPU-514342e8-d7fc-3a89-91fe-50c5289967ca",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "100",
+            "memory.used": "4550",
+            "memory.total": "81559",
+            "temperature.gpu": "36"
+          },
+          {
+            "index": "1",
+            "uuid": "GPU-a1e51276-ec8f-0f55-687c-a27c8ac3a14b",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "100",
+            "memory.used": "4542",
+            "memory.total": "81559",
+            "temperature.gpu": "31"
+          },
+          {
+            "index": "2",
+            "uuid": "GPU-6d230dde-62b7-e3bf-8673-903fae938ead",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "100",
+            "memory.used": "5024",
+            "memory.total": "81559",
+            "temperature.gpu": "37"
+          },
+          {
+            "index": "3",
+            "uuid": "GPU-b66ba04d-1c64-bea1-e881-2182804607f3",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "100",
+            "memory.used": "5086",
+            "memory.total": "81559",
+            "temperature.gpu": "33"
+          },
+          {
+            "index": "4",
+            "uuid": "GPU-e457c3f5-32d8-1444-7af0-24f7db939712",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "100",
+            "memory.used": "5044",
+            "memory.total": "81559",
+            "temperature.gpu": "37"
+          },
+          {
+            "index": "5",
+            "uuid": "GPU-3d359ec0-4de6-9360-8faf-eb1d70685d4b",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "100",
+            "memory.used": "5062",
+            "memory.total": "81559",
+            "temperature.gpu": "41"
+          },
+          {
+            "index": "6",
+            "uuid": "GPU-054b90ab-93bd-a0ab-15e1-1e54202ede83",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "100",
+            "memory.used": "4612",
+            "memory.total": "81559",
+            "temperature.gpu": "36"
+          },
+          {
+            "index": "7",
+            "uuid": "GPU-9b8794c0-638b-8da7-f071-5b11f3b54cb0",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "100",
+            "memory.used": "4602",
+            "memory.total": "81559",
+            "temperature.gpu": "32"
+          }
+        ]
+      }
+    },
+    "time": 1792083476.4840608
+  },
+  "stats:1": {
+    "epoch": 1,
+    "mode": 0,
+    "node": "1",
+    "host": "10.10.4.2",
+    "complete": true,
+    "stats": [
+      {
+        "comm": 1907795888,
+        "hash": "4745518332770963648",
+        "rank": 9,
+        "local": 1,
+        "size": 8,
+        "count": 288,
+        "mean_us": 462.37044444444444,
+        "min_us": 28.672,
+        "max_us": 7096.511,
+        "std_us": 867.8811329223491
+      },
+      {
+        "comm": 1915803296,
+        "hash": "11966292367147579012",
+        "rank": 9,
+        "local": 1,
+        "size": 8,
+        "count": 27648,
+        "mean_us": 530.7031122685186,
+        "min_us": 17.408,
+        "max_us": 3865.247,
+        "std_us": 865.8469011286792
+      },
+      {
+        "comm": 1943866720,
+        "hash": "4336228407350142542",
+        "rank": 9,
+        "local": 0,
+        "size": 1,
+        "count": 216,
+        "mean_us": 3.821578703703704,
+        "min_us": 2.752,
+        "max_us": 15.487,
+        "std_us": 1.1538882910620818
+      },
+      {
+        "comm": 1303498192,
+        "hash": "4745518332770963648",
+        "rank": 10,
+        "local": 2,
+        "size": 8,
+        "count": 288,
+        "mean_us": 253.38298611111117,
+        "min_us": 29.023,
+        "max_us": 5163.008,
+        "std_us": 559.8833830134107
+      },
+      {
+        "comm": 1311506208,
+        "hash": "11966292367147579012",
+        "rank": 10,
+        "local": 2,
+        "size": 8,
+        "count": 27648,
+        "mean_us": 251.16073437499998,
+        "min_us": 17.728,
+        "max_us": 3339.135,
+        "std_us": 487.34927084968234
+      },
+      {
+        "comm": 1339567280,
+        "hash": "18332836307247888733",
+        "rank": 10,
+        "local": 0,
+        "size": 1,
+        "count": 216,
+        "mean_us": 3.9805324074074075,
+        "min_us": 2.752,
+        "max_us": 13.663,
+        "std_us": 1.342929536383239
+      },
+      {
+        "comm": 1502068144,
+        "hash": "4745518332770963648",
+        "rank": 11,
+        "local": 3,
+        "size": 8,
+        "count": 288,
+        "mean_us": 474.80984027777777,
+        "min_us": 29.472,
+        "max_us": 7011.072,
+        "std_us": 797.2456227545043
+      },
+      {
+        "comm": 1510077008,
+        "hash": "11966292367147579012",
+        "rank": 11,
+        "local": 3,
+        "size": 8,
+        "count": 27648,
+        "mean_us": 428.2278998842593,
+        "min_us": 18.432,
+        "max_us": 3788.928,
+        "std_us": 705.5192784265505
+      },
+      {
+        "comm": 1538186144,
+        "hash": "5300596722716479902",
+        "rank": 11,
+        "local": 0,
+        "size": 1,
+        "count": 216,
+        "mean_us": 3.7107592592592593,
+        "min_us": 2.944,
+        "max_us": 9.887,
+        "std_us": 0.7911025577374343
+      },
+      {
+        "comm": 1223165168,
+        "hash": "4745518332770963648",
+        "rank": 14,
+        "local": 6,
+        "size": 8,
+        "count": 288,
+        "mean_us": 475.47757638888896,
+        "min_us": 29.503,
+        "max_us": 7488.704,
+        "std_us": 749.4993987800528
+      },
+      {
+        "comm": 1231172416,
+        "hash": "11966292367147579012",
+        "rank": 14,
+        "local": 6,
+        "size": 8,
+        "count": 27648,
+        "mean_us": 187.7074166666667,
+        "min_us": 16.928,
+        "max_us": 1775.84,
+        "std_us": 229.0780806050767
+      },
+      {
+        "comm": 1259277552,
+        "hash": "514902916641723730",
+        "rank": 14,
+        "local": 0,
+        "size": 1,
+        "count": 216,
+        "mean_us": 3.5058935185185187,
+        "min_us": 2.719,
+        "max_us": 10.111,
+        "std_us": 0.7273744786423377
+      },
+      {
+        "comm": 1543977504,
+        "hash": "4745518332770963648",
+        "rank": 12,
+        "local": 4,
+        "size": 8,
+        "count": 288,
+        "mean_us": 398.2048819444444,
+        "min_us": 29.696,
+        "max_us": 7346.816,
+        "std_us": 750.4758160298159
+      },
+      {
+        "comm": 1551986032,
+        "hash": "11966292367147579012",
+        "rank": 12,
+        "local": 4,
+        "size": 8,
+        "count": 27648,
+        "mean_us": 137.6660480324074,
+        "min_us": 17.728,
+        "max_us": 1346.624,
+        "std_us": 169.14726267734576
+      },
+      {
+        "comm": 1580048528,
+        "hash": "13454446398129185800",
+        "rank": 12,
+        "local": 0,
+        "size": 1,
+        "count": 216,
+        "mean_us": 3.40387962962963,
+        "min_us": 2.687,
+        "max_us": 4.191,
+        "std_us": 0.4237705904009288
+      },
+      {
+        "comm": 1429405776,
+        "hash": "4745518332770963648",
+        "rank": 13,
+        "local": 5,
+        "size": 8,
+        "count": 288,
+        "mean_us": 196.4718090277778,
+        "min_us": 27.904,
+        "max_us": 5003.712,
+        "std_us": 491.8880385106724
+      },
+      {
+        "comm": 1437414192,
+        "hash": "11966292367147579012",
+        "rank": 13,
+        "local": 5,
+        "size": 8,
+        "count": 27648,
+        "mean_us": 142.79246643518516,
+        "min_us": 16.543,
+        "max_us": 2179.359,
+        "std_us": 239.25815953557998
+      },
+      {
+        "comm": 1465471648,
+        "hash": "7979974115004118228",
+        "rank": 13,
+        "local": 0,
+        "size": 1,
+        "count": 216,
+        "mean_us": 3.7454490740740742,
+        "min_us": 2.752,
+        "max_us": 10.879,
+        "std_us": 0.7368670461506922
+      },
+      {
+        "comm": 1621921744,
+        "hash": "4745518332770963648",
+        "rank": 15,
+        "local": 7,
+        "size": 8,
+        "count": 288,
+        "mean_us": 492.93032291666674,
+        "min_us": 28.896,
+        "max_us": 7291.84,
+        "std_us": 737.5933871759735
+      },
+      {
+        "comm": 1629928960,
+        "hash": "11966292367147579012",
+        "rank": 15,
+        "local": 7,
+        "size": 8,
+        "count": 27648,
+        "mean_us": 217.70897048611113,
+        "min_us": 19.039,
+        "max_us": 1735.136,
+        "std_us": 271.9832423840832
+      },
+      {
+        "comm": 1657991344,
+        "hash": "15778863199489734961",
+        "rank": 15,
+        "local": 0,
+        "size": 1,
+        "count": 216,
+        "mean_us": 3.3570555555555557,
+        "min_us": 2.655,
+        "max_us": 7.232,
+        "std_us": 0.49367861102913335
+      },
+      {
+        "comm": 962447456,
+        "hash": "4745518332770963648",
+        "rank": 8,
+        "local": 0,
+        "size": 8,
+        "count": 288,
+        "mean_us": 496.1986736111111,
+        "min_us": 29.664,
+        "max_us": 6744.48,
+        "std_us": 781.8307618311369
+      },
+      {
+        "comm": 970450960,
+        "hash": "11966292367147579012",
+        "rank": 8,
+        "local": 0,
+        "size": 8,
+        "count": 27648,
+        "mean_us": 256.0878582175926,
+        "min_us": 18.271,
+        "max_us": 3655.263,
+        "std_us": 500.846282749842
+      },
+      {
+        "comm": 998746384,
+        "hash": "13969691125404051208",
+        "rank": 8,
+        "local": 0,
+        "size": 1,
+        "count": 216,
+        "mean_us": 3.5760185185185187,
+        "min_us": 2.88,
+        "max_us": 8.0,
+        "std_us": 0.5381278758512474
+      },
+      {
+        "comm": 1308205600,
+        "hash": "10791766484202222090",
+        "rank": 9,
+        "local": 9,
+        "size": 16,
+        "count": 36,
+        "mean_us": 466658.8342777777,
+        "min_us": 464695.343,
+        "max_us": 468226.776,
+        "std_us": 1114.5268687921573
+      },
+      {
+        "comm": 1309398800,
+        "hash": "15854168990494983846",
+        "rank": 9,
+        "local": 1,
+        "size": 2,
+        "count": 35,
+        "mean_us": 373.5610857142857,
+        "min_us": 313.823,
+        "max_us": 604.255,
+        "std_us": 67.43755543627917
+      },
+      {
+        "comm": 703902192,
+        "hash": "10791766484202222090",
+        "rank": 10,
+        "local": 10,
+        "size": 16,
+        "count": 36,
+        "mean_us": 465409.45219444454,
+        "min_us": 462542.083,
+        "max_us": 467405.12,
+        "std_us": 1362.3139076377415
+      },
+      {
+        "comm": 705096512,
+        "hash": "11827321118717201634",
+        "rank": 10,
+        "local": 1,
+        "size": 2,
+        "count": 35,
+        "mean_us": 368.28308571428573,
+        "min_us": 209.792,
+        "max_us": 1448.799,
+        "std_us": 244.38262127963793
+      },
+      {
+        "comm": 902469568,
+        "hash": "10791766484202222090",
+        "rank": 11,
+        "local": 11,
+        "size": 16,
+        "count": 36,
+        "mean_us": 466119.3036944444,
+        "min_us": 462997.619,
+        "max_us": 467739.044,
+        "std_us": 1488.8966829431088
+      },
+      {
+        "comm": 903663552,
+        "hash": "14381772574928379460",
+        "rank": 11,
+        "local": 1,
+        "size": 2,
+        "count": 35,
+        "mean_us": 481.62048571428573,
+        "min_us": 226.784,
+        "max_us": 1379.776,
+        "std_us": 249.9748851194423
+      },
+      {
+        "comm": 623567776,
+        "hash": "10791766484202222090",
+        "rank": 14,
+        "local": 14,
+        "size": 16,
+        "count": 36,
+        "mean_us": 465051.70222222223,
+        "min_us": 462692.138,
+        "max_us": 466047.515,
+        "std_us": 928.6843546213402
+      },
+      {
+        "comm": 624761776,
+        "hash": "15635225119235042840",
+        "rank": 14,
+        "local": 1,
+        "size": 2,
+        "count": 35,
+        "mean_us": 379.19405714285716,
+        "min_us": 317.887,
+        "max_us": 643.967,
+        "std_us": 61.214455434710544
+      },
+      {
+        "comm": 944384704,
+        "hash": "10791766484202222090",
+        "rank": 12,
+        "local": 12,
+        "size": 16,
+        "count": 36,
+        "mean_us": 464917.21297222225,
+        "min_us": 462703.186,
+        "max_us": 466204.498,
+        "std_us": 925.237813231686
+      },
+      {
+        "comm": 945578512,
+        "hash": "6762408076210334134",
+        "rank": 12,
+        "local": 1,
+        "size": 2,
+        "count": 35,
+        "mean_us": 284.00405714285716,
+        "min_us": 198.592,
+        "max_us": 411.52,
+        "std_us": 50.06909627130597
+      },
+      {
+        "comm": 829814016,
+        "hash": "10791766484202222090",
+        "rank": 13,
+        "local": 13,
+        "size": 16,
+        "count": 36,
+        "mean_us": 464875.8362222223,
+        "min_us": 462370.33,
+        "max_us": 466208.892,
+        "std_us": 1038.8562742845595
+      },
+      {
+        "comm": 831006896,
+        "hash": "4554413722762669515",
+        "rank": 13,
+        "local": 1,
+        "size": 2,
+        "count": 35,
+        "mean_us": 335.0120285714285,
+        "min_us": 209.376,
+        "max_us": 698.687,
+        "std_us": 113.97161888657963
+      },
+      {
+        "comm": 1022328752,
+        "hash": "10791766484202222090",
+        "rank": 15,
+        "local": 15,
+        "size": 16,
+        "count": 36,
+        "mean_us": 465204.47063888895,
+        "min_us": 462689.025,
+        "max_us": 466302.459,
+        "std_us": 895.7687725043493
+      },
+      {
+        "comm": 1023522672,
+        "hash": "17764696143290309792",
+        "rank": 15,
+        "local": 1,
+        "size": 2,
+        "count": 35,
+        "mean_us": 356.87719999999996,
+        "min_us": 318.176,
+        "max_us": 568.992,
+        "std_us": 59.31388858211396
+      },
+      {
+        "comm": 362649696,
+        "hash": "10791766484202222090",
+        "rank": 8,
+        "local": 8,
+        "size": 16,
+        "count": 36,
+        "mean_us": 443.5399722222222,
+        "min_us": 389.6,
+        "max_us": 480.96,
+        "std_us": 14.342424706842653
+      },
+      {
+        "comm": 363842864,
+        "hash": "3682194076287552009",
+        "rank": 8,
+        "local": 1,
+        "size": 2,
+        "count": 35,
+        "mean_us": 464.9750857142858,
+        "min_us": 320.095,
+        "max_us": 1621.152,
+        "std_us": 254.69358674178008
+      }
+    ],
+    "operations": {
+      "9": {
+        "2": 39,
+        "1": 1442,
+        "4": 1440,
+        "6": 69120,
+        "7": 69120
+      },
+      "10": {
+        "2": 39,
+        "1": 1442,
+        "4": 1440,
+        "6": 69120,
+        "7": 69120
+      },
+      "11": {
+        "2": 39,
+        "1": 1442,
+        "4": 1440,
+        "6": 69120,
+        "7": 69120
+      },
+      "14": {
+        "2": 39,
+        "1": 1442,
+        "4": 1440,
+        "6": 69120,
+        "7": 69120
+      },
+      "12": {
+        "2": 39,
+        "1": 1442,
+        "4": 1440,
+        "6": 69120,
+        "7": 69120
+      },
+      "13": {
+        "2": 39,
+        "1": 1442,
+        "4": 1440,
+        "6": 69120,
+        "7": 69120
+      },
+      "15": {
+        "2": 39,
+        "1": 1442,
+        "4": 1440,
+        "6": 69120,
+        "7": 69120
+      },
+      "8": {
+        "2": 39,
+        "1": 1442,
+        "4": 1440,
+        "6": 69120,
+        "7": 69120
+      }
+    },
+    "lost": 0,
+    "headers": [
+      [
+        5065495506834174001,
+        0,
+        1,
+        141161,
+        1131092099454048,
+        141161,
+        2,
+        28223,
+        0,
+        9,
+        68644,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        141161,
+        1131092099435290,
+        141161,
+        2,
+        28223,
+        0,
+        10,
+        68645,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        141161,
+        1131092099306224,
+        141161,
+        2,
+        28223,
+        0,
+        11,
+        68646,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        141161,
+        1131092099230358,
+        141161,
+        2,
+        28223,
+        0,
+        14,
+        68649,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        141161,
+        1131092099230556,
+        141161,
+        2,
+        28223,
+        0,
+        12,
+        68647,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        141161,
+        1131092099435983,
+        141161,
+        2,
+        28223,
+        0,
+        13,
+        68648,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        141161,
+        1131092099230672,
+        141161,
+        2,
+        28223,
+        0,
+        15,
+        68650,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        141161,
+        1131092099238804,
+        141161,
+        2,
+        28223,
+        0,
+        8,
+        68643,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ]
+    ],
+    "profile": {
+      "started_at": 1792083401.6399202,
+      "requested_seconds": 20.0,
+      "capture_stopped_at": 1792083421.7283158,
+      "finished_at": 1792083422.1310833,
+      "active_scopes_at_finish": 0,
+      "unknown_records": 0,
+      "driver_status": {
+        "backend": "nvidia-smi/NVML",
+        "devices": [
+          {
+            "index": "0",
+            "uuid": "GPU-a17d04f4-3674-c1bc-c3f8-2189ea56fcb1",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "100",
+            "memory.used": "4550",
+            "memory.total": "81559",
+            "temperature.gpu": "37"
+          },
+          {
+            "index": "1",
+            "uuid": "GPU-53793bfd-0c74-13bd-2209-3afc070c2f10",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "100",
+            "memory.used": "4546",
+            "memory.total": "81559",
+            "temperature.gpu": "31"
+          },
+          {
+            "index": "2",
+            "uuid": "GPU-60b56423-d365-0851-1913-e07785e8b16a",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "100",
+            "memory.used": "5024",
+            "memory.total": "81559",
+            "temperature.gpu": "38"
+          },
+          {
+            "index": "3",
+            "uuid": "GPU-02d3ce23-a079-d334-eb97-62fe0c9ab3b8",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "100",
+            "memory.used": "5084",
+            "memory.total": "81559",
+            "temperature.gpu": "33"
+          },
+          {
+            "index": "4",
+            "uuid": "GPU-3e60a8e7-2982-6d8a-b34f-5e76ae173f45",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "100",
+            "memory.used": "5044",
+            "memory.total": "81559",
+            "temperature.gpu": "37"
+          },
+          {
+            "index": "5",
+            "uuid": "GPU-ed8170d0-b2c3-5c0b-714e-1befa83e432d",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "100",
+            "memory.used": "5062",
+            "memory.total": "81559",
+            "temperature.gpu": "32"
+          },
+          {
+            "index": "6",
+            "uuid": "GPU-6e7c62c2-354f-2cc7-da1d-a18f5b07de64",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "100",
+            "memory.used": "4592",
+            "memory.total": "81559",
+            "temperature.gpu": "37"
+          },
+          {
+            "index": "7",
+            "uuid": "GPU-6a51ce14-d531-d5fe-8fea-db29230410e5",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "100",
+            "memory.used": "4600",
+            "memory.total": "81559",
+            "temperature.gpu": "31"
+          }
+        ]
+      }
+    },
+    "time": 1792083476.4761176
+  },
+  "ack:0": {
+    "epoch": 1,
+    "mode": 0,
+    "time": 1792083476.483672
+  },
+  "ack:1": {
+    "epoch": 1,
+    "mode": 0,
+    "time": 1792083476.4756987
+  },
+  "parallel_states_0": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        0,
+        8
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        0
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        0
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        0
+      ]
+    }
+  ],
+  "parallel_states_1": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        1,
+        9
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        1
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        1
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        1
+      ]
+    }
+  ],
+  "parallel_states_2": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        2,
+        10
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        2
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        2
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        2
+      ]
+    }
+  ],
+  "parallel_states_3": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        3,
+        11
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        3
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        3
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        3
+      ]
+    }
+  ],
+  "parallel_states_4": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        4,
+        12
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        4
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        4
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        4
+      ]
+    }
+  ],
+  "parallel_states_5": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        5,
+        13
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        5
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        5
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        5
+      ]
+    }
+  ],
+  "parallel_states_6": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        6,
+        14
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        6
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        6
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        6
+      ]
+    }
+  ],
+  "parallel_states_7": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        7,
+        15
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        7
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        7
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        7
+      ]
+    }
+  ],
+  "parallel_states_8": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        0,
+        8
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        8
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        8
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        8
+      ]
+    }
+  ],
+  "parallel_states_9": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        1,
+        9
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        9
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        9
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        9
+      ]
+    }
+  ],
+  "parallel_states_10": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        2,
+        10
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        10
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        10
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        10
+      ]
+    }
+  ],
+  "parallel_states_11": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        3,
+        11
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        11
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        11
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        11
+      ]
+    }
+  ],
+  "parallel_states_12": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        4,
+        12
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        12
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        12
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        12
+      ]
+    }
+  ],
+  "parallel_states_13": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        5,
+        13
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        13
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        13
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        13
+      ]
+    }
+  ],
+  "parallel_states_14": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        6,
+        14
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        14
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        14
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        14
+      ]
+    }
+  ],
+  "parallel_states_15": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        7,
+        15
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        15
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        15
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        15
+      ]
+    }
+  ],
+  "source_hashes": {
+    "flash/store.py": "fc1f4b403090cdbdbefd8aba5231fd19d36d1ed7829027006b30adf68b0c7828",
+    "flash/shm.py": "b9066455ed4601a8731d5a40ed547a9eb370a7624d8cc61929a9452e7944ad57",
+    "flash/local_controller.py": "312dfbdcb0a57d15f6f41469684ece9d9abd06e2e455793b5619a40c4191e653",
+    "flash/driver_status.py": "b17b80d1683e6ebfe1598cf00c29e75f8d173920bc1455116f53b9e271d53ffe",
+    "flash/profile.py": "cf95334c93501f74ea70a93962a9aeb078aa96ad964df133196e935fdf47bd7b",
+    "flash/config.py": "a420dfbc6b183d5ca6bc7cf25d6f386b835978c57cf27f6943ff5914924ab442",
+    "flash/analysis.py": "fadf441cb962c9752f293de553a5105f42be2c1843f7b01a60ad3f291427cd43",
+    "flash/detection.py": "7d4c75405ce4f563140692bdfcee69c3f67b53c24a4989af320fc3c5dd896f0d",
+    "flash/global_controller.py": "51bf4f4fe532381ecba03ac2a10180e926e171c265fb491d7a917d37ca974286",
+    "flash/integration.py": "4c5e1129d0a0e843221fe4f6828cf91b753cbe77a239d76a4bbb98cd57a0ca53",
+    "flash/__init__.py": "5c782816326133c7a15ac6a76e883ccebbef1adbe2b165a4635b1b0e4ee828fa",
+    "flash/iteration_writer.py": "bcf58e81bb3835583f6a359f7f3a67b35f71c12d2fc8707b5453ac91babc3cca",
+    "csrc/fault.cpp": "d221b5f3ff8c4ac6f2af00bfdd15fb1aaf011e3988f56557cf99dbea2e0c5a00",
+    "csrc/probe.cpp": "4463b8ef01027a23fc4d2bba1b8a377b10bcaf132e80679275b2bb0f4745d713",
+    "scripts/cleanup_run_shm.py": "60d7b7b6858cbba56f0184a57a473d3f507ef5b5738a7033a88d0cb681633646",
+    "scripts/container.py": "1190c85b13f74a21f5778f96f1fe309910fd4f5682c1ebd65d80bd48bd95f6ba",
+    "scripts/inspect_runtime.py": "1f3725ffcc25886f9c84aa6d5372ec4d4f29909bdcec1156e549e67e687e4d66",
+    "scripts/allreduce_bench.py": "8520c160b32623f51f30646eb7a465526e81bb8136d7fffc04083b1b9e2f2d95",
+    "scripts/check_model.py": "69eb3e40d376cbed1876113e7928a97af7a309bb49c1a19245d771836e22fd3d",
+    "scripts/paper_metrics.py": "916a0cf7a0cd10f09f4f3b352360f19073ef323a2aa25842776c0d2554924393",
+    "scripts/audit_campaign.py": "50019fffef795bbda16fc1149ed4f55f65efabe532e1c05a45a84cb729910649",
+    "scripts/launch.py": "457960e726a336c426efc849ce97464b4f0ae0fde9b8e9101b3eaecd79efbd07",
+    "scripts/greyhound_experiment.py": "be94f842d7a08cdec6db4790e84956e31331ba8f4df81d17cca1f62945785028",
+    "scripts/validate_final.py": "d99c9d722e97408cdc8afc6c3b792a09c656126286ec32a48318f49a6982c835",
+    "scripts/summarize.py": "a17cc16c4ef68c71631ca63f2a3e7c9b81fef1c2117726a9546f1c572d99e8b5",
+    "scripts/clock_experiment.py": "ac2c4e42665aff68c5848d7e5e5ac25a77b0dc7349d9716082f13ea9f636ec68",
+    "scripts/export_run.py": "3edf088152d53143be317456ae8e1b7aa29a0c8c1e9cdf1bcf74075faf674ed2",
+    "scripts/deepspeed_smoke.py": "aba9a70e8f5796f0a66d5e2c5ee4417b3298630073f10c0b10686450f5c2b174",
+    "scripts/network_experiment.py": "6e622ec8b1c1370695078cbad964762dbbf46f5aa043b507cbc19f38a062a6f2",
+    "scripts/download_qwen.py": "9c20ac01508d3905d1eb1592ead161c0b7ab8389d6e7718fa83e0243cd7f61f9",
+    "scripts/bootstrap.py": "dec615ce975d65b27d5d3b83f916aae2262e413bb1a639f6b381d9b6cc676562",
+    "scripts/suite.py": "de420384786daece693a59ad687550b062f7e7f2b9c5b31c04726da0675c5c56",
+    "scripts/qwen_support.py": "71b89dc2138adc26e57a4e6972ca4de3290224b5086595ca7e4520bfb0be4ed9",
+    "scripts/build.sh": "9289bbd52a17bdb9f1a867f02b46efa478b367ba05b850ff7a37c95d9514b6f7",
+    "scripts/collect_all.py": "a9789e9287727a43366cddf47be17b1605bd246e8f0d0fa78f95f3edbe21b761",
+    "scripts/write_report.py": "830fb0d48e39c15f6a35af35e87beadefd2a9d596fc478731db40febc58eefe9",
+    "scripts/run_rank.sh": "0c370bb6ebe3923d253222a6d415faba59b6ff2eb4735ba45d64386208580d7a",
+    "scripts/validate_control.py": "2b8b35742c0bd157d740d27934b2ef18081005bab5a11370c8d96a1ef256660c",
+    "scripts/check_publish_secrets.py": "c44b345b03f3ece46c656ef5a115da3d47504f77fc8e10df14a61e14e64e7a6b",
+    "scripts/experiment.py": "72f3233b4b231dfd54e9fc78bbb5bad5c28b4aba79b0d37d3cd2128cde5d1fa5",
+    "scripts/init_run.py": "d2755783674f778b893fea84dc8379dba02b749282b48eea50e19456bf5abb0a",
+    "scripts/precheck.py": "95300b5152e87609d78f5d0c0d4ef8b1aad0c86cde6e4d108fbba1da0f981298",
+    "scripts/remote.py": "89e37f7d166c4b6a4a7f43eb3e0e6f901f739fbfdc4f5f0b71be70663ada36d0",
+    "scripts/test_probe_contract.sh": "860a0111dd247da8a9f0298aaa1eab7394a66c6f6b93184407026d0084e6ab49",
+    "scripts/download_qwen_ranges.py": "49ceef4378f23ed1cd54ac81bbafd0195f67016b31f27afca6d375412dc1c1ad",
+    "scripts/background_comm.py": "d8e992f0e66afcde33b01762153ed3dd5fc5c698e16bf8eb338aa74bb0d53ef7",
+    "scripts/assert_idle.py": "22ecfb2e50cd80a9a3af381e7c7946cd7000044cda77b8d41fff865b27b148ff",
+    "scripts/final_state.py": "791fd95cf29d8432f2778931f2cd912b60fe3240500bb07bc361c8ea18ac5ca1",
+    "scripts/validate_qwen_gradients.py": "ae03b02d10eb3b5529f923f8affda654f0509718996bb00bdebfe2881e57e1fd",
+    "scripts/gradient_experiment.py": "2991a6b2a4f89274416cbce2631390ffa7e05bc53619b977874c8a9733c872bf",
+    "scripts/plot_results.py": "a697ad9b5024fc628e79a96d9fe48d99cbaf0f8f60211b438f129f0e8cbb8c4a",
+    "scripts/prepare_greyhound_remote.py": "11983462c592b77d0f78a74aab69171d2de8a70cf5a1759ed4de225108b938b6",
+    "scripts/verify_evidence.py": "b9f5887d6b18e235deadcb9774243f0a23207eefb35baa4a0a444b2aecbf588a",
+    "scripts/gradient_sync.py": "1b96293e61bfc2d3769873c02e370e9eb9b7edbc91ed775d8ad1b5dd5c39d9b4",
+    "scripts/sync.py": "92e2801d654a10c22d8e5334514d1b173b00f8a584c64ac0d7532b41ff256dfd",
+    "scripts/prepare_rdma.py": "3e2fff906f274313792783da6b377721c620a5200cd40efce0bfb4fd565a1b61",
+    "scripts/train_moe.py": "dc275946b8d22a3d9d3e4318d4b94e511fb3e19c19a0184eb4ebd0e2d573c529",
+    "scripts/install_qwen_deps.py": "7006fb1a6adb52d6159b604cdf754345b669ae7de6f57f41a85cd60b87b15bf1",
+    "scripts/model_support.py": "2e189d420ee080425ae01b9405856a4d90ed7414397111eae14479799dde1d28",
+    "scripts/prepare_greyhound.py": "323ae9ce8886653123b2da5f586927b1c0a04d4a14d3b7a3338326b833e67bcf"
+  },
+  "runtime": {
+    "python": "3.12.3 (main, Jan  8 2026, 11:30:50) [GCC 13.3.0]",
+    "torch": "2.10.0+cu126",
+    "cuda": "12.6",
+    "nccl": [
+      2,
+      27,
+      5
+    ]
+  },
+  "iter_time_0": [
+    "1:5977.937627",
+    "2:119.509007",
+    "3:63.141759",
+    "4:64.861238",
+    "5:67.892669",
+    "6:72.251630",
+    "7:67.644175",
+    "8:68.467397",
+    "9:68.984008",
+    "10:73.219055",
+    "11:76.425938",
+    "12:75.142328",
+    "13:86.272238",
+    "14:84.438573",
+    "15:78.879473",
+    "16:78.872909",
+    "17:81.427568",
+    "18:84.345196",
+    "19:78.333249",
+    "20:79.464615",
+    "21:79.739429",
+    "22:82.214475",
+    "23:83.400844",
+    "24:82.730696",
+    "25:83.962805",
+    "26:83.163279",
+    "27:90.542087",
+    "28:90.141116",
+    "29:89.270274",
+    "30:91.239990",
+    "31:79.129001",
+    "32:83.126200",
+    "33:79.476871",
+    "34:78.908611",
+    "35:81.163826",
+    "36:81.708890",
+    "37:85.984489",
+    "38:84.199850",
+    "39:86.120541",
+    "40:82.623840",
+    "41:83.881009",
+    "42:80.170341",
+    "43:84.178647",
+    "44:83.718904",
+    "45:81.467991",
+    "46:87.819349",
+    "47:82.980166",
+    "48:82.486831",
+    "49:84.322972",
+    "50:82.598557",
+    "51:83.540926",
+    "52:87.906850",
+    "53:91.082599",
+    "54:78.018858",
+    "55:80.170673",
+    "56:83.683486",
+    "57:93.053153",
+    "58:96.433211",
+    "59:85.539082",
+    "60:543.070126",
+    "61:537.033029",
+    "62:538.781634",
+    "63:544.158381",
+    "64:545.282285",
+    "65:553.836505",
+    "66:546.562592",
+    "67:548.831974",
+    "68:548.287190",
+    "69:552.347106",
+    "70:550.948279",
+    "71:550.657917",
+    "72:547.516571",
+    "73:554.678570",
+    "74:545.392608",
+    "75:549.740939",
+    "76:548.789512",
+    "77:551.517533",
+    "78:552.211056",
+    "79:547.265889",
+    "80:546.031708",
+    "81:548.693038",
+    "82:547.091932",
+    "83:547.967879",
+    "84:555.119857",
+    "85:555.076418",
+    "86:546.792363",
+    "87:548.586000",
+    "88:546.323821",
+    "89:545.496194",
+    "90:547.003125",
+    "91:548.934342",
+    "92:548.066026",
+    "93:547.976094",
+    "94:547.745960",
+    "95:545.346909",
+    "96:547.415815",
+    "97:545.442583",
+    "98:544.435458",
+    "99:547.422337",
+    "100:543.964082",
+    "101:539.584911",
+    "102:542.509065",
+    "103:540.826895",
+    "104:545.170343",
+    "105:545.547910",
+    "106:545.511529",
+    "107:545.222580",
+    "108:546.257636",
+    "109:546.372537",
+    "110:541.825736",
+    "111:545.157890",
+    "112:543.102470",
+    "113:544.846521",
+    "114:543.747253",
+    "115:544.846082",
+    "116:555.294707",
+    "117:548.780343",
+    "118:548.076794",
+    "119:547.186542",
+    "120:546.983784",
+    "121:542.363189",
+    "122:541.009804",
+    "123:545.788360",
+    "124:556.214775",
+    "125:548.432314",
+    "126:546.576589",
+    "127:543.976644",
+    "128:544.100461",
+    "129:547.286350",
+    "130:546.070858",
+    "131:544.843319",
+    "132:543.326078",
+    "133:545.744628",
+    "134:547.036646",
+    "135:546.138938",
+    "136:544.206653",
+    "137:543.154901",
+    "138:547.624169",
+    "139:541.844792",
+    "140:546.445271",
+    "141:545.764666",
+    "142:543.928218",
+    "143:544.550862",
+    "144:543.265349",
+    "145:542.687606",
+    "146:542.647575",
+    "147:543.686143",
+    "148:544.746406",
+    "149:543.832726",
+    "150:543.565010",
+    "151:544.967186",
+    "152:546.005547",
+    "153:544.414720",
+    "154:545.302126",
+    "155:544.778370",
+    "156:545.089061",
+    "157:544.779225",
+    "158:544.189665",
+    "159:540.642099",
+    "160:542.854083",
+    "161:547.746729",
+    "162:544.085946",
+    "163:546.359805",
+    "164:543.503653",
+    "165:546.456688",
+    "166:543.262158",
+    "167:542.720948",
+    "168:564.393425",
+    "169:546.393277",
+    "170:543.625723",
+    "171:544.621061",
+    "172:545.362113",
+    "173:545.236551",
+    "174:547.458994",
+    "175:543.964723",
+    "176:547.344103",
+    "177:543.732844",
+    "178:542.292330",
+    "179:544.837943",
+    "180:545.862020"
+  ],
+  "events": [
+    {
+      "rank": 8,
+      "step": 60,
+      "fault": "delay",
+      "delay_ms": 488.4806592638293,
+      "severity": 0.85,
+      "placement": "before-sync",
+      "kind": "injection",
+      "time": 1792083399.3859801
+    },
+    {
+      "rank": 6,
+      "node": "0",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.2266439510276541,
+      "time": 1792083399.6554294,
+      "pid": 82472,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true,
+      "kind": "failstop"
+    },
+    {
+      "rank": 4,
+      "node": "0",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.21601819602074102,
+      "time": 1792083399.6563723,
+      "pid": 82470,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true,
+      "kind": "failstop"
+    },
+    {
+      "rank": 7,
+      "node": "0",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.20887969800969586,
+      "time": 1792083399.6569085,
+      "pid": 82473,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true,
+      "kind": "failstop"
+    },
+    {
+      "rank": 5,
+      "node": "0",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.21494248503586277,
+      "time": 1792083399.6574101,
+      "pid": 82471,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true,
+      "kind": "failstop"
+    },
+    {
+      "rank": 0,
+      "node": "0",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.21342027699574828,
+      "time": 1792083399.6579359,
+      "pid": 82466,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true,
+      "kind": "failstop"
+    },
+    {
+      "rank": 3,
+      "node": "0",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.2230272910092026,
+      "time": 1792083399.6584346,
+      "pid": 82469,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true,
+      "kind": "failstop"
+    },
+    {
+      "rank": 2,
+      "node": "0",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.21656443201936781,
+      "time": 1792083399.6589346,
+      "pid": 82468,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true,
+      "kind": "failstop"
+    },
+    {
+      "rank": 9,
+      "node": "1",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.21474107401445508,
+      "time": 1792083399.6594079,
+      "pid": 68644,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true,
+      "kind": "failstop"
+    },
+    {
+      "rank": 1,
+      "node": "0",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.227566173998639,
+      "time": 1792083399.6599035,
+      "pid": 82467,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true,
+      "kind": "failstop"
+    },
+    {
+      "rank": 10,
+      "node": "1",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.21361295506358147,
+      "time": 1792083399.6603854,
+      "pid": 68645,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true,
+      "kind": "failstop"
+    },
+    {
+      "rank": 11,
+      "node": "1",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.22542770602740347,
+      "time": 1792083399.6608825,
+      "pid": 68646,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true,
+      "kind": "failstop"
+    },
+    {
+      "rank": 14,
+      "node": "1",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.21328760287724435,
+      "time": 1792083399.6613572,
+      "pid": 68649,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true,
+      "kind": "failstop"
+    },
+    {
+      "rank": 12,
+      "node": "1",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.2145304218865931,
+      "time": 1792083399.6618514,
+      "pid": 68647,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true,
+      "kind": "failstop"
+    },
+    {
+      "rank": 13,
+      "node": "1",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.21448494191281497,
+      "time": 1792083399.6623383,
+      "pid": 68648,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true,
+      "kind": "failstop"
+    },
+    {
+      "rank": 15,
+      "node": "1",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.211575296940282,
+      "time": 1792083399.662817,
+      "pid": 68650,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true,
+      "kind": "failstop"
+    },
+    {
+      "rank": 8,
+      "node": "1",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.21364965406246483,
+      "time": 1792083399.663287,
+      "pid": 68643,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true,
+      "kind": "failstop"
+    },
+    {
+      "epoch": 1,
+      "seconds": 20.0,
+      "trigger": {
+        "iteration": 60,
+        "observed_iteration": 63,
+        "prob": 1.0,
+        "baseline_ms": 84.37552507692307,
+        "degraded_ms": 540.7607925,
+        "throughput_loss": 0.8439688560133118,
+        "recovery_ratio": 0.001686684229926409
+      },
+      "kind": "profile_start",
+      "time": 1792083401.5839777
+    },
+    {
+      "epoch": 1,
+      "trigger": {
+        "iteration": 60,
+        "observed_iteration": 63,
+        "prob": 1.0,
+        "baseline_ms": 84.37552507692307,
+        "degraded_ms": 540.7607925,
+        "throughput_loss": 0.8439688560133118,
+        "recovery_ratio": 0.001686684229926409
+      },
+      "profile_seconds": 20.0,
+      "nodes_received": 2,
+      "lost": 0,
+      "result": {
+        "suspects": [
+          {
+            "rank": 8,
+            "tags": 1,
+            "score": 0.9989830338951875,
+            "evidence": [
+              {
+                "tag": "dp",
+                "hash": "10791766484202222090",
+                "clique": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15
+                ],
+                "mean_us": 443.5399722222222,
+                "clique_mean_us": 436140.3690086806,
+                "cv": 0.25794019941320623,
+                "score": 0.9989830338951875
+              }
+            ],
+            "location": {
+              "node": "1",
+              "host": "10.10.4.2",
+              "pid": 68643
+            }
+          }
+        ],
+        "clique_scores": [
+          {
+            "tag": "dp",
+            "hash": "10791766484202222090",
+            "ranks": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "score": 0.0,
+            "max_avg_latency": 466658.8342777777,
+            "cv": 0.0
+          },
+          {
+            "tag": "expert_dp",
+            "hash": "15635225119235042840",
+            "ranks": [
+              6,
+              14
+            ],
+            "score": -0.09330279691902119,
+            "max_avg_latency": 392.8379714285714,
+            "cv": 0.11851399848401022
+          },
+          {
+            "tag": "expert_dp",
+            "hash": "6762408076210334134",
+            "ranks": [
+              4,
+              12
+            ],
+            "score": -0.2409877668790477,
+            "max_avg_latency": 328.8516,
+            "cv": 0.11851399848401022
+          },
+          {
+            "tag": "expert_dp",
+            "hash": "17764696143290309792",
+            "ranks": [
+              7,
+              15
+            ],
+            "score": -0.07998932649907473,
+            "max_avg_latency": 398.60619999999994,
+            "cv": 0.11851399848401022
+          },
+          {
+            "tag": "expert_dp",
+            "hash": "4554413722762669515",
+            "ranks": [
+              5,
+              13
+            ],
+            "score": 0.05252483682301433,
+            "max_avg_latency": 456.01962857142854,
+            "cv": 0.11851399848401022
+          },
+          {
+            "tag": "expert_dp",
+            "hash": "3682194076287552009",
+            "ranks": [
+              0,
+              8
+            ],
+            "score": 0.07319465118493038,
+            "max_avg_latency": 464.9750857142858,
+            "cv": 0.11851399848401022
+          },
+          {
+            "tag": "expert_dp",
+            "hash": "14381772574928379460",
+            "ranks": [
+              3,
+              11
+            ],
+            "score": 0.11161338542612442,
+            "max_avg_latency": 481.62048571428573,
+            "cv": 0.11851399848401022
+          },
+          {
+            "tag": "expert_dp",
+            "hash": "11827321118717201634",
+            "ranks": [
+              2,
+              10
+            ],
+            "score": 0.05002387903614022,
+            "max_avg_latency": 454.9360571428572,
+            "cv": 0.11851399848401022
+          },
+          {
+            "tag": "expert_dp",
+            "hash": "15854168990494983846",
+            "ranks": [
+              1,
+              9
+            ],
+            "score": 0.1269231378269344,
+            "max_avg_latency": 488.25362857142846,
+            "cv": 0.11851399848401022
+          }
+        ],
+        "incomplete": [],
+        "complete_cliques": 29,
+        "status": "complete"
+      },
+      "kind": "diagnosis",
+      "time": 1792083422.3694632
+    },
+    {
+      "epochs": 1,
+      "kind": "controller_stopped",
+      "time": 1792083476.6015437
+    }
+  ],
+  "failstop_ranks": [
+    {
+      "rank": 6,
+      "node": "0",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.2266439510276541,
+      "time": 1792083399.5974152,
+      "pid": 82472,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true
+    },
+    {
+      "rank": 4,
+      "node": "0",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.21601819602074102,
+      "time": 1792083399.5988183,
+      "pid": 82470,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true
+    },
+    {
+      "rank": 7,
+      "node": "0",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.20887969800969586,
+      "time": 1792083399.5994434,
+      "pid": 82473,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true
+    },
+    {
+      "rank": 5,
+      "node": "0",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.21494248503586277,
+      "time": 1792083399.5999966,
+      "pid": 82471,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true
+    },
+    {
+      "rank": 0,
+      "node": "0",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.21342027699574828,
+      "time": 1792083399.600512,
+      "pid": 82466,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true
+    },
+    {
+      "rank": 3,
+      "node": "0",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.2230272910092026,
+      "time": 1792083399.6010885,
+      "pid": 82469,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true
+    },
+    {
+      "rank": 2,
+      "node": "0",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.21656443201936781,
+      "time": 1792083399.6015882,
+      "pid": 82468,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true
+    },
+    {
+      "rank": 9,
+      "node": "1",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.21474107401445508,
+      "time": 1792083399.601084,
+      "pid": 68644,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true
+    },
+    {
+      "rank": 1,
+      "node": "0",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.227566173998639,
+      "time": 1792083399.6020782,
+      "pid": 82467,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true
+    },
+    {
+      "rank": 10,
+      "node": "1",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.21361295506358147,
+      "time": 1792083399.6025367,
+      "pid": 68645,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true
+    },
+    {
+      "rank": 11,
+      "node": "1",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.22542770602740347,
+      "time": 1792083399.6031902,
+      "pid": 68646,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true
+    },
+    {
+      "rank": 14,
+      "node": "1",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.21328760287724435,
+      "time": 1792083399.6037507,
+      "pid": 68649,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true
+    },
+    {
+      "rank": 12,
+      "node": "1",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.2145304218865931,
+      "time": 1792083399.604271,
+      "pid": 68647,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true
+    },
+    {
+      "rank": 13,
+      "node": "1",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.21448494191281497,
+      "time": 1792083399.6047902,
+      "pid": 68648,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true
+    },
+    {
+      "rank": 15,
+      "node": "1",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.211575296940282,
+      "time": 1792083399.6052883,
+      "pid": 68650,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true
+    },
+    {
+      "rank": 8,
+      "node": "1",
+      "window": 0.17107816399999998,
+      "last_call_age": 0.21364965406246483,
+      "time": 1792083399.6057918,
+      "pid": 68643,
+      "process_exists": true,
+      "process_state": "R",
+      "process_alive": true
+    }
+  ]
+}

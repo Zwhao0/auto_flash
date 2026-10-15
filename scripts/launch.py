@@ -18,7 +18,9 @@ def start(host, command, log):
     return execute(host, cmd)
 
 
-def launch(run, mode="monitor", task="train", args="", port=29541, force=False):
+def launch(
+    run, mode="monitor", task="train", args="", port=29541, force=False, precheck=True
+):
     base = "/flash/results/" + run
     paper = os.getenv("FLASH_RUNTIME") == "paper"
     mcore = (
@@ -54,13 +56,43 @@ def launch(run, mode="monitor", task="train", args="", port=29541, force=False):
     )
     if init[1]:
         raise RuntimeError(init[2])
+    if task == "train" and precheck:
+
+        def check(pair):
+            node, host = pair
+            cmd = (
+                env
+                + f"export FLASH_MODE=baseline FLASH_TASK=precheck; torchrun --nnodes=2 --nproc_per_node=8 --node_rank={node} --master_addr=10.10.4.1 --master_port={port+1} --no_python bash scripts/run_rank.sh; echo $? > {base}/precheck_exit{node}"
+            )
+            return start(host, cmd, base + f"/precheck_torchrun{node}.log")
+
+        with concurrent.futures.ThreadPoolExecutor() as pool:
+            for result in pool.map(check, enumerate(["10.10.4.1", "10.10.4.2"])):
+                if result[1]:
+                    raise RuntimeError(result[2])
+        deadline = time.monotonic() + 150
+        while True:
+            codes = [
+                execute(host, f"cat {base}/precheck_exit{node} 2>/dev/null")
+                for node, host in enumerate(["10.10.4.1", "10.10.4.2"])
+            ]
+            if all(code[1] == 0 for code in codes):
+                if any(code[2].strip() != "0" for code in codes):
+                    raise RuntimeError(
+                        "Coordinated GPU pre-check failed; training was not started"
+                    )
+                break
+            if time.monotonic() > deadline:
+                raise TimeoutError("Coordinated pre-check did not finish")
+            time.sleep(0.5)
     # Controllers are launched independently of torchrun so crashes cannot kill monitoring.
     if mode != "baseline":
         for node, host in enumerate(["10.10.4.1", "10.10.4.2"]):
             print(
                 start(
                     host,
-                    env + f"python -m flash.local_controller --run {run} --node {node}",
+                    env
+                    + f"export FLASH_NODE_ADDR={host}; python -m flash.local_controller --run {run} --node {node}",
                     base + "/local" + str(node) + ".log",
                 )
             )
@@ -96,16 +128,71 @@ def collect(run):
     dest = ROOT / "results" / run
     dest.mkdir(parents=True, exist_ok=True)
     for node, host in enumerate(["10.10.4.1", "10.10.4.2"]):
-        c = connect(host)
+        remote = "/home/campus/zhangweihao/flash-repro-20261015/results/" + run
+        client = sftp = None
+        failures = 0
+
+        def open_sftp():
+            nonlocal client, sftp
+            if sftp is not None:
+                try:
+                    sftp.close()
+                except OSError:
+                    pass
+            if client is not None:
+                client.close()
+            client = connect(host)
+            sftp = client.open_sftp()
+
         try:
-            s = c.open_sftp()
-            remote = "/home/campus/zhangweihao/flash-repro-20261015/results/" + run
-            for f in s.listdir_attr(remote):
+            for attempt in range(3):
+                try:
+                    open_sftp()
+                    files = sftp.listdir_attr(remote)
+                    break
+                except Exception:
+                    failures += 1
+                    if attempt == 2:
+                        raise
+                    time.sleep(attempt + 1)
+
+            for f in files:
                 if f.filename.endswith(".pt"):
                     continue
-                s.get(remote + "/" + f.filename, str(dest / f.filename))
+                source = remote + "/" + f.filename
+                target = dest / f.filename
+                partial = target.with_name(target.name + ".part")
+                for attempt in range(3):
+                    try:
+                        before = sftp.stat(source).st_size
+                        sftp.get(source, str(partial), prefetch=False)
+                        after = sftp.stat(source).st_size
+                        if before != after or partial.stat().st_size != after:
+                            raise IOError("remote file changed during transfer")
+                        os.replace(partial, target)
+                        break
+                    except Exception:
+                        failures += 1
+                        partial.unlink(missing_ok=True)
+                        if attempt == 2:
+                            raise
+                        time.sleep(attempt + 1)
+                        open_sftp()
         finally:
-            c.close()
+            if sftp is not None:
+                try:
+                    sftp.close()
+                except OSError:
+                    pass
+            if client is not None:
+                client.close()
+        if failures:
+            print(
+                json.dumps(
+                    dict(run=run, node=node, host=host, transfer_retries=failures)
+                ),
+                flush=True,
+            )
     return dest
 
 

@@ -1,0 +1,24 @@
+[
+  {
+    "label": "healthy_forced",
+    "run": "audit_healthy_forced_20261015T161215Z_8e569729",
+    "mode": "monitor",
+    "args": "--steps 800 --seq 128 --batch 2 --no-save-checkpoint",
+    "force": true,
+    "exits": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "label": "delay45_auto",
+    "run": "audit_delay45_auto_20261015T161647Z_1bbe88b7",
+    "mode": "monitor",
+    "args": "--steps 800 --seq 128 --batch 2 --fault delay --severity 0.45 --fault-step 80 --no-save-checkpoint",
+    "force": false,
+    "exits": [
+      "0",
+      "0"
+    ]
+  }
+]

@@ -18,6 +18,9 @@ for _ in range(20):
 end.record()
 end.synchronize()
 gemm_ms = start.elapsed_time(end) / 20
+computed = (a @ b)[:4, :4].float().cpu()
+reference = a[:4].float().cpu() @ b[:, :4].float().cpu()
+gemm_correct = bool(torch.allclose(computed, reference, rtol=0.02, atol=0.5))
 x = torch.ones(1024 * 1024, device="cuda")
 dist.all_reduce(x)
 torch.cuda.synchronize()
@@ -27,6 +30,7 @@ row = dict(
     gemm_ms=gemm_ms,
     bf16_tflops=2 * 2048**3 / (gemm_ms / 1000) / 1e12,
     allreduce_correct=correct,
+    gemm_correct=gemm_correct,
     device=torch.cuda.get_device_name(),
     world_size=dist.get_world_size(),
 )
@@ -35,5 +39,5 @@ path.mkdir(parents=True, exist_ok=True)
 (path / f"precheck_rank{rank}.json").write_text(json.dumps(row, indent=2))
 dist.barrier()
 dist.destroy_process_group()
-if not correct:
-    raise RuntimeError("precheck allreduce result mismatch")
+if not correct or not gemm_correct:
+    raise RuntimeError("precheck GPU compute/communication result mismatch")

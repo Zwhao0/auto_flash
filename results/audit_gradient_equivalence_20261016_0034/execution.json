@@ -1,0 +1,8 @@
+{
+  "run": "audit_gradient_equivalence_20261016_0034",
+  "exits": [
+    "0",
+    "0"
+  ],
+  "kind": "independent_gradient_equivalence"
+}

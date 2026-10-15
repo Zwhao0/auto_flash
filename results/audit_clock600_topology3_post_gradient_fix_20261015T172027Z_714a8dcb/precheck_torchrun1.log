@@ -1,0 +1,628 @@
+gpu-02:80541:80541 [0] NCCL INFO cudaDriverVersion 13000
+gpu-02:80541:80541 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond0
+gpu-02:80541:80541 [0] NCCL INFO Bootstrap: Using bond0:10.10.4.2<0>
+gpu-02:80541:80541 [0] NCCL INFO NCCL version 2.27.5+cuda12.9
+gpu-02:80541:80541 [0] NCCL INFO Comm config Blocking set to 1
+gpu-02:80546:80546 [5] NCCL INFO cudaDriverVersion 13000
+gpu-02:80546:80546 [5] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond0
+gpu-02:80546:80546 [5] NCCL INFO Bootstrap: Using bond0:10.10.4.2<0>
+gpu-02:80546:80546 [5] NCCL INFO NCCL version 2.27.5+cuda12.9
+gpu-02:80546:80546 [5] NCCL INFO Comm config Blocking set to 1
+gpu-02:80543:80543 [2] NCCL INFO cudaDriverVersion 13000
+gpu-02:80543:80543 [2] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond0
+gpu-02:80543:80543 [2] NCCL INFO Bootstrap: Using bond0:10.10.4.2<0>
+gpu-02:80543:80543 [2] NCCL INFO NCCL version 2.27.5+cuda12.9
+gpu-02:80543:80543 [2] NCCL INFO Comm config Blocking set to 1
+gpu-02:80548:80548 [7] NCCL INFO cudaDriverVersion 13000
+gpu-02:80548:80548 [7] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond0
+gpu-02:80548:80548 [7] NCCL INFO Bootstrap: Using bond0:10.10.4.2<0>
+gpu-02:80548:80548 [7] NCCL INFO NCCL version 2.27.5+cuda12.9
+gpu-02:80548:80548 [7] NCCL INFO Comm config Blocking set to 1
+gpu-02:80545:80545 [4] NCCL INFO cudaDriverVersion 13000
+gpu-02:80545:80545 [4] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond0
+gpu-02:80545:80545 [4] NCCL INFO Bootstrap: Using bond0:10.10.4.2<0>
+gpu-02:80545:80545 [4] NCCL INFO NCCL version 2.27.5+cuda12.9
+gpu-02:80545:80545 [4] NCCL INFO Comm config Blocking set to 1
+gpu-02:80544:80544 [3] NCCL INFO cudaDriverVersion 13000
+gpu-02:80544:80544 [3] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond0
+gpu-02:80544:80544 [3] NCCL INFO Bootstrap: Using bond0:10.10.4.2<0>
+gpu-02:80544:80544 [3] NCCL INFO NCCL version 2.27.5+cuda12.9
+gpu-02:80544:80544 [3] NCCL INFO Comm config Blocking set to 1
+gpu-02:80547:80547 [6] NCCL INFO cudaDriverVersion 13000
+gpu-02:80547:80547 [6] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond0
+gpu-02:80547:80547 [6] NCCL INFO Bootstrap: Using bond0:10.10.4.2<0>
+gpu-02:80547:80547 [6] NCCL INFO NCCL version 2.27.5+cuda12.9
+gpu-02:80547:80547 [6] NCCL INFO Comm config Blocking set to 1
+gpu-02:80542:80542 [1] NCCL INFO cudaDriverVersion 13000
+gpu-02:80542:80542 [1] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond0
+gpu-02:80542:80542 [1] NCCL INFO Bootstrap: Using bond0:10.10.4.2<0>
+gpu-02:80542:80542 [1] NCCL INFO NCCL version 2.27.5+cuda12.9
+gpu-02:80542:80542 [1] NCCL INFO Comm config Blocking set to 1
+gpu-02:80541:80616 [0] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. 
+gpu-02:80541:80616 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond0
+gpu-02:80541:80616 [0] NCCL INFO NCCL_IB_HCA set to mlx5_0,mlx5_1,mlx5_2,mlx5_3
+gpu-02:80546:80617 [5] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. 
+gpu-02:80543:80618 [2] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. 
+gpu-02:80546:80617 [5] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond0
+gpu-02:80543:80618 [2] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond0
+gpu-02:80546:80617 [5] NCCL INFO NCCL_IB_HCA set to mlx5_0,mlx5_1,mlx5_2,mlx5_3
+gpu-02:80543:80618 [2] NCCL INFO NCCL_IB_HCA set to mlx5_0,mlx5_1,mlx5_2,mlx5_3
+gpu-02:80548:80619 [7] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. 
+gpu-02:80548:80619 [7] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond0
+gpu-02:80548:80619 [7] NCCL INFO NCCL_IB_HCA set to mlx5_0,mlx5_1,mlx5_2,mlx5_3
+gpu-02:80541:80616 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [1]mlx5_1:1/RoCE [2]mlx5_2:1/RoCE [3]mlx5_3:1/RoCE [RO]; OOB bond0:10.10.4.2<0>
+gpu-02:80541:80616 [0] NCCL INFO Initialized NET plugin IB
+gpu-02:80541:80616 [0] NCCL INFO Assigned NET plugin IB to comm
+gpu-02:80541:80616 [0] NCCL INFO Using network IB
+gpu-02:80546:80617 [5] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [1]mlx5_1:1/RoCE [2]mlx5_2:1/RoCE [3]mlx5_3:1/RoCE [RO]; OOB bond0:10.10.4.2<0>
+gpu-02:80546:80617 [5] NCCL INFO Initialized NET plugin IB
+gpu-02:80543:80618 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [1]mlx5_1:1/RoCE [2]mlx5_2:1/RoCE [3]mlx5_3:1/RoCE [RO]; OOB bond0:10.10.4.2<0>
+gpu-02:80543:80618 [2] NCCL INFO Initialized NET plugin IB
+gpu-02:80546:80617 [5] NCCL INFO Assigned NET plugin IB to comm
+gpu-02:80546:80617 [5] NCCL INFO Using network IB
+gpu-02:80543:80618 [2] NCCL INFO Assigned NET plugin IB to comm
+gpu-02:80543:80618 [2] NCCL INFO Using network IB
+gpu-02:80545:80620 [4] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. 
+gpu-02:80545:80620 [4] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond0
+gpu-02:80545:80620 [4] NCCL INFO NCCL_IB_HCA set to mlx5_0,mlx5_1,mlx5_2,mlx5_3
+gpu-02:80548:80619 [7] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [1]mlx5_1:1/RoCE [2]mlx5_2:1/RoCE [3]mlx5_3:1/RoCE [RO]; OOB bond0:10.10.4.2<0>
+gpu-02:80548:80619 [7] NCCL INFO Initialized NET plugin IB
+gpu-02:80548:80619 [7] NCCL INFO Assigned NET plugin IB to comm
+gpu-02:80548:80619 [7] NCCL INFO Using network IB
+gpu-02:80545:80620 [4] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [1]mlx5_1:1/RoCE [2]mlx5_2:1/RoCE [3]mlx5_3:1/RoCE [RO]; OOB bond0:10.10.4.2<0>
+gpu-02:80545:80620 [4] NCCL INFO Initialized NET plugin IB
+gpu-02:80545:80620 [4] NCCL INFO Assigned NET plugin IB to comm
+gpu-02:80545:80620 [4] NCCL INFO Using network IB
+gpu-02:80544:80621 [3] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. 
+gpu-02:80544:80621 [3] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond0
+gpu-02:80544:80621 [3] NCCL INFO NCCL_IB_HCA set to mlx5_0,mlx5_1,mlx5_2,mlx5_3
+gpu-02:80544:80621 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [1]mlx5_1:1/RoCE [2]mlx5_2:1/RoCE [3]mlx5_3:1/RoCE [RO]; OOB bond0:10.10.4.2<0>
+gpu-02:80544:80621 [3] NCCL INFO Initialized NET plugin IB
+gpu-02:80544:80621 [3] NCCL INFO Assigned NET plugin IB to comm
+gpu-02:80544:80621 [3] NCCL INFO Using network IB
+gpu-02:80547:80622 [6] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. 
+gpu-02:80547:80622 [6] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond0
+gpu-02:80547:80622 [6] NCCL INFO NCCL_IB_HCA set to mlx5_0,mlx5_1,mlx5_2,mlx5_3
+gpu-02:80547:80622 [6] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [1]mlx5_1:1/RoCE [2]mlx5_2:1/RoCE [3]mlx5_3:1/RoCE [RO]; OOB bond0:10.10.4.2<0>
+gpu-02:80547:80622 [6] NCCL INFO Initialized NET plugin IB
+gpu-02:80547:80622 [6] NCCL INFO Assigned NET plugin IB to comm
+gpu-02:80547:80622 [6] NCCL INFO Using network IB
+gpu-02:80542:80623 [1] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. 
+gpu-02:80542:80623 [1] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond0
+gpu-02:80542:80623 [1] NCCL INFO NCCL_IB_HCA set to mlx5_0,mlx5_1,mlx5_2,mlx5_3
+gpu-02:80542:80623 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [1]mlx5_1:1/RoCE [2]mlx5_2:1/RoCE [3]mlx5_3:1/RoCE [RO]; OOB bond0:10.10.4.2<0>
+gpu-02:80542:80623 [1] NCCL INFO Initialized NET plugin IB
+gpu-02:80542:80623 [1] NCCL INFO Assigned NET plugin IB to comm
+gpu-02:80542:80623 [1] NCCL INFO Using network IB
+gpu-02:80541:80616 [0] NCCL INFO DMA-BUF is available on GPU device 0
+gpu-02:80541:80616 [0] NCCL INFO ncclCommInitRankConfig comm 0x26919d10 rank 8 nranks 16 cudaDev 0 nvmlDev 0 busId 10000 commId 0x7408753f9da573ac - Init START
+gpu-02:80546:80617 [5] NCCL INFO DMA-BUF is available on GPU device 5
+gpu-02:80546:80617 [5] NCCL INFO ncclCommInitRankConfig comm 0xcad2a00 rank 13 nranks 16 cudaDev 5 nvmlDev 5 busId ba000 commId 0x7408753f9da573ac - Init START
+gpu-02:80543:80618 [2] NCCL INFO DMA-BUF is available on GPU device 2
+gpu-02:80543:80618 [2] NCCL INFO ncclCommInitRankConfig comm 0x14e71e60 rank 10 nranks 16 cudaDev 2 nvmlDev 2 busId 54000 commId 0x7408753f9da573ac - Init START
+gpu-02:80548:80619 [7] NCCL INFO DMA-BUF is available on GPU device 7
+gpu-02:80548:80619 [7] NCCL INFO ncclCommInitRankConfig comm 0x256f0860 rank 15 nranks 16 cudaDev 7 nvmlDev 7 busId db000 commId 0x7408753f9da573ac - Init START
+gpu-02:80545:80620 [4] NCCL INFO DMA-BUF is available on GPU device 4
+gpu-02:80545:80620 [4] NCCL INFO ncclCommInitRankConfig comm 0x1e65cb10 rank 12 nranks 16 cudaDev 4 nvmlDev 4 busId 9a000 commId 0x7408753f9da573ac - Init START
+gpu-02:80544:80621 [3] NCCL INFO DMA-BUF is available on GPU device 3
+gpu-02:80544:80621 [3] NCCL INFO ncclCommInitRankConfig comm 0x4289cd50 rank 11 nranks 16 cudaDev 3 nvmlDev 3 busId 61000 commId 0x7408753f9da573ac - Init START
+gpu-02:80545:80620 [4] NCCL INFO RAS client listening socket at ::1<28028>
+gpu-02:80544:80621 [3] NCCL INFO RAS client listening socket at ::1<28028>
+gpu-02:80547:80622 [6] NCCL INFO DMA-BUF is available on GPU device 6
+gpu-02:80547:80622 [6] NCCL INFO ncclCommInitRankConfig comm 0x32616a90 rank 14 nranks 16 cudaDev 6 nvmlDev 6 busId cb000 commId 0x7408753f9da573ac - Init START
+gpu-02:80546:80617 [5] NCCL INFO RAS client listening socket at ::1<28028>
+gpu-02:80548:80619 [7] NCCL INFO RAS client listening socket at ::1<28028>
+gpu-02:80547:80622 [6] NCCL INFO RAS client listening socket at ::1<28028>
+gpu-02:80542:80623 [1] NCCL INFO DMA-BUF is available on GPU device 1
+gpu-02:80542:80623 [1] NCCL INFO ncclCommInitRankConfig comm 0x1db79af0 rank 9 nranks 16 cudaDev 1 nvmlDev 1 busId 46000 commId 0x7408753f9da573ac - Init START
+gpu-02:80541:80616 [0] NCCL INFO RAS client listening socket at ::1<28028>
+gpu-02:80543:80618 [2] NCCL INFO RAS client listening socket at ::1<28028>
+gpu-02:80542:80623 [1] NCCL INFO RAS client listening socket at ::1<28028>
+gpu-02:80541:80616 [0] NCCL INFO Bootstrap timings total 0.152807 (create 0.000080, send 0.000579, recv 0.149607, ring 0.002126, delay 0.000001)
+gpu-02:80548:80619 [7] NCCL INFO Bootstrap timings total 0.095531 (create 0.000073, send 0.000466, recv 0.000527, ring 0.025365, delay 0.000001)
+gpu-02:80547:80622 [6] NCCL INFO Bootstrap timings total 0.027844 (create 0.000072, send 0.000397, recv 0.000648, ring 0.025664, delay 0.000001)
+gpu-02:80542:80623 [1] NCCL INFO Bootstrap timings total 0.004300 (create 0.000078, send 0.001028, recv 0.000680, ring 0.001499, delay 0.000001)
+gpu-02:80543:80618 [2] NCCL INFO Bootstrap timings total 0.104653 (create 0.000074, send 0.000550, recv 0.034528, ring 0.002854, delay 0.000001)
+gpu-02:80544:80621 [3] NCCL INFO Bootstrap timings total 0.070571 (create 0.000082, send 0.000460, recv 0.000660, ring 0.068233, delay 0.000001)
+gpu-02:80545:80620 [4] NCCL INFO Bootstrap timings total 0.082250 (create 0.000047, send 0.000344, recv 0.000641, ring 0.068549, delay 0.000000)
+gpu-02:80546:80617 [5] NCCL INFO Bootstrap timings total 0.131801 (create 0.000077, send 0.000496, recv 0.103176, ring 0.027619, delay 0.000001)
+gpu-02:80548:80619 [7] NCCL INFO MNNVL busId 0xdb000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+gpu-02:80547:80622 [6] NCCL INFO MNNVL busId 0xcb000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+gpu-02:80542:80623 [1] NCCL INFO MNNVL busId 0x46000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+gpu-02:80541:80616 [0] NCCL INFO MNNVL busId 0x10000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+gpu-02:80543:80618 [2] NCCL INFO MNNVL busId 0x54000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+gpu-02:80545:80620 [4] NCCL INFO MNNVL busId 0x9a000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+gpu-02:80546:80617 [5] NCCL INFO MNNVL busId 0xba000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+gpu-02:80544:80621 [3] NCCL INFO MNNVL busId 0x61000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+gpu-02:80541:80616 [0] NCCL INFO Setting affinity for GPU 0 to 0-47,96-143
+gpu-02:80541:80616 [0] NCCL INFO NVLS multicast support is available on dev 0 (NVLS_NCHANNELS 16)
+gpu-02:80548:80619 [7] NCCL INFO Setting affinity for GPU 7 to 48-95,144-191
+gpu-02:80548:80619 [7] NCCL INFO NVLS multicast support is available on dev 7 (NVLS_NCHANNELS 16)
+gpu-02:80546:80617 [5] NCCL INFO Setting affinity for GPU 5 to 48-95,144-191
+gpu-02:80546:80617 [5] NCCL INFO NVLS multicast support is available on dev 5 (NVLS_NCHANNELS 16)
+gpu-02:80545:80620 [4] NCCL INFO Setting affinity for GPU 4 to 48-95,144-191
+gpu-02:80545:80620 [4] NCCL INFO NVLS multicast support is available on dev 4 (NVLS_NCHANNELS 16)
+gpu-02:80543:80618 [2] NCCL INFO Setting affinity for GPU 2 to 0-47,96-143
+gpu-02:80543:80618 [2] NCCL INFO NVLS multicast support is available on dev 2 (NVLS_NCHANNELS 16)
+gpu-02:80547:80622 [6] NCCL INFO Setting affinity for GPU 6 to 48-95,144-191
+gpu-02:80547:80622 [6] NCCL INFO NVLS multicast support is available on dev 6 (NVLS_NCHANNELS 16)
+gpu-02:80544:80621 [3] NCCL INFO Setting affinity for GPU 3 to 0-47,96-143
+gpu-02:80544:80621 [3] NCCL INFO NVLS multicast support is available on dev 3 (NVLS_NCHANNELS 16)
+gpu-02:80542:80623 [1] NCCL INFO Setting affinity for GPU 1 to 0-47,96-143
+gpu-02:80542:80623 [1] NCCL INFO NVLS multicast support is available on dev 1 (NVLS_NCHANNELS 16)
+gpu-02:80548:80619 [7] NCCL INFO comm 0x256f0860 rank 15 nRanks 16 nNodes 2 localRanks 8 localRank 7 MNNVL 0
+gpu-02:80547:80622 [6] NCCL INFO comm 0x32616a90 rank 14 nRanks 16 nNodes 2 localRanks 8 localRank 6 MNNVL 0
+gpu-02:80546:80617 [5] NCCL INFO comm 0xcad2a00 rank 13 nRanks 16 nNodes 2 localRanks 8 localRank 5 MNNVL 0
+gpu-02:80543:80618 [2] NCCL INFO comm 0x14e71e60 rank 10 nRanks 16 nNodes 2 localRanks 8 localRank 2 MNNVL 0
+gpu-02:80545:80620 [4] NCCL INFO comm 0x1e65cb10 rank 12 nRanks 16 nNodes 2 localRanks 8 localRank 4 MNNVL 0
+gpu-02:80544:80621 [3] NCCL INFO comm 0x4289cd50 rank 11 nRanks 16 nNodes 2 localRanks 8 localRank 3 MNNVL 0
+gpu-02:80548:80619 [7] NCCL INFO Trees [0] 8/-1/-1->15->14 [1] 8/-1/-1->15->14 [2] 8/-1/-1->15->14 [3] 8/-1/-1->15->14 [4] 8/-1/-1->15->14 [5] 8/-1/-1->15->14 [6] 8/-1/-1->15->14 [7] 8/-1/-1->15->14 [8] 8/-1/-1->15->14 [9] 8/-1/-1->15->14 [10] 8/-1/-1->15->14 [11] 8/-1/-1->15->14 [12] 8/-1/-1->15->14 [13] 8/-1/-1->15->14 [14] 8/-1/-1->15->14 [15] 8/-1/-1->15->14
+gpu-02:80542:80623 [1] NCCL INFO comm 0x1db79af0 rank 9 nRanks 16 nNodes 2 localRanks 8 localRank 1 MNNVL 0
+gpu-02:80548:80619 [7] NCCL INFO P2P Chunksize set to 131072
+gpu-02:80547:80622 [6] NCCL INFO Trees [0] 15/-1/-1->14->13 [1] 15/-1/-1->14->13 [2] 15/-1/-1->14->13 [3] 15/-1/-1->14->13 [4] 15/-1/-1->14->13 [5] 15/-1/-1->14->13 [6] 15/-1/-1->14->13 [7] 15/-1/-1->14->13 [8] 15/-1/-1->14->13 [9] 15/-1/-1->14->13 [10] 15/-1/-1->14->13 [11] 15/-1/-1->14->13 [12] 15/-1/-1->14->13 [13] 15/-1/-1->14->13 [14] 15/-1/-1->14->13 [15] 15/-1/-1->14->13
+gpu-02:80547:80622 [6] NCCL INFO P2P Chunksize set to 131072
+gpu-02:80546:80617 [5] NCCL INFO Trees [0] 14/-1/-1->13->12 [1] 14/-1/-1->13->12 [2] 14/-1/-1->13->12 [3] 14/-1/-1->13->5 [4] 14/-1/-1->13->12 [5] 14/-1/-1->13->12 [6] 14/-1/-1->13->12 [7] 14/-1/-1->13->5 [8] 14/-1/-1->13->12 [9] 14/-1/-1->13->12 [10] 14/-1/-1->13->12 [11] 14/5/-1->13->-1 [12] 14/-1/-1->13->12 [13] 14/-1/-1->13->12 [14] 14/-1/-1->13->12 [15] 14/5/-1->13->-1
+gpu-02:80546:80617 [5] NCCL INFO P2P Chunksize set to 131072
+gpu-02:80545:80620 [4] NCCL INFO Trees [0] 13/-1/-1->12->9 [1] 13/-1/-1->12->9 [2] 13/-1/-1->12->4 [3] -1/-1/-1->12->9 [4] 13/-1/-1->12->9 [5] 13/-1/-1->12->9 [6] 13/-1/-1->12->4 [7] -1/-1/-1->12->9 [8] 13/-1/-1->12->9 [9] 13/-1/-1->12->9 [10] 13/4/-1->12->-1 [11] -1/-1/-1->12->9 [12] 13/-1/-1->12->9 [13] 13/-1/-1->12->9 [14] 13/4/-1->12->-1 [15] -1/-1/-1->12->9
+gpu-02:80543:80618 [2] NCCL INFO Trees [0] 11/-1/-1->10->2 [1] -1/-1/-1->10->8 [2] 11/-1/-1->10->8 [3] 11/-1/-1->10->8 [4] 11/-1/-1->10->2 [5] -1/-1/-1->10->8 [6] 11/-1/-1->10->8 [7] 11/-1/-1->10->8 [8] 11/2/-1->10->-1 [9] -1/-1/-1->10->8 [10] 11/-1/-1->10->8 [11] 11/-1/-1->10->8 [12] 11/2/-1->10->-1 [13] -1/-1/-1->10->8 [14] 11/-1/-1->10->8 [15] 11/-1/-1->10->8
+gpu-02:80545:80620 [4] NCCL INFO P2P Chunksize set to 131072
+gpu-02:80543:80618 [2] NCCL INFO P2P Chunksize set to 131072
+gpu-02:80544:80621 [3] NCCL INFO Trees [0] 9/-1/-1->11->10 [1] 9/-1/-1->11->3 [2] 9/-1/-1->11->10 [3] 9/-1/-1->11->10 [4] 9/-1/-1->11->10 [5] 9/-1/-1->11->3 [6] 9/-1/-1->11->10 [7] 9/-1/-1->11->10 [8] 9/-1/-1->11->10 [9] 9/3/-1->11->-1 [10] 9/-1/-1->11->10 [11] 9/-1/-1->11->10 [12] 9/-1/-1->11->10 [13] 9/3/-1->11->-1 [14] 9/-1/-1->11->10 [15] 9/-1/-1->11->10
+gpu-02:80544:80621 [3] NCCL INFO P2P Chunksize set to 131072
+gpu-02:80541:80616 [0] NCCL INFO comm 0x26919d10 rank 8 nRanks 16 nNodes 2 localRanks 8 localRank 0 MNNVL 0
+gpu-02:80542:80623 [1] NCCL INFO Trees [0] 12/-1/-1->9->11 [1] 12/-1/-1->9->11 [2] -1/-1/-1->9->11 [3] 12/-1/-1->9->11 [4] 12/-1/-1->9->11 [5] 12/-1/-1->9->11 [6] -1/-1/-1->9->11 [7] 12/-1/-1->9->11 [8] 12/-1/-1->9->11 [9] 12/-1/-1->9->11 [10] -1/-1/-1->9->11 [11] 12/-1/-1->9->11 [12] 12/-1/-1->9->11 [13] 12/-1/-1->9->11 [14] -1/-1/-1->9->11 [15] 12/-1/-1->9->11
+gpu-02:80542:80623 [1] NCCL INFO P2P Chunksize set to 131072
+gpu-02:80541:80616 [0] NCCL INFO Trees [0] -1/-1/-1->8->15 [1] 10/-1/-1->8->15 [2] 10/-1/-1->8->15 [3] 10/-1/-1->8->15 [4] -1/-1/-1->8->15 [5] 10/-1/-1->8->15 [6] 10/-1/-1->8->15 [7] 10/-1/-1->8->15 [8] -1/-1/-1->8->15 [9] 10/-1/-1->8->15 [10] 10/-1/-1->8->15 [11] 10/-1/-1->8->15 [12] -1/-1/-1->8->15 [13] 10/-1/-1->8->15 [14] 10/-1/-1->8->15 [15] 10/-1/-1->8->15
+gpu-02:80541:80616 [0] NCCL INFO P2P Chunksize set to 131072
+gpu-02:80548:80619 [7] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+gpu-02:80545:80620 [4] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+gpu-02:80544:80621 [3] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+gpu-02:80542:80623 [1] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+gpu-02:80547:80622 [6] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+gpu-02:80541:80616 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+gpu-02:80546:80617 [5] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+gpu-02:80544:80675 [3] NCCL INFO [Proxy Service] Device 3 CPU core 1
+gpu-02:80544:80682 [3] NCCL INFO [Proxy Service UDS] Device 3 CPU core 98
+gpu-02:80548:80680 [7] NCCL INFO [Proxy Service UDS] Device 7 CPU core 54
+gpu-02:80545:80673 [4] NCCL INFO [Proxy Service] Device 4 CPU core 62
+gpu-02:80543:80618 [2] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+gpu-02:80542:80683 [1] NCCL INFO [Proxy Service UDS] Device 1 CPU core 12
+gpu-02:80541:80679 [0] NCCL INFO [Proxy Service] Device 0 CPU core 4
+gpu-02:80548:80674 [7] NCCL INFO [Proxy Service] Device 7 CPU core 149
+gpu-02:80546:80681 [5] NCCL INFO [Proxy Service] Device 5 CPU core 49
+gpu-02:80542:80676 [1] NCCL INFO [Proxy Service] Device 1 CPU core 105
+gpu-02:80547:80677 [6] NCCL INFO [Proxy Service] Device 6 CPU core 161
+gpu-02:80541:80685 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 103
+gpu-02:80546:80686 [5] NCCL INFO [Proxy Service UDS] Device 5 CPU core 51
+gpu-02:80545:80678 [4] NCCL INFO [Proxy Service UDS] Device 4 CPU core 66
+gpu-02:80547:80684 [6] NCCL INFO [Proxy Service UDS] Device 6 CPU core 67
+gpu-02:80543:80687 [2] NCCL INFO [Proxy Service] Device 2 CPU core 13
+gpu-02:80543:80688 [2] NCCL INFO [Proxy Service UDS] Device 2 CPU core 14
+gpu-02:80544:80621 [3] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+gpu-02:80544:80621 [3] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+gpu-02:80546:80617 [5] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+gpu-02:80546:80617 [5] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+gpu-02:80541:80616 [0] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+gpu-02:80541:80616 [0] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+gpu-02:80548:80619 [7] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+gpu-02:80547:80622 [6] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+gpu-02:80548:80619 [7] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+gpu-02:80547:80622 [6] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+gpu-02:80543:80618 [2] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+gpu-02:80543:80618 [2] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+gpu-02:80545:80620 [4] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+gpu-02:80545:80620 [4] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+gpu-02:80542:80623 [1] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+gpu-02:80542:80623 [1] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+gpu-02:80548:80619 [7] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+gpu-02:80548:80619 [7] NCCL INFO ncclCommInitRankConfig comm 0x256f0860 rank 15 nranks 16 cudaDev 7 nvmlDev 7 busId db000 commId 0x7408753f9da573ac - Init COMPLETE
+gpu-02:80548:80619 [7] NCCL INFO Init timings - ncclCommInitRankConfig: rank 15 nranks 16 total 1.77 (kernels 0.25, alloc 0.70, bootstrap 0.10, allgathers 0.15, topo 0.07, graphs 0.25, connections 0.24, rest 0.00)
+gpu-02:80541:80616 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+gpu-02:80541:80616 [0] NCCL INFO ncclCommInitRankConfig comm 0x26919d10 rank 8 nranks 16 cudaDev 0 nvmlDev 0 busId 10000 commId 0x7408753f9da573ac - Init COMPLETE
+gpu-02:80547:80622 [6] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+gpu-02:80544:80621 [3] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+gpu-02:80546:80617 [5] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+gpu-02:80543:80618 [2] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+gpu-02:80541:80616 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 8 nranks 16 total 1.80 (kernels 0.27, alloc 0.67, bootstrap 0.15, allgathers 0.13, topo 0.07, graphs 0.27, connections 0.24, rest 0.00)
+gpu-02:80547:80622 [6] NCCL INFO ncclCommInitRankConfig comm 0x32616a90 rank 14 nranks 16 cudaDev 6 nvmlDev 6 busId cb000 commId 0x7408753f9da573ac - Init COMPLETE
+gpu-02:80544:80621 [3] NCCL INFO ncclCommInitRankConfig comm 0x4289cd50 rank 11 nranks 16 cudaDev 3 nvmlDev 3 busId 61000 commId 0x7408753f9da573ac - Init COMPLETE
+gpu-02:80546:80617 [5] NCCL INFO ncclCommInitRankConfig comm 0xcad2a00 rank 13 nranks 16 cudaDev 5 nvmlDev 5 busId ba000 commId 0x7408753f9da573ac - Init COMPLETE
+gpu-02:80543:80618 [2] NCCL INFO ncclCommInitRankConfig comm 0x14e71e60 rank 10 nranks 16 cudaDev 2 nvmlDev 2 busId 54000 commId 0x7408753f9da573ac - Init COMPLETE
+gpu-02:80547:80622 [6] NCCL INFO Init timings - ncclCommInitRankConfig: rank 14 nranks 16 total 1.74 (kernels 0.39, alloc 0.61, bootstrap 0.03, allgathers 0.14, topo 0.07, graphs 0.26, connections 0.24, rest 0.00)
+gpu-02:80542:80623 [1] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+gpu-02:80546:80617 [5] NCCL INFO Init timings - ncclCommInitRankConfig: rank 13 nranks 16 total 1.79 (kernels 0.26, alloc 0.69, bootstrap 0.13, allgathers 0.14, topo 0.07, graphs 0.25, connections 0.24, rest 0.00)
+gpu-02:80544:80621 [3] NCCL INFO Init timings - ncclCommInitRankConfig: rank 11 nranks 16 total 1.75 (kernels 0.28, alloc 0.68, bootstrap 0.07, allgathers 0.01, topo 0.07, graphs 0.39, connections 0.24, rest 0.00)
+gpu-02:80543:80618 [2] NCCL INFO Init timings - ncclCommInitRankConfig: rank 10 nranks 16 total 1.79 (kernels 0.26, alloc 0.71, bootstrap 0.10, allgathers 0.12, topo 0.07, graphs 0.27, connections 0.24, rest 0.00)
+gpu-02:80542:80623 [1] NCCL INFO ncclCommInitRankConfig comm 0x1db79af0 rank 9 nranks 16 cudaDev 1 nvmlDev 1 busId 46000 commId 0x7408753f9da573ac - Init COMPLETE
+gpu-02:80542:80623 [1] NCCL INFO Init timings - ncclCommInitRankConfig: rank 9 nranks 16 total 1.72 (kernels 0.53, alloc 0.47, bootstrap 0.00, allgathers 0.00, topo 0.08, graphs 0.39, connections 0.24, rest 0.00)
+gpu-02:80545:80620 [4] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+gpu-02:80545:80620 [4] NCCL INFO ncclCommInitRankConfig comm 0x1e65cb10 rank 12 nranks 16 cudaDev 4 nvmlDev 4 busId 9a000 commId 0x7408753f9da573ac - Init COMPLETE
+gpu-02:80545:80620 [4] NCCL INFO Init timings - ncclCommInitRankConfig: rank 12 nranks 16 total 1.75 (kernels 0.26, alloc 0.70, bootstrap 0.08, allgathers 0.14, topo 0.07, graphs 0.25, connections 0.24, rest 0.00)
+gpu-02:80547:80689 [6] NCCL INFO NVLS comm 0x32616a90 headRank -1 nHeads 4 nvlsRanks 8 buffSize 1048576 nvlsPerRankSize 33554432 nvlsTotalSize 134217728
+gpu-02:80543:80690 [2] NCCL INFO NVLS comm 0x14e71e60 headRank 0 nHeads 4 nvlsRanks 8 buffSize 1048576 nvlsPerRankSize 33554432 nvlsTotalSize 134217728
+gpu-02:80548:80691 [7] NCCL INFO NVLS comm 0x256f0860 headRank -1 nHeads 4 nvlsRanks 8 buffSize 1048576 nvlsPerRankSize 33554432 nvlsTotalSize 134217728
+gpu-02:80545:80692 [4] NCCL INFO NVLS comm 0x1e65cb10 headRank 2 nHeads 4 nvlsRanks 8 buffSize 1048576 nvlsPerRankSize 33554432 nvlsTotalSize 134217728
+gpu-02:80541:80693 [0] NCCL INFO NVLS comm 0x26919d10 headRank -1 nHeads 4 nvlsRanks 8 buffSize 1048576 nvlsPerRankSize 33554432 nvlsTotalSize 134217728
+gpu-02:80542:80694 [1] NCCL INFO NVLS comm 0x1db79af0 headRank -1 nHeads 4 nvlsRanks 8 buffSize 1048576 nvlsPerRankSize 33554432 nvlsTotalSize 134217728
+gpu-02:80546:80695 [5] NCCL INFO NVLS comm 0xcad2a00 headRank 3 nHeads 4 nvlsRanks 8 buffSize 1048576 nvlsPerRankSize 33554432 nvlsTotalSize 134217728
+gpu-02:80544:80696 [3] NCCL INFO NVLS comm 0x4289cd50 headRank 1 nHeads 4 nvlsRanks 8 buffSize 1048576 nvlsPerRankSize 33554432 nvlsTotalSize 134217728
+gpu-02:80541:80693 [0] NCCL INFO Connected NVLS tree
+gpu-02:80542:80694 [1] NCCL INFO Connected NVLS tree
+gpu-02:80547:80689 [6] NCCL INFO Connected NVLS tree
+gpu-02:80548:80691 [7] NCCL INFO Connected NVLS tree
+gpu-02:80544:80697 [3] NCCL INFO [Proxy Progress] Device 3 CPU core 98
+gpu-02:80544:80696 [3] NCCL INFO Channel 00/0 : 3[3] -> 11[3] [receive] via NET/IB/1/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 01/0 : 3[3] -> 11[3] [receive] via NET/IB/1/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 02/0 : 3[3] -> 11[3] [receive] via NET/IB/1/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 03/0 : 3[3] -> 11[3] [receive] via NET/IB/1/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 04/0 : 3[3] -> 11[3] [receive] via NET/IB/1/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 05/0 : 3[3] -> 11[3] [receive] via NET/IB/1/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 06/0 : 3[3] -> 11[3] [receive] via NET/IB/1/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 07/0 : 3[3] -> 11[3] [receive] via NET/IB/1/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 08/0 : 3[3] -> 11[3] [receive] via NET/IB/1/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 09/0 : 3[3] -> 11[3] [receive] via NET/IB/1/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 10/0 : 3[3] -> 11[3] [receive] via NET/IB/1/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 11/0 : 3[3] -> 11[3] [receive] via NET/IB/1/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 12/0 : 3[3] -> 11[3] [receive] via NET/IB/1/GDRDMA
+gpu-02:80546:80698 [5] NCCL INFO [Proxy Progress] Device 5 CPU core 53
+gpu-02:80546:80695 [5] NCCL INFO Channel 00/0 : 5[5] -> 13[5] [receive] via NET/IB/3/GDRDMA
+gpu-02:80545:80699 [4] NCCL INFO [Proxy Progress] Device 4 CPU core 161
+gpu-02:80544:80696 [3] NCCL INFO Channel 13/0 : 3[3] -> 11[3] [receive] via NET/IB/1/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 00/0 : 4[4] -> 12[4] [receive] via NET/IB/2/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 01/0 : 5[5] -> 13[5] [receive] via NET/IB/3/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 01/0 : 4[4] -> 12[4] [receive] via NET/IB/2/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 14/0 : 3[3] -> 11[3] [receive] via NET/IB/1/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 02/0 : 5[5] -> 13[5] [receive] via NET/IB/3/GDRDMA
+gpu-02:80543:80700 [2] NCCL INFO [Proxy Progress] Device 2 CPU core 111
+gpu-02:80545:80692 [4] NCCL INFO Channel 02/0 : 4[4] -> 12[4] [receive] via NET/IB/2/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 15/0 : 3[3] -> 11[3] [receive] via NET/IB/1/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 03/0 : 5[5] -> 13[5] [receive] via NET/IB/3/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 00/0 : 2[2] -> 10[2] [receive] via NET/IB/0/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 03/0 : 4[4] -> 12[4] [receive] via NET/IB/2/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 00/0 : 11[3] -> 3[3] [send] via NET/IB/1/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 04/0 : 5[5] -> 13[5] [receive] via NET/IB/3/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 01/0 : 2[2] -> 10[2] [receive] via NET/IB/0/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 04/0 : 4[4] -> 12[4] [receive] via NET/IB/2/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 01/0 : 11[3] -> 3[3] [send] via NET/IB/1/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 05/0 : 5[5] -> 13[5] [receive] via NET/IB/3/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 05/0 : 4[4] -> 12[4] [receive] via NET/IB/2/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 02/0 : 2[2] -> 10[2] [receive] via NET/IB/0/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 02/0 : 11[3] -> 3[3] [send] via NET/IB/1/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 06/0 : 5[5] -> 13[5] [receive] via NET/IB/3/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 06/0 : 4[4] -> 12[4] [receive] via NET/IB/2/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 03/0 : 11[3] -> 3[3] [send] via NET/IB/1/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 03/0 : 2[2] -> 10[2] [receive] via NET/IB/0/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 07/0 : 5[5] -> 13[5] [receive] via NET/IB/3/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 07/0 : 4[4] -> 12[4] [receive] via NET/IB/2/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 04/0 : 11[3] -> 3[3] [send] via NET/IB/1/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 04/0 : 2[2] -> 10[2] [receive] via NET/IB/0/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 08/0 : 5[5] -> 13[5] [receive] via NET/IB/3/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 08/0 : 4[4] -> 12[4] [receive] via NET/IB/2/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 05/0 : 11[3] -> 3[3] [send] via NET/IB/1/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 09/0 : 5[5] -> 13[5] [receive] via NET/IB/3/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 05/0 : 2[2] -> 10[2] [receive] via NET/IB/0/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 09/0 : 4[4] -> 12[4] [receive] via NET/IB/2/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 06/0 : 11[3] -> 3[3] [send] via NET/IB/1/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 10/0 : 5[5] -> 13[5] [receive] via NET/IB/3/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 06/0 : 2[2] -> 10[2] [receive] via NET/IB/0/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 10/0 : 4[4] -> 12[4] [receive] via NET/IB/2/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 07/0 : 11[3] -> 3[3] [send] via NET/IB/1/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 11/0 : 5[5] -> 13[5] [receive] via NET/IB/3/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 11/0 : 4[4] -> 12[4] [receive] via NET/IB/2/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 07/0 : 2[2] -> 10[2] [receive] via NET/IB/0/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 08/0 : 11[3] -> 3[3] [send] via NET/IB/1/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 12/0 : 5[5] -> 13[5] [receive] via NET/IB/3/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 12/0 : 4[4] -> 12[4] [receive] via NET/IB/2/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 08/0 : 2[2] -> 10[2] [receive] via NET/IB/0/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 09/0 : 11[3] -> 3[3] [send] via NET/IB/1/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 13/0 : 5[5] -> 13[5] [receive] via NET/IB/3/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 13/0 : 4[4] -> 12[4] [receive] via NET/IB/2/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 10/0 : 11[3] -> 3[3] [send] via NET/IB/1/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 14/0 : 5[5] -> 13[5] [receive] via NET/IB/3/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 09/0 : 2[2] -> 10[2] [receive] via NET/IB/0/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 14/0 : 4[4] -> 12[4] [receive] via NET/IB/2/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 11/0 : 11[3] -> 3[3] [send] via NET/IB/1/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 15/0 : 5[5] -> 13[5] [receive] via NET/IB/3/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 10/0 : 2[2] -> 10[2] [receive] via NET/IB/0/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 15/0 : 4[4] -> 12[4] [receive] via NET/IB/2/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 00/0 : 13[5] -> 5[5] [send] via NET/IB/3/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 12/0 : 11[3] -> 3[3] [send] via NET/IB/1/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 00/0 : 12[4] -> 4[4] [send] via NET/IB/2/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 11/0 : 2[2] -> 10[2] [receive] via NET/IB/0/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 01/0 : 13[5] -> 5[5] [send] via NET/IB/3/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 13/0 : 11[3] -> 3[3] [send] via NET/IB/1/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 01/0 : 12[4] -> 4[4] [send] via NET/IB/2/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 02/0 : 13[5] -> 5[5] [send] via NET/IB/3/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 12/0 : 2[2] -> 10[2] [receive] via NET/IB/0/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 14/0 : 11[3] -> 3[3] [send] via NET/IB/1/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 02/0 : 12[4] -> 4[4] [send] via NET/IB/2/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 03/0 : 13[5] -> 5[5] [send] via NET/IB/3/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 03/0 : 12[4] -> 4[4] [send] via NET/IB/2/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 13/0 : 2[2] -> 10[2] [receive] via NET/IB/0/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Channel 15/0 : 11[3] -> 3[3] [send] via NET/IB/1/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 04/0 : 13[5] -> 5[5] [send] via NET/IB/3/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 04/0 : 12[4] -> 4[4] [send] via NET/IB/2/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 14/0 : 2[2] -> 10[2] [receive] via NET/IB/0/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 05/0 : 13[5] -> 5[5] [send] via NET/IB/3/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 05/0 : 12[4] -> 4[4] [send] via NET/IB/2/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 06/0 : 13[5] -> 5[5] [send] via NET/IB/3/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 15/0 : 2[2] -> 10[2] [receive] via NET/IB/0/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 06/0 : 12[4] -> 4[4] [send] via NET/IB/2/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 07/0 : 13[5] -> 5[5] [send] via NET/IB/3/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 07/0 : 12[4] -> 4[4] [send] via NET/IB/2/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 00/0 : 10[2] -> 2[2] [send] via NET/IB/0/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 08/0 : 13[5] -> 5[5] [send] via NET/IB/3/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 08/0 : 12[4] -> 4[4] [send] via NET/IB/2/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 01/0 : 10[2] -> 2[2] [send] via NET/IB/0/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 09/0 : 13[5] -> 5[5] [send] via NET/IB/3/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 09/0 : 12[4] -> 4[4] [send] via NET/IB/2/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 10/0 : 13[5] -> 5[5] [send] via NET/IB/3/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 02/0 : 10[2] -> 2[2] [send] via NET/IB/0/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 10/0 : 12[4] -> 4[4] [send] via NET/IB/2/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 11/0 : 13[5] -> 5[5] [send] via NET/IB/3/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 03/0 : 10[2] -> 2[2] [send] via NET/IB/0/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 11/0 : 12[4] -> 4[4] [send] via NET/IB/2/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 12/0 : 13[5] -> 5[5] [send] via NET/IB/3/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 12/0 : 12[4] -> 4[4] [send] via NET/IB/2/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 04/0 : 10[2] -> 2[2] [send] via NET/IB/0/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 13/0 : 13[5] -> 5[5] [send] via NET/IB/3/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 13/0 : 12[4] -> 4[4] [send] via NET/IB/2/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 14/0 : 13[5] -> 5[5] [send] via NET/IB/3/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 05/0 : 10[2] -> 2[2] [send] via NET/IB/0/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 14/0 : 12[4] -> 4[4] [send] via NET/IB/2/GDRDMA
+gpu-02:80546:80695 [5] NCCL INFO Channel 15/0 : 13[5] -> 5[5] [send] via NET/IB/3/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 06/0 : 10[2] -> 2[2] [send] via NET/IB/0/GDRDMA
+gpu-02:80545:80692 [4] NCCL INFO Channel 15/0 : 12[4] -> 4[4] [send] via NET/IB/2/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 07/0 : 10[2] -> 2[2] [send] via NET/IB/0/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 08/0 : 10[2] -> 2[2] [send] via NET/IB/0/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 09/0 : 10[2] -> 2[2] [send] via NET/IB/0/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 10/0 : 10[2] -> 2[2] [send] via NET/IB/0/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 11/0 : 10[2] -> 2[2] [send] via NET/IB/0/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 12/0 : 10[2] -> 2[2] [send] via NET/IB/0/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 13/0 : 10[2] -> 2[2] [send] via NET/IB/0/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 14/0 : 10[2] -> 2[2] [send] via NET/IB/0/GDRDMA
+gpu-02:80543:80690 [2] NCCL INFO Channel 15/0 : 10[2] -> 2[2] [send] via NET/IB/0/GDRDMA
+gpu-02:80544:80696 [3] NCCL INFO Connected NVLS tree
+gpu-02:80543:80690 [2] NCCL INFO Connected NVLS tree
+gpu-02:80546:80695 [5] NCCL INFO Connected NVLS tree
+gpu-02:80545:80692 [4] NCCL INFO Connected NVLS tree
+gpu-02:80542:80701 [1] NCCL INFO Channel 00/0 : 9[1] -> 11[3] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 01/0 : 9[1] -> 11[3] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 02/0 : 9[1] -> 11[3] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 03/0 : 9[1] -> 11[3] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 04/0 : 9[1] -> 11[3] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 01/0 : 8[0] -> 10[2] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 05/0 : 9[1] -> 11[3] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 06/0 : 9[1] -> 11[3] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 02/0 : 8[0] -> 10[2] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 07/0 : 9[1] -> 11[3] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 03/0 : 8[0] -> 10[2] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 00/0 : 10[2] -> 11[3] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 08/0 : 9[1] -> 11[3] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 05/0 : 8[0] -> 10[2] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 09/0 : 9[1] -> 11[3] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 02/0 : 10[2] -> 11[3] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 06/0 : 8[0] -> 10[2] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 10/0 : 9[1] -> 11[3] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 03/0 : 10[2] -> 11[3] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 07/0 : 8[0] -> 10[2] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 11/0 : 9[1] -> 11[3] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 04/0 : 10[2] -> 11[3] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 09/0 : 8[0] -> 10[2] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 06/0 : 10[2] -> 11[3] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 12/0 : 9[1] -> 11[3] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 10/0 : 8[0] -> 10[2] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 07/0 : 10[2] -> 11[3] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 13/0 : 9[1] -> 11[3] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 08/0 : 10[2] -> 11[3] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 11/0 : 8[0] -> 10[2] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 14/0 : 9[1] -> 11[3] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 13/0 : 8[0] -> 10[2] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 10/0 : 10[2] -> 11[3] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 15/0 : 9[1] -> 11[3] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 14/0 : 8[0] -> 10[2] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 11/0 : 10[2] -> 11[3] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 12/0 : 10[2] -> 11[3] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 15/0 : 8[0] -> 10[2] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 00/0 : 14[6] -> 15[7] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 14/0 : 10[2] -> 11[3] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 01/0 : 14[6] -> 15[7] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 15/0 : 10[2] -> 11[3] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 02/0 : 14[6] -> 15[7] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 03/0 : 14[6] -> 15[7] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 04/0 : 14[6] -> 15[7] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 05/0 : 14[6] -> 15[7] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 06/0 : 14[6] -> 15[7] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 07/0 : 14[6] -> 15[7] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 08/0 : 14[6] -> 15[7] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 09/0 : 14[6] -> 15[7] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 10/0 : 14[6] -> 15[7] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 11/0 : 14[6] -> 15[7] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 12/0 : 14[6] -> 15[7] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 13/0 : 14[6] -> 15[7] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 14/0 : 14[6] -> 15[7] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 15/0 : 14[6] -> 15[7] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 00/0 : 12[4] -> 13[5] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 01/0 : 12[4] -> 13[5] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 02/0 : 12[4] -> 13[5] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 04/0 : 12[4] -> 13[5] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 05/0 : 12[4] -> 13[5] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 06/0 : 12[4] -> 13[5] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 08/0 : 12[4] -> 13[5] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 00/0 : 13[5] -> 14[6] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 09/0 : 12[4] -> 13[5] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 01/0 : 13[5] -> 14[6] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 10/0 : 12[4] -> 13[5] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 02/0 : 13[5] -> 14[6] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 12/0 : 12[4] -> 13[5] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 03/0 : 13[5] -> 14[6] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 13/0 : 12[4] -> 13[5] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 04/0 : 13[5] -> 14[6] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 14/0 : 12[4] -> 13[5] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 05/0 : 13[5] -> 14[6] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 06/0 : 13[5] -> 14[6] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 07/0 : 13[5] -> 14[6] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 08/0 : 13[5] -> 14[6] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 09/0 : 13[5] -> 14[6] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 10/0 : 13[5] -> 14[6] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 11/0 : 13[5] -> 14[6] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 12/0 : 13[5] -> 14[6] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 13/0 : 13[5] -> 14[6] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 14/0 : 13[5] -> 14[6] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 15/0 : 13[5] -> 14[6] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 01/0 : 10[2] -> 8[0] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 02/0 : 10[2] -> 8[0] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 00/0 : 8[0] -> 15[7] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 03/0 : 10[2] -> 8[0] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 05/0 : 10[2] -> 8[0] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 01/0 : 8[0] -> 15[7] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 06/0 : 10[2] -> 8[0] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 02/0 : 8[0] -> 15[7] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 07/0 : 10[2] -> 8[0] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 03/0 : 8[0] -> 15[7] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 09/0 : 10[2] -> 8[0] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 04/0 : 8[0] -> 15[7] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 10/0 : 10[2] -> 8[0] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 11/0 : 10[2] -> 8[0] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 05/0 : 8[0] -> 15[7] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 00/0 : 11[3] -> 9[1] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 00/0 : 9[1] -> 12[4] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 13/0 : 10[2] -> 8[0] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 06/0 : 8[0] -> 15[7] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 01/0 : 9[1] -> 12[4] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 14/0 : 10[2] -> 8[0] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 01/0 : 11[3] -> 9[1] via P2P/CUMEM
+gpu-02:80543:80705 [2] NCCL INFO Channel 15/0 : 10[2] -> 8[0] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 02/0 : 11[3] -> 9[1] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 07/0 : 8[0] -> 15[7] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 03/0 : 9[1] -> 12[4] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 03/0 : 11[3] -> 9[1] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 08/0 : 8[0] -> 15[7] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 09/0 : 8[0] -> 15[7] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 04/0 : 11[3] -> 9[1] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 04/0 : 9[1] -> 12[4] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 10/0 : 8[0] -> 15[7] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 05/0 : 11[3] -> 9[1] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 05/0 : 9[1] -> 12[4] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 11/0 : 8[0] -> 15[7] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 06/0 : 11[3] -> 9[1] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 00/0 : 13[5] -> 12[4] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 12/0 : 8[0] -> 15[7] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 13/0 : 8[0] -> 15[7] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 07/0 : 11[3] -> 9[1] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 07/0 : 9[1] -> 12[4] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 01/0 : 13[5] -> 12[4] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 14/0 : 8[0] -> 15[7] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 02/0 : 13[5] -> 12[4] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 08/0 : 11[3] -> 9[1] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Channel 15/0 : 8[0] -> 15[7] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 08/0 : 9[1] -> 12[4] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 09/0 : 11[3] -> 9[1] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 04/0 : 13[5] -> 12[4] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 00/0 : 15[7] -> 8[0] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 09/0 : 9[1] -> 12[4] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 05/0 : 13[5] -> 12[4] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 01/0 : 15[7] -> 8[0] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 10/0 : 11[3] -> 9[1] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 11/0 : 9[1] -> 12[4] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 02/0 : 15[7] -> 8[0] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 06/0 : 13[5] -> 12[4] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 03/0 : 15[7] -> 8[0] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 12/0 : 9[1] -> 12[4] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 08/0 : 13[5] -> 12[4] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 11/0 : 11[3] -> 9[1] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 04/0 : 15[7] -> 8[0] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 05/0 : 15[7] -> 8[0] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 09/0 : 13[5] -> 12[4] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 13/0 : 9[1] -> 12[4] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 12/0 : 11[3] -> 9[1] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 06/0 : 15[7] -> 8[0] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 00/0 : 14[6] -> 13[5] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 13/0 : 11[3] -> 9[1] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 10/0 : 13[5] -> 12[4] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 07/0 : 15[7] -> 8[0] via P2P/CUMEM
+gpu-02:80542:80701 [1] NCCL INFO Channel 15/0 : 9[1] -> 12[4] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 01/0 : 14[6] -> 13[5] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 08/0 : 15[7] -> 8[0] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 12/0 : 13[5] -> 12[4] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 14/0 : 11[3] -> 9[1] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 09/0 : 15[7] -> 8[0] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 13/0 : 13[5] -> 12[4] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 02/0 : 14[6] -> 13[5] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 15/0 : 11[3] -> 9[1] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 10/0 : 15[7] -> 8[0] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 00/0 : 12[4] -> 9[1] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 11/0 : 15[7] -> 8[0] via P2P/CUMEM
+gpu-02:80546:80707 [5] NCCL INFO Channel 14/0 : 13[5] -> 12[4] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 03/0 : 14[6] -> 13[5] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 12/0 : 15[7] -> 8[0] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 01/0 : 12[4] -> 9[1] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 13/0 : 15[7] -> 8[0] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 04/0 : 14[6] -> 13[5] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 14/0 : 15[7] -> 8[0] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 03/0 : 12[4] -> 9[1] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 05/0 : 14[6] -> 13[5] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 15/0 : 15[7] -> 8[0] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 06/0 : 14[6] -> 13[5] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 04/0 : 12[4] -> 9[1] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 07/0 : 14[6] -> 13[5] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 05/0 : 12[4] -> 9[1] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 00/0 : 15[7] -> 14[6] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 01/0 : 15[7] -> 14[6] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 08/0 : 14[6] -> 13[5] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 07/0 : 12[4] -> 9[1] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 02/0 : 15[7] -> 14[6] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 09/0 : 14[6] -> 13[5] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 03/0 : 15[7] -> 14[6] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 08/0 : 12[4] -> 9[1] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 04/0 : 15[7] -> 14[6] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 10/0 : 14[6] -> 13[5] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 09/0 : 12[4] -> 9[1] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 05/0 : 15[7] -> 14[6] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 11/0 : 14[6] -> 13[5] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 06/0 : 15[7] -> 14[6] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 11/0 : 12[4] -> 9[1] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 12/0 : 14[6] -> 13[5] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 07/0 : 15[7] -> 14[6] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 12/0 : 12[4] -> 9[1] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 08/0 : 15[7] -> 14[6] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 13/0 : 14[6] -> 13[5] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 09/0 : 15[7] -> 14[6] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 14/0 : 14[6] -> 13[5] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 10/0 : 15[7] -> 14[6] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 13/0 : 12[4] -> 9[1] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 11/0 : 15[7] -> 14[6] via P2P/CUMEM
+gpu-02:80547:80703 [6] NCCL INFO Channel 15/0 : 14[6] -> 13[5] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 12/0 : 15[7] -> 14[6] via P2P/CUMEM
+gpu-02:80545:80708 [4] NCCL INFO Channel 15/0 : 12[4] -> 9[1] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 13/0 : 15[7] -> 14[6] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 14/0 : 15[7] -> 14[6] via P2P/CUMEM
+gpu-02:80548:80704 [7] NCCL INFO Channel 15/0 : 15[7] -> 14[6] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 00/0 : 11[3] -> 10[2] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 02/0 : 11[3] -> 10[2] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 03/0 : 11[3] -> 10[2] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 04/0 : 11[3] -> 10[2] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 06/0 : 11[3] -> 10[2] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 07/0 : 11[3] -> 10[2] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 08/0 : 11[3] -> 10[2] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 10/0 : 11[3] -> 10[2] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 11/0 : 11[3] -> 10[2] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 12/0 : 11[3] -> 10[2] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 14/0 : 11[3] -> 10[2] via P2P/CUMEM
+gpu-02:80544:80706 [3] NCCL INFO Channel 15/0 : 11[3] -> 10[2] via P2P/CUMEM
+gpu-02:80541:80702 [0] NCCL INFO Connected all trees
+gpu-02:80548:80704 [7] NCCL INFO Connected all trees
+gpu-02:80547:80703 [6] NCCL INFO Connected all trees
+gpu-02:80542:80701 [1] NCCL INFO Connected all trees
+gpu-02:80545:80708 [4] NCCL INFO Connected all trees
+gpu-02:80546:80707 [5] NCCL INFO Connected all trees
+gpu-02:80544:80706 [3] NCCL INFO Connected all trees
+gpu-02:80543:80705 [2] NCCL INFO Connected all trees
+gpu-02:80541:80541 [0] NCCL INFO comm 0x26919d10 rank 8 nranks 16 cudaDev 0 busId 10000 - Destroy COMPLETE
+gpu-02:80542:80542 [1] NCCL INFO comm 0x1db79af0 rank 9 nranks 16 cudaDev 1 busId 46000 - Destroy COMPLETE
+gpu-02:80545:80545 [4] NCCL INFO comm 0x1e65cb10 rank 12 nranks 16 cudaDev 4 busId 9a000 - Destroy COMPLETE
+gpu-02:80546:80546 [5] NCCL INFO comm 0xcad2a00 rank 13 nranks 16 cudaDev 5 busId ba000 - Destroy COMPLETE
+gpu-02:80548:80548 [7] NCCL INFO comm 0x256f0860 rank 15 nranks 16 cudaDev 7 busId db000 - Destroy COMPLETE
+gpu-02:80543:80543 [2] NCCL INFO comm 0x14e71e60 rank 10 nranks 16 cudaDev 2 busId 54000 - Destroy COMPLETE
+gpu-02:80547:80547 [6] NCCL INFO comm 0x32616a90 rank 14 nranks 16 cudaDev 6 busId cb000 - Destroy COMPLETE
+gpu-02:80544:80544 [3] NCCL INFO comm 0x4289cd50 rank 11 nranks 16 cudaDev 3 busId 61000 - Destroy COMPLETE

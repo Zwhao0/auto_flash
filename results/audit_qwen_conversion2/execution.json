@@ -1,0 +1,8 @@
+{
+  "run": "audit_qwen_conversion2",
+  "exits": [
+    "0",
+    "0"
+  ],
+  "collection_recovered": true
+}

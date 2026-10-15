@@ -14,7 +14,7 @@
 |3.2.2、3.3.2|30 点窗口、Rbeast、概率 .8、退化 .2|跳过前 3 次；z-score >3 过滤；恢复比 .75；相邻变点距离 2；右侧保护 2|
 |3.2.3|本地 100–500ms 轮询；profile=max(2.2*iter,20s)|0.1s 轮询、严格 20s 下限；Redis 协调两节点|
 |3.2.3、3.3.2|按标签选 max_avg_latency 最大组，组内取均值最小 rank|clique/rank CV .1；rank 相对均值低至少 20%；跨标签证据|
-|3.2.4|2*iteration 内无新 NCCL 调用则 fail-stop|动态时间窗，无额外存活心跳；记录级联误报|
+|3.2.4|2*iteration 内无新 NCCL 调用则 fail-stop|动态时间窗，无额外存活心跳；记录其他rank告警及进程存活证据，区分根因和停机进程指标|
 |3.4.3|吞吐、4–128MiB AllReduce、profile 开销与误触|每项少量开发轮次、预热与测量隔离；保留原始数据|
 |3.4.4–3.4.6|降频、背景通信、OOM/timeout、四组并行配置|真实模型训练故障注入；报告 TP/FP/FN、延迟、score；未运行项目明确标注|
 
@@ -43,3 +43,8 @@
 21. **背景通信fixture设备映射**：2rank均使用本地GPU0，必须向init_process_group和barrier显式声明device0，避免rank1被推断到GPU1并建立不同communicator。有效重测为paper_background_devicefixed，两端3399次128MiB，30秒，correct=true；先前失败并非FLASH算法结果。
 22. **多stream记录标记**：CUDA group记录完成后将valid flag改为1；遍历其他stream时必须同时检查未处理标记，避免CUDA特殊stream handle与valid flag数值重合导致重复赋值。final probe加此边界修复并重新构建验证；主实验未观察到该特殊handle情形，未据此改变旧结果。
 23. **去除fixture辅助NCCL干扰**：最终发现退出用world MIN AllReduce可被简化成员标签当作DP组，影响组内/组间分数。新默认使用独立Gloo CPU控制组，模型NCCL调用保持不变。新对照paper_gloo_*覆盖baseline/monitor参数一致性、healthy forced、持续delay与完成锁频后forced采样；其他旧扫描不重新标成同条件验证。属于测试方法修正，不是修改FLASH算法。新旧绝对吞吐不能混比，因为CPU控制成本不同。
+
+
+## v1审计后的执行约束
+
+固定步数训练不再创建或执行每步退出规约（NCCL/Gloo均无）；仅显式使用--min-seconds时才保留Gloo停止协调。迭代写入由独立后台进程执行，接收计数可核验；正式训练先自动完成两节点协同precheck。剖析按同一epoch等待两节点complete及在途group排空，部分数据不定位。Group内mode/epoch锁存，多stream先提交全部结束event再等待；同rank同hash多handle按全部记录加权，未知成员集合保留special标签。上述是复现/测试方法修正，不改变论文阈值。完整缺项和歧义见fidelity_audit.md。

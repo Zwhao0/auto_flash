@@ -1,0 +1,345 @@
+{
+  "scope": "Audit runs with execution markers; PASS checks evidence integrity, not claimed accuracy",
+  "runs": [
+    {
+      "run": "audit_allreduce_base1_20261015T162151Z_83d2755d",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "not_applicable",
+      "issues": []
+    },
+    {
+      "run": "audit_allreduce_base2_20261015T162317Z_01135d0e",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "not_applicable",
+      "issues": []
+    },
+    {
+      "run": "audit_allreduce_mon1_20261015T162219Z_6ac0c83d",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "not_applicable",
+      "issues": []
+    },
+    {
+      "run": "audit_allreduce_mon2_20261015T162248Z_071ba563",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "not_applicable",
+      "issues": []
+    },
+    {
+      "run": "audit_background_mild_post_gradient_fix_20261015T171155Z_434df2ff",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "post_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_background_strong_post_gradient_fix_20261015T171422Z_caf37609",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "post_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_clock600_topology1_post_gradient_fix_20261015T171705Z_199281be",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "post_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_clock600_topology2_post_gradient_fix_20261015T171844Z_0bb98786",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "post_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_clock600_topology3_post_gradient_fix_20261015T172027Z_714a8dcb",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "post_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_clock600_topology4_post_gradient_fix_20261015T172201Z_bab9449e",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "post_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_delay25_post_gradient_fix_20261015T165232Z_7f75a06c",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "post_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_delay45_auto_20261015T161647Z_1bbe88b7",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "pre_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_delay45_auto_post_gradient_fix_20261015T163747Z_2a995db6",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "post_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_delay5_post_gradient_fix_20261015T165105Z_66d7d32b",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "post_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_delay65_post_gradient_fix_20261015T165404Z_8c9cf2cd",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "post_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_delay85_post_gradient_fix_20261015T165554Z_7ab4d13f",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "post_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_gradient_equivalence_20261016_0034",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "not_applicable",
+      "issues": []
+    },
+    {
+      "run": "audit_healthy_forced_20261015T161215Z_8e569729",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "pre_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_healthy_forced_post_gradient_fix_20261015T163528Z_47b835d1",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "post_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_oom_post_gradient_fix_20261015T170018Z_08e12f16",
+      "status": "PASS",
+      "exits": [
+        "1",
+        "1"
+      ],
+      "expected_fault": "oom",
+      "training_cohort": "post_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_qwen_conversion",
+      "status": "INVALID",
+      "reason": "Development failure: missing checkpoint after optional dependency import failed"
+    },
+    {
+      "run": "audit_qwen_conversion2",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "pre_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b",
+      "status": "PASS",
+      "exits": [
+        "1",
+        "1"
+      ],
+      "expected_fault": "timeout",
+      "training_cohort": "post_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_train_base1_20261015T162520Z_183230ee",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "pre_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_train_base1_post_gradient_fix_20261015T164153Z_221f1ae3",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "post_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_train_base2_20261015T163151Z_a2ce9685",
+      "status": "ABORTED_BEFORE_TRAINING",
+      "reason": "Orchestrator stopped after discovery of expert gradient normalization bug. Coordinated precheck passed; actual training was not started."
+    },
+    {
+      "run": "audit_train_base2_post_gradient_fix_20261015T164819Z_ddb8d164",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "post_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_train_mon1_20261015T162727Z_ffedc8e0",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "pre_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_train_mon1_post_gradient_fix_20261015T164358Z_8736c8a0",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "post_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_train_mon2_20261015T162938Z_14073461",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "pre_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_train_mon2_post_gradient_fix_20261015T164608Z_65c53bf2",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "post_gradient_fix",
+      "issues": []
+    },
+    {
+      "run": "audit_transient500ms_post_gradient_fix_20261015T165808Z_d933a743",
+      "status": "PASS",
+      "exits": [
+        "0",
+        "0"
+      ],
+      "expected_fault": null,
+      "training_cohort": "post_gradient_fix",
+      "issues": []
+    }
+  ]
+}

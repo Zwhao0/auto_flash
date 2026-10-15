@@ -1,0 +1,33 @@
+{
+  "run": "audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b",
+  "fault": "timeout",
+  "reason": "The run-scoped liveness query found no remaining train_moe.py or torchrun processes; no signal was sent. The runner then recorded exit codes 1/1 and collected the run.",
+  "termination_attempted": false,
+  "status": "completed_naturally_after_timeout",
+  "final_exits": [
+    "1",
+    "1"
+  ],
+  "timeout_evidence": "Both node logs contain NCCL watchdog Timeout(ms)=90000, with observed duration approximately 90073-90094 ms.",
+  "completion_observed_at_utc": "2026-10-15T17:08:14.793408+00:00",
+  "liveness_check_at_unix": 1792084075.8950741,
+  "liveness_check_at_utc": "2026-10-15T17:07:55.895091+00:00",
+  "liveness_check": {
+    "label": "after_training_exit_before_runner_collection",
+    "time": 1792084075.8950741,
+    "nodes": [
+      {
+        "node": 0,
+        "host": "10.10.4.1",
+        "exit": 0,
+        "output": ""
+      },
+      {
+        "node": 1,
+        "host": "10.10.4.2",
+        "exit": 0,
+        "output": ""
+      }
+    ]
+  }
+}

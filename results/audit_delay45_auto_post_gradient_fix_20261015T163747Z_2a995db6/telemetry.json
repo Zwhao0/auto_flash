@@ -1,0 +1,3481 @@
+{
+  "run_metadata": {
+    "run": "audit_delay45_auto_post_gradient_fix_20261015T163747Z_2a995db6",
+    "time": 1792082270.0687017,
+    "mode": "monitor",
+    "task": "train",
+    "args": "--seq 128 --batch 2 --steps 800 --fault delay --severity 0.45 --fault-step 80 --no-save-checkpoint",
+    "config": {
+      "redis_host": "10.10.4.1",
+      "redis_port": 16379,
+      "window": 30,
+      "thresh_prob": 0.8,
+      "degradation_thresh": 0.2,
+      "recovery_ratio": 0.75,
+      "right_guard": 2,
+      "min_persistence": 0,
+      "poll_seconds": 0.1,
+      "profile_multiplier": 2.2,
+      "profile_min_seconds": 20.0,
+      "cv_threshold": 0.1,
+      "rank_threshold": 0.2,
+      "failstop_multiplier": 2.0
+    },
+    "source_hashes": {
+      "flash/store.py": "fc1f4b403090cdbdbefd8aba5231fd19d36d1ed7829027006b30adf68b0c7828",
+      "flash/shm.py": "b9066455ed4601a8731d5a40ed547a9eb370a7624d8cc61929a9452e7944ad57",
+      "flash/local_controller.py": "312dfbdcb0a57d15f6f41469684ece9d9abd06e2e455793b5619a40c4191e653",
+      "flash/driver_status.py": "b17b80d1683e6ebfe1598cf00c29e75f8d173920bc1455116f53b9e271d53ffe",
+      "flash/profile.py": "cf95334c93501f74ea70a93962a9aeb078aa96ad964df133196e935fdf47bd7b",
+      "flash/config.py": "a420dfbc6b183d5ca6bc7cf25d6f386b835978c57cf27f6943ff5914924ab442",
+      "flash/analysis.py": "fadf441cb962c9752f293de553a5105f42be2c1843f7b01a60ad3f291427cd43",
+      "flash/detection.py": "7d4c75405ce4f563140692bdfcee69c3f67b53c24a4989af320fc3c5dd896f0d",
+      "flash/global_controller.py": "51bf4f4fe532381ecba03ac2a10180e926e171c265fb491d7a917d37ca974286",
+      "flash/integration.py": "4c5e1129d0a0e843221fe4f6828cf91b753cbe77a239d76a4bbb98cd57a0ca53",
+      "flash/__init__.py": "5c782816326133c7a15ac6a76e883ccebbef1adbe2b165a4635b1b0e4ee828fa",
+      "flash/iteration_writer.py": "bcf58e81bb3835583f6a359f7f3a67b35f71c12d2fc8707b5453ac91babc3cca",
+      "csrc/fault.cpp": "d221b5f3ff8c4ac6f2af00bfdd15fb1aaf011e3988f56557cf99dbea2e0c5a00",
+      "csrc/probe.cpp": "4463b8ef01027a23fc4d2bba1b8a377b10bcaf132e80679275b2bb0f4745d713",
+      "scripts/cleanup_run_shm.py": "60d7b7b6858cbba56f0184a57a473d3f507ef5b5738a7033a88d0cb681633646",
+      "scripts/container.py": "1190c85b13f74a21f5778f96f1fe309910fd4f5682c1ebd65d80bd48bd95f6ba",
+      "scripts/inspect_runtime.py": "1f3725ffcc25886f9c84aa6d5372ec4d4f29909bdcec1156e549e67e687e4d66",
+      "scripts/allreduce_bench.py": "8520c160b32623f51f30646eb7a465526e81bb8136d7fffc04083b1b9e2f2d95",
+      "scripts/check_model.py": "69eb3e40d376cbed1876113e7928a97af7a309bb49c1a19245d771836e22fd3d",
+      "scripts/paper_metrics.py": "916a0cf7a0cd10f09f4f3b352360f19073ef323a2aa25842776c0d2554924393",
+      "scripts/audit_campaign.py": "50019fffef795bbda16fc1149ed4f55f65efabe532e1c05a45a84cb729910649",
+      "scripts/launch.py": "457960e726a336c426efc849ce97464b4f0ae0fde9b8e9101b3eaecd79efbd07",
+      "scripts/greyhound_experiment.py": "be94f842d7a08cdec6db4790e84956e31331ba8f4df81d17cca1f62945785028",
+      "scripts/validate_final.py": "d99c9d722e97408cdc8afc6c3b792a09c656126286ec32a48318f49a6982c835",
+      "scripts/summarize.py": "a17cc16c4ef68c71631ca63f2a3e7c9b81fef1c2117726a9546f1c572d99e8b5",
+      "scripts/clock_experiment.py": "ac2c4e42665aff68c5848d7e5e5ac25a77b0dc7349d9716082f13ea9f636ec68",
+      "scripts/export_run.py": "3edf088152d53143be317456ae8e1b7aa29a0c8c1e9cdf1bcf74075faf674ed2",
+      "scripts/deepspeed_smoke.py": "aba9a70e8f5796f0a66d5e2c5ee4417b3298630073f10c0b10686450f5c2b174",
+      "scripts/network_experiment.py": "6e622ec8b1c1370695078cbad964762dbbf46f5aa043b507cbc19f38a062a6f2",
+      "scripts/download_qwen.py": "9c20ac01508d3905d1eb1592ead161c0b7ab8389d6e7718fa83e0243cd7f61f9",
+      "scripts/bootstrap.py": "dec615ce975d65b27d5d3b83f916aae2262e413bb1a639f6b381d9b6cc676562",
+      "scripts/suite.py": "de420384786daece693a59ad687550b062f7e7f2b9c5b31c04726da0675c5c56",
+      "scripts/qwen_support.py": "71b89dc2138adc26e57a4e6972ca4de3290224b5086595ca7e4520bfb0be4ed9",
+      "scripts/build.sh": "9289bbd52a17bdb9f1a867f02b46efa478b367ba05b850ff7a37c95d9514b6f7",
+      "scripts/collect_all.py": "a9789e9287727a43366cddf47be17b1605bd246e8f0d0fa78f95f3edbe21b761",
+      "scripts/write_report.py": "830fb0d48e39c15f6a35af35e87beadefd2a9d596fc478731db40febc58eefe9",
+      "scripts/run_rank.sh": "0c370bb6ebe3923d253222a6d415faba59b6ff2eb4735ba45d64386208580d7a",
+      "scripts/validate_control.py": "2b8b35742c0bd157d740d27934b2ef18081005bab5a11370c8d96a1ef256660c",
+      "scripts/check_publish_secrets.py": "c44b345b03f3ece46c656ef5a115da3d47504f77fc8e10df14a61e14e64e7a6b",
+      "scripts/experiment.py": "72f3233b4b231dfd54e9fc78bbb5bad5c28b4aba79b0d37d3cd2128cde5d1fa5",
+      "scripts/init_run.py": "d2755783674f778b893fea84dc8379dba02b749282b48eea50e19456bf5abb0a",
+      "scripts/precheck.py": "95300b5152e87609d78f5d0c0d4ef8b1aad0c86cde6e4d108fbba1da0f981298",
+      "scripts/remote.py": "89e37f7d166c4b6a4a7f43eb3e0e6f901f739fbfdc4f5f0b71be70663ada36d0",
+      "scripts/test_probe_contract.sh": "860a0111dd247da8a9f0298aaa1eab7394a66c6f6b93184407026d0084e6ab49",
+      "scripts/download_qwen_ranges.py": "49ceef4378f23ed1cd54ac81bbafd0195f67016b31f27afca6d375412dc1c1ad",
+      "scripts/background_comm.py": "d8e992f0e66afcde33b01762153ed3dd5fc5c698e16bf8eb338aa74bb0d53ef7",
+      "scripts/assert_idle.py": "22ecfb2e50cd80a9a3af381e7c7946cd7000044cda77b8d41fff865b27b148ff",
+      "scripts/final_state.py": "791fd95cf29d8432f2778931f2cd912b60fe3240500bb07bc361c8ea18ac5ca1",
+      "scripts/validate_qwen_gradients.py": "ae03b02d10eb3b5529f923f8affda654f0509718996bb00bdebfe2881e57e1fd",
+      "scripts/gradient_experiment.py": "2991a6b2a4f89274416cbce2631390ffa7e05bc53619b977874c8a9733c872bf",
+      "scripts/plot_results.py": "a697ad9b5024fc628e79a96d9fe48d99cbaf0f8f60211b438f129f0e8cbb8c4a",
+      "scripts/prepare_greyhound_remote.py": "11983462c592b77d0f78a74aab69171d2de8a70cf5a1759ed4de225108b938b6",
+      "scripts/verify_evidence.py": "b9f5887d6b18e235deadcb9774243f0a23207eefb35baa4a0a444b2aecbf588a",
+      "scripts/gradient_sync.py": "1b96293e61bfc2d3769873c02e370e9eb9b7edbc91ed775d8ad1b5dd5c39d9b4",
+      "scripts/sync.py": "92e2801d654a10c22d8e5334514d1b173b00f8a584c64ac0d7532b41ff256dfd",
+      "scripts/prepare_rdma.py": "3e2fff906f274313792783da6b377721c620a5200cd40efce0bfb4fd565a1b61",
+      "scripts/train_moe.py": "dc275946b8d22a3d9d3e4318d4b94e511fb3e19c19a0184eb4ebd0e2d573c529",
+      "scripts/install_qwen_deps.py": "7006fb1a6adb52d6159b604cdf754345b669ae7de6f57f41a85cd60b87b15bf1",
+      "scripts/model_support.py": "2e189d420ee080425ae01b9405856a4d90ed7414397111eae14479799dde1d28",
+      "scripts/prepare_greyhound.py": "323ae9ce8886653123b2da5f586927b1c0a04d4a14d3b7a3338326b833e67bcf"
+    },
+    "libraries": {
+      "build/libncclprobe.so": "ad28f2682dabed46a90ee9f7b00909df92c6fe75f8cec632fe833de4f6623fd2",
+      "build/libncclfault.so": "132f0fb89ba08171475474392c5730b36cad44a842093aa5bf09a4fa8d1bfaa4"
+    },
+    "runtime": null
+  },
+  "control": {
+    "mode": 0,
+    "epoch": 1
+  },
+  "world_size": 16,
+  "training_done": true,
+  "iteration_reporter": {
+    "backend": "background_process",
+    "received": 800,
+    "last_iteration": 800
+  },
+  "stats:0": {
+    "epoch": 1,
+    "mode": 0,
+    "node": "0",
+    "host": "10.10.4.1",
+    "complete": true,
+    "stats": [
+      {
+        "comm": 1395249792,
+        "hash": "2081088948918824626",
+        "rank": 4,
+        "local": 4,
+        "size": 8,
+        "count": 1121,
+        "mean_us": 516.5109295272078,
+        "min_us": 29.856,
+        "max_us": 6536.831,
+        "std_us": 459.44215426587766
+      },
+      {
+        "comm": 1403257408,
+        "hash": "8221747988796352894",
+        "rank": 4,
+        "local": 4,
+        "size": 8,
+        "count": 107520,
+        "mean_us": 226.91657395833334,
+        "min_us": 17.632,
+        "max_us": 10364.352,
+        "std_us": 359.3022281675841
+      },
+      {
+        "comm": 1431320864,
+        "hash": "9127929149067389141",
+        "rank": 4,
+        "local": 0,
+        "size": 1,
+        "count": 840,
+        "mean_us": 3.5544178571428575,
+        "min_us": 2.816,
+        "max_us": 12.736,
+        "std_us": 0.6179293864074473
+      },
+      {
+        "comm": 1120923456,
+        "hash": "2081088948918824626",
+        "rank": 6,
+        "local": 6,
+        "size": 8,
+        "count": 1121,
+        "mean_us": 527.2582167707404,
+        "min_us": 30.208,
+        "max_us": 6467.167,
+        "std_us": 542.7063973630575
+      },
+      {
+        "comm": 1128931376,
+        "hash": "8221747988796352894",
+        "rank": 6,
+        "local": 6,
+        "size": 8,
+        "count": 107568,
+        "mean_us": 315.66555644801434,
+        "min_us": 17.279,
+        "max_us": 10619.104,
+        "std_us": 533.139827859401
+      },
+      {
+        "comm": 1157039024,
+        "hash": "2440917552845943231",
+        "rank": 6,
+        "local": 0,
+        "size": 1,
+        "count": 840,
+        "mean_us": 3.475202380952381,
+        "min_us": 2.687,
+        "max_us": 12.48,
+        "std_us": 0.6190269395584436
+      },
+      {
+        "comm": 1628874432,
+        "hash": "2081088948918824626",
+        "rank": 1,
+        "local": 1,
+        "size": 8,
+        "count": 1122,
+        "mean_us": 493.4124759358288,
+        "min_us": 28.704,
+        "max_us": 6288.703,
+        "std_us": 632.3855188036147
+      },
+      {
+        "comm": 1636881936,
+        "hash": "8221747988796352894",
+        "rank": 1,
+        "local": 1,
+        "size": 8,
+        "count": 107584,
+        "mean_us": 404.90194437834623,
+        "min_us": 16.928,
+        "max_us": 9838.208,
+        "std_us": 692.2468561595508
+      },
+      {
+        "comm": 1664950352,
+        "hash": "5502157368238860922",
+        "rank": 1,
+        "local": 0,
+        "size": 1,
+        "count": 840,
+        "mean_us": 3.573140476190476,
+        "min_us": 2.784,
+        "max_us": 12.0,
+        "std_us": 0.7568716169550515
+      },
+      {
+        "comm": 1281131968,
+        "hash": "2081088948918824626",
+        "rank": 3,
+        "local": 3,
+        "size": 8,
+        "count": 1122,
+        "mean_us": 358.1164153297683,
+        "min_us": 28.287,
+        "max_us": 6289.12,
+        "std_us": 423.8494263098694
+      },
+      {
+        "comm": 1289141136,
+        "hash": "8221747988796352894",
+        "rank": 3,
+        "local": 3,
+        "size": 8,
+        "count": 107616,
+        "mean_us": 186.47796669640204,
+        "min_us": 15.936,
+        "max_us": 10432.512,
+        "std_us": 317.3377042476439
+      },
+      {
+        "comm": 1317248752,
+        "hash": "9677780684820903179",
+        "rank": 3,
+        "local": 0,
+        "size": 1,
+        "count": 840,
+        "mean_us": 3.5367380952380953,
+        "min_us": 2.848,
+        "max_us": 11.199,
+        "std_us": 0.5460942295944646
+      },
+      {
+        "comm": 1815866464,
+        "hash": "2081088948918824626",
+        "rank": 7,
+        "local": 7,
+        "size": 8,
+        "count": 1123,
+        "mean_us": 450.39463579697235,
+        "min_us": 29.247,
+        "max_us": 6325.92,
+        "std_us": 495.4928212598309
+      },
+      {
+        "comm": 1823874176,
+        "hash": "8221747988796352894",
+        "rank": 7,
+        "local": 7,
+        "size": 8,
+        "count": 107664,
+        "mean_us": 270.97776697874866,
+        "min_us": 17.535,
+        "max_us": 5054.272,
+        "std_us": 454.9889324022265
+      },
+      {
+        "comm": 1851938512,
+        "hash": "5342530257962643271",
+        "rank": 7,
+        "local": 0,
+        "size": 1,
+        "count": 840,
+        "mean_us": 3.572885714285714,
+        "min_us": 2.752,
+        "max_us": 33.087,
+        "std_us": 1.2028035054210067
+      },
+      {
+        "comm": 1605640512,
+        "hash": "2081088948918824626",
+        "rank": 2,
+        "local": 2,
+        "size": 8,
+        "count": 1124,
+        "mean_us": 531.1609048042704,
+        "min_us": 29.376,
+        "max_us": 6698.815,
+        "std_us": 487.07794622002814
+      },
+      {
+        "comm": 1613649088,
+        "hash": "8221747988796352894",
+        "rank": 2,
+        "local": 2,
+        "size": 8,
+        "count": 107696,
+        "mean_us": 245.97589778636163,
+        "min_us": 17.888,
+        "max_us": 10228.927,
+        "std_us": 385.83245531097106
+      },
+      {
+        "comm": 1641717136,
+        "hash": "7208371530141871230",
+        "rank": 2,
+        "local": 0,
+        "size": 1,
+        "count": 840,
+        "mean_us": 3.599761904761905,
+        "min_us": 2.784,
+        "max_us": 13.024,
+        "std_us": 0.6701431478040739
+      },
+      {
+        "comm": 1005636032,
+        "hash": "2081088948918824626",
+        "rank": 5,
+        "local": 5,
+        "size": 8,
+        "count": 1124,
+        "mean_us": 469.55937989323843,
+        "min_us": 28.928,
+        "max_us": 6366.975,
+        "std_us": 505.1225910751332
+      },
+      {
+        "comm": 1013643920,
+        "hash": "8221747988796352894",
+        "rank": 5,
+        "local": 5,
+        "size": 8,
+        "count": 107728,
+        "mean_us": 288.1991647111243,
+        "min_us": 17.567,
+        "max_us": 10745.568,
+        "std_us": 465.575658851366
+      },
+      {
+        "comm": 1041709920,
+        "hash": "148004320041550575",
+        "rank": 5,
+        "local": 0,
+        "size": 1,
+        "count": 843,
+        "mean_us": 3.5438956109134043,
+        "min_us": 2.687,
+        "max_us": 12.671,
+        "std_us": 0.6950490009043094
+      },
+      {
+        "comm": 1024624992,
+        "hash": "2081088948918824626",
+        "rank": 0,
+        "local": 0,
+        "size": 8,
+        "count": 1124,
+        "mean_us": 57.71507473309608,
+        "min_us": 28.672,
+        "max_us": 4801.568,
+        "std_us": 238.6381375326785
+      },
+      {
+        "comm": 1032633888,
+        "hash": "8221747988796352894",
+        "rank": 0,
+        "local": 0,
+        "size": 8,
+        "count": 107760,
+        "mean_us": 87.21964187082405,
+        "min_us": 16.543,
+        "max_us": 9978.176,
+        "std_us": 215.0481461004947
+      },
+      {
+        "comm": 1060971504,
+        "hash": "8689371209729820790",
+        "rank": 0,
+        "local": 0,
+        "size": 1,
+        "count": 843,
+        "mean_us": 3.892431791221827,
+        "min_us": 2.687,
+        "max_us": 16.607,
+        "std_us": 1.1287535966205127
+      },
+      {
+        "comm": 795659360,
+        "hash": "7664959776553311785",
+        "rank": 4,
+        "local": 4,
+        "size": 16,
+        "count": 140,
+        "mean_us": 63168.896778571434,
+        "min_us": 50540.512,
+        "max_us": 77906.364,
+        "std_us": 3502.302279892879
+      },
+      {
+        "comm": 796853040,
+        "hash": "17955672190795255330",
+        "rank": 4,
+        "local": 0,
+        "size": 2,
+        "count": 140,
+        "mean_us": 336.4082071428572,
+        "min_us": 207.552,
+        "max_us": 817.535,
+        "std_us": 58.36522746862411
+      },
+      {
+        "comm": 521329200,
+        "hash": "7664959776553311785",
+        "rank": 6,
+        "local": 6,
+        "size": 16,
+        "count": 140,
+        "mean_us": 63599.88369285715,
+        "min_us": 51167.903,
+        "max_us": 78549.987,
+        "std_us": 3537.9601262667625
+      },
+      {
+        "comm": 522522768,
+        "hash": "15883274602148676783",
+        "rank": 6,
+        "local": 0,
+        "size": 2,
+        "count": 140,
+        "mean_us": 353.70834999999994,
+        "min_us": 307.839,
+        "max_us": 452.672,
+        "std_us": 22.675078411244176
+      },
+      {
+        "comm": 1029283264,
+        "hash": "7664959776553311785",
+        "rank": 1,
+        "local": 1,
+        "size": 16,
+        "count": 140,
+        "mean_us": 63947.12244285714,
+        "min_us": 51935.806,
+        "max_us": 76946.914,
+        "std_us": 3558.7824327620324
+      },
+      {
+        "comm": 1030476928,
+        "hash": "3398587792294409684",
+        "rank": 1,
+        "local": 0,
+        "size": 2,
+        "count": 140,
+        "mean_us": 341.9828,
+        "min_us": 307.615,
+        "max_us": 537.248,
+        "std_us": 25.094660850240068
+      },
+      {
+        "comm": 681538112,
+        "hash": "7664959776553311785",
+        "rank": 3,
+        "local": 3,
+        "size": 16,
+        "count": 140,
+        "mean_us": 63070.18926428573,
+        "min_us": 50419.071,
+        "max_us": 78456.092,
+        "std_us": 3533.828103127955
+      },
+      {
+        "comm": 682731424,
+        "hash": "3751091091694513865",
+        "rank": 3,
+        "local": 0,
+        "size": 2,
+        "count": 140,
+        "mean_us": 377.4116357142857,
+        "min_us": 201.535,
+        "max_us": 800.512,
+        "std_us": 57.99814721821609
+      },
+      {
+        "comm": 1216274624,
+        "hash": "7664959776553311785",
+        "rank": 7,
+        "local": 7,
+        "size": 16,
+        "count": 140,
+        "mean_us": 63289.747271428576,
+        "min_us": 49330.814,
+        "max_us": 78255.874,
+        "std_us": 3637.7014814457534
+      },
+      {
+        "comm": 1217468448,
+        "hash": "8805070725536195033",
+        "rank": 7,
+        "local": 0,
+        "size": 2,
+        "count": 140,
+        "mean_us": 370.51586428571426,
+        "min_us": 312.64,
+        "max_us": 681.951,
+        "std_us": 48.19705935727536
+      },
+      {
+        "comm": 1006045568,
+        "hash": "7664959776553311785",
+        "rank": 2,
+        "local": 2,
+        "size": 16,
+        "count": 140,
+        "mean_us": 63269.145878571435,
+        "min_us": 50698.272,
+        "max_us": 78568.321,
+        "std_us": 3521.438069694942
+      },
+      {
+        "comm": 1007239616,
+        "hash": "1747925694627340651",
+        "rank": 2,
+        "local": 0,
+        "size": 2,
+        "count": 140,
+        "mean_us": 286.49642857142857,
+        "min_us": 196.896,
+        "max_us": 444.063,
+        "std_us": 46.347021290191556
+      },
+      {
+        "comm": 406039008,
+        "hash": "7664959776553311785",
+        "rank": 5,
+        "local": 5,
+        "size": 16,
+        "count": 140,
+        "mean_us": 63425.60397857143,
+        "min_us": 49452.606,
+        "max_us": 77946.495,
+        "std_us": 3602.690204460184
+      },
+      {
+        "comm": 407232768,
+        "hash": "4284690059122668138",
+        "rank": 5,
+        "local": 0,
+        "size": 2,
+        "count": 140,
+        "mean_us": 314.57647142857144,
+        "min_us": 206.431,
+        "max_us": 581.152,
+        "std_us": 38.227266286820324
+      },
+      {
+        "comm": 425022160,
+        "hash": "7664959776553311785",
+        "rank": 0,
+        "local": 0,
+        "size": 16,
+        "count": 140,
+        "mean_us": 62522.42035714285,
+        "min_us": 49912.384,
+        "max_us": 76794.303,
+        "std_us": 3569.2976384101657
+      },
+      {
+        "comm": 426214800,
+        "hash": "2570889465241362615",
+        "rank": 0,
+        "local": 0,
+        "size": 2,
+        "count": 140,
+        "mean_us": 331.4623785714286,
+        "min_us": 308.8,
+        "max_us": 544.928,
+        "std_us": 22.517936287536227
+      }
+    ],
+    "operations": {
+      "4": {
+        "2": 39,
+        "1": 6402,
+        "4": 6400,
+        "6": 307200,
+        "7": 307200
+      },
+      "6": {
+        "2": 39,
+        "1": 6402,
+        "4": 6400,
+        "6": 307200,
+        "7": 307200
+      },
+      "1": {
+        "2": 39,
+        "1": 6402,
+        "4": 6400,
+        "6": 307200,
+        "7": 307200
+      },
+      "3": {
+        "2": 39,
+        "1": 6402,
+        "4": 6400,
+        "6": 307200,
+        "7": 307200
+      },
+      "7": {
+        "2": 39,
+        "1": 6402,
+        "4": 6400,
+        "6": 307200,
+        "7": 307200
+      },
+      "2": {
+        "2": 39,
+        "1": 6402,
+        "4": 6400,
+        "6": 307200,
+        "7": 307200
+      },
+      "5": {
+        "2": 39,
+        "1": 6402,
+        "4": 6400,
+        "6": 307200,
+        "7": 307200
+      },
+      "0": {
+        "2": 39,
+        "1": 6402,
+        "4": 6400,
+        "6": 307200,
+        "7": 307200
+      }
+    },
+    "lost": 0,
+    "headers": [
+      [
+        5065495506834174001,
+        0,
+        1,
+        627241,
+        298134780037070,
+        627241,
+        2,
+        109761,
+        0,
+        4,
+        69690,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        627241,
+        298134780071576,
+        627241,
+        2,
+        109809,
+        0,
+        6,
+        69692,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        627241,
+        298134780099691,
+        627241,
+        2,
+        109826,
+        0,
+        1,
+        69687,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        627241,
+        298134780023659,
+        627241,
+        2,
+        109858,
+        0,
+        3,
+        69689,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        627241,
+        298134780295199,
+        627241,
+        2,
+        109907,
+        0,
+        7,
+        69693,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        627241,
+        298134779983127,
+        627241,
+        2,
+        109940,
+        0,
+        2,
+        69688,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        627241,
+        298134780340676,
+        627241,
+        2,
+        109975,
+        0,
+        5,
+        69691,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        627241,
+        298134813386996,
+        627241,
+        2,
+        110007,
+        0,
+        0,
+        69686,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ]
+    ],
+    "profile": {
+      "started_at": 1792082313.7667482,
+      "requested_seconds": 20.0,
+      "capture_stopped_at": 1792082333.7999096,
+      "finished_at": 1792082334.3186774,
+      "active_scopes_at_finish": 0,
+      "unknown_records": 0,
+      "driver_status": {
+        "backend": "nvidia-smi/NVML",
+        "devices": [
+          {
+            "index": "0",
+            "uuid": "GPU-514342e8-d7fc-3a89-91fe-50c5289967ca",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "68",
+            "memory.used": "4552",
+            "memory.total": "81559",
+            "temperature.gpu": "37"
+          },
+          {
+            "index": "1",
+            "uuid": "GPU-a1e51276-ec8f-0f55-687c-a27c8ac3a14b",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "82",
+            "memory.used": "4544",
+            "memory.total": "81559",
+            "temperature.gpu": "32"
+          },
+          {
+            "index": "2",
+            "uuid": "GPU-6d230dde-62b7-e3bf-8673-903fae938ead",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "71",
+            "memory.used": "5024",
+            "memory.total": "81559",
+            "temperature.gpu": "38"
+          },
+          {
+            "index": "3",
+            "uuid": "GPU-b66ba04d-1c64-bea1-e881-2182804607f3",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "84",
+            "memory.used": "5086",
+            "memory.total": "81559",
+            "temperature.gpu": "33"
+          },
+          {
+            "index": "4",
+            "uuid": "GPU-e457c3f5-32d8-1444-7af0-24f7db939712",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "77",
+            "memory.used": "5046",
+            "memory.total": "81559",
+            "temperature.gpu": "37"
+          },
+          {
+            "index": "5",
+            "uuid": "GPU-3d359ec0-4de6-9360-8faf-eb1d70685d4b",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "80",
+            "memory.used": "5064",
+            "memory.total": "81559",
+            "temperature.gpu": "41"
+          },
+          {
+            "index": "6",
+            "uuid": "GPU-054b90ab-93bd-a0ab-15e1-1e54202ede83",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "82",
+            "memory.used": "4612",
+            "memory.total": "81559",
+            "temperature.gpu": "37"
+          },
+          {
+            "index": "7",
+            "uuid": "GPU-9b8794c0-638b-8da7-f071-5b11f3b54cb0",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "81",
+            "memory.used": "4602",
+            "memory.total": "81559",
+            "temperature.gpu": "33"
+          }
+        ]
+      }
+    },
+    "time": 1792082437.229129
+  },
+  "stats:1": {
+    "epoch": 1,
+    "mode": 0,
+    "node": "1",
+    "host": "10.10.4.2",
+    "complete": true,
+    "stats": [
+      {
+        "comm": 1206844400,
+        "hash": "17880906262896034920",
+        "rank": 15,
+        "local": 7,
+        "size": 8,
+        "count": 1120,
+        "mean_us": 221.64273839285715,
+        "min_us": 28.48,
+        "max_us": 6251.423,
+        "std_us": 316.80500221444004
+      },
+      {
+        "comm": 1214851600,
+        "hash": "17374197296956571394",
+        "rank": 15,
+        "local": 7,
+        "size": 8,
+        "count": 107520,
+        "mean_us": 164.67711011904765,
+        "min_us": 16.48,
+        "max_us": 6601.183,
+        "std_us": 263.63605776449685
+      },
+      {
+        "comm": 1242912416,
+        "hash": "11822718715376464601",
+        "rank": 15,
+        "local": 0,
+        "size": 1,
+        "count": 840,
+        "mean_us": 3.4521297619047617,
+        "min_us": 2.687,
+        "max_us": 13.311,
+        "std_us": 0.6808322470609325
+      },
+      {
+        "comm": 1237229552,
+        "hash": "17374197296956571394",
+        "rank": 11,
+        "local": 3,
+        "size": 8,
+        "count": 107568,
+        "mean_us": 362.90158798155585,
+        "min_us": 16.992,
+        "max_us": 8711.135,
+        "std_us": 624.415785288667
+      },
+      {
+        "comm": 629632288,
+        "hash": "7664959776553311785",
+        "rank": 11,
+        "local": 11,
+        "size": 16,
+        "count": 141,
+        "mean_us": 67149.77016312056,
+        "min_us": 62387.359,
+        "max_us": 68283.164,
+        "std_us": 721.7397572035773
+      },
+      {
+        "comm": 630825872,
+        "hash": "3751091091694513865",
+        "rank": 11,
+        "local": 1,
+        "size": 2,
+        "count": 140,
+        "mean_us": 286.96587142857146,
+        "min_us": 212.032,
+        "max_us": 520.991,
+        "std_us": 35.960095602892714
+      },
+      {
+        "comm": 1229221616,
+        "hash": "17880906262896034920",
+        "rank": 11,
+        "local": 3,
+        "size": 8,
+        "count": 1120,
+        "mean_us": 195.07528749999997,
+        "min_us": 28.448,
+        "max_us": 6851.712,
+        "std_us": 478.0506728337091
+      },
+      {
+        "comm": 1265334976,
+        "hash": "10062949063419093101",
+        "rank": 11,
+        "local": 0,
+        "size": 1,
+        "count": 840,
+        "mean_us": 3.843072619047619,
+        "min_us": 2.752,
+        "max_us": 16.575,
+        "std_us": 0.87245085587496
+      },
+      {
+        "comm": 1482310160,
+        "hash": "17880906262896034920",
+        "rank": 12,
+        "local": 4,
+        "size": 8,
+        "count": 1120,
+        "mean_us": 194.78649732142858,
+        "min_us": 28.575,
+        "max_us": 6097.856,
+        "std_us": 312.4178585760383
+      },
+      {
+        "comm": 1490318352,
+        "hash": "17374197296956571394",
+        "rank": 12,
+        "local": 4,
+        "size": 8,
+        "count": 107520,
+        "mean_us": 134.62428407738096,
+        "min_us": 16.256,
+        "max_us": 6399.68,
+        "std_us": 227.42061681986024
+      },
+      {
+        "comm": 1518379376,
+        "hash": "638091465705770629",
+        "rank": 12,
+        "local": 0,
+        "size": 1,
+        "count": 840,
+        "mean_us": 3.494861904761905,
+        "min_us": 2.752,
+        "max_us": 18.88,
+        "std_us": 0.7426101938280436
+      },
+      {
+        "comm": 1802142384,
+        "hash": "17880906262896034920",
+        "rank": 14,
+        "local": 6,
+        "size": 8,
+        "count": 1120,
+        "mean_us": 289.59551160714284,
+        "min_us": 28.543,
+        "max_us": 4756.735,
+        "std_us": 267.32046494476543
+      },
+      {
+        "comm": 1810150416,
+        "hash": "17374197296956571394",
+        "rank": 14,
+        "local": 6,
+        "size": 8,
+        "count": 107520,
+        "mean_us": 169.60129970238097,
+        "min_us": 16.767,
+        "max_us": 6551.712,
+        "std_us": 240.95852156080352
+      },
+      {
+        "comm": 1838254160,
+        "hash": "278673002914797633",
+        "rank": 14,
+        "local": 0,
+        "size": 1,
+        "count": 840,
+        "mean_us": 3.399980952380952,
+        "min_us": 2.719,
+        "max_us": 10.208,
+        "std_us": 0.46797075571943253
+      },
+      {
+        "comm": 1097429680,
+        "hash": "17880906262896034920",
+        "rank": 9,
+        "local": 1,
+        "size": 8,
+        "count": 1120,
+        "mean_us": 257.08337053571427,
+        "min_us": 28.64,
+        "max_us": 6067.743,
+        "std_us": 328.0270734094068
+      },
+      {
+        "comm": 1105437392,
+        "hash": "17374197296956571394",
+        "rank": 9,
+        "local": 1,
+        "size": 8,
+        "count": 107520,
+        "mean_us": 172.22266651785716,
+        "min_us": 17.023,
+        "max_us": 6549.6,
+        "std_us": 263.78593281109966
+      },
+      {
+        "comm": 1133497440,
+        "hash": "17977901957991301326",
+        "rank": 9,
+        "local": 0,
+        "size": 1,
+        "count": 840,
+        "mean_us": 3.520334523809524,
+        "min_us": 2.816,
+        "max_us": 10.528,
+        "std_us": 0.5686381486026082
+      },
+      {
+        "comm": 1051888000,
+        "hash": "17880906262896034920",
+        "rank": 10,
+        "local": 2,
+        "size": 8,
+        "count": 1120,
+        "mean_us": 253.45831339285712,
+        "min_us": 28.448,
+        "max_us": 6328.32,
+        "std_us": 331.89485722816835
+      },
+      {
+        "comm": 1059896704,
+        "hash": "17374197296956571394",
+        "rank": 10,
+        "local": 2,
+        "size": 8,
+        "count": 107520,
+        "mean_us": 163.61180669642857,
+        "min_us": 16.736,
+        "max_us": 6640.223,
+        "std_us": 270.66890993185746
+      },
+      {
+        "comm": 1087957024,
+        "hash": "13199847149955279806",
+        "rank": 10,
+        "local": 0,
+        "size": 1,
+        "count": 840,
+        "mean_us": 3.5523976190476194,
+        "min_us": 2.784,
+        "max_us": 13.663,
+        "std_us": 0.7304258487146533
+      },
+      {
+        "comm": 1279521728,
+        "hash": "17880906262896034920",
+        "rank": 13,
+        "local": 5,
+        "size": 8,
+        "count": 1120,
+        "mean_us": 196.5746089285714,
+        "min_us": 28.031,
+        "max_us": 6597.727,
+        "std_us": 358.05346368743636
+      },
+      {
+        "comm": 1287530640,
+        "hash": "17374197296956571394",
+        "rank": 13,
+        "local": 5,
+        "size": 8,
+        "count": 107520,
+        "mean_us": 157.3283294642857,
+        "min_us": 16.416,
+        "max_us": 6835.68,
+        "std_us": 318.0380479736738
+      },
+      {
+        "comm": 1315588800,
+        "hash": "11557165733744723783",
+        "rank": 13,
+        "local": 0,
+        "size": 1,
+        "count": 840,
+        "mean_us": 3.389782142857143,
+        "min_us": 2.687,
+        "max_us": 13.216,
+        "std_us": 0.7294372024377219
+      },
+      {
+        "comm": 1819940560,
+        "hash": "17880906262896034920",
+        "rank": 8,
+        "local": 0,
+        "size": 8,
+        "count": 1120,
+        "mean_us": 218.7821517857143,
+        "min_us": 29.472,
+        "max_us": 5989.535,
+        "std_us": 289.7568946458457
+      },
+      {
+        "comm": 1827943856,
+        "hash": "17374197296956571394",
+        "rank": 8,
+        "local": 0,
+        "size": 8,
+        "count": 107520,
+        "mean_us": 139.61589389880953,
+        "min_us": 17.152,
+        "max_us": 6072.415,
+        "std_us": 194.10221803586498
+      },
+      {
+        "comm": 1856236480,
+        "hash": "15924402160007688101",
+        "rank": 8,
+        "local": 0,
+        "size": 1,
+        "count": 840,
+        "mean_us": 3.5290214285714283,
+        "min_us": 2.752,
+        "max_us": 10.688,
+        "std_us": 0.6593275882203288
+      },
+      {
+        "comm": 607247616,
+        "hash": "7664959776553311785",
+        "rank": 15,
+        "local": 15,
+        "size": 16,
+        "count": 140,
+        "mean_us": 66147.48555714286,
+        "min_us": 65445.793,
+        "max_us": 67298.301,
+        "std_us": 270.8135966599873
+      },
+      {
+        "comm": 608441504,
+        "hash": "8805070725536195033",
+        "rank": 15,
+        "local": 1,
+        "size": 2,
+        "count": 139,
+        "mean_us": 365.6342949640288,
+        "min_us": 306.719,
+        "max_us": 985.759,
+        "std_us": 59.61107119257248
+      },
+      {
+        "comm": 882719840,
+        "hash": "7664959776553311785",
+        "rank": 12,
+        "local": 12,
+        "size": 16,
+        "count": 140,
+        "mean_us": 66058.48472857143,
+        "min_us": 64860.16,
+        "max_us": 67125.312,
+        "std_us": 299.4091356961918
+      },
+      {
+        "comm": 883913216,
+        "hash": "17955672190795255330",
+        "rank": 12,
+        "local": 1,
+        "size": 2,
+        "count": 139,
+        "mean_us": 322.1345179856115,
+        "min_us": 207.103,
+        "max_us": 937.247,
+        "std_us": 65.50713984111461
+      },
+      {
+        "comm": 1202550144,
+        "hash": "7664959776553311785",
+        "rank": 14,
+        "local": 14,
+        "size": 16,
+        "count": 140,
+        "mean_us": 66156.52365,
+        "min_us": 64924.316,
+        "max_us": 67016.288,
+        "std_us": 291.5534330828058
+      },
+      {
+        "comm": 1203743600,
+        "hash": "15883274602148676783",
+        "rank": 14,
+        "local": 1,
+        "size": 2,
+        "count": 139,
+        "mean_us": 361.64347482014387,
+        "min_us": 315.2,
+        "max_us": 587.231,
+        "std_us": 39.219623695422136
+      },
+      {
+        "comm": 497836640,
+        "hash": "7664959776553311785",
+        "rank": 9,
+        "local": 9,
+        "size": 16,
+        "count": 140,
+        "mean_us": 66194.71484285715,
+        "min_us": 65600.578,
+        "max_us": 68054.367,
+        "std_us": 341.7833429561408
+      },
+      {
+        "comm": 499029952,
+        "hash": "3398587792294409684",
+        "rank": 9,
+        "local": 1,
+        "size": 2,
+        "count": 139,
+        "mean_us": 346.3394676258993,
+        "min_us": 306.944,
+        "max_us": 596.928,
+        "std_us": 35.52575645138604
+      },
+      {
+        "comm": 452298272,
+        "hash": "7664959776553311785",
+        "rank": 10,
+        "local": 10,
+        "size": 16,
+        "count": 140,
+        "mean_us": 66144.04151428571,
+        "min_us": 64611.007,
+        "max_us": 68243.263,
+        "std_us": 425.0592753041881
+      },
+      {
+        "comm": 453491120,
+        "hash": "1747925694627340651",
+        "rank": 10,
+        "local": 1,
+        "size": 2,
+        "count": 139,
+        "mean_us": 264.09643884892085,
+        "min_us": 198.688,
+        "max_us": 520.287,
+        "std_us": 49.800920557224444
+      },
+      {
+        "comm": 679932640,
+        "hash": "7664959776553311785",
+        "rank": 13,
+        "local": 13,
+        "size": 16,
+        "count": 140,
+        "mean_us": 66137.60690000001,
+        "min_us": 63778.4,
+        "max_us": 68589.79,
+        "std_us": 677.1225442907265
+      },
+      {
+        "comm": 681125472,
+        "hash": "4284690059122668138",
+        "rank": 13,
+        "local": 1,
+        "size": 2,
+        "count": 139,
+        "mean_us": 316.9767841726619,
+        "min_us": 199.264,
+        "max_us": 402.144,
+        "std_us": 39.70410144240897
+      },
+      {
+        "comm": 1220139488,
+        "hash": "7664959776553311785",
+        "rank": 8,
+        "local": 8,
+        "size": 16,
+        "count": 140,
+        "mean_us": 437.9329928571428,
+        "min_us": 310.943,
+        "max_us": 476.799,
+        "std_us": 15.873473301390247
+      },
+      {
+        "comm": 1221333024,
+        "hash": "2570889465241362615",
+        "rank": 8,
+        "local": 1,
+        "size": 2,
+        "count": 139,
+        "mean_us": 463.59730215827335,
+        "min_us": 320.16,
+        "max_us": 1427.456,
+        "std_us": 142.42080666326018
+      }
+    ],
+    "operations": {
+      "15": {
+        "2": 39,
+        "1": 6402,
+        "4": 6400,
+        "6": 307200,
+        "7": 307200
+      },
+      "11": {
+        "2": 39,
+        "1": 6402,
+        "4": 6400,
+        "6": 307200,
+        "7": 307200
+      },
+      "12": {
+        "2": 39,
+        "1": 6402,
+        "4": 6400,
+        "6": 307200,
+        "7": 307200
+      },
+      "14": {
+        "2": 39,
+        "1": 6402,
+        "4": 6400,
+        "6": 307200,
+        "7": 307200
+      },
+      "9": {
+        "2": 39,
+        "1": 6402,
+        "4": 6400,
+        "6": 307200,
+        "7": 307200
+      },
+      "10": {
+        "2": 39,
+        "1": 6402,
+        "4": 6400,
+        "6": 307200,
+        "7": 307200
+      },
+      "13": {
+        "2": 39,
+        "1": 6402,
+        "4": 6400,
+        "6": 307200,
+        "7": 307200
+      },
+      "8": {
+        "2": 39,
+        "1": 6402,
+        "4": 6400,
+        "6": 307200,
+        "7": 307200
+      }
+    },
+    "lost": 0,
+    "headers": [
+      [
+        5065495506834174001,
+        0,
+        1,
+        627241,
+        1130041690996696,
+        627241,
+        2,
+        109759,
+        0,
+        15,
+        56994,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        627241,
+        1130041691068090,
+        627241,
+        2,
+        109809,
+        0,
+        11,
+        56990,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        627241,
+        1130041690944802,
+        627241,
+        2,
+        109759,
+        0,
+        12,
+        56991,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        627241,
+        1130041691053647,
+        627241,
+        2,
+        109759,
+        0,
+        14,
+        56993,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        627241,
+        1130041691021806,
+        627241,
+        2,
+        109759,
+        0,
+        9,
+        56988,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        627241,
+        1130041690924734,
+        627241,
+        2,
+        109759,
+        0,
+        10,
+        56989,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        627241,
+        1130041690958934,
+        627241,
+        2,
+        109759,
+        0,
+        13,
+        56992,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ],
+      [
+        5065495506834174001,
+        0,
+        1,
+        627241,
+        1130041690946320,
+        627241,
+        2,
+        109759,
+        0,
+        8,
+        56987,
+        6,
+        2,
+        0,
+        5275776,
+        0
+      ]
+    ],
+    "profile": {
+      "started_at": 1792082313.8466735,
+      "requested_seconds": 20.0,
+      "capture_stopped_at": 1792082333.8914719,
+      "finished_at": 1792082334.4166558,
+      "active_scopes_at_finish": 0,
+      "unknown_records": 0,
+      "driver_status": {
+        "backend": "nvidia-smi/NVML",
+        "devices": [
+          {
+            "index": "0",
+            "uuid": "GPU-a17d04f4-3674-c1bc-c3f8-2189ea56fcb1",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "57",
+            "memory.used": "4554",
+            "memory.total": "81559",
+            "temperature.gpu": "37"
+          },
+          {
+            "index": "1",
+            "uuid": "GPU-53793bfd-0c74-13bd-2209-3afc070c2f10",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "80",
+            "memory.used": "4546",
+            "memory.total": "81559",
+            "temperature.gpu": "31"
+          },
+          {
+            "index": "2",
+            "uuid": "GPU-60b56423-d365-0851-1913-e07785e8b16a",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "57",
+            "memory.used": "5024",
+            "memory.total": "81559",
+            "temperature.gpu": "37"
+          },
+          {
+            "index": "3",
+            "uuid": "GPU-02d3ce23-a079-d334-eb97-62fe0c9ab3b8",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "84",
+            "memory.used": "5086",
+            "memory.total": "81559",
+            "temperature.gpu": "34"
+          },
+          {
+            "index": "4",
+            "uuid": "GPU-3e60a8e7-2982-6d8a-b34f-5e76ae173f45",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "77",
+            "memory.used": "5046",
+            "memory.total": "81559",
+            "temperature.gpu": "37"
+          },
+          {
+            "index": "5",
+            "uuid": "GPU-ed8170d0-b2c3-5c0b-714e-1befa83e432d",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "76",
+            "memory.used": "5064",
+            "memory.total": "81559",
+            "temperature.gpu": "32"
+          },
+          {
+            "index": "6",
+            "uuid": "GPU-6e7c62c2-354f-2cc7-da1d-a18f5b07de64",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "79",
+            "memory.used": "4594",
+            "memory.total": "81559",
+            "temperature.gpu": "37"
+          },
+          {
+            "index": "7",
+            "uuid": "GPU-6a51ce14-d531-d5fe-8fea-db29230410e5",
+            "name": "NVIDIA H800",
+            "driver_version": "580.178.04",
+            "pstate": "P0",
+            "clocks.sm": "1980",
+            "utilization.gpu": "62",
+            "memory.used": "4600",
+            "memory.total": "81559",
+            "temperature.gpu": "31"
+          }
+        ]
+      }
+    },
+    "time": 1792082437.2272325
+  },
+  "ack:0": {
+    "epoch": 1,
+    "mode": 0,
+    "time": 1792082437.2287452
+  },
+  "ack:1": {
+    "epoch": 1,
+    "mode": 0,
+    "time": 1792082437.226859
+  },
+  "parallel_states_0": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        0,
+        8
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        0
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        0
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        0
+      ]
+    }
+  ],
+  "parallel_states_1": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        1,
+        9
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        1
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        1
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        1
+      ]
+    }
+  ],
+  "parallel_states_2": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        2,
+        10
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        2
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        2
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        2
+      ]
+    }
+  ],
+  "parallel_states_3": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        3,
+        11
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        3
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        3
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        3
+      ]
+    }
+  ],
+  "parallel_states_4": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        4,
+        12
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        4
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        4
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        4
+      ]
+    }
+  ],
+  "parallel_states_5": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        5,
+        13
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        5
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        5
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        5
+      ]
+    }
+  ],
+  "parallel_states_6": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        6,
+        14
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        6
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        6
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        6
+      ]
+    }
+  ],
+  "parallel_states_7": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        7,
+        15
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        7
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        7
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        7
+      ]
+    }
+  ],
+  "parallel_states_8": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        0,
+        8
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        8
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        8
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        8
+      ]
+    }
+  ],
+  "parallel_states_9": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        1,
+        9
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        9
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        9
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        9
+      ]
+    }
+  ],
+  "parallel_states_10": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        2,
+        10
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        10
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        10
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        10
+      ]
+    }
+  ],
+  "parallel_states_11": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        3,
+        11
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        11
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        11
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        11
+      ]
+    }
+  ],
+  "parallel_states_12": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        4,
+        12
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        12
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        12
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        12
+      ]
+    }
+  ],
+  "parallel_states_13": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        5,
+        13
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        13
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        13
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        13
+      ]
+    }
+  ],
+  "parallel_states_14": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        6,
+        14
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        14
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        14
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        14
+      ]
+    }
+  ],
+  "parallel_states_15": [
+    {
+      "tag": "dp",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_dp",
+      "ranks": [
+        7,
+        15
+      ]
+    },
+    {
+      "tag": "tp",
+      "ranks": [
+        15
+      ]
+    },
+    {
+      "tag": "pp",
+      "ranks": [
+        15
+      ]
+    },
+    {
+      "tag": "ep",
+      "ranks": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "tag": "expert_tp",
+      "ranks": [
+        15
+      ]
+    }
+  ],
+  "source_hashes": {
+    "flash/store.py": "fc1f4b403090cdbdbefd8aba5231fd19d36d1ed7829027006b30adf68b0c7828",
+    "flash/shm.py": "b9066455ed4601a8731d5a40ed547a9eb370a7624d8cc61929a9452e7944ad57",
+    "flash/local_controller.py": "312dfbdcb0a57d15f6f41469684ece9d9abd06e2e455793b5619a40c4191e653",
+    "flash/driver_status.py": "b17b80d1683e6ebfe1598cf00c29e75f8d173920bc1455116f53b9e271d53ffe",
+    "flash/profile.py": "cf95334c93501f74ea70a93962a9aeb078aa96ad964df133196e935fdf47bd7b",
+    "flash/config.py": "a420dfbc6b183d5ca6bc7cf25d6f386b835978c57cf27f6943ff5914924ab442",
+    "flash/analysis.py": "fadf441cb962c9752f293de553a5105f42be2c1843f7b01a60ad3f291427cd43",
+    "flash/detection.py": "7d4c75405ce4f563140692bdfcee69c3f67b53c24a4989af320fc3c5dd896f0d",
+    "flash/global_controller.py": "51bf4f4fe532381ecba03ac2a10180e926e171c265fb491d7a917d37ca974286",
+    "flash/integration.py": "4c5e1129d0a0e843221fe4f6828cf91b753cbe77a239d76a4bbb98cd57a0ca53",
+    "flash/__init__.py": "5c782816326133c7a15ac6a76e883ccebbef1adbe2b165a4635b1b0e4ee828fa",
+    "flash/iteration_writer.py": "bcf58e81bb3835583f6a359f7f3a67b35f71c12d2fc8707b5453ac91babc3cca",
+    "csrc/fault.cpp": "d221b5f3ff8c4ac6f2af00bfdd15fb1aaf011e3988f56557cf99dbea2e0c5a00",
+    "csrc/probe.cpp": "4463b8ef01027a23fc4d2bba1b8a377b10bcaf132e80679275b2bb0f4745d713",
+    "scripts/cleanup_run_shm.py": "60d7b7b6858cbba56f0184a57a473d3f507ef5b5738a7033a88d0cb681633646",
+    "scripts/container.py": "1190c85b13f74a21f5778f96f1fe309910fd4f5682c1ebd65d80bd48bd95f6ba",
+    "scripts/inspect_runtime.py": "1f3725ffcc25886f9c84aa6d5372ec4d4f29909bdcec1156e549e67e687e4d66",
+    "scripts/allreduce_bench.py": "8520c160b32623f51f30646eb7a465526e81bb8136d7fffc04083b1b9e2f2d95",
+    "scripts/check_model.py": "69eb3e40d376cbed1876113e7928a97af7a309bb49c1a19245d771836e22fd3d",
+    "scripts/paper_metrics.py": "916a0cf7a0cd10f09f4f3b352360f19073ef323a2aa25842776c0d2554924393",
+    "scripts/audit_campaign.py": "50019fffef795bbda16fc1149ed4f55f65efabe532e1c05a45a84cb729910649",
+    "scripts/launch.py": "457960e726a336c426efc849ce97464b4f0ae0fde9b8e9101b3eaecd79efbd07",
+    "scripts/greyhound_experiment.py": "be94f842d7a08cdec6db4790e84956e31331ba8f4df81d17cca1f62945785028",
+    "scripts/validate_final.py": "d99c9d722e97408cdc8afc6c3b792a09c656126286ec32a48318f49a6982c835",
+    "scripts/summarize.py": "a17cc16c4ef68c71631ca63f2a3e7c9b81fef1c2117726a9546f1c572d99e8b5",
+    "scripts/clock_experiment.py": "ac2c4e42665aff68c5848d7e5e5ac25a77b0dc7349d9716082f13ea9f636ec68",
+    "scripts/export_run.py": "3edf088152d53143be317456ae8e1b7aa29a0c8c1e9cdf1bcf74075faf674ed2",
+    "scripts/deepspeed_smoke.py": "aba9a70e8f5796f0a66d5e2c5ee4417b3298630073f10c0b10686450f5c2b174",
+    "scripts/network_experiment.py": "6e622ec8b1c1370695078cbad964762dbbf46f5aa043b507cbc19f38a062a6f2",
+    "scripts/download_qwen.py": "9c20ac01508d3905d1eb1592ead161c0b7ab8389d6e7718fa83e0243cd7f61f9",
+    "scripts/bootstrap.py": "dec615ce975d65b27d5d3b83f916aae2262e413bb1a639f6b381d9b6cc676562",
+    "scripts/suite.py": "de420384786daece693a59ad687550b062f7e7f2b9c5b31c04726da0675c5c56",
+    "scripts/qwen_support.py": "71b89dc2138adc26e57a4e6972ca4de3290224b5086595ca7e4520bfb0be4ed9",
+    "scripts/build.sh": "9289bbd52a17bdb9f1a867f02b46efa478b367ba05b850ff7a37c95d9514b6f7",
+    "scripts/collect_all.py": "a9789e9287727a43366cddf47be17b1605bd246e8f0d0fa78f95f3edbe21b761",
+    "scripts/write_report.py": "830fb0d48e39c15f6a35af35e87beadefd2a9d596fc478731db40febc58eefe9",
+    "scripts/run_rank.sh": "0c370bb6ebe3923d253222a6d415faba59b6ff2eb4735ba45d64386208580d7a",
+    "scripts/validate_control.py": "2b8b35742c0bd157d740d27934b2ef18081005bab5a11370c8d96a1ef256660c",
+    "scripts/check_publish_secrets.py": "c44b345b03f3ece46c656ef5a115da3d47504f77fc8e10df14a61e14e64e7a6b",
+    "scripts/experiment.py": "72f3233b4b231dfd54e9fc78bbb5bad5c28b4aba79b0d37d3cd2128cde5d1fa5",
+    "scripts/init_run.py": "d2755783674f778b893fea84dc8379dba02b749282b48eea50e19456bf5abb0a",
+    "scripts/precheck.py": "95300b5152e87609d78f5d0c0d4ef8b1aad0c86cde6e4d108fbba1da0f981298",
+    "scripts/remote.py": "89e37f7d166c4b6a4a7f43eb3e0e6f901f739fbfdc4f5f0b71be70663ada36d0",
+    "scripts/test_probe_contract.sh": "860a0111dd247da8a9f0298aaa1eab7394a66c6f6b93184407026d0084e6ab49",
+    "scripts/download_qwen_ranges.py": "49ceef4378f23ed1cd54ac81bbafd0195f67016b31f27afca6d375412dc1c1ad",
+    "scripts/background_comm.py": "d8e992f0e66afcde33b01762153ed3dd5fc5c698e16bf8eb338aa74bb0d53ef7",
+    "scripts/assert_idle.py": "22ecfb2e50cd80a9a3af381e7c7946cd7000044cda77b8d41fff865b27b148ff",
+    "scripts/final_state.py": "791fd95cf29d8432f2778931f2cd912b60fe3240500bb07bc361c8ea18ac5ca1",
+    "scripts/validate_qwen_gradients.py": "ae03b02d10eb3b5529f923f8affda654f0509718996bb00bdebfe2881e57e1fd",
+    "scripts/gradient_experiment.py": "2991a6b2a4f89274416cbce2631390ffa7e05bc53619b977874c8a9733c872bf",
+    "scripts/plot_results.py": "a697ad9b5024fc628e79a96d9fe48d99cbaf0f8f60211b438f129f0e8cbb8c4a",
+    "scripts/prepare_greyhound_remote.py": "11983462c592b77d0f78a74aab69171d2de8a70cf5a1759ed4de225108b938b6",
+    "scripts/verify_evidence.py": "b9f5887d6b18e235deadcb9774243f0a23207eefb35baa4a0a444b2aecbf588a",
+    "scripts/gradient_sync.py": "1b96293e61bfc2d3769873c02e370e9eb9b7edbc91ed775d8ad1b5dd5c39d9b4",
+    "scripts/sync.py": "92e2801d654a10c22d8e5334514d1b173b00f8a584c64ac0d7532b41ff256dfd",
+    "scripts/prepare_rdma.py": "3e2fff906f274313792783da6b377721c620a5200cd40efce0bfb4fd565a1b61",
+    "scripts/train_moe.py": "dc275946b8d22a3d9d3e4318d4b94e511fb3e19c19a0184eb4ebd0e2d573c529",
+    "scripts/install_qwen_deps.py": "7006fb1a6adb52d6159b604cdf754345b669ae7de6f57f41a85cd60b87b15bf1",
+    "scripts/model_support.py": "2e189d420ee080425ae01b9405856a4d90ed7414397111eae14479799dde1d28",
+    "scripts/prepare_greyhound.py": "323ae9ce8886653123b2da5f586927b1c0a04d4a14d3b7a3338326b833e67bcf"
+  },
+  "runtime": {
+    "python": "3.12.3 (main, Jan  8 2026, 11:30:50) [GCC 13.3.0]",
+    "torch": "2.10.0+cu126",
+    "cuda": "12.6",
+    "nccl": [
+      2,
+      27,
+      5
+    ]
+  },
+  "iter_time_0": [
+    "301:143.285389",
+    "302:139.641389",
+    "303:138.998734",
+    "304:139.170813",
+    "305:139.252016",
+    "306:143.145983",
+    "307:139.603055",
+    "308:141.265247",
+    "309:139.759885",
+    "310:138.388377",
+    "311:138.490585",
+    "312:138.422350",
+    "313:140.382829",
+    "314:141.814921",
+    "315:142.953235",
+    "316:141.010233",
+    "317:139.849459",
+    "318:144.316925",
+    "319:142.778572",
+    "320:140.715691",
+    "321:141.306698",
+    "322:141.440592",
+    "323:142.635706",
+    "324:145.237798",
+    "325:141.848360",
+    "326:142.194311",
+    "327:140.188308",
+    "328:143.644412",
+    "329:141.897220",
+    "330:144.718494",
+    "331:141.230977",
+    "332:141.294729",
+    "333:140.565895",
+    "334:140.663819",
+    "335:142.406807",
+    "336:143.003318",
+    "337:144.927305",
+    "338:140.685584",
+    "339:139.836912",
+    "340:140.259272",
+    "341:141.908524",
+    "342:142.385709",
+    "343:142.890321",
+    "344:142.731755",
+    "345:140.280792",
+    "346:140.151716",
+    "347:138.966596",
+    "348:139.551327",
+    "349:139.290591",
+    "350:138.608757",
+    "351:147.283235",
+    "352:140.615190",
+    "353:140.650962",
+    "354:142.929338",
+    "355:149.729272",
+    "356:139.672434",
+    "357:140.681442",
+    "358:140.294100",
+    "359:140.085838",
+    "360:139.449828",
+    "361:140.121225",
+    "362:139.967135",
+    "363:139.467573",
+    "364:140.206499",
+    "365:138.903002",
+    "366:140.067986",
+    "367:142.273826",
+    "368:140.511196",
+    "369:142.987388",
+    "370:139.845240",
+    "371:141.455535",
+    "372:139.791576",
+    "373:147.435175",
+    "374:142.854954",
+    "375:141.693597",
+    "376:144.722968",
+    "377:140.200174",
+    "378:140.633709",
+    "379:142.777056",
+    "380:139.731144",
+    "381:144.539126",
+    "382:141.315825",
+    "383:144.658126",
+    "384:139.994085",
+    "385:138.564729",
+    "386:140.201323",
+    "387:140.641944",
+    "388:139.568674",
+    "389:139.268301",
+    "390:139.582959",
+    "391:142.535180",
+    "392:141.079063",
+    "393:142.274870",
+    "394:141.297189",
+    "395:139.435328",
+    "396:141.449140",
+    "397:140.694774",
+    "398:144.773796",
+    "399:141.038756",
+    "400:141.005572",
+    "401:141.129444",
+    "402:140.060158",
+    "403:139.681911",
+    "404:139.780833",
+    "405:140.756433",
+    "406:142.073934",
+    "407:139.589512",
+    "408:142.722232",
+    "409:140.244209",
+    "410:140.535190",
+    "411:142.035482",
+    "412:142.847791",
+    "413:138.546201",
+    "414:140.398296",
+    "415:142.976761",
+    "416:142.632380",
+    "417:140.888317",
+    "418:143.226929",
+    "419:140.171453",
+    "420:140.527524",
+    "421:140.343792",
+    "422:140.142312",
+    "423:140.594693",
+    "424:139.671458",
+    "425:140.205627",
+    "426:140.386607",
+    "427:140.824207",
+    "428:142.364927",
+    "429:143.010620",
+    "430:140.006234",
+    "431:139.013656",
+    "432:140.359310",
+    "433:141.246108",
+    "434:141.198629",
+    "435:140.857672",
+    "436:140.638296",
+    "437:139.917206",
+    "438:140.032244",
+    "439:141.129896",
+    "440:142.988474",
+    "441:140.047407",
+    "442:139.180460",
+    "443:141.251109",
+    "444:141.393821",
+    "445:139.345994",
+    "446:139.364960",
+    "447:138.049788",
+    "448:141.129704",
+    "449:140.205404",
+    "450:142.552369",
+    "451:140.021072",
+    "452:140.055393",
+    "453:142.426764",
+    "454:140.486413",
+    "455:140.867107",
+    "456:140.456277",
+    "457:143.001353",
+    "458:138.557332",
+    "459:139.845939",
+    "460:139.636498",
+    "461:140.289956",
+    "462:140.092351",
+    "463:143.373912",
+    "464:140.140122",
+    "465:141.423307",
+    "466:140.267771",
+    "467:143.504201",
+    "468:140.216932",
+    "469:139.606459",
+    "470:141.218997",
+    "471:142.624457",
+    "472:141.640248",
+    "473:141.218132",
+    "474:139.627762",
+    "475:139.824622",
+    "476:140.188929",
+    "477:140.547911",
+    "478:139.858340",
+    "479:140.527566",
+    "480:143.113697",
+    "481:140.892060",
+    "482:142.839069",
+    "483:142.221058",
+    "484:141.441486",
+    "485:139.460236",
+    "486:140.479048",
+    "487:139.989029",
+    "488:139.686558",
+    "489:140.437314",
+    "490:142.781783",
+    "491:140.182335",
+    "492:141.657037",
+    "493:140.247039",
+    "494:143.824988",
+    "495:139.963484",
+    "496:139.976367",
+    "497:143.306923",
+    "498:138.627322",
+    "499:139.776848",
+    "500:139.054755",
+    "501:140.276342",
+    "502:141.794590",
+    "503:140.367652",
+    "504:139.528139",
+    "505:139.286750",
+    "506:139.971805",
+    "507:139.499209",
+    "508:139.880349",
+    "509:139.893684",
+    "510:146.427189",
+    "511:143.177585",
+    "512:140.337723",
+    "513:140.550561",
+    "514:140.248116",
+    "515:141.975757",
+    "516:139.350578",
+    "517:141.727195",
+    "518:139.803581",
+    "519:140.719725",
+    "520:141.720339",
+    "521:138.782995",
+    "522:140.318119",
+    "523:141.690082",
+    "524:142.266975",
+    "525:139.817482",
+    "526:140.455287",
+    "527:140.240644",
+    "528:140.810767",
+    "529:139.815169",
+    "530:146.427589",
+    "531:141.579681",
+    "532:140.861058",
+    "533:139.567655",
+    "534:140.641397",
+    "535:141.764781",
+    "536:144.000098",
+    "537:141.180518",
+    "538:140.570463",
+    "539:141.452311",
+    "540:140.009057",
+    "541:140.200024",
+    "542:140.567454",
+    "543:139.666387",
+    "544:140.312803",
+    "545:140.432893",
+    "546:140.454435",
+    "547:140.546416",
+    "548:139.820331",
+    "549:140.352871",
+    "550:138.638798",
+    "551:142.933066",
+    "552:140.476026",
+    "553:140.462219",
+    "554:141.210566",
+    "555:142.391826",
+    "556:144.870140",
+    "557:140.623994",
+    "558:140.627126",
+    "559:142.054129",
+    "560:139.449223",
+    "561:140.255787",
+    "562:139.829554",
+    "563:140.685290",
+    "564:140.089248",
+    "565:140.283131",
+    "566:142.834990",
+    "567:140.692660",
+    "568:140.044424",
+    "569:141.024069",
+    "570:138.360531",
+    "571:139.399493",
+    "572:139.616248",
+    "573:140.086353",
+    "574:140.731899",
+    "575:141.052589",
+    "576:140.450759",
+    "577:140.079048",
+    "578:140.049407",
+    "579:140.412751",
+    "580:141.154362",
+    "581:140.012818",
+    "582:140.234628",
+    "583:139.832912",
+    "584:140.296620",
+    "585:140.010942",
+    "586:143.053514",
+    "587:141.120908",
+    "588:140.191638",
+    "589:144.297494",
+    "590:140.307434",
+    "591:139.766246",
+    "592:140.208169",
+    "593:139.299819",
+    "594:139.711529",
+    "595:140.393952",
+    "596:140.591827",
+    "597:140.476862",
+    "598:139.741106",
+    "599:140.391654",
+    "600:140.040427",
+    "601:140.140568",
+    "602:140.759545",
+    "603:140.529688",
+    "604:139.879784",
+    "605:140.404569",
+    "606:140.136499",
+    "607:139.931609",
+    "608:142.105953",
+    "609:140.267196",
+    "610:140.492369",
+    "611:140.323962",
+    "612:139.776139",
+    "613:139.855240",
+    "614:140.324679",
+    "615:140.395269",
+    "616:140.757028",
+    "617:140.209141",
+    "618:142.913963",
+    "619:140.378786",
+    "620:139.994677",
+    "621:142.873097",
+    "622:140.125706",
+    "623:140.292587",
+    "624:140.237054",
+    "625:140.130330",
+    "626:143.142619",
+    "627:140.855119",
+    "628:140.134343",
+    "629:140.079699",
+    "630:140.549154",
+    "631:139.924483",
+    "632:140.593867",
+    "633:145.560058",
+    "634:141.953202",
+    "635:139.341062",
+    "636:140.841268",
+    "637:142.098386",
+    "638:142.938392",
+    "639:141.815383",
+    "640:141.558866",
+    "641:140.526224",
+    "642:140.142784",
+    "643:140.277113",
+    "644:142.051975",
+    "645:143.437023",
+    "646:142.255070",
+    "647:140.128148",
+    "648:140.648308",
+    "649:140.605367",
+    "650:140.055030",
+    "651:139.918194",
+    "652:139.948874",
+    "653:144.510005",
+    "654:140.270219",
+    "655:141.636318",
+    "656:140.534804",
+    "657:140.518453",
+    "658:140.761332",
+    "659:140.716538",
+    "660:139.917058",
+    "661:139.976211",
+    "662:142.255334",
+    "663:139.965367",
+    "664:139.896637",
+    "665:142.423606",
+    "666:141.683592",
+    "667:143.035818",
+    "668:141.368124",
+    "669:140.507410",
+    "670:140.617683",
+    "671:140.646228",
+    "672:139.459305",
+    "673:140.485555",
+    "674:140.353978",
+    "675:139.715507",
+    "676:139.739396",
+    "677:138.256659",
+    "678:139.862970",
+    "679:141.137611",
+    "680:142.029018",
+    "681:140.960456",
+    "682:140.798768",
+    "683:140.501986",
+    "684:137.924023",
+    "685:137.631105",
+    "686:137.873411",
+    "687:139.310096",
+    "688:142.263518",
+    "689:140.360430",
+    "690:139.493867",
+    "691:139.631907",
+    "692:141.076692",
+    "693:138.528476",
+    "694:140.245930",
+    "695:145.683684",
+    "696:141.271811",
+    "697:139.729878",
+    "698:139.736456",
+    "699:139.416563",
+    "700:140.397606",
+    "701:140.813536",
+    "702:144.731355",
+    "703:142.031734",
+    "704:140.323896",
+    "705:147.064127",
+    "706:146.023139",
+    "707:143.024042",
+    "708:141.739889",
+    "709:143.159397",
+    "710:141.312649",
+    "711:141.286956",
+    "712:139.947965",
+    "713:142.850117",
+    "714:138.019744",
+    "715:139.609586",
+    "716:139.832210",
+    "717:145.857421",
+    "718:140.201163",
+    "719:142.913380",
+    "720:140.589926",
+    "721:140.387363",
+    "722:140.491055",
+    "723:139.472408",
+    "724:140.258152",
+    "725:140.403907",
+    "726:145.587262",
+    "727:140.049503",
+    "728:140.119617",
+    "729:142.645210",
+    "730:141.943130",
+    "731:139.966745",
+    "732:140.849290",
+    "733:140.316970",
+    "734:139.532019",
+    "735:139.892795",
+    "736:139.316154",
+    "737:139.492327",
+    "738:140.429034",
+    "739:141.880210",
+    "740:141.034088",
+    "741:140.827371",
+    "742:140.664222",
+    "743:139.753198",
+    "744:140.126930",
+    "745:142.396305",
+    "746:144.971178",
+    "747:139.899303",
+    "748:142.274888",
+    "749:140.976149",
+    "750:139.975454",
+    "751:140.051533",
+    "752:140.738003",
+    "753:144.875945",
+    "754:138.474381",
+    "755:135.669907",
+    "756:139.482477",
+    "757:142.023313",
+    "758:139.719764",
+    "759:139.310711",
+    "760:141.923196",
+    "761:141.726031",
+    "762:144.167317",
+    "763:142.875360",
+    "764:139.457981",
+    "765:139.708091",
+    "766:141.114427",
+    "767:139.274367",
+    "768:141.849609",
+    "769:139.600610",
+    "770:140.210929",
+    "771:140.094791",
+    "772:140.536723",
+    "773:139.784174",
+    "774:142.082077",
+    "775:139.674441",
+    "776:142.085166",
+    "777:139.583901",
+    "778:142.880952",
+    "779:139.956842",
+    "780:139.330103",
+    "781:140.191266",
+    "782:140.977453",
+    "783:139.954072",
+    "784:140.402902",
+    "785:139.752577",
+    "786:139.759436",
+    "787:140.146366",
+    "788:140.451352",
+    "789:140.388594",
+    "790:140.010575",
+    "791:141.470023",
+    "792:140.191237",
+    "793:140.282783",
+    "794:139.961219",
+    "795:139.946101",
+    "796:142.555200",
+    "797:142.317231",
+    "798:145.018529",
+    "799:143.287689",
+    "800:141.838542"
+  ],
+  "events": [
+    {
+      "rank": 8,
+      "step": 80,
+      "fault": "delay",
+      "delay_ms": 68.9667237816717,
+      "severity": 0.45,
+      "placement": "before-sync",
+      "kind": "injection",
+      "time": 1792082313.1588671
+    },
+    {
+      "epoch": 1,
+      "seconds": 20.0,
+      "trigger": {
+        "iteration": 80,
+        "observed_iteration": 83,
+        "prob": 1.0,
+        "baseline_ms": 83.20562873076923,
+        "degraded_ms": 137.670028,
+        "throughput_loss": 0.39561551675743656,
+        "recovery_ratio": -0.013059913317269805
+      },
+      "kind": "profile_start",
+      "time": 1792082313.7580523
+    },
+    {
+      "epoch": 1,
+      "trigger": {
+        "iteration": 80,
+        "observed_iteration": 83,
+        "prob": 1.0,
+        "baseline_ms": 83.20562873076923,
+        "degraded_ms": 137.670028,
+        "throughput_loss": 0.39561551675743656,
+        "recovery_ratio": -0.013059913317269805
+      },
+      "profile_seconds": 20.0,
+      "nodes_received": 2,
+      "lost": 0,
+      "result": {
+        "suspects": [
+          {
+            "rank": 8,
+            "tags": 1,
+            "score": 0.992781717704919,
+            "evidence": [
+              {
+                "tag": "dp",
+                "hash": "7664959776553311785",
+                "clique": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15
+                ],
+                "mean_us": 437.9329928571428,
+                "clique_mean_us": 60669.97312582003,
+                "cv": 0.2575123853629131,
+                "score": 0.992781717704919
+              }
+            ],
+            "location": {
+              "node": "1",
+              "host": "10.10.4.2",
+              "pid": 56987
+            }
+          }
+        ],
+        "clique_scores": [
+          {
+            "tag": "dp",
+            "hash": "7664959776553311785",
+            "ranks": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "score": 0.0,
+            "max_avg_latency": 67149.77016312056,
+            "cv": 0.0
+          },
+          {
+            "tag": "expert_dp",
+            "hash": "17955672190795255330",
+            "ranks": [
+              4,
+              12
+            ],
+            "score": -0.058797000924607774,
+            "max_avg_latency": 336.4082071428572,
+            "cv": 0.13668015202516381
+          },
+          {
+            "tag": "expert_dp",
+            "hash": "15883274602148676783",
+            "ranks": [
+              6,
+              14
+            ],
+            "score": 0.011806239769357683,
+            "max_avg_latency": 361.64347482014387,
+            "cv": 0.13668015202516381
+          },
+          {
+            "tag": "expert_dp",
+            "hash": "3398587792294409684",
+            "ranks": [
+              1,
+              9
+            ],
+            "score": -0.03101131688727154,
+            "max_avg_latency": 346.3394676258993,
+            "cv": 0.13668015202516381
+          },
+          {
+            "tag": "expert_dp",
+            "hash": "3751091091694513865",
+            "ranks": [
+              3,
+              11
+            ],
+            "score": 0.05592240580916924,
+            "max_avg_latency": 377.4116357142857,
+            "cv": 0.13668015202516381
+          },
+          {
+            "tag": "expert_dp",
+            "hash": "8805070725536195033",
+            "ranks": [
+              7,
+              15
+            ],
+            "score": 0.03662941410533219,
+            "max_avg_latency": 370.51586428571426,
+            "cv": 0.13668015202516381
+          },
+          {
+            "tag": "expert_dp",
+            "hash": "1747925694627340651",
+            "ranks": [
+              2,
+              10
+            ],
+            "score": -0.19844019239010752,
+            "max_avg_latency": 286.49642857142857,
+            "cv": 0.13668015202516381
+          },
+          {
+            "tag": "expert_dp",
+            "hash": "4284690059122668138",
+            "ranks": [
+              5,
+              13
+            ],
+            "score": -0.1131622428762817,
+            "max_avg_latency": 316.9767841726619,
+            "cv": 0.13668015202516381
+          },
+          {
+            "tag": "expert_dp",
+            "hash": "2570889465241362615",
+            "ranks": [
+              0,
+              8
+            ],
+            "score": 0.29705269339441054,
+            "max_avg_latency": 463.59730215827335,
+            "cv": 0.13668015202516381
+          }
+        ],
+        "incomplete": [],
+        "complete_cliques": 29,
+        "status": "complete"
+      },
+      "kind": "diagnosis",
+      "time": 1792082334.6505039
+    },
+    {
+      "epochs": 1,
+      "kind": "controller_stopped",
+      "time": 1792082437.4316921
+    }
+  ],
+  "failstop_ranks": []
+}

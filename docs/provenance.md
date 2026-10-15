@@ -29,3 +29,6 @@
 远端专用目录：`/home/campus/zhangweihao/flash-repro-20261015`，挂载 `/flash`。Redis使用任务端口16379和 `flash:RUN:` 命名空间。官方基线只在独立容器内使用私有IPC及临时端口6379。
 
 NCCL与probe同时预加载，probe在前，避免PyTorch局部动态库加载使RTLD_NEXT无法解析。实验的monitor/baseline使用相同NCCL库。新运行保存源码与二进制SHA256；早期缺该文件的运行仍保留真实日志，不伪造追溯元数据。
+
+
+v1审计增加了独立Qwen2MoE转换fixture（7,609,088参数），原始HF实现与Megatron EP4加载相同权重，在16卡各训练4步；它仅验证导入路径，不替代主15M模型性能测试。官方近似预训练模型Qwen1.5-MoE-A2.7B的固定来源和未完成状态见 `qwen_validation.md`、`data/qwen_source_manifest.json` 与 `results/qwen_download_status.json`；v1没有宣称使用其完整权重测试。新增Transformers4.51.3、tokenizers0.21.4、safetensors0.6.2、huggingface-hub0.34.4、regex2025.9.18由Mac离线搬运，DeepSpeed隔离为可选依赖。

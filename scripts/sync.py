@@ -27,6 +27,7 @@ if __name__ == "__main__":
         "tests",
         "docs",
         "README.md",
+        "AGENTS.md",
         "pyproject.toml",
         "requirements-paper.txt",
         "handoff.md",

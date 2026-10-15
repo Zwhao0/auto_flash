@@ -1,55 +1,39 @@
-# FLASH 第一版复现交接
+# FLASH v1 阶段交接
 
-2026-10-15：本轮已完成设计、实现、两节点16卡开发验证与结果归档。用户目标是严格依中文论文第三章复现FLASH，使用真实小MoE、少次数测试，记录问题；本轮没有做SHIFT、工业界调研或后续算法优化，也没有读取此前复现尝试。用户偏好主窗口GPT6.1 Sol high、子智能体GPT6 Luna Max；本轮未创建子智能体或新聊天。
+更新：2026-10-16 Asia/Shanghai。第一版按当前覆盖冻结，发布位置为 [Zwhao0/auto_flash 的 v1](https://github.com/Zwhao0/auto_flash/tree/v1)。**完成发布后暂停；没有用户新的继续指示，不重启训练、下载、调优或工业界调研。**
 
-## 直接阅读
+## 目标与当前判断
 
-- `docs/report.md`：完整中文报告，结论、设计验收、实际吞吐、故障矩阵、频率/拓扑、官方基线及限制。
-- `docs/spec.md`：论文阈值与未定义细节的处理，区分论文歧义和本轮实现错误。
-- `docs/runbook.md`：离线部署、使用新RUN编号重跑、结果重建。
-- `docs/provenance.md`：模型/数据/软件版本、公开源固定commit与论文差异。
-- `results/summary.json`、`trials.csv`、`paper_equations.csv`：从原始证据导出；图表在results/figures。
+用户要求尽量按中文论文第三章复现原始FLASH，允许论文歧义、未完善内容和未达指标，但须保留证据、先修确定的复现问题。没有读取用户指定不看的早先复现尝试。当前主流程已有两节点16卡真实MoE训练、采集、门控与定位验证，可以冻结为可审计的第一版；不能宣称全部论文功能、原13.3B模型或统计指标已复现。
 
-## 部署位置
+- 当前结论：[v1报告](docs/v1_report.md)、[扩展测试](docs/audit_test_results.md)。
+- 忠实性和归因：[fidelity_audit](docs/fidelity_audit.md)、[独立审计](docs/audit_findings.md)、[规格选择](docs/spec.md)。
+- 首轮历史：[report](docs/report.md)，保留原始失败，不与修复后数据混算。
 
-本地 `/Users/henry/Desktop/autoflash`。本地Python为 `/Users/henry/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3`，有paramiko/black/clang-format，无torch和matplotlib。
+## 冻结源码与证据
 
-远端新目录 `/home/campus/zhangweihao/flash-repro-20261015`，挂载 `/flash`。凭据只由scripts/remote.py读取被Git忽略的服务器.md，禁止打印/提交。
+核心冻结提交`db828f4`；v1发布提交另含最终测试脚本、证据、汇总和文档。修复覆盖group模式/epoch、多stream计时、采集完成竞态、异步迭代上报、聚合/标签、precheck与训练额外退出通信。训练专家梯度分母修为dense DP规模，独立EP4/DP16/EDP4 FP32参考14项最大relative L2为8.51e-7；范围不包含完整大模型或TP2/PP2梯度等价。
 
-正式运行必须 `FLASH_RUNTIME=paper`，选择flash-paper-20261015，PyTorch2.10/CUDA12.6/NCCL2.27.5、Megatron-core0.12.1、Rbeast0.1.25，实际NCCL NET/IB。未设该变量会选择早期工具容器，不能用于正式结果。
+- `results/audit_campaign_summary.json`：逐项测试汇总；新运行使用fresh ID和post_gradient_fix标记。
+- `results/v1_evidence_check.json`：32个审计目录，已知无效/中止记录单列，PASS仅指档案检查。
+- `results/v1_core_source_check.json`：20个修复后运行的核心源码及构建库一致。
+- `results/v1_runtime_hashes.json`：两节点源码、Probe/注入器构建库和实际Torch/CUDA/NCCL版本。
+- `results/audit_unit_tests_final.log`、`audit_probe_contract.log`：两节点10项CPU回归及实际C++ Probe契约通过。
 
-模型为真实15,083,776参数GPT MoE：4层256hidden、8路由专家top2、1共享专家、SwiGLU/RMSNorm、GQA4、RoPE、expertTP1、All-to-All；FP32/AdamW、真实Shakespeare字节训练，随机初始化。不是通信模拟，不声称预训练模型。TP2时SP开启，原生norm适配经分片/非分片输出与梯度等价测试。
+最终训练ABBA每次800步，baseline/monitor首对16分片最大参数差0；healthy forced仍有rank5候选；45%名义延迟唯一定位rank8，实际吞吐损失约40.81%。85%及500ms瞬态发生存活进程fail-stop告警，按原规则保留。OOM与90秒NCCL timeout均有真实错误且自然非零退出，未人工终止。两档背景通信各800步，实测端到端损失1.42%/14.57%，未达20%门槛。四种600MHz拓扑各400步、forced采集完整，候选[9]/[4]/[0,9]/[4,8]，实测损失2.43%–4.47%；不能当严重全局退化准确率统计。
 
-flash-repro-20261015保留任务Redis16379与构建工具，不能在重跑期间停掉其Redis。FLASH_RUNTIME=greyhound选择独立官方基线容器，私有IPC，使用旧PyTorch2.1/NCCL2.19栈；不能与现代主栈无条件比较。
+## 资源状态与安全访问
 
-## 最终重点结果
+本项目GPU训练/控制器/下载已停止；任务锁频复位、新增共享内存已清理。容器、Redis及检查点保留，状态以`results/v1_server_state.json`时间点为准。检测到其他主机任务，不属于本项目，未处理；不要据此认定机器可独占。
 
-- 最新fixture默认Gloo CPU控制组协调结束，避免额外world NCCL规约污染DP标签；旧条件用--stop-backend nccl可恢复，所有旧结果保留。
-- 最新160步Gloo对照：baseline83873.97、monitor83961.42 tokens/s，监控相对约+0.10%，视为短测噪声；16分片参数均finite且最大差0。
-- 最新正常forced剖析：无自动profile、无fail-stop，仍有误候选rank6；采样前/期间95.122/94.460ms，变化约-0.70%，不能解释为剖析加速。
-- 最新持续退化实测38.1%，自动profile，唯一候选rank8，约0.683s触发、21.227s诊断，errors/lost0。
-- 最新600MHz（实际查询600）：损失1.56%，未达20%门槛，无自动profile；forced误候选rank5，未定位rank8。锁频完成后才放行forced。
-- 早期辅助NCCL条件：实测27.6/40.8/62.9/84.7%四次自动正确定位rank8；5%名义实际2.8%、25%名义实际16.4%未触发。旧六频率/四拓扑未复现论文定位分数，只作探索记录，不排除fixture影响。
-- OOM/timeout真实日志齐全；目标rank8约0.217/0.224s告警，但每次16个停机告警（1TP、15级联FP）。85%持续与单步500ms同样可混淆为停机；没有改原始规则掩盖它。
-- 背景通信有效重测：双端3399次128MiB，约30s，correct=true，损失14.3%、无自动/停机告警，同时存在GPU争用，非纯链路故障。
-- DeepSpeed0.19.7 stage0 dense兼容性16rank成功，只验证probe/共同回调，未声称DeepSpeed MoE/ZeRO全面验证。
-- 官方Greyhound第三次gated运行0/0，实际完成precheck、ACF慢事件上报、profile和主动验证；local报8–15，global判comm。训练sleep在独立验证时不持续，且栈/模型不同，不形成可信同条件精确率比较。首次并行状态race和第二次训练早于precheck均LIMITATION。
-- 四种EP/TP/PP/SP真实训练全部0/0；4项算法/norm单测通过；最终probe边界修复后约299万timed、0errors/lost。black/compileall及凭据精确扫描通过。
+两节点任务目录`/home/campus/zhangweihao/flash-repro-20261015`，容器内`/flash`。正式运行必须设`FLASH_RUNTIME=paper`（容器`flash-paper-20261015`）；不设置会落到旧工具容器。任务Redis16379位于旧工具容器，保留该服务。凭据只通过`scripts.remote.connect`在内存读取本地被忽略的`服务器.md`，禁止cat/sed整个文件或写入日志。发布前检查包括工作树和Git全部可达blob的凭据扫描。
 
-## 已修复的复现错误与数据边界
+## Qwen与剩余限制
 
-PYTHONPATH漏deps导致旧observer未停、陈旧heartbeat采样、重复OOM调度、背景通信退出不同步与barrier设备推断、TP2/SP原生norm缺适配、多stream有效标记边界、辅助NCCL退出规约污染分组，均已修复并记录。旧失败有INVALID/LIMITATION标记，不归因论文。
+论文13.3B/A1.4B没有可核验原检查点；官方近似Qwen1.5-MoE-A2.7B是14.3B/A2.7B、60专家top4，不能冒充原模型，不能EP8。完整权重下载已暂停保留断点，0/8完整分片SHA256验证，未上传、未大测；状态见`results/qwen_download_status.json`。只有小型独立HF/MCore前向和梯度验证，见`docs/qwen_validation.md`。不自动恢复下载。
 
-论文未说明的BOCD/Rbeast、20iter与1–2iter矛盾、CV解释、expertTP/标签选择均公开；不能证明与师兄不可提供的原代码二进制等价。没有做数周零误触、13.3B/Muon/TE同栈、10,000次微基准、纯网络分档或完整同栈Greyhound准确率对照；依用户快速小模型范围缩减，不声称论文全指标已达到。
+仍有限制：未实现可选NCCL私有ring/tree完整解析与自动降级，未覆盖CommSplit/非阻塞NCCL/CUDA Graph计时；原生MCore模块、自管梯度/AdamW不等价完整Megatron/TE/FlashAttention/Muon训练栈。六频率扫描只有旧fixture历史证据；无数周/万次统计、纯链路故障或同栈Greyhound完整精确率召回率对照。后续完善必须由用户另行启动。
 
-## 运行与后续
+## 后续协作约定
 
-所有GPU实验已结束；两节点GPU空闲、任务锁频已复位，证据results/final_server_state.json。模型checkpoint保留远端各run的train_rank*.jsonl.pt；本地保留检查结果，未重复下载大文件。任务控制器已退出；导出后释放本任务probe共享内存，保留容器/Redis用于重跑。
-
-每次重跑必须新RUN编号，启动器拒绝已有运行且检查GPU空闲。scripts/suite.py、validate_final.py、validate_control.py的固定ID是本轮记录，不能原样覆盖重跑。新启动入口示例：
-
-```bash
-FLASH_RUNTIME=paper python -m scripts.experiment NEW_ID --args '--steps 120 --min-seconds 34 --seq 128 --batch 2 --fault delay --severity .45'
-```
-
-源码与证据保存本地Git；origin为用户给定auto_flash，未fetch旧代码、未push覆盖远端。下一阶段先讨论报告中的差距和解释，再由用户决定优化范围；本轮不自动开展新目标。
+已采纳用户建议于`AGENTS.md`：适合的独立重复工作优先GPT 6 Luna Max子智能体，主窗口验收；一个协调者串行拥有全部16卡实验；上下文较长时先更新本文件，再用新窗口交接。未来开始任何GPU工作先确认外部任务与GPU占用，不能修改无关任务。

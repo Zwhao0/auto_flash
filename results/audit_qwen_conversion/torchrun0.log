@@ -1,0 +1,280 @@
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/transformer/multi_token_prediction.py:60: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+/flash/vendor/MegatronCore/megatron/core/models/gpt/gpt_layer_specs.py:65: UserWarning: Apex is not installed. Falling back to Torch Norm
+  warnings.warn('Apex is not installed. Falling back to Torch Norm')
+[Gloo] Rank 0 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 1 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank [Gloo] Rank [Gloo] Rank 234 is connected to  is connected to  is connected to 151515 peer ranks.  peer ranks.  peer ranks. Expected number of connected peer ranks is : Expected number of connected peer ranks is : Expected number of connected peer ranks is : 151515[Gloo] Rank 
+5
+
+ is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 6 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 7 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 0 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 1 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 2 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 3 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 4 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 5 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 6 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 7 is connected to 15 peer ranks. Expected number of connected peer ranks is : 15
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank [Gloo] Rank 01 is connected to  is connected to 33 peer ranks.  peer ranks. Expected number of connected peer ranks is : Expected number of connected peer ranks is : 33
+
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/flash/scripts/train_moe.py", line 466, in <module>
+[rank6]:     main()
+[rank6]:   File "/flash/scripts/train_moe.py", line 117, in main
+[rank6]:     model, hf = build(a.hf_checkpoint, a.seq, a.tp, a.pp, a.ep, dtype)
+[rank6]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/flash/scripts/qwen_support.py", line 16, in build
+[rank6]:     hf = json.loads((Path(checkpoint) / "config.json").read_text())
+[rank6]:                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+[rank6]:     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+[rank6]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+[rank6]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]: FileNotFoundError: [Errno 2] No such file or directory: '/flash/models/qwen_conversion_fixture/config.json'
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/flash/scripts/train_moe.py", line 466, in <module>
+[rank2]:     main()
+[rank2]:   File "/flash/scripts/train_moe.py", line 117, in main
+[rank2]:     model, hf = build(a.hf_checkpoint, a.seq, a.tp, a.pp, a.ep, dtype)
+[rank2]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/flash/scripts/qwen_support.py", line 16, in build
+[rank2]:     hf = json.loads((Path(checkpoint) / "config.json").read_text())
+[rank2]:                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+[rank2]:     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+[rank2]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+[rank2]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]: FileNotFoundError: [Errno 2] No such file or directory: '/flash/models/qwen_conversion_fixture/config.json'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/flash/scripts/train_moe.py", line 466, in <module>
+[rank0]:     main()
+[rank0]:   File "/flash/scripts/train_moe.py", line 117, in main
+[rank0]:     model, hf = build(a.hf_checkpoint, a.seq, a.tp, a.pp, a.ep, dtype)
+[rank0]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/flash/scripts/qwen_support.py", line 16, in build
+[rank0]:     hf = json.loads((Path(checkpoint) / "config.json").read_text())
+[rank0]:                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+[rank0]:     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+[rank0]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+[rank0]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: FileNotFoundError: [Errno 2] No such file or directory: '/flash/models/qwen_conversion_fixture/config.json'
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/flash/scripts/train_moe.py", line 466, in <module>
+[rank4]:     main()
+[rank4]:   File "/flash/scripts/train_moe.py", line 117, in main
+[rank4]:     model, hf = build(a.hf_checkpoint, a.seq, a.tp, a.pp, a.ep, dtype)
+[rank4]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/flash/scripts/qwen_support.py", line 16, in build
+[rank4]:     hf = json.loads((Path(checkpoint) / "config.json").read_text())
+[rank4]:                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+[rank4]:     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+[rank4]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+[rank4]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]: FileNotFoundError: [Errno 2] No such file or directory: '/flash/models/qwen_conversion_fixture/config.json'
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/flash/scripts/train_moe.py", line 466, in <module>
+[rank3]:     main()
+[rank3]:   File "/flash/scripts/train_moe.py", line 117, in main
+[rank3]:     model, hf = build(a.hf_checkpoint, a.seq, a.tp, a.pp, a.ep, dtype)
+[rank3]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/flash/scripts/qwen_support.py", line 16, in build
+[rank3]:     hf = json.loads((Path(checkpoint) / "config.json").read_text())
+[rank3]:                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+[rank3]:     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+[rank3]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+[rank3]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]: FileNotFoundError: [Errno 2] No such file or directory: '/flash/models/qwen_conversion_fixture/config.json'
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/flash/scripts/train_moe.py", line 466, in <module>
+[rank7]:     main()
+[rank7]:   File "/flash/scripts/train_moe.py", line 117, in main
+[rank7]:     model, hf = build(a.hf_checkpoint, a.seq, a.tp, a.pp, a.ep, dtype)
+[rank7]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/flash/scripts/qwen_support.py", line 16, in build
+[rank7]:     hf = json.loads((Path(checkpoint) / "config.json").read_text())
+[rank7]:                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+[rank7]:     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+[rank7]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+[rank7]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]: FileNotFoundError: [Errno 2] No such file or directory: '/flash/models/qwen_conversion_fixture/config.json'
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/flash/scripts/train_moe.py", line 466, in <module>
+[rank1]:     main()
+[rank1]:   File "/flash/scripts/train_moe.py", line 117, in main
+[rank1]:     model, hf = build(a.hf_checkpoint, a.seq, a.tp, a.pp, a.ep, dtype)
+[rank1]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/flash/scripts/qwen_support.py", line 16, in build
+[rank1]:     hf = json.loads((Path(checkpoint) / "config.json").read_text())
+[rank1]:                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+[rank1]:     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+[rank1]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+[rank1]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: FileNotFoundError: [Errno 2] No such file or directory: '/flash/models/qwen_conversion_fixture/config.json'
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/flash/scripts/train_moe.py", line 466, in <module>
+[rank5]:     main()
+[rank5]:   File "/flash/scripts/train_moe.py", line 117, in main
+[rank5]:     model, hf = build(a.hf_checkpoint, a.seq, a.tp, a.pp, a.ep, dtype)
+[rank5]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/flash/scripts/qwen_support.py", line 16, in build
+[rank5]:     hf = json.loads((Path(checkpoint) / "config.json").read_text())
+[rank5]:                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+[rank5]:     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+[rank5]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+[rank5]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]: FileNotFoundError: [Errno 2] No such file or directory: '/flash/models/qwen_conversion_fixture/config.json'
+[rank0]:[W1015 16:00:51.838224482 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank1]:[W1015 16:00:51.037722520 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank2]:[W1015 16:00:51.047889411 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank4]:[W1015 16:00:51.057902378 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank3]:[W1015 16:00:51.057920382 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank5]:[W1015 16:00:51.058046918 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank6]:[W1015 16:00:51.058146451 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank7]:[W1015 16:00:51.068181774 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W1015 16:00:51.873000 55588 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 55602 closing signal SIGTERM
+W1015 16:00:51.877000 55588 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 55603 closing signal SIGTERM
+W1015 16:00:51.879000 55588 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 55604 closing signal SIGTERM
+W1015 16:00:51.880000 55588 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 55605 closing signal SIGTERM
+W1015 16:00:51.882000 55588 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 55606 closing signal SIGTERM
+W1015 16:00:51.883000 55588 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 55607 closing signal SIGTERM
+W1015 16:00:51.885000 55588 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 55608 closing signal SIGTERM
+E1015 16:00:52.071000 55588 torch/distributed/elastic/multiprocessing/api.py:984] failed (exitcode: 1) local_rank: 0 (pid: 55601) of binary: bash
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 7, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 362, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 991, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 982, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 170, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 317, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+bash FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-10-15_16:00:52
+  host      : gpu-01
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 55602)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2026-10-15_16:00:52
+  host      : gpu-01
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 55603)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2026-10-15_16:00:52
+  host      : gpu-01
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 55604)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[4]:
+  time      : 2026-10-15_16:00:52
+  host      : gpu-01
+  rank      : 4 (local_rank: 4)
+  exitcode  : 1 (pid: 55605)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[5]:
+  time      : 2026-10-15_16:00:52
+  host      : gpu-01
+  rank      : 5 (local_rank: 5)
+  exitcode  : 1 (pid: 55606)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[6]:
+  time      : 2026-10-15_16:00:52
+  host      : gpu-01
+  rank      : 6 (local_rank: 6)
+  exitcode  : 1 (pid: 55607)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[7]:
+  time      : 2026-10-15_16:00:52
+  host      : gpu-01
+  rank      : 7 (local_rank: 7)
+  exitcode  : 1 (pid: 55608)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-10-15_16:00:51
+  host      : gpu-01
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 55601)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

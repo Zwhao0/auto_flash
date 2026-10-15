@@ -1,0 +1,69 @@
+{
+  "status": "paused_resumable",
+  "repository": "Qwen/Qwen1.5-MoE-A2.7B",
+  "revision": "1a758c50ecb6350748b9ce0a99d2352fd9fc11c9",
+  "source_manifest_path": "data/qwen_source_manifest.json",
+  "source_manifest_contains_signed_urls": false,
+  "expected_repository_bytes": 28644048831,
+  "expected_model_weights_bytes": 28632144944,
+  "chunk_size_bytes": 33554432,
+  "expected_chunk_count": 857,
+  "download_process_running": false,
+  "download_workers_last": 16,
+  "download_log": "tmp/qwen_ranges2.log",
+  "range_chunks": {
+    "complete_file_count_by_exact_range_size": 125,
+    "complete_bytes_by_exact_range_size": 4167386824,
+    "partial_file_count": 16,
+    "partial_bytes_on_disk": 292552704,
+    "full_length_temp_files": 0,
+    "invalid_files": []
+  },
+  "legacy_part_files_not_used_by_range_resumer": [
+    {
+      "name": "model-00002-of-00008.safetensors.part",
+      "size": 53477376
+    },
+    {
+      "name": "model-00001-of-00008.safetensors.part",
+      "size": 117440512
+    },
+    {
+      "name": "model-00004-of-00008.safetensors.part",
+      "size": 251658240
+    },
+    {
+      "name": "model-00003-of-00008.safetensors.part",
+      "size": 466616320
+    }
+  ],
+  "official_hash_validation": {
+    "safetensors_lfs_sha256_verified_count": 0,
+    "safetensors_lfs_sha256_total": 8,
+    "metadata_git_blob_sha1_verified_count": 7,
+    "metadata_git_blob_sha1_total": 10,
+    "verified_metadata_files": [
+      "LICENSE",
+      "README.md",
+      "config.json",
+      "configuration.json",
+      "generation_config.json",
+      "merges.txt",
+      "model.safetensors.index.json"
+    ],
+    "missing_metadata_files": [
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "vocab.json"
+    ],
+    "all_weights_fully_verified": false
+  },
+  "upload": {
+    "status": "not_started",
+    "nodes": []
+  },
+  "large_model_test": {
+    "status": "not_run"
+  },
+  "resume_command": "QWEN_DOWNLOAD_WORKERS=16 /Users/henry/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 -u -m scripts.download_qwen_ranges"
+}

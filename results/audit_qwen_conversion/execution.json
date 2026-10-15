@@ -1,0 +1,7 @@
+{
+  "run": "audit_qwen_conversion",
+  "exits": [
+    "1",
+    "1"
+  ]
+}

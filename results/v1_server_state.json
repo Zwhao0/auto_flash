@@ -1,0 +1,65 @@
+{
+  "generated_at_utc": "2026-10-15T17:28:38Z",
+  "runtime": "paper",
+  "audit_workloads": "idle",
+  "audit_controllers": "stopped",
+  "host_exclusivity": "not_claimed",
+  "other_host_activity": {
+    "detected": true,
+    "scope": "non-project host tasks were visible on both nodes at snapshot time",
+    "handled": false,
+    "details": "No command lines, paths, or parameters are retained here. This activity was left untouched."
+  },
+  "gpu_observation": {
+    "scope": "point-in-time snapshot after FLASH audit workloads stopped",
+    "compute_processes_reported_by_nvidia_smi": 0,
+    "utilization_percent_all_gpus": 0,
+    "sm_clock_mhz_all_gpus": 345,
+    "max_sm_clock_mhz_all_gpus": 1980,
+    "interpretation": "No compute processes were reported and utilization was 0% in this snapshot; other host activity was present, so exclusive availability is not asserted."
+  },
+  "clock_reset": {
+    "command": "nvidia-smi -i 0 -rgc",
+    "exit": 0,
+    "output": "All done.",
+    "verified_on_both_nodes": true,
+    "all_gpus_current_sm_clock_mhz": 345
+  },
+  "nodes": [
+    {
+      "node": 1,
+      "nvidia_smi_compute_processes": 0,
+      "gpus": 8,
+      "current_sm_clock_mhz": 345,
+      "utilization_percent": 0,
+      "flash_container_audit_processes": 0
+    },
+    {
+      "node": 2,
+      "nvidia_smi_compute_processes": 0,
+      "gpus": 8,
+      "current_sm_clock_mhz": 345,
+      "utilization_percent": 0,
+      "flash_container_audit_processes": 0
+    }
+  ],
+  "container": {
+    "runtime": "flash-paper-20261015",
+    "status": "running",
+    "audit_processes": "none"
+  },
+  "redis": {
+    "port": 16379,
+    "ping_exit": 0,
+    "ping": true,
+    "preserved": true
+  },
+  "shared_memory_cleanup": {
+    "post_gradient_fix_runs": 19,
+    "per_host_removed_buffers_first_batch": 88,
+    "per_host_removed_buffers_second_batch": 48,
+    "per_host_removed_buffers_total": 136,
+    "scope": "Only the 19 audit runs listed in results/audit_campaign_cleanup_runs.json"
+  },
+  "run_ids_file": "results/audit_campaign_cleanup_runs.json"
+}

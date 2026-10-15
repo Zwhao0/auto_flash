@@ -1,0 +1,9 @@
+{
+  "rank": 8,
+  "gemm_ms": 0.02534559965133667,
+  "bf16_tflops": 677.8245305036204,
+  "allreduce_correct": true,
+  "gemm_correct": true,
+  "device": "NVIDIA H800",
+  "world_size": 16
+}

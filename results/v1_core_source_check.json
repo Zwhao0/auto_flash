@@ -1,0 +1,210 @@
+{
+  "reference_commit": "db828f49f654a5fd9998d0135bdefb3dd4b9b58a",
+  "scope": "FLASH/training core and probe/injector libraries; orchestration and documentation hashes may vary",
+  "expected_source_hashes": {
+    "flash/driver_status.py": "b17b80d1683e6ebfe1598cf00c29e75f8d173920bc1455116f53b9e271d53ffe",
+    "flash/store.py": "fc1f4b403090cdbdbefd8aba5231fd19d36d1ed7829027006b30adf68b0c7828",
+    "flash/detection.py": "7d4c75405ce4f563140692bdfcee69c3f67b53c24a4989af320fc3c5dd896f0d",
+    "flash/shm.py": "b9066455ed4601a8731d5a40ed547a9eb370a7624d8cc61929a9452e7944ad57",
+    "flash/local_controller.py": "312dfbdcb0a57d15f6f41469684ece9d9abd06e2e455793b5619a40c4191e653",
+    "flash/config.py": "a420dfbc6b183d5ca6bc7cf25d6f386b835978c57cf27f6943ff5914924ab442",
+    "flash/analysis.py": "fadf441cb962c9752f293de553a5105f42be2c1843f7b01a60ad3f291427cd43",
+    "flash/profile.py": "cf95334c93501f74ea70a93962a9aeb078aa96ad964df133196e935fdf47bd7b",
+    "flash/global_controller.py": "51bf4f4fe532381ecba03ac2a10180e926e171c265fb491d7a917d37ca974286",
+    "flash/__init__.py": "5c782816326133c7a15ac6a76e883ccebbef1adbe2b165a4635b1b0e4ee828fa",
+    "flash/iteration_writer.py": "bcf58e81bb3835583f6a359f7f3a67b35f71c12d2fc8707b5453ac91babc3cca",
+    "flash/integration.py": "4c5e1129d0a0e843221fe4f6828cf91b753cbe77a239d76a4bbb98cd57a0ca53",
+    "csrc/probe.cpp": "4463b8ef01027a23fc4d2bba1b8a377b10bcaf132e80679275b2bb0f4745d713",
+    "csrc/fault.cpp": "d221b5f3ff8c4ac6f2af00bfdd15fb1aaf011e3988f56557cf99dbea2e0c5a00",
+    "scripts/train_moe.py": "dc275946b8d22a3d9d3e4318d4b94e511fb3e19c19a0184eb4ebd0e2d573c529",
+    "scripts/model_support.py": "2e189d420ee080425ae01b9405856a4d90ed7414397111eae14479799dde1d28",
+    "scripts/gradient_sync.py": "1b96293e61bfc2d3769873c02e370e9eb9b7edbc91ed775d8ad1b5dd5c39d9b4",
+    "scripts/qwen_support.py": "71b89dc2138adc26e57a4e6972ca4de3290224b5086595ca7e4520bfb0be4ed9"
+  },
+  "expected_runtime_libraries": {
+    "build/libncclprobe.so": "ad28f2682dabed46a90ee9f7b00909df92c6fe75f8cec632fe833de4f6623fd2",
+    "build/libncclfault.so": "132f0fb89ba08171475474392c5730b36cad44a842093aa5bf09a4fa8d1bfaa4"
+  },
+  "runs": [
+    {
+      "run": "audit_background_mild_post_gradient_fix_20261015T171155Z_434df2ff",
+      "passed": true,
+      "mismatches": [],
+      "libraries": {
+        "build/libncclprobe.so": "ad28f2682dabed46a90ee9f7b00909df92c6fe75f8cec632fe833de4f6623fd2",
+        "build/libncclfault.so": "132f0fb89ba08171475474392c5730b36cad44a842093aa5bf09a4fa8d1bfaa4"
+      }
+    },
+    {
+      "run": "audit_background_strong_post_gradient_fix_20261015T171422Z_caf37609",
+      "passed": true,
+      "mismatches": [],
+      "libraries": {
+        "build/libncclprobe.so": "ad28f2682dabed46a90ee9f7b00909df92c6fe75f8cec632fe833de4f6623fd2",
+        "build/libncclfault.so": "132f0fb89ba08171475474392c5730b36cad44a842093aa5bf09a4fa8d1bfaa4"
+      }
+    },
+    {
+      "run": "audit_clock600_topology1_post_gradient_fix_20261015T171705Z_199281be",
+      "passed": true,
+      "mismatches": [],
+      "libraries": {
+        "build/libncclprobe.so": "ad28f2682dabed46a90ee9f7b00909df92c6fe75f8cec632fe833de4f6623fd2",
+        "build/libncclfault.so": "132f0fb89ba08171475474392c5730b36cad44a842093aa5bf09a4fa8d1bfaa4"
+      }
+    },
+    {
+      "run": "audit_clock600_topology2_post_gradient_fix_20261015T171844Z_0bb98786",
+      "passed": true,
+      "mismatches": [],
+      "libraries": {
+        "build/libncclprobe.so": "ad28f2682dabed46a90ee9f7b00909df92c6fe75f8cec632fe833de4f6623fd2",
+        "build/libncclfault.so": "132f0fb89ba08171475474392c5730b36cad44a842093aa5bf09a4fa8d1bfaa4"
+      }
+    },
+    {
+      "run": "audit_clock600_topology3_post_gradient_fix_20261015T172027Z_714a8dcb",
+      "passed": true,
+      "mismatches": [],
+      "libraries": {
+        "build/libncclprobe.so": "ad28f2682dabed46a90ee9f7b00909df92c6fe75f8cec632fe833de4f6623fd2",
+        "build/libncclfault.so": "132f0fb89ba08171475474392c5730b36cad44a842093aa5bf09a4fa8d1bfaa4"
+      }
+    },
+    {
+      "run": "audit_clock600_topology4_post_gradient_fix_20261015T172201Z_bab9449e",
+      "passed": true,
+      "mismatches": [],
+      "libraries": {
+        "build/libncclprobe.so": "ad28f2682dabed46a90ee9f7b00909df92c6fe75f8cec632fe833de4f6623fd2",
+        "build/libncclfault.so": "132f0fb89ba08171475474392c5730b36cad44a842093aa5bf09a4fa8d1bfaa4"
+      }
+    },
+    {
+      "run": "audit_delay25_post_gradient_fix_20261015T165232Z_7f75a06c",
+      "passed": true,
+      "mismatches": [],
+      "libraries": {
+        "build/libncclprobe.so": "ad28f2682dabed46a90ee9f7b00909df92c6fe75f8cec632fe833de4f6623fd2",
+        "build/libncclfault.so": "132f0fb89ba08171475474392c5730b36cad44a842093aa5bf09a4fa8d1bfaa4"
+      }
+    },
+    {
+      "run": "audit_delay45_auto_post_gradient_fix_20261015T163747Z_2a995db6",
+      "passed": true,
+      "mismatches": [],
+      "libraries": {
+        "build/libncclprobe.so": "ad28f2682dabed46a90ee9f7b00909df92c6fe75f8cec632fe833de4f6623fd2",
+        "build/libncclfault.so": "132f0fb89ba08171475474392c5730b36cad44a842093aa5bf09a4fa8d1bfaa4"
+      }
+    },
+    {
+      "run": "audit_delay5_post_gradient_fix_20261015T165105Z_66d7d32b",
+      "passed": true,
+      "mismatches": [],
+      "libraries": {
+        "build/libncclprobe.so": "ad28f2682dabed46a90ee9f7b00909df92c6fe75f8cec632fe833de4f6623fd2",
+        "build/libncclfault.so": "132f0fb89ba08171475474392c5730b36cad44a842093aa5bf09a4fa8d1bfaa4"
+      }
+    },
+    {
+      "run": "audit_delay65_post_gradient_fix_20261015T165404Z_8c9cf2cd",
+      "passed": true,
+      "mismatches": [],
+      "libraries": {
+        "build/libncclprobe.so": "ad28f2682dabed46a90ee9f7b00909df92c6fe75f8cec632fe833de4f6623fd2",
+        "build/libncclfault.so": "132f0fb89ba08171475474392c5730b36cad44a842093aa5bf09a4fa8d1bfaa4"
+      }
+    },
+    {
+      "run": "audit_delay85_post_gradient_fix_20261015T165554Z_7ab4d13f",
+      "passed": true,
+      "mismatches": [],
+      "libraries": {
+        "build/libncclprobe.so": "ad28f2682dabed46a90ee9f7b00909df92c6fe75f8cec632fe833de4f6623fd2",
+        "build/libncclfault.so": "132f0fb89ba08171475474392c5730b36cad44a842093aa5bf09a4fa8d1bfaa4"
+      }
+    },
+    {
+      "run": "audit_gradient_equivalence_20261016_0034",
+      "passed": true,
+      "mismatches": [],
+      "libraries": {
+        "build/libncclprobe.so": "ad28f2682dabed46a90ee9f7b00909df92c6fe75f8cec632fe833de4f6623fd2",
+        "build/libncclfault.so": "132f0fb89ba08171475474392c5730b36cad44a842093aa5bf09a4fa8d1bfaa4"
+      }
+    },
+    {
+      "run": "audit_healthy_forced_post_gradient_fix_20261015T163528Z_47b835d1",
+      "passed": true,
+      "mismatches": [],
+      "libraries": {
+        "build/libncclprobe.so": "ad28f2682dabed46a90ee9f7b00909df92c6fe75f8cec632fe833de4f6623fd2",
+        "build/libncclfault.so": "132f0fb89ba08171475474392c5730b36cad44a842093aa5bf09a4fa8d1bfaa4"
+      }
+    },
+    {
+      "run": "audit_oom_post_gradient_fix_20261015T170018Z_08e12f16",
+      "passed": true,
+      "mismatches": [],
+      "libraries": {
+        "build/libncclprobe.so": "ad28f2682dabed46a90ee9f7b00909df92c6fe75f8cec632fe833de4f6623fd2",
+        "build/libncclfault.so": "132f0fb89ba08171475474392c5730b36cad44a842093aa5bf09a4fa8d1bfaa4"
+      }
+    },
+    {
+      "run": "audit_timeout_post_gradient_fix_20261015T170357Z_1e8a1b6b",
+      "passed": true,
+      "mismatches": [],
+      "libraries": {
+        "build/libncclprobe.so": "ad28f2682dabed46a90ee9f7b00909df92c6fe75f8cec632fe833de4f6623fd2",
+        "build/libncclfault.so": "132f0fb89ba08171475474392c5730b36cad44a842093aa5bf09a4fa8d1bfaa4"
+      }
+    },
+    {
+      "run": "audit_train_base1_post_gradient_fix_20261015T164153Z_221f1ae3",
+      "passed": true,
+      "mismatches": [],
+      "libraries": {
+        "build/libncclprobe.so": "ad28f2682dabed46a90ee9f7b00909df92c6fe75f8cec632fe833de4f6623fd2",
+        "build/libncclfault.so": "132f0fb89ba08171475474392c5730b36cad44a842093aa5bf09a4fa8d1bfaa4"
+      }
+    },
+    {
+      "run": "audit_train_base2_post_gradient_fix_20261015T164819Z_ddb8d164",
+      "passed": true,
+      "mismatches": [],
+      "libraries": {
+        "build/libncclprobe.so": "ad28f2682dabed46a90ee9f7b00909df92c6fe75f8cec632fe833de4f6623fd2",
+        "build/libncclfault.so": "132f0fb89ba08171475474392c5730b36cad44a842093aa5bf09a4fa8d1bfaa4"
+      }
+    },
+    {
+      "run": "audit_train_mon1_post_gradient_fix_20261015T164358Z_8736c8a0",
+      "passed": true,
+      "mismatches": [],
+      "libraries": {
+        "build/libncclprobe.so": "ad28f2682dabed46a90ee9f7b00909df92c6fe75f8cec632fe833de4f6623fd2",
+        "build/libncclfault.so": "132f0fb89ba08171475474392c5730b36cad44a842093aa5bf09a4fa8d1bfaa4"
+      }
+    },
+    {
+      "run": "audit_train_mon2_post_gradient_fix_20261015T164608Z_65c53bf2",
+      "passed": true,
+      "mismatches": [],
+      "libraries": {
+        "build/libncclprobe.so": "ad28f2682dabed46a90ee9f7b00909df92c6fe75f8cec632fe833de4f6623fd2",
+        "build/libncclfault.so": "132f0fb89ba08171475474392c5730b36cad44a842093aa5bf09a4fa8d1bfaa4"
+      }
+    },
+    {
+      "run": "audit_transient500ms_post_gradient_fix_20261015T165808Z_d933a743",
+      "passed": true,
+      "mismatches": [],
+      "libraries": {
+        "build/libncclprobe.so": "ad28f2682dabed46a90ee9f7b00909df92c6fe75f8cec632fe833de4f6623fd2",
+        "build/libncclfault.so": "132f0fb89ba08171475474392c5730b36cad44a842093aa5bf09a4fa8d1bfaa4"
+      }
+    }
+  ]
+}

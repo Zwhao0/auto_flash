@@ -1,0 +1,5 @@
+{
+  "status": "ABORTED_BEFORE_TRAINING",
+  "reason": "Orchestrator stopped after discovery of expert gradient normalization bug. Coordinated precheck passed; actual training was not started.",
+  "recorded_at": 1792082474.216119
+}

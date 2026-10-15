@@ -8,6 +8,9 @@ import pathlib
 import time
 import torch
 import torch.distributed as dist
+import sys
+
+sys.path.insert(0, "/flash/deps-optional")
 import deepspeed
 from flash.integration import report_iteration, report_parallel_states
 from flash.store import Store

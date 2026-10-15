@@ -1,0 +1,8 @@
+HOST 10.10.4.1 EXIT 0
+deepspeed
+deepspeed-0.19.7.dist-info
+
+HOST 10.10.4.2 EXIT 0
+deepspeed
+deepspeed-0.19.7.dist-info
+
